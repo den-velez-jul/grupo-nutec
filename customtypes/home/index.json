@@ -1,0 +1,326 @@
+{
+  "id": "home",
+  "label": "Home",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "unique identifier",
+          "placeholder": "Agrega SLUG"
+        }
+      },
+      "top_title": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+          "allowTargetBlank": true,
+          "label": "Top Title",
+          "placeholder": "Ingresa un titulo para la sección"
+        }
+      },
+      "cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "CTA Label"
+        }
+      },
+      "cta_link": {
+        "type": "Link",
+        "config": {
+          "allowTargetBlank": true,
+          "label": "CTA Link",
+          "placeholder": "Agregar link de enlace al CTA",
+          "select": null
+        }
+      },
+      "top_slides": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Image"
+              }
+            },
+            "image_or_video": {
+              "type": "Boolean",
+              "config": {
+                "placeholder_false": "Video",
+                "placeholder_true": "Image",
+                "default_value": true,
+                "label": "Image or Video"
+              }
+            },
+            "video": {
+              "type": "Link",
+              "config": {
+                "allowTargetBlank": true,
+                "label": "Video",
+                "select": null
+              }
+            }
+          },
+          "label": "Top Slides"
+        }
+      }
+    },
+    "Content": {
+      "articles_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Articles Title",
+          "placeholder": "Title"
+        }
+      },
+      "featured_article": {
+        "type": "Link",
+        "config": {
+          "select": "document",
+          "label": "Featured Article"
+        }
+      },
+      "featured_article_cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "Featured Article CTA Label",
+          "placeholder": "Read Full Article"
+        }
+      },
+      "articles_cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "Articles CTA Label",
+          "placeholder": "Explore All Articles & Editorials"
+        }
+      },
+      "articles_cta_link": {
+        "type": "Link",
+        "config": {
+          "label": "Articles CTA Link",
+          "select": null
+        }
+      },
+      "body": {
+        "type": "Slices",
+        "fieldset": "Slice zone",
+        "config": {
+          "labels": null,
+          "choices": {
+            "conoce_mas": {
+              "type": "Slice",
+              "fieldset": "Conoce Más",
+              "description": "Modulo - Conoce más ",
+              "icon": "add_circle",
+              "display": "grid",
+              "non-repeat": {},
+              "repeat": {}
+            },
+            "tienda_nutec": {
+              "type": "Slice",
+              "fieldset": "Tienda NUTEC",
+              "description": "Tienda Nutec",
+              "icon": "add",
+              "display": "grid",
+              "non-repeat": {},
+              "repeat": {}
+            }
+          }
+        }
+      }
+    },
+    "Events": {
+      "events_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Events Title",
+          "placeholder": "Upcoming Events"
+        }
+      },
+      "events_cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "Events CTA Label",
+          "placeholder": "View Past Events"
+        }
+      },
+      "events_cta_link": {
+        "type": "Link",
+        "config": {
+          "label": "Events CTA Link",
+          "select": null
+        }
+      }
+    },
+    "Compañias": {
+      "companies_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "titulo compañias",
+          "placeholder": "Titulo"
+        }
+      },
+      "companias": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "imagen": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "imagen"
+              }
+            },
+            "titulo_compania": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading3",
+                "label": "Titulo compañia"
+              }
+            },
+            "descripcion": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,strong",
+                "label": "Descripcion"
+              }
+            },
+            "cta_label1": {
+              "type": "Text",
+              "config": {
+                "label": "CTA Label",
+                "placeholder": "Ej: Visita el sitio web de Nutec bickley"
+              }
+            },
+            "cta_link1": {
+              "type": "Link",
+              "config": {
+                "label": "CTA Link",
+                "allowTargetBlank": true,
+                "select": null
+              }
+            }
+          },
+          "label": "compañias"
+        }
+      }
+    },
+    "SEO": {
+      "meta_titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Meta titulo",
+          "placeholder": "Meta titulo"
+        }
+      },
+      "meta_descripcion": {
+        "type": "Text",
+        "config": {
+          "label": "Meta descripcion",
+          "placeholder": "Meta descripcion"
+        }
+      },
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "Meta keyword"
+        }
+      },
+      "meta_imagen": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 512,
+            "height": 512
+          },
+          "thumbnails": [],
+          "label": "Meta imagen"
+        }
+      }
+    },
+    "Shop Nutec": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "title"
+        }
+      },
+      "description_shop": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong,hyperlink,image",
+          "label": "description shop"
+        }
+      },
+      "events_cta_label1": {
+        "type": "Text",
+        "config": {
+          "label": "CTA Label"
+        }
+      },
+      "cta_link1": {
+        "type": "Link",
+        "config": {
+          "label": "CTA LINK",
+          "select": null
+        }
+      }
+    },
+    "About US Nutec": {
+      "group": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "image_about": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "image about"
+              }
+            },
+            "text_nutec": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,strong",
+                "label": "text nutec"
+              }
+            },
+            "title1": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading2",
+                "label": "title"
+              }
+            },
+            "label_cta": {
+              "type": "Text",
+              "config": {
+                "label": "label cta"
+              }
+            },
+            "link_cta": {
+              "type": "Link",
+              "config": {
+                "label": "link cta",
+                "select": null
+              }
+            }
+          },
+          "label": "group"
+        }
+      }
+    }
+  }
+}

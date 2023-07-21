@@ -1,0 +1,327 @@
+{
+  "id": "nutec",
+  "label": "Company",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Unique Identifier"
+        }
+      },
+      "breadcrumb_title": {
+        "type": "Text",
+        "config": {
+          "label": "Breadcrumb Title"
+        }
+      },
+      "top_label": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "allowTargetBlank": true,
+          "label": "Top Label"
+        }
+      },
+      "top_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Top Title"
+        }
+      },
+      "image_or_video": {
+        "type": "Boolean",
+        "config": {
+          "placeholder_false": "Video",
+          "placeholder_true": "Image",
+          "default_value": true,
+          "label": "Image or Video"
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Image"
+        }
+      },
+      "video": {
+        "type": "Link",
+        "config": {
+          "select": "media",
+          "label": "Video",
+          "placeholder": "Add video from media library .mp4"
+        }
+      }
+    },
+    "Description": {
+      "label": {
+        "type": "Text",
+        "config": {
+          "label": "Label",
+          "placeholder": "Label"
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Title",
+          "placeholder": "Title"
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph,strong",
+          "allowTargetBlank": true,
+          "label": "Description",
+          "placeholder": "Description"
+        }
+      },
+      "video_or_image": {
+        "type": "Boolean",
+        "config": {
+          "placeholder_false": "Video",
+          "placeholder_true": "Image",
+          "default_value": true,
+          "label": "Video or image"
+        }
+      },
+      "description_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Description Image"
+        }
+      }
+    },
+    "Time line": {},
+    "Purpose": {
+      "purpose_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Purpose Title",
+          "placeholder": "Title"
+        }
+      },
+      "mission_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "Mission title"
+        }
+      },
+      "mission_desc": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Mission Desc",
+          "placeholder": "Description"
+        }
+      },
+      "mission_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Mission Image"
+        }
+      },
+      "vision_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "Vision Title",
+          "placeholder": "Title"
+        }
+      },
+      "vision_desc": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Vision Desc",
+          "placeholder": "Description"
+        }
+      },
+      "vision_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Vision Image"
+        }
+      },
+      "values_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "Values Title",
+          "placeholder": "Title"
+        }
+      },
+      "values_desc": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Values Desc",
+          "placeholder": "Description"
+        }
+      },
+      "values_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Values Image"
+        }
+      }
+    },
+    "Valores fundamentales": {
+      "titulo_valores": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Titulo valores",
+          "placeholder": "Titulo de valores"
+        }
+      },
+      "compromiso": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "compromiso",
+          "placeholder": "compromiso"
+        }
+      },
+      "descripcion_compromiso": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "descripcion compromiso",
+          "placeholder": "descripcion compromiso"
+        }
+      },
+      "imagen_compromiso": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "imagen compromiso"
+        }
+      },
+      "titulo_integridad": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "titulo Integridad",
+          "placeholder": "titulo Integridad"
+        }
+      },
+      "descripcion_integridad": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "descripcion integridad",
+          "placeholder": "descripcion integridad"
+        }
+      },
+      "imagen_integridad": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "imagen integridad"
+        }
+      },
+      "respeto_titulo": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "respeto titulo",
+          "placeholder": "respeto titulo"
+        }
+      },
+      "descripcion_respeto": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "descripcion respeto",
+          "placeholder": "descripcion respeto"
+        }
+      },
+      "imagen_respeto": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "imagen respeto"
+        }
+      },
+      "titulo_responsabilidad": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "Titulo responsabilidad",
+          "placeholder": "Titulo responsabilidad"
+        }
+      },
+      "descripcion_responsabilidad": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Descripcion responsabilidad",
+          "placeholder": "Descripcion responsabilidad"
+        }
+      },
+      "imagen_responsabilidad": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Imagen responsabilidad"
+        }
+      }
+    },
+    "SEO": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "Meta titulo - Grupo Nutec"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "Meta descripcion"
+        }
+      },
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "Meta keyword"
+        }
+      },
+      "meta_thumbnail": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 512,
+            "height": 512
+          },
+          "thumbnails": [],
+          "label": "Meta Thumbnail"
+        }
+      }
+    }
+  }
+}

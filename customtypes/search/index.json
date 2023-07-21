@@ -1,0 +1,76 @@
+{
+  "id": "search",
+  "label": "Search",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Unique Identifier"
+        }
+      },
+      "breadcrumb_title": {
+        "type": "Text",
+        "config": {
+          "label": "Breadcrumb Title"
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Title"
+        }
+      },
+      "input_top_label": {
+        "type": "Text",
+        "config": {
+          "label": "Input Top Label"
+        }
+      },
+      "input_placeholder": {
+        "type": "Text",
+        "config": {
+          "label": "Input Placeholder"
+        }
+      },
+      "loading_label": {
+        "type": "Text",
+        "config": {
+          "label": "Loading Label"
+        }
+      }
+    },
+    "SEO": {
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "meta keyword"
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "meta title"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "meta image"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "meta description"
+        }
+      }
+    }
+  }
+}

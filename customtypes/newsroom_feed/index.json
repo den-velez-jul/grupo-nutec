@@ -1,0 +1,133 @@
+{
+  "id": "newsroom_feed",
+  "label": "Newsroom Feed",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Unique identifier",
+          "placeholder": "slug-section"
+        }
+      },
+      "breadcrumb_title": {
+        "type": "Text",
+        "config": {
+          "label": "Breadcrumb Title"
+        }
+      },
+      "top_label": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Top Label",
+          "placeholder": "Title"
+        }
+      },
+      "main_featured_post": {
+        "type": "Link",
+        "config": {
+          "select": "document",
+          "label": "Main Featured Post"
+        }
+      },
+      "main_cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "Main CTA Label",
+          "placeholder": "Main CTA Label"
+        }
+      }
+    },
+    "Eventos": {
+      "event_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "title event"
+        }
+      },
+      "events_cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "Events CTA Label",
+          "placeholder": "View Past Events"
+        }
+      },
+      "events_cta_link": {
+        "type": "Link",
+        "config": {
+          "label": "Events CTA Link",
+          "select": null
+        }
+      }
+    },
+    "articles and editorials": {
+      "articles_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Articles Title"
+        }
+      },
+      "featured_article": {
+        "type": "Link",
+        "config": {
+          "select": "document",
+          "customtypes": ["article"],
+          "label": "Featured Article"
+        }
+      },
+      "featured_article_cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "Featured Article CTA Label"
+        }
+      },
+      "articles_cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "Articles CTA Label"
+        }
+      },
+      "articles_cta_link": {
+        "type": "Link",
+        "config": {
+          "label": "Articles CTA Link",
+          "select": null
+        }
+      }
+    },
+    "SEO": {
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "meta keyword"
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "meta title"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "meta description"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "meta image"
+        }
+      }
+    }
+  }
+}

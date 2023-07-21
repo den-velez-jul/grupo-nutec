@@ -1,0 +1,110 @@
+{
+  "id": "article",
+  "label": "Article",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Unique Identifier"
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Title"
+        }
+      },
+      "label": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Label"
+        }
+      },
+      "excerpt": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Excerpt"
+        }
+      },
+      "imagen": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "imagen"
+        }
+      },
+      "display_date": {
+        "type": "Date",
+        "config": {
+          "label": "Display Date"
+        }
+      },
+      "reading_time": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Reading Time"
+        }
+      },
+      "preface": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Preface"
+        }
+      },
+      "source": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Source"
+        }
+      },
+      "top_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Top Image"
+        }
+      }
+    },
+    "Content": {},
+    "SEO": {
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "meta keyword"
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "meta title"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "meta description"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "meta image"
+        }
+      }
+    }
+  }
+}

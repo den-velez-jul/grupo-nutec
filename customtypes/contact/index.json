@@ -1,0 +1,373 @@
+{
+  "id": "contact",
+  "label": "Contact",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Unique Identifier",
+          "placeholder": "slug-url"
+        }
+      },
+      "breadcrumb_title": {
+        "type": "Text",
+        "config": {
+          "label": "Breadcrumb Title"
+        }
+      },
+      "top_label": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "Top Label",
+          "placeholder": "Top Label"
+        }
+      },
+      "top_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Top Title",
+          "placeholder": "Top Title"
+        }
+      },
+      "top_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Top Image"
+        }
+      }
+    },
+    "Form": {
+      "form_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Form Title"
+        }
+      },
+      "form_description": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong,em,hyperlink",
+          "allowTargetBlank": true,
+          "label": "Form Description"
+        }
+      },
+      "form_iframe": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "preformatted",
+          "allowTargetBlank": true,
+          "label": "Form iFrame",
+          "placeholder": "Paste iframe code."
+        }
+      },
+      "form_policy": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong,em,hyperlink",
+          "allowTargetBlank": true,
+          "label": "Form Policy"
+        }
+      },
+      "form_button_label": {
+        "type": "Text",
+        "config": {
+          "label": "Form Button Label",
+          "placeholder": "Click me to send"
+        }
+      },
+      "form_success_message": {
+        "type": "Text",
+        "config": {
+          "label": "Form Success Message",
+          "placeholder": "Form Success Message"
+        }
+      },
+      "more_ways_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "More Ways Title",
+          "placeholder": "More Ways Title"
+        }
+      },
+      "more_ways": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "icon": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "Icon"
+              }
+            },
+            "text": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,strong,em,hyperlink",
+                "allowTargetBlank": true,
+                "label": "Text"
+              }
+            }
+          },
+          "label": "More Ways"
+        }
+      }
+    },
+    "SEO": {
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "Meta keyword"
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta title"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta Description"
+        }
+      },
+      "imagen": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 512,
+            "height": 512
+          },
+          "thumbnails": [],
+          "label": "Imagen"
+        }
+      }
+    },
+    "compañias": {
+      "titulo_companias": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "titulo compañias",
+          "placeholder": "Nuestras compaños"
+        }
+      },
+      "label_companias": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong,em",
+          "allowTargetBlank": true,
+          "label": "Label compañias"
+        }
+      },
+      "companias": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "iimagen_companias": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "iimagen compañias"
+              }
+            },
+            "sub_companias": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading3",
+                "label": "sub compañias"
+              }
+            },
+            "label_sub_companias": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,strong,em",
+                "allowTargetBlank": true,
+                "label": "label sub compañias"
+              }
+            },
+            "descripcion_compania": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,strong,em,hyperlink",
+                "allowTargetBlank": true,
+                "label": "descripcion compañia"
+              }
+            },
+            "link_cta": {
+              "type": "Link",
+              "config": {
+                "allowTargetBlank": true,
+                "label": "link CTA",
+                "select": null
+              }
+            }
+          },
+          "label": "compañias"
+        }
+      }
+    },
+    "Map": {
+      "map_label": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "Map Label"
+        }
+      },
+      "nutec_inc_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Nutec Inc Title"
+        }
+      },
+      "nutec_inc_location": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "Nutec Inc Location"
+        }
+      },
+      "nutec_inc_subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "Nutec Inc Subtitle"
+        }
+      },
+      "nutec_inc_description": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Nutec Inc Description"
+        }
+      },
+      "nutec_fibras_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Nutec Fibras Title"
+        }
+      },
+      "nutec_fibras_location": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Nutec Fibras Location"
+        }
+      },
+      "nutec_fibras_subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "Nutec Fibras Subtitle"
+        }
+      },
+      "nutec_fibras_description": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Nutec Fibras Description"
+        }
+      },
+      "nutec_npc_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Nutec NPC Title"
+        }
+      },
+      "nutec_npc_location": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph",
+          "label": "Nutec NPC Location"
+        }
+      },
+      "nutec_npc_subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "Nutec NPC Subtitle"
+        }
+      },
+      "nutec_npc_description": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Nutec NPC Description"
+        }
+      },
+      "nutec_procal_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Nutec Procal Title"
+        }
+      },
+      "nutec_procal_location": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Nutec Procal Location"
+        }
+      },
+      "nutec_procal_subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Nutec Procal Subtitle"
+        }
+      },
+      "nutec_procal_description": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Nutec Procal Description"
+        }
+      },
+      "nutec_ibar_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Nutec Ibar Title"
+        }
+      },
+      "nutec_ibar_location": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Nutec Ibar Location"
+        }
+      },
+      "nutec_ibar_subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading3",
+          "label": "Nutec Ibar Subtitle"
+        }
+      },
+      "nutec_ibar_description": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Nutec Ibar Description"
+        }
+      }
+    }
+  }
+}

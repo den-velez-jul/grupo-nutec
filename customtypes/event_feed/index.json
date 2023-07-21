@@ -1,0 +1,64 @@
+{
+  "id": "event_feed",
+  "label": "Event Feed",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "unique identifier",
+          "placeholder": "slug-url"
+        }
+      },
+      "breadcrumb_title": {
+        "type": "Text",
+        "config": {
+          "label": "Breadcrumb Title"
+        }
+      },
+      "top_label": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph,strong,em",
+          "allowTargetBlank": true,
+          "label": "Top Label",
+          "placeholder": "Top Label"
+        }
+      }
+    },
+    "SEO": {
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "Meta title"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "Meta description"
+        }
+      },
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "Meta keyword"
+        }
+      },
+      "meta_image": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 512,
+            "height": 512
+          },
+          "thumbnails": [],
+          "label": "meta image"
+        }
+      }
+    }
+  }
+}

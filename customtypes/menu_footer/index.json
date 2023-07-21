@@ -1,0 +1,10 @@
+{
+  "id": "menu_footer",
+  "label": "Menu & Footer",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

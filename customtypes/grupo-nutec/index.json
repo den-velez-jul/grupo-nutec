@@ -1,0 +1,10 @@
+{
+  "id": "grupo-nutec",
+  "label": "Grupo-Nutec",
+  "format": "custom",
+  "repeatable": true,
+  "status": false,
+  "json": {
+    "Main": {}
+  }
+}

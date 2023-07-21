@@ -1,0 +1,119 @@
+{
+  "id": "event",
+  "label": "Event",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "unique identifier",
+          "placeholder": "slug-url"
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Title",
+          "placeholder": "event title"
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong,em,hyperlink",
+          "allowTargetBlank": true,
+          "label": "Description",
+          "placeholder": "Description"
+        }
+      },
+      "label": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "Label"
+        }
+      },
+      "start_day": {
+        "type": "Date",
+        "config": {
+          "label": "Start Day"
+        }
+      },
+      "country": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph,strong",
+          "label": "Country",
+          "placeholder": "USA / MEXICO"
+        }
+      },
+      "location": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "Location",
+          "placeholder": "Cleveland, OH, US"
+        }
+      },
+      "location_detail": {
+        "type": "StructuredText",
+        "config": {
+          "single": "paragraph",
+          "label": "Location Detail",
+          "placeholder": "Booth 101A"
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Logo"
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Image"
+        }
+      }
+    },
+    "SEO": {
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "meta keyword"
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "meta title"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "meta description"
+        }
+      },
+      "image1": {
+        "type": "Image",
+        "config": {
+          "constraint": {
+            "width": 512,
+            "height": 512
+          },
+          "thumbnails": [],
+          "label": "image"
+        }
+      }
+    }
+  }
+}

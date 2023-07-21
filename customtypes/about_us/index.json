@@ -1,0 +1,153 @@
+{
+  "id": "about_us",
+  "label": "Nutec Divisions",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Unique Identifier"
+        }
+      },
+      "breadcrumb_title": {
+        "type": "Text",
+        "config": {
+          "label": "Breadcrumb Title"
+        }
+      },
+      "top_label": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong",
+          "label": "Top Label"
+        }
+      },
+      "top_title": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading1",
+          "label": "Top Title"
+        }
+      },
+      "image_or_video": {
+        "type": "Boolean",
+        "config": {
+          "placeholder_false": "Image",
+          "placeholder_true": "Video",
+          "default_value": false,
+          "label": "Image or Video"
+        }
+      },
+      "imagen_fondo": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Imagen fondo"
+        }
+      },
+      "video": {
+        "type": "Link",
+        "config": {
+          "select": "media",
+          "label": "Video"
+        }
+      }
+    },
+    "Descripcion": {
+      "label": {
+        "type": "Text",
+        "config": {
+          "label": "Label"
+        }
+      },
+      "titulo": {
+        "type": "StructuredText",
+        "config": {
+          "single": "heading2",
+          "label": "Titulo",
+          "placeholder": "Ej: Especialistas de diseño"
+        }
+      },
+      "descripcion": {
+        "type": "StructuredText",
+        "config": {
+          "multi": "paragraph,strong,hyperlink",
+          "allowTargetBlank": true,
+          "label": "Descripcion",
+          "placeholder": "Descripcion del titulo"
+        }
+      },
+      "cta_label": {
+        "type": "Text",
+        "config": {
+          "label": "CTA Label",
+          "placeholder": "Ej: Conoce mas sobre Bickley"
+        }
+      },
+      "cta_link": {
+        "type": "Link",
+        "config": {
+          "label": "CTA Link",
+          "allowTargetBlank": true,
+          "select": null
+        }
+      },
+      "video_or_image": {
+        "type": "Boolean",
+        "config": {
+          "placeholder_false": "Video",
+          "placeholder_true": "Image",
+          "default_value": true,
+          "label": "Video or image"
+        }
+      },
+      "imagen": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Imagen"
+        }
+      },
+      "description_video": {
+        "type": "Link",
+        "config": {
+          "select": "media",
+          "label": "Video"
+        }
+      }
+    },
+    "SEO": {
+      "meta_keyword": {
+        "type": "Text",
+        "config": {
+          "label": "meta keyword"
+        }
+      },
+      "meta_title": {
+        "type": "Text",
+        "config": {
+          "label": "meta title"
+        }
+      },
+      "meta_description": {
+        "type": "Text",
+        "config": {
+          "label": "meta description"
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "image"
+        }
+      }
+    }
+  }
+}
