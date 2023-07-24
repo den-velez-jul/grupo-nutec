@@ -8,8 +8,13 @@ export default defineNuxtConfig({
     clientConfig: {
       routes: [
         {
-          type: "page",
-          path: "/page/pruebas",
+          type: "home",
+          path: "/",
+        },
+        {
+          type: "home",
+          lang: "es-mx",
+          path: "/es",
         },
       ],
     },

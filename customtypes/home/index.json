@@ -80,59 +80,151 @@
           "placeholder": "Title"
         }
       },
-      "featured_article": {
-        "type": "Link",
+      "group_news": {
+        "type": "Group",
         "config": {
-          "select": "document",
-          "label": "Featured Article"
-        }
-      },
-      "featured_article_cta_label": {
-        "type": "Text",
-        "config": {
-          "label": "Featured Article CTA Label",
-          "placeholder": "Read Full Article"
-        }
-      },
-      "articles_cta_label": {
-        "type": "Text",
-        "config": {
-          "label": "Articles CTA Label",
-          "placeholder": "Explore All Articles & Editorials"
-        }
-      },
-      "articles_cta_link": {
-        "type": "Link",
-        "config": {
-          "label": "Articles CTA Link",
-          "select": null
-        }
-      },
-      "body": {
-        "type": "Slices",
-        "fieldset": "Slice zone",
-        "config": {
-          "labels": null,
-          "choices": {
-            "conoce_mas": {
-              "type": "Slice",
-              "fieldset": "Conoce Más",
-              "description": "Modulo - Conoce más ",
-              "icon": "add_circle",
-              "display": "grid",
-              "non-repeat": {},
-              "repeat": {}
+          "fields": {
+            "title1": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading2",
+                "label": "title"
+              }
             },
-            "tienda_nutec": {
-              "type": "Slice",
-              "fieldset": "Tienda NUTEC",
-              "description": "Tienda Nutec",
-              "icon": "add",
-              "display": "grid",
-              "non-repeat": {},
-              "repeat": {}
+            "author": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+                "label": "author"
+              }
+            },
+            "date": {
+              "type": "Date",
+              "config": {
+                "label": "date"
+              }
+            },
+            "description-news": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+                "label": "description-news"
+              }
+            },
+            "label_button": {
+              "type": "Text",
+              "config": {
+                "label": "label_button"
+              }
+            },
+            "link_button": {
+              "type": "Link",
+              "config": {
+                "label": "link_button",
+                "select": null
+              }
             }
-          }
+          },
+          "label": "group_news"
+        }
+      },
+      "group_division_fibras": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "image_fibras": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "image_fibras"
+              }
+            },
+            "title_fibras": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading2",
+                "label": "title_fibras"
+              }
+            },
+            "description_fibras": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+                "label": "description_fibras"
+              }
+            },
+            "cta_button": {
+              "type": "Text",
+              "config": {
+                "label": "cta_button"
+              }
+            },
+            "cta_button_link": {
+              "type": "Link",
+              "config": {
+                "label": "cta_button_link",
+                "select": null
+              }
+            }
+          },
+          "label": "group_division_fibras"
+        }
+      },
+      "group_bickley": {
+        "type": "Group",
+        "config": {
+          "fields": {
+            "image_bickley": {
+              "type": "Image",
+              "config": {
+                "constraint": {},
+                "thumbnails": [],
+                "label": "image_bickley"
+              }
+            },
+            "title_bickley": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading2",
+                "label": "title_bickley"
+              }
+            },
+            "description_bickley": {
+              "type": "StructuredText",
+              "config": {
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+                "label": "description_bickley"
+              }
+            },
+            "label_bickley": {
+              "type": "Text",
+              "config": {
+                "label": "label_bickley"
+              }
+            },
+            "link_bickley_cta": {
+              "type": "Link",
+              "config": {
+                "label": "link_bickley_cta",
+                "select": null
+              }
+            }
+          },
+          "label": "group_bickley"
+        }
+      },
+      "link_explore_articles": {
+        "type": "Text",
+        "config": {
+          "label": "link_explore_articles"
+        }
+      },
+      "link_articles": {
+        "type": "Link",
+        "config": {
+          "label": "link_articles",
+          "select": null
         }
       }
     },
@@ -181,18 +273,11 @@
                 "label": "imagen"
               }
             },
-            "titulo_compania": {
+            "description": {
               "type": "StructuredText",
               "config": {
-                "single": "heading3",
-                "label": "Titulo compañia"
-              }
-            },
-            "descripcion": {
-              "type": "StructuredText",
-              "config": {
-                "multi": "paragraph,strong",
-                "label": "Descripcion"
+                "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+                "label": "description"
               }
             },
             "cta_label1": {
@@ -274,6 +359,14 @@
         "config": {
           "label": "CTA LINK",
           "select": null
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "constraint": {},
+          "thumbnails": [],
+          "label": "Image"
         }
       }
     },

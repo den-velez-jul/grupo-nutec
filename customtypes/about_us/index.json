@@ -58,12 +58,6 @@
       }
     },
     "Descripcion": {
-      "label": {
-        "type": "Text",
-        "config": {
-          "label": "Label"
-        }
-      },
       "titulo": {
         "type": "StructuredText",
         "config": {
