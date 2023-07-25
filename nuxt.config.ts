@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/prismic"],
+  modules: ["@nuxtjs/prismic", "@nuxt/image"],
 
   prismic: {
     endpoint: "nutec",

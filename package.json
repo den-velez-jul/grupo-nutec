@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.0.0-rc.1",
     "@nuxtjs/prismic": "3.0.0",
     "@slicemachine/adapter-nuxt": "0.3.6",
     "@types/node": "18.16.19",

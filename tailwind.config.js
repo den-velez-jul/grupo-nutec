@@ -10,10 +10,10 @@ module.exports = {
   ],
   theme: {
     screens:{
-      'sm': '600px',
-      'md': '1000px',
-      'lg': '1550px',
-      'xl': '1920px',
+      'sm': '10px',
+      'md': '600px',
+      'lg': '1000px',
+      'xl': '1550px',
     },
     fontFamily: {
       'founders-grosteskers': ['Graphik', 'sans-serif'],
