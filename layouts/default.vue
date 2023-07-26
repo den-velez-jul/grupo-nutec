@@ -3,7 +3,7 @@
 <template>
   <div>
     <Header />
-    <div class="max-w-[1900px] mx-auto bg-red">
+    <div class="max-w-[1900px] mx-auto">
       <slot />
       <Footer />
     </div>

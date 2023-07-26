@@ -65,24 +65,44 @@ svg {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 35px;
 }
 
 h2 {
-  font-size: 60px;
+  font-size: 28px;
 }
 
 h3 {
-  font-size: 50px;
+  font-size: 24px;
 }
 h4 {
-  font-size: 40px;
+  font-size: 24px;
 }
 h5 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
-@media (max-width: 1550px) {
+@media (min-width: 600px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  h5 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
   h1 {
     font-size: 60px;
   }
@@ -95,49 +115,31 @@ h5 {
     font-size: 40px;
   }
   h4 {
-    font-size: 35px;
+    font-size: 30px;
   }
   h5 {
     font-size: 28px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1550px) {
   h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  h3 {
     font-size: 50px;
   }
 
-  h2 {
+  h4 {
     font-size: 40px;
   }
 
-  h3 {
-    font-size: 35px;
-  }
-  h4 {
-    font-size: 28px;
-  }
   h5 {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 600px) {
-  h1 {
     font-size: 35px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-  h4 {
-    font-size: 20px;
-  }
-  h5 {
-    font-size: 20px;
   }
 }
