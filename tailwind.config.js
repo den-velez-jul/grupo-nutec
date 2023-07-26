@@ -14,10 +14,11 @@ module.exports = {
       'md': '600px',
       'lg': '1000px',
       'xl': '1550px',
+      '2xl': '1900px',
     },
     fontFamily: {
-      'founders-grosteskers': ['Graphik', 'sans-serif'],
-      'untitled-sans': ['Merriweather', 'serif'],
+      'founders-grosteskers': ['Founders Grotesk', 'sans-serif'],
+      'untitled-sans': ['Untitled Sans', 'serif'],
     },
     colors:{
       black: '#272727',
