@@ -66,10 +66,12 @@ svg {
 
 h1 {
   font-size: 35px;
+  line-height: 44px;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 30px;
+  line-height: 38px;
 }
 
 h3 {
@@ -85,10 +87,12 @@ h5 {
 @media (min-width: 600px) {
   h1 {
     font-size: 50px;
+    line-height: 58px;
   }
 
   h2 {
     font-size: 40px;
+    line-height: 48px;
   }
 
   h3 {
@@ -105,10 +109,12 @@ h5 {
 @media (min-width: 1000px) {
   h1 {
     font-size: 60px;
+    line-height: 68px;
   }
 
   h2 {
     font-size: 50px;
+    line-height: 58px;
   }
 
   h3 {
@@ -125,10 +131,12 @@ h5 {
 @media (min-width: 1550px) {
   h1 {
     font-size: 70px;
+    line-height: 80px;
   }
 
   h2 {
     font-size: 60px;
+    line-height: 68px;
   }
 
   h3 {
