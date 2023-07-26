@@ -69,6 +69,46 @@
         </div>
       </div>
     </section>
+    <section class="pb-[80px] lg:pb-[100px]">
+      <p
+        class="text-[24px] font-bold text-center font-founders-grosteskers text-dark-blue md:text-[30px] lg:text-left xl:text-[40px]">
+        Ultimas noticias
+      </p>
+      <div
+        class="mt-[60px] lg:grid lg:grid-cols-2 lg:mt-[70px] lg:h-[688px] lg:gap-x-[60px] xl:h-[588px]">
+        <div class="lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
+          <img
+            src="~assets/images/dummy2.png"
+            class="h-[300px] md:h-[524px] w-full" />
+        </div>
+        <div
+          class="lg:flex lg:flex-col lg:justify-between font-founders-grosteskers">
+          <h1 class="text-blue mt-8 lg:m-0">
+            Grupo NUTEC anuncia Nuevo Presidente para NUTEC División Fibras
+          </h1>
+          <p class="mt-[30px] md:mt-[50px] lg:m-0 xl:text-[20px]">
+            Por Grupo Nutec
+          </p>
+          <p class="mt-[30px] md:mt-[40px] lg:m-0 xl:text-[20px]">
+            16 de mayo de 2023
+          </p>
+          <p class="mt-[15px] lg:m-0 xl:text-[20px]">
+            Efectivo a partir del 1ero de mayo de 2023, Grupo NUTEC nombró a
+            Gerardo Muraira como su nuevo Presidente de la División Fibras.
+            Durante casi ocho años, Gerardo dirigió la subsidiaria
+            norteamericana del grupo, NUTEC Inc.
+          </p>
+          <div class="flex justify-start mt-[30px] lg:m-0">
+            <a href="" class="flex items-center text-dark-blue">
+              <span class="font-semibold md:text-[20px] xl:text-[30px]">
+                Leer Articulos
+              </span>
+              <img src="~assets/icons/arrow-dark-blue.svg" class="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
