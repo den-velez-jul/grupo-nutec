@@ -1,18 +1,19 @@
 <template>
   <div class="flex flex-col bg-light-baby-blue">
-    <nuxt-img
-      :src="data.imagePath"
+    <img
+      src="~assets/images/dummy.png"
       class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px]" />
     <h2 v-if="data.title != ''">{{ data.title }}</h2>
     <div class="p-8">
-      <p class="text-[20px] xl:text-[30px] font-founders-grosteskers font-bold">
+      <p
+        class="text-[20px] xl:text-[30px] font-founders-grosteskers font-bold text-dark-blue">
         {{ data.paragraph }}
       </p>
       <a
         href=""
-        class="mt-8 flex justify-end w-full text-[20px] xl:text-[30px]">
+        class="mt-8 flex justify-end w-full text-[20px] xl:text-[30px] text-dark-blue">
         <span class="font-semibold"> {{ data.anchorLabel }} </span>
-        <nuxt-img src="/icons/arrow-dark-blue.svg" class="" />
+        <img src="~assets/icons/arrow-dark-blue.svg" class="" />
       </a>
     </div>
   </div>
@@ -20,7 +21,7 @@
 
 <script setup>
 const data = {
-  imagePath: "/images/dummy.png",
+  imagePath: "~assets/images/dummy.png",
   title: "",
   redTitle: false,
   paragraph:

@@ -4,31 +4,31 @@
     <div
       class="flex flex-col items-center md:grid lg:grid-cols-4 md:content-center md:grid-cols-2 md:grid-rows-2 lg:grid-rows-1 md:gap-y-[60px] lg:gap-y-0">
       <div>
-        <nuxt-img
-          src="/logos/LogoGrupoNutecES.svg"
+        <img
+          src="~assets/logos/LogoGrupoNutecES.svg"
           alt="logo"
           width="120px"
           height="110px" />
       </div>
       <div
         class="grid grid-cols-[25px_25px_25px_25px] gap-x-6 my-[60px] md:my-0 md:self-start lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-2">
-        <nuxt-img
-          src="/icons/icon-linkendln.svg"
+        <img
+          src="~assets/icons/icon-linkendln.svg"
           alt="logo linkedIn"
           width="25px"
           height="25px" />
-        <nuxt-img
-          src="/icons/icon-facebook.svg"
+        <img
+          src="~assets/icons/icon-facebook.svg"
           alt="logo facebook"
           width="25px"
           height="25px" />
-        <nuxt-img
-          src="/icons/icon-twitter.svg"
+        <img
+          src="~assets/icons/icon-twitter.svg"
           alt="logo twitter"
           width="25px"
           height="25px" />
-        <nuxt-img
-          src="/icons/icon-email.svg"
+        <img
+          src="~assets/icons/icon-email.svg"
           alt="logo email"
           width="25px"
           height="25px" />

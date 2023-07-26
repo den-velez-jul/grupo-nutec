@@ -9,7 +9,7 @@
         {{ btn }}
       </span>
       <span>
-        <nuxt-img src="/icons/arrow-dark-blue.svg" />
+        <img src="~assets/icons/arrow-dark-blue.svg" />
       </span>
     </button>
     <div class="flex justify-end bg-dark-blue px-[50px] py-[40px]">
@@ -28,7 +28,7 @@
     <button
       @click="() => closeOptionSelected()"
       class="flex items-center px-[50px] py-[40px] font-bold text-dark-blue text-[30px]">
-      <nuxt-img src="/icons/arrow-dark-blue.svg" class="-scale-100" />
+      <img src="~assets/icons/arrow-dark-blue.svg" class="-scale-100" />
       <span class="ml-6">
         {{ optionSelected.optionToDisplay.title }}
       </span>

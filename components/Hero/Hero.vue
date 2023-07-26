@@ -10,9 +10,9 @@
         >{{ btnLabel }}</NuxtLink
       >
     </div>
-    <nuxt-img
+    <img
       class="absolute left-0 right-0 w-full h-[600px] -z-10"
-      src="/images/dummy.png" />
+      src="~assets/images/dummy.png" />
   </section>
 </template>
 

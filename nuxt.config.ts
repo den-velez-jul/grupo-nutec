@@ -2,7 +2,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/prismic", "@nuxt/image"],
-
+  image: {
+    provider: "ipx",
+    dir: "dist",
+  },
   prismic: {
     endpoint: "nutec",
     clientConfig: {

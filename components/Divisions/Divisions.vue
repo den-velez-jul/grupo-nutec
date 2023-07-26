@@ -5,8 +5,8 @@
       v-for="division of divisionsData"
       class="flex font-bold font-founders-grosteskers lg:max-w-[500px] lg:ml-[70px]">
       <div class="w-[152px] h-[32px]">
-        <nuxt-img
-          :src="division.logoPath"
+        <img
+          src="~assets/logos/LogoNutecGroupEN.svg"
           alt=""
           class="w-full h-full"
           fit="cover" />
@@ -15,8 +15,8 @@
         <p>{{ division.description }}</p>
         <div class="flex justify-end">
           <a href="" class="flex items-center">
-            <span class="font-semibold"> Conoce Más </span>
-            <nuxt-img src="/icons/arrow-dark-blue.svg" class="" />
+            <span class="font-semibold text-dark-blue"> Conoce Más </span>
+            <img src="~assets/icons/arrow-dark-blue.svg" class="" />
           </a>
         </div>
       </div>
@@ -27,13 +27,13 @@
 <script setup>
 const divisionsData = [
   {
-    logoPath: "/logos/LogoGrupoNutecES.svg",
+    logoPath: "~assets/logos/LogoNutecGroupEN.svg",
     description:
       "Soluciones Térmicas de Alto Rendimiento para tus Desafíos de Aislamiento",
     url: "/",
   },
   {
-    logoPath: "/logos/LogoNutecGroupEN.svg",
+    logoPath: "~assets/logos/LogoNutecGroupEN.svg",
     description:
       "Soluciones Térmicas de Alto Rendimiento para tus Desafíos de Aislamiento",
     url: "/",

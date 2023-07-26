@@ -1,0 +1,9 @@
+[[headers]]
+for = "/*"
+
+[headers.values]
+Access-Control-Allow-Origin = "*"
+X-Frame-Options = "SAMEORIGIN"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Content-Security-Policy = "default-src 'self' app.hubspot.com *.prismic.io info.nutecbickley.com ; font-src 'self' fast.wistia.com data:; media-src 'self' data: blob: * ; script-src-elem 'self' snap.licdn.com js.hs-scripts.com js.usemessages.com js.hsadspixel.net js.hs-banner.com js.hs-analytics.net *.nutecbickley.com pi.pardot.com *.hertzen.com prismic.io code.jquery.com fast.wistia.com static.cdn.prismic.io/prismic.min.js 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com *.hotjar.com; style-src 'self' 'unsafe-inline'; frame-ancestors 'self'; form-action 'self'; img-src 'self' *.hubspot.com/ *.cdn.prismic.io www.linkedin.com px.ads.linkedin.com data: *.wistia.com www.googletagmanager.com images.prismic.io ; connect-src 'self' getform.io cdn.linkedin.oribi.io api.hubapi.com api.hubspot.com *.litix.io *.wistia.com  https://*.hotjar.com https://*.hotjar.io wss://*.hotjar.com googletagmanager.com *.google-analytics.com *.prismic.io ; script-src 'self' 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval'; script-src-elem 'self' 'unsafe-inline' 'unsafe-hashes' 'unsafe-eval' application/javascript;"

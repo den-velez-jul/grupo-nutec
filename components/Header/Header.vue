@@ -5,9 +5,9 @@
     </div>
     <div
       class="px-6 py-[10px] flex items-center justify-between md:px-[50px] lg:px-[75px] lg:py-3 xl:max-w-[1900px] 2xl:mx-auto 2xl:min-w-[1900px]">
-      <nuxt-img
+      <img
         class="mr-3"
-        src="/logos/LogoGrupoNutecES.svg"
+        src="~assets/logos/LogoGrupoNutecES.svg"
         alt="logo"
         width="51px"
         height="48px" />
@@ -26,16 +26,16 @@
         </ul>
       </nav>
       <div class="flex">
-        <nuxt-img
+        <img
           class="mr-3"
-          src="/icons/search.svg"
+          src="~assets/icons/search.svg"
           alt="logo"
           width="24px"
           height="24px" />
         <button @click="() => onShowMenu()">
-          <nuxt-img
+          <img
             class="lg:hidden"
-            src="/icons/menu.svg"
+            src="~assets/icons/menu.svg"
             alt="logo"
             width="24px"
             height="24px" />
