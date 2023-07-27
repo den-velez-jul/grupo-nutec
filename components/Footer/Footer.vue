@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="px-6 pt-6 pb-[80px] lg:h-[100px] lg:px-[100px] lg:py-[150px] md:py-[60px] md:px-[50px] text-dark-blue font-semibold">
+    class="px-6 pt-6 pb-[80px] text-dark-blue font-semibold md:px-[50px] lg:px-[100px] lg:py-[150px]">
     <div
       class="flex flex-col items-center md:grid lg:grid-cols-4 md:content-center md:grid-cols-2 md:grid-rows-2 lg:grid-rows-1 md:gap-y-[60px] lg:gap-y-0">
       <div>

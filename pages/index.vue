@@ -109,6 +109,26 @@
         </div>
       </div>
     </section>
+    <section
+      class="grid grid-rows-2 gap-y-10 md:grid-rows-1 md:grid-cols-2 md:gap-x-10 pb-[30px] md:pb-[40px] xl:pb-[50px]">
+      <CardArticule />
+      <CardArticule />
+    </section>
+    <section class="pb-[60px]">
+      <h4 class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+        Proximos Eventos
+      </h4>
+      <CardEvent />
+      <div class="mt-8 w-full">
+        <a href="/" class="flex items-center">
+          <span
+            class="font-founders-grosteskers font-semibold md:text-[20px] text-dark-blue">
+            Conoce eventos anteriores
+          </span>
+          <img src="/assets/icons/arrow-dark-blue.svg" class="" />
+        </a>
+      </div>
+    </section>
   </div>
 </template>
 
