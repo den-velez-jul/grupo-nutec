@@ -1,5 +1,5 @@
 <template>
-  <Hero />
+  <Hero :title="heroData.title" :cta-label="heroData.ctaLabel" />
   <div class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-[100px]">
     <Divisions />
     <section
@@ -11,30 +11,11 @@
         <Card />
       </div>
     </section>
-    <section class="py-[60px]">
-      <h4 class="text-dark-blue text-center xl:text-left xl:mb-[80px]">
+    <section class="py-[60px] bg-baby-blue">
+      <h4 class="text-dark-blue text-center lg:text-left lg:mb-[80px]">
         Esto es Grupo NUTEC
       </h4>
-      <div class="xl:grid xl:grid-cols-[50%_50%] xl:gap-x-10">
-        <div class="mb-[80px]">
-          <h1
-            class="text-dark-blue text-center mt-10 mb-5 xl:text-left xl:mt-0 xl:mb-10">
-            Líder mundial en el desarrollo de Soluciones Innovadoras en
-            Insulación Industria
-          </h1>
-          <div class="flex justify-center xl:justify-start">
-            <a href="" class="flex items-center text-dark-blue">
-              <span class="font-semibold md:text-[20px] xl:text-[30px]">
-                Conoce más sobre Grupo NUTEC
-              </span>
-              <img src="~assets/icons/arrow-dark-blue.svg" class="" />
-            </a>
-          </div>
-        </div>
-        <div>
-          <img src="~assets/images/dummy.png" class="w-full h-[430px]" />
-        </div>
-      </div>
+      <ArticleOne />
     </section>
     <section class="pb-[80px]">
       <p
@@ -137,6 +118,9 @@ const { client } = usePrismic();
 const { data: home } = await useAsyncData("home", () =>
   client.getByUID("home", "homepage")
 );
-</script>
 
-<script></script>
+const heroData = {
+  title: "Soluciones Innovadoras, Ingeniería de Vanguardia",
+  ctaLabel: "Conoce nuestras filiales",
+};
+</script>
