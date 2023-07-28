@@ -18,7 +18,7 @@
     </div>
     <img
       class="absolute left-0 right-0 w-full h-[600px] -z-10"
-      src="~assets/images/dummy.png" />
+      src="~assets/images/heroimage-background.png" />
   </section>
 </template>
 

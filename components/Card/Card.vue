@@ -10,8 +10,8 @@
         {{ data.paragraph }}
       </p>
       <a href="" :class="anchorCustomStyle">
-        <span class="font-semibold"> {{ data.anchorLabel }} </span>
-        <img src="~assets/icons/arrow-dark-blue.svg" class="" />
+        <span class="font-bold"> {{ data.anchorLabel }} </span>
+        <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </a>
     </div>
   </div>

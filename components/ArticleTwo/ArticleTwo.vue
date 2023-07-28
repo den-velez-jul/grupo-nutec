@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:grid lg:grid-cols-[45%_42%] lg:gap-x-10">
+  <div class="lg:grid lg:grid-cols-[55%_42%] lg:gap-x-10">
     <div class="mb-[80px]">
       <h1
         class="text-dark-blue text-center mt-10 mb-5 lg:text-left lg:mt-0 lg:mb-10">
@@ -21,10 +21,10 @@
       </p>
       <div class="flex justify-center lg:justify-start">
         <a href="" class="flex items-center text-dark-blue">
-          <span class="font-semibold md:text-[20px] xl:text-[30px]">
+          <span class="font-bold md:text-[20px] xl:text-[30px]">
             Conoce Más Sobre NUTEC Bickley
           </span>
-          <img src="~assets/icons/arrow-dark-blue.svg" class="" />
+          <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
       </div>
     </div>

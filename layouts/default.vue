@@ -3,8 +3,8 @@
 <template>
   <div>
     <Header />
+    <slot />
     <div class="max-w-[1900px] mx-auto">
-      <slot />
       <Footer />
     </div>
   </div>

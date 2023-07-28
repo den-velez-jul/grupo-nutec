@@ -10,8 +10,8 @@
       <a
         href=""
         class="flex w-full text-[20px] lg:text-[30px] xl:text-[30px] text-dark-blue">
-        <span class="font-semibold"> Conoce más </span>
-        <img src="~assets/icons/arrow-dark-blue.svg" class="" />
+        <span class="font-bold"> Conoce más </span>
+        <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </a>
     </div>
   </div>

@@ -1,10 +1,10 @@
 <template>
   <div :class="stylesClass">
     <a href="/" class="flex items-center">
-      <span class="font-founders-grosteskers font-semibold md:text-[20px]">
+      <span class="font-founders-grosteskers font-bold md:text-[20px]">
         {{ labelBtn }}
       </span>
-      <img :src="iconSelected" class="" />
+      <img :src="iconSelected" class="ml-3" />
     </a>
   </div>
 </template>

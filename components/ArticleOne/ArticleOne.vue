@@ -8,10 +8,10 @@
       </h1>
       <div class="flex justify-center lg:justify-start">
         <a href="" class="flex items-center text-dark-blue">
-          <span class="font-semibold md:text-[20px] xl:text-[30px]">
+          <span class="font-bold md:text-[20px] xl:text-[30px]">
             Conoce más sobre Grupo NUTEC
           </span>
-          <img src="~assets/icons/arrow-dark-blue.svg" class="" />
+          <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
       </div>
     </div>

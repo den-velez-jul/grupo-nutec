@@ -9,7 +9,7 @@
         {{ btn }}
       </span>
       <span>
-        <img src="~assets/icons/arrow-dark-blue.svg" />
+        <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </span>
     </button>
     <div class="flex justify-end bg-dark-blue px-[50px] py-[40px]">

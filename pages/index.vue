@@ -1,7 +1,17 @@
 <template>
   <Hero :title="heroData.title" :cta-label="heroData.ctaLabel" />
-  <div class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-[100px]">
+  <div class="bg-baby-blue w-full">
     <Divisions />
+    <section
+      class="py-[60px] bg-baby-blue xl:max-w-[1720px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
+      <h4 class="text-dark-blue text-center lg:text-left lg:mb-[80px]">
+        Esto es Grupo NUTEC
+      </h4>
+      <ArticleOne />
+    </section>
+  </div>
+  <div
+    class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1720px] xl:px-[100px]">
     <section
       class="pb-[80px] pt-[60px] md:pb-[100px] md:pt-[70px] lg:pt-[150px]">
       <h4 class="text-center text-dark-blue">Un Grupo, Dos Divisiones</h4>
@@ -10,12 +20,6 @@
         <Card />
         <Card />
       </div>
-    </section>
-    <section class="py-[60px] bg-baby-blue">
-      <h4 class="text-dark-blue text-center lg:text-left lg:mb-[80px]">
-        Esto es Grupo NUTEC
-      </h4>
-      <ArticleOne />
     </section>
     <section class="pb-[80px]">
       <p
@@ -84,7 +88,7 @@
               <span class="font-semibold md:text-[20px] xl:text-[30px]">
                 Leer Articulos
               </span>
-              <img src="~assets/icons/arrow-dark-blue.svg" class="" />
+              <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
             </a>
           </div>
         </div>
