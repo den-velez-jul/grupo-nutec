@@ -5,11 +5,11 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
- * Content for Nutec Division documents
+ * Content for Nutec Divisions documents
  */
 interface AboutUsDocumentData {
   /**
-   * Breadcrumb Title field in *Nutec Division*
+   * Breadcrumb Title field in *Nutec Divisions*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -20,7 +20,7 @@ interface AboutUsDocumentData {
   breadcrumb_title: prismic.KeyTextField;
 
   /**
-   * Top Label field in *Nutec Division*
+   * Top Label field in *Nutec Divisions*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -31,7 +31,7 @@ interface AboutUsDocumentData {
   top_label: prismic.RichTextField;
 
   /**
-   * Top Title field in *Nutec Division*
+   * Top Title field in *Nutec Divisions*
    *
    * - **Field Type**: Title
    * - **Placeholder**: *None*
@@ -42,7 +42,7 @@ interface AboutUsDocumentData {
   top_title: prismic.TitleField;
 
   /**
-   * Image or Video field in *Nutec Division*
+   * Image or Video field in *Nutec Divisions*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
@@ -54,7 +54,7 @@ interface AboutUsDocumentData {
   image_or_video: prismic.BooleanField;
 
   /**
-   * Imagen fondo field in *Nutec Division*
+   * Imagen fondo field in *Nutec Divisions*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -65,7 +65,7 @@ interface AboutUsDocumentData {
   imagen_fondo: prismic.ImageField<never>;
 
   /**
-   * Video field in *Nutec Division*
+   * Video field in *Nutec Divisions*
    *
    * - **Field Type**: Link to Media
    * - **Placeholder**: *None*
@@ -75,29 +75,18 @@ interface AboutUsDocumentData {
    */
   video: prismic.LinkToMediaField
   /**
-   * Label field in *Nutec Division*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.label
-   * - **Tab**: Descripcion
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  label: prismic.KeyTextField;
-
-  /**
-   * Titulo field in *Nutec Division*
+   * Titulo field in *Nutec Divisions*
    *
    * - **Field Type**: Title
    * - **Placeholder**: Ej: Especialistas de diseño
    * - **API ID Path**: about_us.titulo
    * - **Tab**: Descripcion
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
+   */;
   titulo: prismic.TitleField;
 
   /**
-   * Descripcion field in *Nutec Division*
+   * Descripcion field in *Nutec Divisions*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: Descripcion del titulo
@@ -108,7 +97,7 @@ interface AboutUsDocumentData {
   descripcion: prismic.RichTextField;
 
   /**
-   * CTA Label field in *Nutec Division*
+   * CTA Label field in *Nutec Divisions*
    *
    * - **Field Type**: Text
    * - **Placeholder**: Ej: Conoce mas sobre Bickley
@@ -119,7 +108,7 @@ interface AboutUsDocumentData {
   cta_label: prismic.KeyTextField;
 
   /**
-   * CTA Link field in *Nutec Division*
+   * CTA Link field in *Nutec Divisions*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -130,7 +119,7 @@ interface AboutUsDocumentData {
   cta_link: prismic.LinkField;
 
   /**
-   * Video or image field in *Nutec Division*
+   * Video or image field in *Nutec Divisions*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
@@ -142,7 +131,7 @@ interface AboutUsDocumentData {
   video_or_image: prismic.BooleanField;
 
   /**
-   * Imagen field in *Nutec Division*
+   * Imagen field in *Nutec Divisions*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -153,7 +142,7 @@ interface AboutUsDocumentData {
   imagen: prismic.ImageField<never>;
 
   /**
-   * Video field in *Nutec Division*
+   * Video field in *Nutec Divisions*
    *
    * - **Field Type**: Link to Media
    * - **Placeholder**: *None*
@@ -163,7 +152,7 @@ interface AboutUsDocumentData {
    */
   description_video: prismic.LinkToMediaField
   /**
-   * meta keyword field in *Nutec Division*
+   * meta keyword field in *Nutec Divisions*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -174,7 +163,7 @@ interface AboutUsDocumentData {
   meta_keyword: prismic.KeyTextField;
 
   /**
-   * meta title field in *Nutec Division*
+   * meta title field in *Nutec Divisions*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -185,7 +174,7 @@ interface AboutUsDocumentData {
   meta_title: prismic.KeyTextField;
 
   /**
-   * meta description field in *Nutec Division*
+   * meta description field in *Nutec Divisions*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -196,7 +185,7 @@ interface AboutUsDocumentData {
   meta_description: prismic.KeyTextField;
 
   /**
-   * image field in *Nutec Division*
+   * image field in *Nutec Divisions*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -208,7 +197,7 @@ interface AboutUsDocumentData {
 }
 
 /**
- * Nutec Division document from Prismic
+ * Nutec Divisions document from Prismic
  *
  * - **API ID**: `about_us`
  * - **Repeatable**: `true`
@@ -1430,7 +1419,659 @@ export type GrupoNutecDocument<Lang extends string = string> =
     Lang
   >;
 
-interface HomeDocumentData {}
+/**
+ * Item in *Home → Top Slides*
+ */
+export interface HomeDocumentDataTopSlidesItem {
+  /**
+   * Image field in *Home → Top Slides*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.top_slides[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Image or Video field in *Home → Top Slides*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: home.top_slides[].image_or_video
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  image_or_video: prismic.BooleanField;
+
+  /**
+   * Video field in *Home → Top Slides*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.top_slides[].video
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  video: prismic.LinkField;
+}
+
+type HomeDocumentDataSlicesSlice = MiniCardSlice;
+
+/**
+ * Item in *Home → group_news*
+ */
+export interface HomeDocumentDataGroupNewsItem {
+  /**
+   * title field in *Home → group_news*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_news[].title1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title1: prismic.TitleField;
+
+  /**
+   * author field in *Home → group_news*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_news[].author
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  author: prismic.RichTextField;
+
+  /**
+   * date field in *Home → group_news*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_news[].date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * description-news field in *Home → group_news*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_news[].description-news
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  "description-news": prismic.RichTextField;
+
+  /**
+   * label_button field in *Home → group_news*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_news[].label_button
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label_button: prismic.KeyTextField;
+
+  /**
+   * link_button field in *Home → group_news*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_news[].link_button
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_button: prismic.LinkField;
+}
+
+/**
+ * Item in *Home → group_division_fibras*
+ */
+export interface HomeDocumentDataGroupDivisionFibrasItem {
+  /**
+   * image_fibras field in *Home → group_division_fibras*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_division_fibras[].image_fibras
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_fibras: prismic.ImageField<never>;
+
+  /**
+   * title_fibras field in *Home → group_division_fibras*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_division_fibras[].title_fibras
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title_fibras: prismic.TitleField;
+
+  /**
+   * description_fibras field in *Home → group_division_fibras*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_division_fibras[].description_fibras
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description_fibras: prismic.RichTextField;
+
+  /**
+   * cta_button field in *Home → group_division_fibras*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_division_fibras[].cta_button
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_button: prismic.KeyTextField;
+
+  /**
+   * cta_button_link field in *Home → group_division_fibras*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_division_fibras[].cta_button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_button_link: prismic.LinkField;
+}
+
+/**
+ * Item in *Home → group_bickley*
+ */
+export interface HomeDocumentDataGroupBickleyItem {
+  /**
+   * image_bickley field in *Home → group_bickley*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_bickley[].image_bickley
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_bickley: prismic.ImageField<never>;
+
+  /**
+   * title_bickley field in *Home → group_bickley*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_bickley[].title_bickley
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title_bickley: prismic.TitleField;
+
+  /**
+   * description_bickley field in *Home → group_bickley*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_bickley[].description_bickley
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description_bickley: prismic.RichTextField;
+
+  /**
+   * label_bickley field in *Home → group_bickley*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_bickley[].label_bickley
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label_bickley: prismic.KeyTextField;
+
+  /**
+   * link_bickley_cta field in *Home → group_bickley*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_bickley[].link_bickley_cta
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_bickley_cta: prismic.LinkField;
+}
+
+/**
+ * Item in *Home → compañias*
+ */
+export interface HomeDocumentDataCompaniasItem {
+  /**
+   * imagen field in *Home → compañias*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.companias[].imagen
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagen: prismic.ImageField<never>;
+
+  /**
+   * description field in *Home → compañias*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.companias[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * CTA Label field in *Home → compañias*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Ej: Visita el sitio web de Nutec bickley
+   * - **API ID Path**: home.companias[].cta_label1
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_label1: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Home → compañias*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.companias[].cta_link1
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link1: prismic.LinkField;
+}
+
+/**
+ * Item in *Home → group*
+ */
+export interface HomeDocumentDataGroupItem {
+  /**
+   * image about field in *Home → group*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group[].image_about
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_about: prismic.ImageField<never>;
+
+  /**
+   * text nutec field in *Home → group*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group[].text_nutec
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text_nutec: prismic.RichTextField;
+
+  /**
+   * title field in *Home → group*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group[].title1
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title1: prismic.TitleField;
+
+  /**
+   * label cta field in *Home → group*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group[].label_cta
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label_cta: prismic.KeyTextField;
+
+  /**
+   * link cta field in *Home → group*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group[].link_cta
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_cta: prismic.LinkField;
+}
+
+/**
+ * Content for Home documents
+ */
+interface HomeDocumentData {
+  /**
+   * Top Title field in *Home*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Ingresa un titulo para la sección
+   * - **API ID Path**: home.top_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  top_title: prismic.TitleField;
+
+  /**
+   * CTA Label field in *Home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.cta_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  cta_label: prismic.KeyTextField;
+
+  /**
+   * CTA Link field in *Home*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: Agregar link de enlace al CTA
+   * - **API ID Path**: home.cta_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link: prismic.LinkField;
+
+  /**
+   * Top Slides field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.top_slides[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  top_slides: prismic.GroupField<Simplify<HomeDocumentDataTopSlidesItem>>;
+
+  /**
+   * Slice Zone field in *Home*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<HomeDocumentDataSlicesSlice>
+  /**
+   * Articles Title field in *Home*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Title
+   * - **API ID Path**: home.articles_title
+   * - **Tab**: Content
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  articles_title: prismic.TitleField;
+
+  /**
+   * group_news field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_news[]
+   * - **Tab**: Content
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  group_news: prismic.GroupField<Simplify<HomeDocumentDataGroupNewsItem>>;
+
+  /**
+   * group_division_fibras field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_division_fibras[]
+   * - **Tab**: Content
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  group_division_fibras: prismic.GroupField<
+    Simplify<HomeDocumentDataGroupDivisionFibrasItem>
+  >;
+
+  /**
+   * group_bickley field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group_bickley[]
+   * - **Tab**: Content
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  group_bickley: prismic.GroupField<Simplify<HomeDocumentDataGroupBickleyItem>>;
+
+  /**
+   * link_explore_articles field in *Home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.link_explore_articles
+   * - **Tab**: Content
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_explore_articles: prismic.KeyTextField;
+
+  /**
+   * link_articles field in *Home*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.link_articles
+   * - **Tab**: Content
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_articles: prismic.LinkField
+  /**
+   * Events Title field in *Home*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Upcoming Events
+   * - **API ID Path**: home.events_title
+   * - **Tab**: Events
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  events_title: prismic.TitleField;
+
+  /**
+   * Events CTA Label field in *Home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: View Past Events
+   * - **API ID Path**: home.events_cta_label
+   * - **Tab**: Events
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  events_cta_label: prismic.KeyTextField;
+
+  /**
+   * Events CTA Link field in *Home*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.events_cta_link
+   * - **Tab**: Events
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  events_cta_link: prismic.LinkField
+  /**
+   * titulo compañias field in *Home*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: Titulo
+   * - **API ID Path**: home.companies_title
+   * - **Tab**: Compañias
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  companies_title: prismic.TitleField;
+
+  /**
+   * compañias field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.companias[]
+   * - **Tab**: Compañias
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  companias: prismic.GroupField<Simplify<HomeDocumentDataCompaniasItem>>
+  /**
+   * Meta titulo field in *Home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Meta titulo
+   * - **API ID Path**: home.meta_titulo
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_titulo: prismic.KeyTextField;
+
+  /**
+   * Meta descripcion field in *Home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Meta descripcion
+   * - **API ID Path**: home.meta_descripcion
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_descripcion: prismic.KeyTextField;
+
+  /**
+   * Meta keyword field in *Home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.meta_keyword
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_keyword: prismic.KeyTextField;
+
+  /**
+   * Meta imagen field in *Home*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.meta_imagen
+   * - **Tab**: SEO
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_imagen: prismic.ImageField<never>
+  /**
+   * title field in *Home*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.title
+   * - **Tab**: Shop Nutec
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  title: prismic.TitleField;
+
+  /**
+   * description shop field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.description_shop
+   * - **Tab**: Shop Nutec
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description_shop: prismic.RichTextField;
+
+  /**
+   * CTA Label field in *Home*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.events_cta_label1
+   * - **Tab**: Shop Nutec
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  events_cta_label1: prismic.KeyTextField;
+
+  /**
+   * CTA LINK field in *Home*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.cta_link1
+   * - **Tab**: Shop Nutec
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  cta_link1: prismic.LinkField;
+
+  /**
+   * Image field in *Home*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.image
+   * - **Tab**: Shop Nutec
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>
+  /**
+   * group field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.group[]
+   * - **Tab**: About US Nutec
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */;
+  group: prismic.GroupField<Simplify<HomeDocumentDataGroupItem>>
+  /**
+   * description top label field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.descriptionTopLabel
+   * - **Tab**: Descripcion
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  descriptionTopLabel: prismic.RichTextField;
+
+  /**
+   * description title field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.descriptionTitle
+   * - **Tab**: Descripcion
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descriptionTitle: prismic.RichTextField;
+
+  /**
+   * description link field in *Home*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.descriptionLink
+   * - **Tab**: Descripcion
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  descriptionLink: prismic.LinkField;
+
+  /**
+   * descriptionLinkLabel field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.descriptionLinkLabel
+   * - **Tab**: Descripcion
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descriptionLinkLabel: prismic.RichTextField;
+
+  /**
+   * descriptionImage field in *Home*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.descriptionImage
+   * - **Tab**: Descripcion
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  descriptionImage: prismic.ImageField<never>;
+}
 
 /**
  * Home document from Prismic
@@ -1442,7 +2083,7 @@ interface HomeDocumentData {}
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
+  prismic.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 
 interface MenuFooterDocumentData {}
 
@@ -3358,6 +3999,81 @@ export type AllDocumentTypes =
   | PrivacyPolicyDocument
   | SearchDocument;
 
+/**
+ * Primary content in *MiniCard → Items*
+ */
+export interface MiniCardSliceDefaultItem {
+  /**
+   * logoImg field in *MiniCard → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mini_card.items[].logoImg
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logoImg: prismic.ImageField<never>;
+
+  /**
+   * description field in *MiniCard → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mini_card.items[].description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+
+  /**
+   * url field in *MiniCard → Items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mini_card.items[].url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField;
+
+  /**
+   * anchorLabel field in *MiniCard → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: mini_card.items[].anchorLabel
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  anchorLabel: prismic.RichTextField;
+}
+
+/**
+ * Default variation for MiniCard Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MiniCardSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<MiniCardSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *MiniCard*
+ */
+type MiniCardSliceVariation = MiniCardSliceDefault;
+
+/**
+ * MiniCard Shared Slice
+ *
+ * - **API ID**: `mini_card`
+ * - **Description**: MiniCard
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MiniCardSlice = prismic.SharedSlice<
+  "mini_card",
+  MiniCardSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -3401,6 +4117,9 @@ declare module "@prismicio/client" {
       SearchDocument,
       SearchDocumentData,
       AllDocumentTypes,
+      MiniCardSlice,
+      MiniCardSliceVariation,
+      MiniCardSliceDefault,
     };
   }
 }

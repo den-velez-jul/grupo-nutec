@@ -27,45 +27,23 @@
     "Career Feed": {
       "career_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Career title"
-        }
+        "config": { "single": "heading2", "label": "Career title" }
       },
       "career_description": {
         "type": "StructuredText",
-        "config": {
-          "multi": "paragraph,strong",
-          "label": "career description"
-        }
+        "config": { "multi": "paragraph,strong", "label": "career description" }
       }
     },
     "SEO": {
-      "meta_keyword": {
-        "type": "Text",
-        "config": {
-          "label": "meta keyword"
-        }
-      },
-      "meta_title": {
-        "type": "Text",
-        "config": {
-          "label": "Meta title"
-        }
-      },
+      "meta_keyword": { "type": "Text", "config": { "label": "meta keyword" } },
+      "meta_title": { "type": "Text", "config": { "label": "Meta title" } },
       "meta_description": {
         "type": "Text",
-        "config": {
-          "label": "meta description"
-        }
+        "config": { "label": "meta description" }
       },
       "image1": {
         "type": "Image",
-        "config": {
-          "constraint": {},
-          "thumbnails": [],
-          "label": "image"
-        }
+        "config": { "constraint": {}, "thumbnails": [], "label": "image" }
       }
     }
   }

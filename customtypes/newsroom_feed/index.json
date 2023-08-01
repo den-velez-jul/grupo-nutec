@@ -15,9 +15,7 @@
       },
       "breadcrumb_title": {
         "type": "Text",
-        "config": {
-          "label": "Breadcrumb Title"
-        }
+        "config": { "label": "Breadcrumb Title" }
       },
       "top_label": {
         "type": "StructuredText",
@@ -29,26 +27,17 @@
       },
       "main_featured_post": {
         "type": "Link",
-        "config": {
-          "select": "document",
-          "label": "Main Featured Post"
-        }
+        "config": { "select": "document", "label": "Main Featured Post" }
       },
       "main_cta_label": {
         "type": "Text",
-        "config": {
-          "label": "Main CTA Label",
-          "placeholder": "Main CTA Label"
-        }
+        "config": { "label": "Main CTA Label", "placeholder": "Main CTA Label" }
       }
     },
     "Eventos": {
       "event_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "title event"
-        }
+        "config": { "single": "heading2", "label": "title event" }
       },
       "events_cta_label": {
         "type": "Text",
@@ -59,19 +48,13 @@
       },
       "events_cta_link": {
         "type": "Link",
-        "config": {
-          "label": "Events CTA Link",
-          "select": null
-        }
+        "config": { "label": "Events CTA Link", "select": null }
       }
     },
     "articles and editorials": {
       "articles_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Articles Title"
-        }
+        "config": { "single": "heading2", "label": "Articles Title" }
       },
       "featured_article": {
         "type": "Link",
@@ -83,50 +66,27 @@
       },
       "featured_article_cta_label": {
         "type": "Text",
-        "config": {
-          "label": "Featured Article CTA Label"
-        }
+        "config": { "label": "Featured Article CTA Label" }
       },
       "articles_cta_label": {
         "type": "Text",
-        "config": {
-          "label": "Articles CTA Label"
-        }
+        "config": { "label": "Articles CTA Label" }
       },
       "articles_cta_link": {
         "type": "Link",
-        "config": {
-          "label": "Articles CTA Link",
-          "select": null
-        }
+        "config": { "label": "Articles CTA Link", "select": null }
       }
     },
     "SEO": {
-      "meta_keyword": {
-        "type": "Text",
-        "config": {
-          "label": "meta keyword"
-        }
-      },
-      "meta_title": {
-        "type": "Text",
-        "config": {
-          "label": "meta title"
-        }
-      },
+      "meta_keyword": { "type": "Text", "config": { "label": "meta keyword" } },
+      "meta_title": { "type": "Text", "config": { "label": "meta title" } },
       "meta_description": {
         "type": "Text",
-        "config": {
-          "label": "meta description"
-        }
+        "config": { "label": "meta description" }
       },
       "meta_image": {
         "type": "Image",
-        "config": {
-          "constraint": {},
-          "thumbnails": [],
-          "label": "meta image"
-        }
+        "config": { "constraint": {}, "thumbnails": [], "label": "meta image" }
       }
     }
   }

@@ -10,30 +10,53 @@
       <h1 class="text-white text-center">
         {{ title }}
       </h1>
-      <NuxtLink
-        v-if="ctaLabel"
+      <PrismicLink
+        v-if="ctaLink"
+        :field="ctaLink"
         class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white font-bold xl:text-[30px] text-[16px] md:text-[20px]"
-        >{{ ctaLabel }}</NuxtLink
-      >
+        >{{ ctaLabel }}
+      </PrismicLink>
     </div>
+    <ClientOnly>
+      <div class="absolute left-0 right-0 w-full h-[600px] -z-10">
+        <iframe
+          class="w-full h-full"
+          v-if="videoOptions"
+          autoplay
+          :src="videoOptions"
+          title="Grupo Nutec"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; clipboard-write; encrypted-media"
+          preload="none"
+          muted
+          playsinline
+          loop></iframe>
+      </div>
+    </ClientOnly>
     <img
+      v-if="!video.url && image.url"
       class="absolute left-0 right-0 w-full h-[600px] -z-10"
-      src="~assets/images/heroimage-background.png" />
+      :src="image.url" />
   </section>
+  <div v-if="divisions" class="bg-baby-blue">
+    <Divisions :divisions="divisions[0].items" />
+  </div>
 </template>
 
 <script setup>
-// const title = "Soluciones Innovadoras, Ingeniería de Vanguardia";
-
-// const btnLabel = "Conoce nuestras filiales";
-
 const props = defineProps({
   ctaLabel: String,
-  ctaUrl: String,
+  ctaLink: String,
   title: String,
   topLabel: String,
-  image: String,
+  bgMedia: String,
+  divisions: String,
 });
 
-const { ctaLabel, ctaUrl, title, topLabel } = props;
+const { ctaLabel, ctaLink, title, topLabel, bgMedia, divisions } = props;
+
+const { image, video } = bgMedia[0];
+
+const videoOptions =
+  video.url +
+  "?controls=0&rel=0&version=3&autoplay=1&showinfo=0&loop=1&playsinline=1&amp;";
 </script>

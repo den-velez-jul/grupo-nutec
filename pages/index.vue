@@ -1,7 +1,11 @@
 <template>
-  <Hero :title="heroData.title" :cta-label="heroData.ctaLabel" />
+  <Hero
+    :title="hero.title"
+    :cta-label="hero.ctaLabel"
+    :cta-link="hero.ctaLink"
+    :bgMedia="hero.bgMedia"
+    :divisions="hero.divisions" />
   <div class="bg-baby-blue w-full">
-    <Divisions />
     <section
       class="py-[60px] bg-baby-blue xl:max-w-[1720px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
       <h4 class="text-dark-blue text-center lg:text-left lg:mb-[80px]">
@@ -123,8 +127,32 @@ const { data: home } = await useAsyncData("home", () =>
   client.getByUID("home", "homepage")
 );
 
-const heroData = {
-  title: "Soluciones Innovadoras, Ingeniería de Vanguardia",
-  ctaLabel: "Conoce nuestras filiales",
+const homeData = home.value.data;
+
+const hero = {
+  title: homeData.top_title[0].text,
+  ctaLabel: homeData.cta_label,
+  ctaLink: homeData.cta_link,
+  bgMedia: homeData.top_slides,
+  divisions: homeData.slices,
+};
+
+const description = {
+  topLabel: homeData.descriptionTopLabel,
+  title: homeData.descriptionTitle,
+  image: homeData.descriptionImage,
+  linkLabel: homeData.descriptionLinkLabel,
+  linkUrl: homeData.descriptionLink,
+};
+
+const nutecGroup = {
+  nutecFibras: homeData.group_division_fibras,
+  nutecBickley: homeData.group_division_bickey,
+};
+
+const nutecShop = {};
+
+const lastedNews = {
+  title: homeData.group_news[0].title1,
 };
 </script>

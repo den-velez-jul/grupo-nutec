@@ -32,10 +32,7 @@
       },
       "cta_label": {
         "type": "Text",
-        "config": {
-          "label": "CTA Label",
-          "placeholder": "Explore all..."
-        }
+        "config": { "label": "CTA Label", "placeholder": "Explore all..." }
       },
       "cta_link": {
         "type": "Link",

@@ -6,24 +6,14 @@
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "Unique Identifier"
-        }
-      },
+      "uid": { "type": "UID", "config": { "label": "Unique Identifier" } },
       "breadcrumb_title": {
         "type": "Text",
-        "config": {
-          "label": "Breadcrumb Title"
-        }
+        "config": { "label": "Breadcrumb Title" }
       },
       "title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading1",
-          "label": "Title"
-        }
+        "config": { "single": "heading1", "label": "Title" }
       },
       "description": {
         "type": "StructuredText",
@@ -34,31 +24,16 @@
       }
     },
     "SEO": {
-      "meta_keyword": {
-        "type": "Text",
-        "config": {
-          "label": "meta keyword"
-        }
-      },
-      "meta_title": {
-        "type": "Text",
-        "config": {
-          "label": "meta title"
-        }
-      },
+      "meta_keyword": { "type": "Text", "config": { "label": "meta keyword" } },
+      "meta_title": { "type": "Text", "config": { "label": "meta title" } },
       "meta_description": {
         "type": "Text",
-        "config": {
-          "label": "meta description"
-        }
+        "config": { "label": "meta description" }
       },
       "image": {
         "type": "Image",
         "config": {
-          "constraint": {
-            "width": 512,
-            "height": 512
-          },
+          "constraint": { "width": 512, "height": 512 },
           "thumbnails": [],
           "label": "image"
         }

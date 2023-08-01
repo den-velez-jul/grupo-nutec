@@ -4,7 +4,5 @@
   "format": "custom",
   "repeatable": true,
   "status": false,
-  "json": {
-    "Main": {}
-  }
+  "json": { "Main": {} }
 }

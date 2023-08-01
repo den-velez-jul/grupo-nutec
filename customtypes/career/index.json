@@ -50,23 +50,11 @@
       }
     },
     "SEO": {
-      "meta_keyword": {
-        "type": "Text",
-        "config": {
-          "label": "Meta keyword"
-        }
-      },
-      "meta_title": {
-        "type": "Text",
-        "config": {
-          "label": "meta title"
-        }
-      },
+      "meta_keyword": { "type": "Text", "config": { "label": "Meta keyword" } },
+      "meta_title": { "type": "Text", "config": { "label": "meta title" } },
       "meta_description": {
         "type": "Text",
-        "config": {
-          "label": "Meta description"
-        }
+        "config": { "label": "Meta description" }
       }
     }
   }

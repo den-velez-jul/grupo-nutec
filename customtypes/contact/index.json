@@ -8,16 +8,11 @@
     "Main": {
       "uid": {
         "type": "UID",
-        "config": {
-          "label": "Unique Identifier",
-          "placeholder": "slug-url"
-        }
+        "config": { "label": "Unique Identifier", "placeholder": "slug-url" }
       },
       "breadcrumb_title": {
         "type": "Text",
-        "config": {
-          "label": "Breadcrumb Title"
-        }
+        "config": { "label": "Breadcrumb Title" }
       },
       "top_label": {
         "type": "StructuredText",
@@ -37,20 +32,13 @@
       },
       "top_image": {
         "type": "Image",
-        "config": {
-          "constraint": {},
-          "thumbnails": [],
-          "label": "Top Image"
-        }
+        "config": { "constraint": {}, "thumbnails": [], "label": "Top Image" }
       }
     },
     "Form": {
       "form_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Form Title"
-        }
+        "config": { "single": "heading2", "label": "Form Title" }
       },
       "form_description": {
         "type": "StructuredText",
@@ -105,11 +93,7 @@
           "fields": {
             "icon": {
               "type": "Image",
-              "config": {
-                "constraint": {},
-                "thumbnails": [],
-                "label": "Icon"
-              }
+              "config": { "constraint": {}, "thumbnails": [], "label": "Icon" }
             },
             "text": {
               "type": "StructuredText",
@@ -125,31 +109,16 @@
       }
     },
     "SEO": {
-      "meta_keyword": {
-        "type": "Text",
-        "config": {
-          "label": "Meta keyword"
-        }
-      },
-      "meta_title": {
-        "type": "Text",
-        "config": {
-          "label": "Meta title"
-        }
-      },
+      "meta_keyword": { "type": "Text", "config": { "label": "Meta keyword" } },
+      "meta_title": { "type": "Text", "config": { "label": "Meta title" } },
       "meta_description": {
         "type": "Text",
-        "config": {
-          "label": "Meta Description"
-        }
+        "config": { "label": "Meta Description" }
       },
       "imagen": {
         "type": "Image",
         "config": {
-          "constraint": {
-            "width": 512,
-            "height": 512
-          },
+          "constraint": { "width": 512, "height": 512 },
           "thumbnails": [],
           "label": "Imagen"
         }
@@ -186,10 +155,7 @@
             },
             "sub_companias": {
               "type": "StructuredText",
-              "config": {
-                "single": "heading3",
-                "label": "sub compañias"
-              }
+              "config": { "single": "heading3", "label": "sub compañias" }
             },
             "label_sub_companias": {
               "type": "StructuredText",
@@ -223,31 +189,19 @@
     "Map": {
       "map_label": {
         "type": "StructuredText",
-        "config": {
-          "single": "paragraph",
-          "label": "Map Label"
-        }
+        "config": { "single": "paragraph", "label": "Map Label" }
       },
       "nutec_inc_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Nutec Inc Title"
-        }
+        "config": { "single": "heading2", "label": "Nutec Inc Title" }
       },
       "nutec_inc_location": {
         "type": "StructuredText",
-        "config": {
-          "single": "paragraph",
-          "label": "Nutec Inc Location"
-        }
+        "config": { "single": "paragraph", "label": "Nutec Inc Location" }
       },
       "nutec_inc_subtitle": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading3",
-          "label": "Nutec Inc Subtitle"
-        }
+        "config": { "single": "heading3", "label": "Nutec Inc Subtitle" }
       },
       "nutec_inc_description": {
         "type": "StructuredText",
@@ -258,24 +212,15 @@
       },
       "nutec_fibras_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Nutec Fibras Title"
-        }
+        "config": { "single": "heading2", "label": "Nutec Fibras Title" }
       },
       "nutec_fibras_location": {
         "type": "StructuredText",
-        "config": {
-          "multi": "paragraph",
-          "label": "Nutec Fibras Location"
-        }
+        "config": { "multi": "paragraph", "label": "Nutec Fibras Location" }
       },
       "nutec_fibras_subtitle": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading3",
-          "label": "Nutec Fibras Subtitle"
-        }
+        "config": { "single": "heading3", "label": "Nutec Fibras Subtitle" }
       },
       "nutec_fibras_description": {
         "type": "StructuredText",
@@ -286,24 +231,15 @@
       },
       "nutec_npc_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Nutec NPC Title"
-        }
+        "config": { "single": "heading2", "label": "Nutec NPC Title" }
       },
       "nutec_npc_location": {
         "type": "StructuredText",
-        "config": {
-          "multi": "paragraph",
-          "label": "Nutec NPC Location"
-        }
+        "config": { "multi": "paragraph", "label": "Nutec NPC Location" }
       },
       "nutec_npc_subtitle": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading3",
-          "label": "Nutec NPC Subtitle"
-        }
+        "config": { "single": "heading3", "label": "Nutec NPC Subtitle" }
       },
       "nutec_npc_description": {
         "type": "StructuredText",
@@ -314,10 +250,7 @@
       },
       "nutec_procal_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Nutec Procal Title"
-        }
+        "config": { "single": "heading2", "label": "Nutec Procal Title" }
       },
       "nutec_procal_location": {
         "type": "StructuredText",
@@ -342,10 +275,7 @@
       },
       "nutec_ibar_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "Nutec Ibar Title"
-        }
+        "config": { "single": "heading2", "label": "Nutec Ibar Title" }
       },
       "nutec_ibar_location": {
         "type": "StructuredText",
@@ -356,10 +286,7 @@
       },
       "nutec_ibar_subtitle": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading3",
-          "label": "Nutec Ibar Subtitle"
-        }
+        "config": { "single": "heading3", "label": "Nutec Ibar Subtitle" }
       },
       "nutec_ibar_description": {
         "type": "StructuredText",

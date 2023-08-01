@@ -1,0 +1,54 @@
+{
+  "id": "mini_card",
+  "type": "SharedSlice",
+  "name": "MiniCard",
+  "description": "MiniCard",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "logoImg": {
+          "type": "Image",
+          "config": {
+            "label": "logoImg",
+            "constraint": { "width": 154, "height": 36 },
+            "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "url": {
+          "type": "Link",
+          "config": {
+            "label": "url",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "anchorLabel": {
+          "type": "StructuredText",
+          "config": {
+            "label": "anchorLabel",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -8,26 +8,18 @@
     "Main": {
       "uid": {
         "type": "UID",
-        "config": {
-          "label": "unique identifier",
-          "placeholder": "Agrega SLUG"
-        }
+        "config": { "label": "unique identifier", "placeholder": "Agrega SLUG" }
       },
       "top_title": {
         "type": "StructuredText",
         "config": {
-          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
-          "allowTargetBlank": true,
           "label": "Top Title",
-          "placeholder": "Ingresa un titulo para la sección"
+          "placeholder": "Ingresa un titulo para la sección",
+          "allowTargetBlank": true,
+          "single": "heading1"
         }
       },
-      "cta_label": {
-        "type": "Text",
-        "config": {
-          "label": "CTA Label"
-        }
-      },
+      "cta_label": { "type": "Text", "config": { "label": "CTA Label" } },
       "cta_link": {
         "type": "Link",
         "config": {
@@ -43,11 +35,7 @@
           "fields": {
             "image": {
               "type": "Image",
-              "config": {
-                "constraint": {},
-                "thumbnails": [],
-                "label": "Image"
-              }
+              "config": { "constraint": {}, "thumbnails": [], "label": "Image" }
             },
             "image_or_video": {
               "type": "Boolean",
@@ -69,6 +57,11 @@
           },
           "label": "Top Slides"
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": { "choices": { "mini_card": { "type": "SharedSlice" } } }
       }
     },
     "Content": {
@@ -86,10 +79,7 @@
           "fields": {
             "title1": {
               "type": "StructuredText",
-              "config": {
-                "single": "heading2",
-                "label": "title"
-              }
+              "config": { "single": "heading2", "label": "title" }
             },
             "author": {
               "type": "StructuredText",
@@ -98,12 +88,7 @@
                 "label": "author"
               }
             },
-            "date": {
-              "type": "Date",
-              "config": {
-                "label": "date"
-              }
-            },
+            "date": { "type": "Date", "config": { "label": "date" } },
             "description-news": {
               "type": "StructuredText",
               "config": {
@@ -113,16 +98,11 @@
             },
             "label_button": {
               "type": "Text",
-              "config": {
-                "label": "label_button"
-              }
+              "config": { "label": "label_button" }
             },
             "link_button": {
               "type": "Link",
-              "config": {
-                "label": "link_button",
-                "select": null
-              }
+              "config": { "label": "link_button", "select": null }
             }
           },
           "label": "group_news"
@@ -142,10 +122,7 @@
             },
             "title_fibras": {
               "type": "StructuredText",
-              "config": {
-                "single": "heading2",
-                "label": "title_fibras"
-              }
+              "config": { "single": "heading2", "label": "title_fibras" }
             },
             "description_fibras": {
               "type": "StructuredText",
@@ -156,16 +133,11 @@
             },
             "cta_button": {
               "type": "Text",
-              "config": {
-                "label": "cta_button"
-              }
+              "config": { "label": "cta_button" }
             },
             "cta_button_link": {
               "type": "Link",
-              "config": {
-                "label": "cta_button_link",
-                "select": null
-              }
+              "config": { "label": "cta_button_link", "select": null }
             }
           },
           "label": "group_division_fibras"
@@ -185,10 +157,7 @@
             },
             "title_bickley": {
               "type": "StructuredText",
-              "config": {
-                "single": "heading2",
-                "label": "title_bickley"
-              }
+              "config": { "single": "heading2", "label": "title_bickley" }
             },
             "description_bickley": {
               "type": "StructuredText",
@@ -199,16 +168,11 @@
             },
             "label_bickley": {
               "type": "Text",
-              "config": {
-                "label": "label_bickley"
-              }
+              "config": { "label": "label_bickley" }
             },
             "link_bickley_cta": {
               "type": "Link",
-              "config": {
-                "label": "link_bickley_cta",
-                "select": null
-              }
+              "config": { "label": "link_bickley_cta", "select": null }
             }
           },
           "label": "group_bickley"
@@ -216,16 +180,11 @@
       },
       "link_explore_articles": {
         "type": "Text",
-        "config": {
-          "label": "link_explore_articles"
-        }
+        "config": { "label": "link_explore_articles" }
       },
       "link_articles": {
         "type": "Link",
-        "config": {
-          "label": "link_articles",
-          "select": null
-        }
+        "config": { "label": "link_articles", "select": null }
       }
     },
     "Events": {
@@ -246,10 +205,7 @@
       },
       "events_cta_link": {
         "type": "Link",
-        "config": {
-          "label": "Events CTA Link",
-          "select": null
-        }
+        "config": { "label": "Events CTA Link", "select": null }
       }
     },
     "Compañias": {
@@ -303,10 +259,7 @@
     "SEO": {
       "meta_titulo": {
         "type": "Text",
-        "config": {
-          "label": "Meta titulo",
-          "placeholder": "Meta titulo"
-        }
+        "config": { "label": "Meta titulo", "placeholder": "Meta titulo" }
       },
       "meta_descripcion": {
         "type": "Text",
@@ -315,19 +268,11 @@
           "placeholder": "Meta descripcion"
         }
       },
-      "meta_keyword": {
-        "type": "Text",
-        "config": {
-          "label": "Meta keyword"
-        }
-      },
+      "meta_keyword": { "type": "Text", "config": { "label": "Meta keyword" } },
       "meta_imagen": {
         "type": "Image",
         "config": {
-          "constraint": {
-            "width": 512,
-            "height": 512
-          },
+          "constraint": { "width": 512, "height": 512 },
           "thumbnails": [],
           "label": "Meta imagen"
         }
@@ -336,10 +281,7 @@
     "Shop Nutec": {
       "title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading2",
-          "label": "title"
-        }
+        "config": { "single": "heading2", "label": "title" }
       },
       "description_shop": {
         "type": "StructuredText",
@@ -350,24 +292,15 @@
       },
       "events_cta_label1": {
         "type": "Text",
-        "config": {
-          "label": "CTA Label"
-        }
+        "config": { "label": "CTA Label" }
       },
       "cta_link1": {
         "type": "Link",
-        "config": {
-          "label": "CTA LINK",
-          "select": null
-        }
+        "config": { "label": "CTA LINK", "select": null }
       },
       "image": {
         "type": "Image",
-        "config": {
-          "constraint": {},
-          "thumbnails": [],
-          "label": "Image"
-        }
+        "config": { "constraint": {}, "thumbnails": [], "label": "Image" }
       }
     },
     "About US Nutec": {
@@ -385,33 +318,64 @@
             },
             "text_nutec": {
               "type": "StructuredText",
-              "config": {
-                "multi": "paragraph,strong",
-                "label": "text nutec"
-              }
+              "config": { "multi": "paragraph,strong", "label": "text nutec" }
             },
             "title1": {
               "type": "StructuredText",
-              "config": {
-                "single": "heading2",
-                "label": "title"
-              }
+              "config": { "single": "heading2", "label": "title" }
             },
-            "label_cta": {
-              "type": "Text",
-              "config": {
-                "label": "label cta"
-              }
-            },
+            "label_cta": { "type": "Text", "config": { "label": "label cta" } },
             "link_cta": {
               "type": "Link",
-              "config": {
-                "label": "link cta",
-                "select": null
-              }
+              "config": { "label": "link cta", "select": null }
             }
           },
           "label": "group"
+        }
+      }
+    },
+    "Descripcion": {
+      "descriptionTopLabel": {
+        "type": "StructuredText",
+        "config": {
+          "label": "description top label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "descriptionTitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "description title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "descriptionLink": {
+        "type": "Link",
+        "config": {
+          "label": "description link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "descriptionLinkLabel": {
+        "type": "StructuredText",
+        "config": {
+          "label": "descriptionLinkLabel",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "descriptionImage": {
+        "type": "Image",
+        "config": {
+          "label": "descriptionImage",
+          "constraint": {},
+          "thumbnails": []
         }
       }
     }
