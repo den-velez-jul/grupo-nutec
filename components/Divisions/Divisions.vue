@@ -14,12 +14,13 @@
       <div class="ml-3 lg:max-w-[224px]">
         <PrismicRichText :field="division.description" />
         <div class="flex justify-end">
-          <a :href="division.url" class="flex items-center">
-            <PrismicRichText
-              class="font-semibold text-dark-blue"
-              :field="division.anchorLabel" />
-            <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
-          </a>
+          <PrismicLink :field="division.url" class="flex items-center">
+            <span
+              class="font-bold text-[16px] md:text-[20px] xl:text-[20px] text-dark-blue">
+              <PrismicText :field="division.anchorLabel" />
+            </span>
+            <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3"
+          /></PrismicLink>
         </div>
       </div>
     </div>
@@ -32,6 +33,4 @@ const props = defineProps({
 });
 
 const { divisions } = props;
-
-console.log(divisions[0]);
 </script>

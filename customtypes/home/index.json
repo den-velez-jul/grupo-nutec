@@ -185,6 +185,14 @@
       "link_articles": {
         "type": "Link",
         "config": { "label": "link_articles", "select": null }
+      },
+      "image_article": {
+        "type": "Image",
+        "config": {
+          "label": "image article",
+          "constraint": {},
+          "thumbnails": []
+        }
       }
     },
     "Events": {
@@ -206,6 +214,32 @@
       "events_cta_link": {
         "type": "Link",
         "config": { "label": "Events CTA Link", "select": null }
+      },
+      "event_top_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "event top label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "event_date_start": {
+        "type": "Date",
+        "config": { "label": "date start", "placeholder": "" }
+      },
+      "event_date_end": {
+        "type": "Date",
+        "config": { "label": "date end", "placeholder": "" }
+      },
+      "event_place": {
+        "type": "StructuredText",
+        "config": {
+          "label": "event place",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       }
     },
     "Compañias": {
@@ -279,24 +313,36 @@
       }
     },
     "Shop Nutec": {
-      "title": {
-        "type": "StructuredText",
-        "config": { "single": "heading2", "label": "title" }
-      },
-      "description_shop": {
+      "shop_title": {
         "type": "StructuredText",
         "config": {
-          "multi": "paragraph,strong,hyperlink,image",
-          "label": "description shop"
+          "label": "title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "heading2"
         }
       },
-      "events_cta_label1": {
-        "type": "Text",
-        "config": { "label": "CTA Label" }
+      "shop_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "description shop",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,hyperlink,image"
+        }
       },
-      "cta_link1": {
+      "shop_cta_label": {
+        "type": "Text",
+        "config": { "label": "CTA Label", "placeholder": "" }
+      },
+      "shop_cta_link": {
         "type": "Link",
-        "config": { "label": "CTA LINK", "select": null }
+        "config": {
+          "label": "CTA LINK",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "select": null
+        }
       },
       "image": {
         "type": "Image",

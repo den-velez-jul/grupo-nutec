@@ -1856,7 +1856,18 @@ interface HomeDocumentData {
    * - **Tab**: Content
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link_articles: prismic.LinkField
+  link_articles: prismic.LinkField;
+
+  /**
+   * image article field in *Home*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.image_article
+   * - **Tab**: Content
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_article: prismic.ImageField<never>
   /**
    * Events Title field in *Home*
    *
@@ -1888,7 +1899,51 @@ interface HomeDocumentData {
    * - **Tab**: Events
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  events_cta_link: prismic.LinkField
+  events_cta_link: prismic.LinkField;
+
+  /**
+   * event top label field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.event_top_label
+   * - **Tab**: Events
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  event_top_label: prismic.RichTextField;
+
+  /**
+   * date start field in *Home*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.event_date_start
+   * - **Tab**: Events
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  event_date_start: prismic.DateField;
+
+  /**
+   * date end field in *Home*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.event_date_end
+   * - **Tab**: Events
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  event_date_end: prismic.DateField;
+
+  /**
+   * event place field in *Home*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.event_place
+   * - **Tab**: Events
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  event_place: prismic.RichTextField
   /**
    * titulo compañias field in *Home*
    *
@@ -1958,44 +2013,44 @@ interface HomeDocumentData {
    *
    * - **Field Type**: Title
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.title
+   * - **API ID Path**: home.shop_title
    * - **Tab**: Shop Nutec
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */;
-  title: prismic.TitleField;
+  shop_title: prismic.TitleField;
 
   /**
    * description shop field in *Home*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.description_shop
+   * - **API ID Path**: home.shop_description
    * - **Tab**: Shop Nutec
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description_shop: prismic.RichTextField;
+  shop_description: prismic.RichTextField;
 
   /**
    * CTA Label field in *Home*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.events_cta_label1
+   * - **API ID Path**: home.shop_cta_label
    * - **Tab**: Shop Nutec
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  events_cta_label1: prismic.KeyTextField;
+  shop_cta_label: prismic.KeyTextField;
 
   /**
    * CTA LINK field in *Home*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.cta_link1
+   * - **API ID Path**: home.shop_cta_link
    * - **Tab**: Shop Nutec
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  cta_link1: prismic.LinkField;
+  shop_cta_link: prismic.LinkField;
 
   /**
    * Image field in *Home*

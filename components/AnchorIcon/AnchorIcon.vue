@@ -1,6 +1,6 @@
 <template>
   <div :class="stylesClass">
-    <a href="/" class="flex items-center">
+    <a :href="urlTo" class="flex items-center">
       <span class="font-founders-grosteskers font-bold md:text-[20px]">
         {{ labelBtn }}
       </span>

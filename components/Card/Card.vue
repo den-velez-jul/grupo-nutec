@@ -1,16 +1,16 @@
 <template>
   <div class="flex flex-col bg-baby-blue">
     <img
-      src="~assets/images/dummy.png"
+      :src="companyProps.imagen.url"
       class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px]" />
     <div class="p-8">
       <h2 v-if="title" :class="titleCustomStyle">{{ title }}</h2>
-      <p
-        class="text-[20px] xl:text-[30px] font-founders-grosteskers font-bold text-dark-blue">
-        {{ data.paragraph }}
-      </p>
-      <a href="" :class="anchorCustomStyle">
-        <span class="font-bold"> {{ data.anchorLabel }} </span>
+      <PrismicText
+        :field="companyProps.description"
+        class="text-[20px] xl:text-[30px] font-founders-grosteskers font-bold text-dark-blue" />
+
+      <a :href="companyProps.cta_link1.url" :class="anchorCustomStyle">
+        <span class="font-bold"> {{ companyProps.cta_label1 }} </span>
         <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </a>
     </div>
@@ -19,33 +19,13 @@
 
 <script setup>
 const props = defineProps({
-  imagePath: String,
+  companyProps: String,
   title: String,
   redTitle: Boolean,
-  paragraph: String,
-  anchorLabel: String,
-  anchorLink: String,
   anchorLeft: Boolean,
 });
-const data = {
-  imagePath: "~assets/images/dummy.png",
-  title: "",
-  redTitle: false,
-  paragraph:
-    "NUTEC está transformando la Industria del Aislamiento Térmico a través de tecnologías innovadoras que mejoran la eficiencia y ayudan a compensar la huella de carbono.",
-  anchorLabel: "Conoce Más Sobre NUTEC",
-  anchorLink: "/",
-};
 
-const {
-  imagePath,
-  title,
-  redTitle,
-  paragraph,
-  anchorLabel,
-  anchorLink,
-  anchorLeft,
-} = props;
+const { companyProps, title, redTitle, anchorLeft } = props;
 
 const titleColorStyle = redTitle ? "text-[#B40023]" : "text-dark-blue";
 const archorPositionColor = anchorLeft ? "justify-start" : "justify-end";
