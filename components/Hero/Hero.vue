@@ -17,7 +17,7 @@
         >{{ ctaLabel }}
       </PrismicLink>
     </div>
-    <ClientOnly>
+    <ClientOnly v-if="video">
       <div class="absolute left-0 right-0 w-full h-[600px] -z-10">
         <iframe
           class="w-full h-full"

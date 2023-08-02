@@ -13,7 +13,7 @@
         height="48px" />
       <nav>
         <ul
-          class="hidden lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers font-semibold">
+          class="hidden lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers font-semibold text-dark-blue">
           <li>
             <button @click="onShowHeaderDetails()">Que hacemos</button>
           </li>
