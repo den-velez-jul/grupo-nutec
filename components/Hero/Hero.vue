@@ -7,19 +7,31 @@
         class="text-white uppercase font-founders-grosteskers font-bold mb-6 md:mb-[30px] md:text-[30px] lg:mb-[40px] xl:mb-[48px]"
         >{{ topLabel }}</span
       >
-      <h1 class="text-white text-center">
+      <h1 class="text-white text-center z-10">
         {{ title }}
       </h1>
       <PrismicLink
         v-if="ctaLink"
         :field="ctaLink"
-        class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white font-bold xl:text-[30px] text-[16px] md:text-[20px]"
+        class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white font-bold xl:text-[30px] text-[16px] md:text-[20px] z-10"
         >{{ ctaLabel }}
       </PrismicLink>
     </div>
-    <img
-      class="absolute left-0 right-0 w-full h-[600px] -z-10"
-      :src="image.url" />
+    <div
+      class="absolute left-0 right-0 w-full h-[600px] -z-8 opacity-[.8] bg-black"></div>
+    <div class="absolute left-0 right-0 w-full h-[600px] -z-10">
+      <video
+        v-if="video.url"
+        preload="none"
+        playsinline
+        muted
+        autoplay
+        loop
+        class="w-full">
+        <source :src="video.url" type="video/mp4" />
+        <img v-if="!video.url && image.url" :src="image.url" />
+      </video>
+    </div>
   </section>
   <div v-if="divisions" class="bg-baby-blue">
     <Divisions :divisions="divisions[0].items" />
