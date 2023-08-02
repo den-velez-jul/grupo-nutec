@@ -50,7 +50,7 @@
           </h2>
           <PrismicText
             :field="nutecShop.description"
-            class="mt-6 mb-14 font-bold md:mt-10 md:text-[20px]" />
+            class="mt-6 mb-14 font-bold md:mt-10 md:text-[20px] leading-[22px] lg:leading-[28px]" />
 
           <div class="flex justify-center md:justify-start">
             <PrismicLink
@@ -108,6 +108,9 @@
       class="grid grid-rows-2 gap-y-10 md:grid-rows-1 md:grid-cols-2 md:gap-x-10 pb-[30px] md:pb-[40px] xl:pb-[50px]">
       <CardArticule :cardArticleProps="divisionsNews.nutecFibras" />
       <CardArticule :cardArticleProps="divisionsNews.nutecBickley" />
+      <AnchorIcon
+        labelBtn="Explora Todos los Artículos y Editoriales"
+        class="mt-[50px]" />
     </section>
     <section class="pb-[60px] lg:px-5 xl:px-[225px]">
       <h4 class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
@@ -120,7 +123,7 @@
             class="font-founders-grosteskers font-semibold md:text-[20px] text-dark-blue">
             Conoce eventos anteriores
           </span>
-          <img src="/assets/icons/arrow-dark-blue.svg" class="" />
+          <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
       </div>
     </section>
