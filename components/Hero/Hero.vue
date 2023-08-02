@@ -18,6 +18,7 @@
       </PrismicLink>
     </div>
     <div
+      v-if="video.url"
       class="absolute left-0 right-0 w-full h-[600px] -z-8 opacity-[.8] bg-black"></div>
     <video
       v-if="video.url"
@@ -28,8 +29,12 @@
       loop
       class="w-full object-fill absolute left-0 right-0 h-[600px] -z-10">
       <source :src="video.url" type="video/mp4" />
-      <img v-if="!video.url && image.url" :src="image.url" />
     </video>
+    <div
+      v-if="!video.url && image.url"
+      class="absolute left-0 right-0 h-[600px] -z-10">
+      <img :src="image.url" class="w-full h-full" />
+    </div>
   </section>
   <div v-if="divisions" class="bg-baby-blue">
     <Divisions :divisions="divisions[0].items" />
