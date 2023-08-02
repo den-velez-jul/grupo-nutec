@@ -17,23 +17,7 @@
         >{{ ctaLabel }}
       </PrismicLink>
     </div>
-    <ClientOnly v-if="video">
-      <div class="absolute left-0 right-0 w-full h-[600px] -z-10">
-        <iframe
-          class="w-full h-full"
-          v-if="videoOptions"
-          autoplay
-          :src="videoOptions"
-          title="Grupo Nutec"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; clipboard-write; encrypted-media"
-          preload="none"
-          muted
-          playsinline
-          loop></iframe>
-      </div>
-    </ClientOnly>
     <img
-      v-if="!video.url && image.url"
       class="absolute left-0 right-0 w-full h-[600px] -z-10"
       :src="image.url" />
   </section>
