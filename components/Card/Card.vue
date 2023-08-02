@@ -19,7 +19,7 @@
 
 <script setup>
 const props = defineProps({
-  companyProps: String,
+  companyProps: Array,
   title: String,
   redTitle: Boolean,
   anchorLeft: Boolean,

@@ -109,11 +109,11 @@
       <CardArticule :cardArticleProps="divisionsNews.nutecFibras" />
       <CardArticule :cardArticleProps="divisionsNews.nutecBickley" />
     </section>
-    <section class="pb-[60px]">
+    <section class="pb-[60px] lg:px-5 xl:px-[225px]">
       <h4 class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
         Proximos Eventos
       </h4>
-      <CardEvent />
+      <CardEvent :cardEventProps="events" />
       <div class="mt-8 w-full">
         <a href="/" class="flex items-center">
           <span
@@ -183,10 +183,12 @@ const divisionsNews = {
 
 const events = {
   title: homeData.events_title,
-  //   topLabel: homeData.event_top_label,
-  //   : homeData.events_title,
-  //   title: homeData.events_title,
-  //   title: homeData.events_title,
+  topLabel: homeData.event_top_label,
+  place: homeData.event_place,
+  dateStart: homeData.event_date_start,
+  dateEnd: homeData.event_date_end,
+  ctaLabel: homeData.events_cta_label,
+  ctaLink: homeData.events_cta_link,
 };
-console.log(homeData.events_title);
+console.log(events.dateStart);
 </script>

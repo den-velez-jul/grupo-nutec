@@ -12,7 +12,9 @@
           fit="cover" />
       </div>
       <div class="ml-3 lg:max-w-[224px]">
-        <PrismicRichText :field="division.description" />
+        <PrismicText
+          :field="division.description"
+          class="text-[16px] md:leading-[20px] lg:text-[16px] xl:leading-[22px]" />
         <div class="flex justify-end">
           <PrismicLink :field="division.url" class="flex items-center">
             <span

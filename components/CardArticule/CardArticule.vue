@@ -29,5 +29,4 @@ const props = defineProps({
 });
 
 const { image, title, description, ctaLabel, ctaUrl } = props.cardArticleProps;
-console.log(props);
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <Hero :title="heroData.title" :top-label="heroData.topLabel" />
+  <!-- <Hero :title="heroData.title" :top-label="heroData.topLabel" />
   <div class="bg-baby-blue">
     <section
       class="py-[60px] xl:py-[100px] xl:max-w-[1720px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
@@ -43,12 +43,13 @@
         <Card title="Trenes de Combustible" anchorLeft />
       </div>
     </section>
-  </div>
+  </div> -->
+  <div>bickley</div>
 </template>
 
-<script setup>
+<!-- <script setup>
 const heroData = {
   title: "Soluciones Innovadoras, Ingeniería de Vanguardia",
   topLabel: "nutec bickley",
 };
-</script>
+</script> -->

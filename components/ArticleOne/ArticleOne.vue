@@ -8,7 +8,8 @@
       </h1>
       <div class="flex justify-center lg:justify-start">
         <PrismicLink :field="linkUrl" class="flex items-center text-dark-blue"
-          ><span class="font-bold md:text-[20px] xl:text-[30px]">
+          ><span
+            class="font-bold text-[16px] md:text-[20px] xl:text-[30px] font-founders-grosteskers">
             <PrismicText :field="linkLabel" />
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3"
@@ -16,7 +17,7 @@
       </div>
     </div>
     <div>
-      <img src="~assets/images/dummy.png" class="w-full h-[430px]" />
+      <img :src="image.url" class="w-full h-[430px]" />
     </div>
   </div>
 </template>
