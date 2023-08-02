@@ -19,19 +19,17 @@
     </div>
     <div
       class="absolute left-0 right-0 w-full h-[600px] -z-8 opacity-[.8] bg-black"></div>
-    <div class="absolute left-0 right-0 w-full h-[600px] -z-10">
-      <video
-        v-if="video.url"
-        preload="none"
-        playsinline
-        muted
-        autoplay
-        loop
-        class="w-full">
-        <source :src="video.url" type="video/mp4" />
-        <img v-if="!video.url && image.url" :src="image.url" />
-      </video>
-    </div>
+    <video
+      v-if="video.url"
+      preload="none"
+      playsinline
+      muted
+      autoplay
+      loop
+      class="w-full object-fill absolute left-0 right-0 h-[600px] -z-10">
+      <source :src="video.url" type="video/mp4" />
+      <img v-if="!video.url && image.url" :src="image.url" />
+    </video>
   </section>
   <div v-if="divisions" class="bg-baby-blue">
     <Divisions :divisions="divisions[0].items" />
