@@ -2,7 +2,7 @@
   <div class="flex flex-col bg-baby-blue">
     <img
       :src="companyProps.imagen.url"
-      class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px]" />
+      class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px] object-cover" />
     <div class="p-8">
       <h2 v-if="title" :class="titleCustomStyle">{{ title }}</h2>
       <PrismicText

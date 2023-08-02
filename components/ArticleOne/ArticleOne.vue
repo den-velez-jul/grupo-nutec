@@ -17,7 +17,7 @@
       </div>
     </div>
     <div>
-      <img :src="image.url" class="w-full h-[430px]" />
+      <img :src="image.url" class="w-full h-[430px] object-cover" />
     </div>
   </div>
 </template>

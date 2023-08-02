@@ -28,7 +28,7 @@ const stylesSS = "grid md:flex";
           :style="{ width: '160px' }"
           :src="item.logoImg.url"
           alt=""
-          class="w-[160px] h-full"
+          class="w-[160px] h-full object-cover"
           fit="cover" />
       </div>
       <div

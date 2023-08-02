@@ -40,7 +40,7 @@
         <div class="lg:col-start-2 lg:col-end-3">
           <img
             src="~assets/images/dummy2.png"
-            class="w-full h-[200px] md:h-[440px] lg:h-[100%]" />
+            class="w-full h-[200px] md:h-[440px] lg:h-[100%] object-cover" />
         </div>
         <div
           class="p-8 pt-6 bg-dark-blue text-white lg:py-[78px] lg:px-[74px] lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2 lg:flex lg:flex-col lg:justify-between xl:h-[760px]">
@@ -73,7 +73,7 @@
         <div class="lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
           <img
             :src="homeData.image_article.url"
-            class="h-[300px] md:h-[524px] w-full" />
+            class="h-[300px] md:h-[524px] w-full object-cover" />
         </div>
         <div
           class="lg:flex lg:flex-col lg:justify-between font-founders-grosteskers">
