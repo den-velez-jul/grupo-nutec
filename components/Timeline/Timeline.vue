@@ -101,8 +101,8 @@
         <div class="border-[1px] border-solid border-white w-[814px]" />
         <img src="~assets/icons/leaf.svg" class="ml-3" />
       </div>
-      <div class="flex h-full px-[154px] pb-[98px]">
-        <div class="flex flex-col items-center justify-between">
+      <div class="flex h-full px-[154px]">
+        <div class="flex flex-col items-center justify-between pb-[98px]">
           <PrismicText :field="futureDescription" class="text-center" />
           <PrismicText
             :field="futureLowerLabel"
