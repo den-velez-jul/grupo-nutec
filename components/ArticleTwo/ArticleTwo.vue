@@ -1,4 +1,9 @@
 <template>
+  <h4 v-if="topLabel">
+    <PrismicText
+      :field="topLabel"
+      class="font-founders-grosteskers mb-[80px] text-dark-blue text-center font-bold" />
+  </h4>
   <div class="lg:grid lg:grid-cols-[55%_42%] lg:gap-x-10">
     <div class="mb-[80px]">
       <h1
@@ -6,9 +11,9 @@
         <PrismicText :field="title" />
       </h1>
       <p class="my-10">
-        <PrismicText :field="description" />
+        <PrismicRichText :field="description" class="flex flex-col space-y-4" />
       </p>
-      <div class="flex justify-center lg:justify-start">
+      <div v-if="ctaLabel" class="flex justify-center lg:justify-start">
         <a :href="ctaLink" class="flex items-center text-dark-blue">
           <span class="font-bold md:text-[20px] xl:text-[30px]">
             {{ ctaLabel }}
@@ -31,8 +36,10 @@ const props = defineProps({
     ctaLabel: String,
     ctaLink: String,
     image: String,
+    topLabel: String,
   },
 });
 
-const { title, description, ctaLabel, ctaLink, image } = props.articleProps;
+const { title, description, ctaLabel, ctaLink, image, topLabel } =
+  props.articleProps;
 </script>

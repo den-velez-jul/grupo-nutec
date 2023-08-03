@@ -5,6 +5,76 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Item in *Nutec Divisions → purpose*
+ */
+export interface AboutUsDocumentDataPurposeItem {
+  /**
+   * purpose image field in *Nutec Divisions → purpose*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.purpose[].purpose_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  purpose_image: prismic.ImageField<never>;
+
+  /**
+   * purpose title field in *Nutec Divisions → purpose*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.purpose[].purpose_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  purpose_title: prismic.RichTextField;
+
+  /**
+   * purpose description field in *Nutec Divisions → purpose*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.purpose[].purpose_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  purpose_description: prismic.RichTextField;
+}
+
+/**
+ * Item in *Nutec Divisions → values*
+ */
+export interface AboutUsDocumentDataValuesItem {
+  /**
+   * values title field in *Nutec Divisions → values*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.values[].values_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  values_title: prismic.RichTextField;
+
+  /**
+   * values description field in *Nutec Divisions → values*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.values[].values_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  values_description: prismic.RichTextField;
+
+  /**
+   * values image field in *Nutec Divisions → values*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.values[].values_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  values_image: prismic.ImageField<never>;
+}
+
+/**
  * Content for Nutec Divisions documents
  */
 interface AboutUsDocumentData {
@@ -150,7 +220,18 @@ interface AboutUsDocumentData {
    * - **Tab**: Descripcion
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  description_video: prismic.LinkToMediaField
+  description_video: prismic.LinkToMediaField;
+
+  /**
+   * Top Label description field in *Nutec Divisions*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.top_label_description
+   * - **Tab**: Descripcion
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  top_label_description: prismic.RichTextField
   /**
    * meta keyword field in *Nutec Divisions*
    *
@@ -193,7 +274,28 @@ interface AboutUsDocumentData {
    * - **Tab**: SEO
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image: prismic.ImageField<never>;
+  image: prismic.ImageField<never>
+  /**
+   * purpose field in *Nutec Divisions*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.purpose[]
+   * - **Tab**: Values
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */;
+  purpose: prismic.GroupField<Simplify<AboutUsDocumentDataPurposeItem>>;
+
+  /**
+   * values field in *Nutec Divisions*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.values[]
+   * - **Tab**: Values
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  values: prismic.GroupField<Simplify<AboutUsDocumentDataValuesItem>>;
 }
 
 /**
@@ -3922,6 +4024,93 @@ export type PrivacyPolicyDocument<Lang extends string = string> =
   >;
 
 /**
+ * Content for product documents
+ */
+interface ProductDocumentData {
+  /**
+   * category field in *product*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.category
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  category: prismic.RichTextField;
+
+  /**
+   * product name field in *product*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.product_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  product_name: prismic.TitleField;
+
+  /**
+   * product description field in *product*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.product_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  product_description: prismic.RichTextField;
+
+  /**
+   * product cta label field in *product*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.product_cta_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  product_cta_label: prismic.RichTextField;
+
+  /**
+   * product cta link field in *product*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.product_cta_link
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  product_cta_link: prismic.LinkField;
+
+  /**
+   * producto Image field in *product*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.producto_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  producto_image: prismic.ImageField<never>;
+}
+
+/**
+ * product document from Prismic
+ *
+ * - **API ID**: `product`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProductDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ProductDocumentData>,
+    "product",
+    Lang
+  >;
+
+/**
  * Content for Search documents
  */
 interface SearchDocumentData {
@@ -4036,6 +4225,135 @@ interface SearchDocumentData {
 export type SearchDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<SearchDocumentData>, "search", Lang>;
 
+/**
+ * Item in *Timeline → range time*
+ */
+export interface TimelineDocumentDataRangeTimeItem {
+  /**
+   * timeline year field in *Timeline → range time*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.range_time[].timeline_year
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  timeline_year: prismic.RichTextField;
+
+  /**
+   * timeline description field in *Timeline → range time*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.range_time[].timeline_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  timeline_description: prismic.RichTextField;
+}
+
+/**
+ * Item in *Timeline → range time labels*
+ */
+export interface TimelineDocumentDataRangeTimeLabelsItem {
+  /**
+   * range time label field in *Timeline → range time labels*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.range_time_labels[].range_time_label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  range_time_label: prismic.RichTextField;
+}
+
+/**
+ * Content for Timeline documents
+ */
+interface TimelineDocumentData {
+  /**
+   * timeline title field in *Timeline*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.timeline_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  timeline_title: prismic.RichTextField;
+
+  /**
+   * range time field in *Timeline*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.range_time[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  range_time: prismic.GroupField<Simplify<TimelineDocumentDataRangeTimeItem>>;
+
+  /**
+   * range time labels field in *Timeline*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.range_time_labels[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  range_time_labels: prismic.GroupField<
+    Simplify<TimelineDocumentDataRangeTimeLabelsItem>
+  >;
+
+  /**
+   * timeline future label field in *Timeline*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.timeline_future_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  timeline_future_label: prismic.RichTextField;
+
+  /**
+   * timeline future description field in *Timeline*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.timeline_future_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  timeline_future_description: prismic.RichTextField;
+
+  /**
+   * timeline future low label field in *Timeline*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: timeline.timeline_future_low_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  timeline_future_low_label: prismic.RichTextField;
+}
+
+/**
+ * Timeline document from Prismic
+ *
+ * - **API ID**: `timeline`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type TimelineDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<TimelineDocumentData>,
+    "timeline",
+    Lang
+  >;
+
 export type AllDocumentTypes =
   | AboutUsDocument
   | ArticleDocument
@@ -4052,7 +4370,9 @@ export type AllDocumentTypes =
   | NutecDocument
   | PageDocument
   | PrivacyPolicyDocument
-  | SearchDocument;
+  | ProductDocument
+  | SearchDocument
+  | TimelineDocument;
 
 /**
  * Primary content in *MiniCard → Items*
@@ -4169,8 +4489,12 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PrivacyPolicyDocument,
       PrivacyPolicyDocumentData,
+      ProductDocument,
+      ProductDocumentData,
       SearchDocument,
       SearchDocumentData,
+      TimelineDocument,
+      TimelineDocumentData,
       AllDocumentTypes,
       MiniCardSlice,
       MiniCardSliceVariation,

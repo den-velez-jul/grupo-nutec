@@ -90,6 +90,15 @@
       "description_video": {
         "type": "Link",
         "config": { "select": "media", "label": "Video" }
+      },
+      "top_label_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Top Label description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       }
     },
     "SEO": {
@@ -102,6 +111,76 @@
       "image": {
         "type": "Image",
         "config": { "constraint": {}, "thumbnails": [], "label": "image" }
+      }
+    },
+    "Values": {
+      "purpose": {
+        "type": "Group",
+        "config": {
+          "label": "purpose",
+          "fields": {
+            "purpose_image": {
+              "type": "Image",
+              "config": {
+                "label": "purpose image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "purpose_title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "purpose title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "purpose_description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "purpose description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      },
+      "values": {
+        "type": "Group",
+        "config": {
+          "label": "values",
+          "fields": {
+            "values_title": {
+              "type": "StructuredText",
+              "config": {
+                "label": "values title",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "values_description": {
+              "type": "StructuredText",
+              "config": {
+                "label": "values description",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "values_image": {
+              "type": "Image",
+              "config": {
+                "label": "values image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
       }
     }
   }
