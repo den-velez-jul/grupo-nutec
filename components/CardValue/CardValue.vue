@@ -1,14 +1,15 @@
 <template>
-  <article>
-    <div>
-      <img src="~assets/icons/leaf.svg" class="" />
-      <h2>Misión</h2>
+  <article class="p-8 flex flex-col font-founders-grosteskers">
+    <div
+      class="flex justify-between lg:flex-row-reverse lg:justify-end lg:items-center">
+      <h2
+        class="text-[35px] text-dark-blue font-bold md:text-[50px] lg:text-[60px] lg:ml-5">
+        <PrismicText :field="title" />
+      </h2>
+      <img :src="icon.url" class="h-[48px] w-[52px]" />
     </div>
-    <p>
-      Ser un grupo de clase mundial en la fabricación de aislamientos de alta
-      temperatura, Hornos y Hornos, suministrando productos de alta calidad y un
-      servicio superior superando las expectativas de los empleados y
-      accionistas de nuestros clientes.
+    <p class="mt-[21.5px] font-founders-grosteskers">
+      <PrismicText :field="description" />
     </p>
   </article>
 </template>
@@ -16,7 +17,7 @@
 <script setup>
 const props = defineProps({
   title: String,
-  image: String,
+  icon: String,
   description: String,
 });
 
