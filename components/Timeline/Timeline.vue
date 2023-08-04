@@ -115,41 +115,59 @@
 
 <script setup>
 const props = defineProps({
-  timelineData: String,
+  timelineData: {
+    firstRangeUpper: Array,
+    firstRangeLower: Array,
+    secondRangeUpper: Array,
+    secondRangeLower: Array,
+    firstRangeLabel: String,
+    secondRangeLabel: String,
+    futureLabel: String,
+    futureDescription: String,
+    futureLowerLabel: String,
+  },
 });
 
-const { timelineData } = props;
+const {
+  firstRangeUpper,
+  firstRangeLower,
+  secondRangeUpper,
+  secondRangeLower,
+  firstRangeLabel,
+  secondRangeLabel,
+  futureLabel,
+  futureDescription,
+  futureLowerLabel,
+} = props.timelineData;
 
-console.log(timelineData);
+// const firstRange = [...timelineData.range_time.splice(0, 8)];
+// const secondRange = [...timelineData.range_time];
 
-const firstRange = [...timelineData.range_time.splice(0, 8)];
-const secondRange = [...timelineData.range_time];
+// const firstRangeUpper = [];
+// const firstRangeLower = [];
+// const secondRangeUpper = [];
+// const secondRangeLower = [];
+// const firstRangeLabel = timelineData.range_time_labels[0].range_time_label;
+// const secondRangeLabel = timelineData.range_time_labels[1].range_time_label;
+// const futureLabel = timelineData.timeline_future_label;
+// const futureDescription = timelineData.timeline_future_description;
+// const futureLowerLabel = timelineData.timeline_future_low_label;
 
-const firstRangeUpper = [];
-const firstRangeLower = [];
-const secondRangeUpper = [];
-const secondRangeLower = [];
-const firstRangeLabel = timelineData.range_time_labels[0].range_time_label;
-const secondRangeLabel = timelineData.range_time_labels[1].range_time_label;
-const futureLabel = timelineData.timeline_future_label;
-const futureDescription = timelineData.timeline_future_description;
-const futureLowerLabel = timelineData.timeline_future_low_label;
+// firstRange.forEach((item, index) => {
+//   const indexFixed = index + 1;
+//   if (indexFixed % 2 != 0) {
+//     firstRangeUpper.push(item);
+//   } else {
+//     firstRangeLower.push(item);
+//   }
+// });
 
-firstRange.forEach((item, index) => {
-  const indexFixed = index + 1;
-  if (indexFixed % 2 != 0) {
-    firstRangeUpper.push(item);
-  } else {
-    firstRangeLower.push(item);
-  }
-});
-
-secondRange.forEach((item, index) => {
-  const indexFixed = index + 1;
-  if (indexFixed % 2 != 0) {
-    secondRangeUpper.push(item);
-  } else {
-    secondRangeLower.push(item);
-  }
-});
+// secondRange.forEach((item, index) => {
+//   const indexFixed = index + 1;
+//   if (indexFixed % 2 != 0) {
+//     secondRangeUpper.push(item);
+//   } else {
+//     secondRangeLower.push(item);
+//   }
+// });
 </script>

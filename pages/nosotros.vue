@@ -55,7 +55,6 @@ const { data: timeline } = await useAsyncData("timeline", () =>
 );
 
 const aboutUsData = aboutUs.value.data;
-const timelineProps = timeline.value.data;
 
 const hero = {
   title: aboutUsData.top_title[0].text,
@@ -75,6 +74,49 @@ const aboutUsDescription = {
 const nutecPurposeList = aboutUsData.purpose;
 const nutecValuesList = aboutUsData.values;
 
-// quick fix to render all dates
-console.log(timelineProps);
+const timelineData = timeline.value.data;
+const timelineDates = [...timeline.value.data.range_time];
+
+const firstRange = [...timelineDates.splice(0, 8)];
+const secondRange = [...timelineDates];
+
+const firstRangeUpper = [];
+const firstRangeLower = [];
+const secondRangeUpper = [];
+const secondRangeLower = [];
+const firstRangeLabel = timelineData.range_time_labels[0].range_time_label;
+const secondRangeLabel = timelineData.range_time_labels[1].range_time_label;
+const futureLabel = timelineData.timeline_future_label;
+const futureDescription = timelineData.timeline_future_description;
+const futureLowerLabel = timelineData.timeline_future_low_label;
+
+firstRange.forEach((item, index) => {
+  const indexFixed = index + 1;
+  if (indexFixed % 2 != 0) {
+    firstRangeUpper.push(item);
+  } else {
+    firstRangeLower.push(item);
+  }
+});
+
+secondRange.forEach((item, index) => {
+  const indexFixed = index + 1;
+  if (indexFixed % 2 != 0) {
+    secondRangeUpper.push(item);
+  } else {
+    secondRangeLower.push(item);
+  }
+});
+
+const timelineProps = {
+  firstRangeUpper,
+  firstRangeLower,
+  secondRangeUpper,
+  secondRangeLower,
+  firstRangeLabel,
+  secondRangeLabel,
+  futureLabel,
+  futureDescription,
+  futureLowerLabel,
+};
 </script>
