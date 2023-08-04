@@ -23,7 +23,7 @@
       </div>
     </div>
     <div>
-      <img :src="image.url" class="w-full h-[430px] object-cover" />
+      <img :src="image.url" class="w-full h-[430px] object-contain" />
     </div>
   </div>
 </template>

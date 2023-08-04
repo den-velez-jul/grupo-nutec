@@ -33,7 +33,7 @@
     <div
       v-if="!video.url && image.url"
       class="absolute left-0 right-0 h-[600px] -z-10">
-      <img :src="image.url" class="w-full h-full" />
+      <img :src="image.url" class="w-full h-full object-cover" />
     </div>
   </section>
   <div v-if="divisions" class="bg-baby-blue">
