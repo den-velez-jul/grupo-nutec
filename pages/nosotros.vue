@@ -74,8 +74,4 @@ const aboutUsDescription = {
 
 const nutecPurposeList = aboutUsData.purpose;
 const nutecValuesList = aboutUsData.values;
-
-// console.log("den", timelineProps);
-// console.log("den", nutecValues);
-// console.log("den", secondRange);
 </script>

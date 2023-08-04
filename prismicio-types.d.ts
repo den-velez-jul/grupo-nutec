@@ -722,6 +722,93 @@ export type CareerFeedDocument<Lang extends string = string> =
   >;
 
 /**
+ * Content for company documents
+ */
+interface CompanyDocumentData {
+  /**
+   * company logo field in *company*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.company_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  company_logo: prismic.ImageField<never>;
+
+  /**
+   * company name field in *company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.company_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_name: prismic.RichTextField;
+
+  /**
+   * company description field in *company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.company_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_description: prismic.RichTextField;
+
+  /**
+   * company ubication field in *company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.company_ubication
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_ubication: prismic.RichTextField;
+
+  /**
+   * company cta label field in *company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.company_cta_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_cta_label: prismic.RichTextField;
+
+  /**
+   * company cta url field in *company*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.company_cta_url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  company_cta_url: prismic.LinkField;
+}
+
+/**
+ * company document from Prismic
+ *
+ * - **API ID**: `company`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CompanyDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<CompanyDocumentData>,
+    "company",
+    Lang
+  >;
+
+/**
  * Item in *Contact → More Ways*
  */
 export interface ContactDocumentDataMoreWaysItem {
@@ -2535,71 +2622,70 @@ export type NewsroomFeedDocument<Lang extends string = string> =
  */
 interface NutecDocumentData {
   /**
-   * Breadcrumb Title field in *Company*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: nutec.breadcrumb_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  breadcrumb_title: prismic.KeyTextField;
-
-  /**
-   * Top Label field in *Company*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: nutec.top_label
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  top_label: prismic.RichTextField;
-
-  /**
-   * Top Title field in *Company*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: nutec.top_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  top_title: prismic.TitleField;
-
-  /**
-   * Image or Video field in *Company*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: true
-   * - **API ID Path**: nutec.image_or_video
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  image_or_video: prismic.BooleanField;
-
-  /**
-   * Image field in *Company*
+   * logo field in *Company*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: nutec.image
+   * - **API ID Path**: nutec.company_logo
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image: prismic.ImageField<never>;
+  company_logo: prismic.ImageField<never>;
 
   /**
-   * Video field in *Company*
+   * Company Title field in *Company*
    *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: Add video from media library .mp4
-   * - **API ID Path**: nutec.video
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nutec.company_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_title: prismic.TitleField;
+
+  /**
+   * company description field in *Company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nutec.company_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_description: prismic.RichTextField;
+
+  /**
+   * company ubication field in *Company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nutec.company_ubication
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_ubication: prismic.RichTextField;
+
+  /**
+   * company cta link field in *Company*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nutec.company_cta_link
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  video: prismic.LinkToMediaField
+  company_cta_link: prismic.LinkField;
+
+  /**
+   * company cta label field in *Company*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nutec.company_cta_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  company_cta_label: prismic.RichTextField
   /**
    * Label field in *Company*
    *
@@ -4359,6 +4445,7 @@ export type AllDocumentTypes =
   | ArticleDocument
   | CareerDocument
   | CareerFeedDocument
+  | CompanyDocument
   | ContactDocument
   | EventDocument
   | EventFeedDocument
@@ -4467,6 +4554,8 @@ declare module "@prismicio/client" {
       CareerDocumentData,
       CareerFeedDocument,
       CareerFeedDocumentData,
+      CompanyDocument,
+      CompanyDocumentData,
       ContactDocument,
       ContactDocumentData,
       EventDocument,

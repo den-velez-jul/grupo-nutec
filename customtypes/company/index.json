@@ -1,0 +1,64 @@
+{
+  "id": "company",
+  "label": "company",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "config": { "label": "UID" }, "type": "UID" },
+      "company_logo": {
+        "type": "Image",
+        "config": {
+          "label": "company logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "company_name": {
+        "type": "StructuredText",
+        "config": {
+          "label": "company name",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "company_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "company description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "company_ubication": {
+        "type": "StructuredText",
+        "config": {
+          "label": "company ubication",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "company_cta_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "company cta label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "company_cta_url": {
+        "type": "Link",
+        "config": {
+          "label": "company cta url",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}
