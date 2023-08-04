@@ -120,6 +120,8 @@ const props = defineProps({
 
 const { timelineData } = props;
 
+console.log(timelineData);
+
 const firstRange = [...timelineData.range_time.splice(0, 8)];
 const secondRange = [...timelineData.range_time];
 

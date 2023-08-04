@@ -8,7 +8,8 @@
       </h2>
       <img :src="icon.url" class="h-[48px] w-[52px]" />
     </div>
-    <p class="mt-[21.5px] font-founders-grosteskers">
+    <p
+      class="mt-[21.5px] font-bold font-founders-grosteskers lg:text-[16px] leading-[22px] xl:text-[20px] xl:leading-[28px]">
       <PrismicText :field="description" />
     </p>
   </article>

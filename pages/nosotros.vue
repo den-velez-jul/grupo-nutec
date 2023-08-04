@@ -32,7 +32,7 @@
       <h4 class="text-center text-dark-blue pb-6 md:pb-8">
         Valores Fundamentales
       </h4>
-      <div class="lg:grid lg:grid-cols-3">
+      <div class="lg:grid lg:grid-cols-3 xl:grid-cols-4">
         <div v-for="card of nutecValuesList">
           <CardValue
             :title="card.values_title"
@@ -74,4 +74,7 @@ const aboutUsDescription = {
 
 const nutecPurposeList = aboutUsData.purpose;
 const nutecValuesList = aboutUsData.values;
+
+// quick fix to render all dates
+console.log(timelineProps);
 </script>
