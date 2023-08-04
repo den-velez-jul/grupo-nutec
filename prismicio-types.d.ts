@@ -319,103 +319,92 @@ export type AboutUsDocument<Lang extends string = string> =
  */
 interface ArticleDocumentData {
   /**
-   * Title field in *Article*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.TitleField;
-
-  /**
-   * Label field in *Article*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.label
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  label: prismic.RichTextField;
-
-  /**
-   * Excerpt field in *Article*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.excerpt
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  excerpt: prismic.RichTextField;
-
-  /**
-   * imagen field in *Article*
+   * article image field in *Article*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: article.imagen
+   * - **API ID Path**: article.article_image
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  imagen: prismic.ImageField<never>;
+  article_image: prismic.ImageField<never>;
 
   /**
-   * Display Date field in *Article*
+   * article top label field in *Article*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.article_top_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  article_top_label: prismic.RichTextField;
+
+  /**
+   * article title field in *Article*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.article_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  article_title: prismic.RichTextField;
+
+  /**
+   * article author field in *Article*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.article_author
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  article_author: prismic.RichTextField;
+
+  /**
+   * article date field in *Article*
    *
    * - **Field Type**: Date
    * - **Placeholder**: *None*
-   * - **API ID Path**: article.display_date
+   * - **API ID Path**: article.article_date
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#date
    */
-  display_date: prismic.DateField;
+  article_date: prismic.DateField;
 
   /**
-   * Reading Time field in *Article*
+   * article description field in *Article*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: article.reading_time
+   * - **API ID Path**: article.article_description
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  reading_time: prismic.RichTextField;
+  article_description: prismic.RichTextField;
 
   /**
-   * Preface field in *Article*
+   * article cta label field in *Article*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: article.preface
+   * - **API ID Path**: article.article_cta_label
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  preface: prismic.RichTextField;
+  article_cta_label: prismic.RichTextField;
 
   /**
-   * Source field in *Article*
+   * article cta link field in *Article*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: article.source
+   * - **API ID Path**: article.article_cta_link
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  source: prismic.RichTextField;
-
-  /**
-   * Top Image field in *Article*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: article.top_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  top_image: prismic.ImageField<never>
+  article_cta_link: prismic.LinkField
   /**
    * meta keyword field in *Article*
    *

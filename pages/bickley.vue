@@ -159,6 +159,4 @@ const servicesList = services.value.map((item) => {
     anchorLeft: true,
   };
 });
-
-console.log(sistemsList);
 </script>

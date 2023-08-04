@@ -164,6 +164,4 @@ const solutionsProps = solutionsList.map((item) => {
     anchorLeft: true,
   };
 });
-
-console.log(solutionsProps);
 </script>

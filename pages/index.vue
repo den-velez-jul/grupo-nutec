@@ -193,5 +193,4 @@ const events = {
   ctaLabel: homeData.events_cta_label,
   ctaLink: homeData.events_cta_link,
 };
-console.log(events.dateStart);
 </script>
