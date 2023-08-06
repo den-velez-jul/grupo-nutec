@@ -1,8 +1,8 @@
 <template>
   <article
     class="grid grid-cols-1 grid-rows-[50%_50%] bg-light-baby-blue h-[480px] lg:h-[580]">
-    <div class="flex justify-center items-center">
-      <img :src="image.url" alt="" object-cover />
+    <div class="flex justify-center items-center p-[60px]">
+      <img :src="image.url" alt="" class="object-contain" />
     </div>
     <div
       class="flex flex-col justify-between bg-blue text-white p-8 pb-[60px] md:pb-[40px] lg:pb-[60px]">

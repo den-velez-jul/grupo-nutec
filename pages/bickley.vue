@@ -22,7 +22,7 @@
         ctaLabel="Conoce más"
         ctaUrl="" />
       <div
-        class="py-[60px] grid grid-cols-1 grid-rows-3 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
+        class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
           v-for="product of ovensCeramicList"
           :companyProps="product.companyProps"
@@ -38,7 +38,7 @@
         ctaLabel="Conoce más"
         ctaUrl="" />
       <div
-        class="py-[60px] grid grid-cols-1 grid-rows-3 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
+        class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
           v-for="product of ovensMetalsList"
           :companyProps="product.companyProps"
@@ -54,7 +54,7 @@
         ctaLabel="Conoce más"
         ctaUrl="" />
       <div
-        class="py-[60px] grid grid-cols-1 grid-rows-3 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
+        class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
           v-for="product of sistemsList"
           :companyProps="product.companyProps"
@@ -70,7 +70,7 @@
         ctaLabel="Conoce más"
         ctaUrl="" />
       <div
-        class="py-[60px] grid grid-cols-1 grid-rows-3 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
+        class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
           v-for="product of servicesList"
           :companyProps="product.companyProps"
