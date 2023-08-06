@@ -779,6 +779,17 @@ interface CompanyDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   company_cta_url: prismic.LinkField;
+
+  /**
+   * sort_position field in *company*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: company.company_sort_position
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  company_sort_position: prismic.NumberField;
 }
 
 /**
@@ -4167,6 +4178,17 @@ interface ProductDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   producto_image: prismic.ImageField<never>;
+
+  /**
+   * product sort post field in *product*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product.product_sort_post
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  product_sort_post: prismic.NumberField;
 }
 
 /**

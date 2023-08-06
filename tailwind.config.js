@@ -11,10 +11,10 @@ module.exports = {
   theme: {
     screens:{
       'sm': '10px',
-      'md': '600px',
-      'lg': '1000px',
-      'xl': '1550px',
-      '2xl': '1900px',
+      'md': '601px',
+      'lg': '1001px',
+      'xl': '1551px',
+      '2xl': '1921px',
     },
     fontFamily: {
       'founders-grosteskers': ['Founders Grotesk', 'sans-serif'],

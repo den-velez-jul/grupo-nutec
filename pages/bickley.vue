@@ -16,7 +16,11 @@
   <div
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1720px] xl:px-[100px]">
     <section class="pt-[80px] pb-[60px] md:pt-[120px] lg:pt-[150px]">
-      <ArticleHeader />
+      <ArticleHeader
+        topLabel="Hornos Industriales para Cerámica y Materiales Avanzados"
+        title="Tecnología líder en la industria, resultados basados ​​en el rendimiento"
+        ctaLabel="Conoce más"
+        ctaUrl="" />
       <div
         class="py-[60px] grid grid-cols-1 grid-rows-3 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -28,7 +32,11 @@
       </div>
     </section>
     <section class="pt-[80px] pb-[60px]">
-      <ArticleHeader />
+      <ArticleHeader
+        topLabel="HORNOS INDUSTRIALES PARA METALES"
+        title="Forja el futuro con nuestros Hornos Industriales para metales de alta tecnología"
+        ctaLabel="Conoce más"
+        ctaUrl="" />
       <div
         class="py-[60px] grid grid-cols-1 grid-rows-3 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -40,7 +48,11 @@
       </div>
     </section>
     <section class="pt-[80px] pb-[60px]">
-      <ArticleHeader />
+      <ArticleHeader
+        topLabel="SISTEMAS DE COMBUSTIÓN Y CONTROL"
+        title="Eficiencia y sostenibilidad para tus necesidades de equipos térmicos industriales"
+        ctaLabel="Conoce más"
+        ctaUrl="" />
       <div
         class="py-[60px] grid grid-cols-1 grid-rows-3 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -52,7 +64,11 @@
       </div>
     </section>
     <section class="pt-[80px] pb-[60px]">
-      <ArticleHeader />
+      <ArticleHeader
+        topLabel="SERVICIOS DE FABRICACIÓN E INSTALACIÓN"
+        title="Deja que los expertos de NUTEC Bickley hagan el trabajo por tu negocio"
+        ctaLabel="Conoce más"
+        ctaUrl="" />
       <div
         class="py-[60px] grid grid-cols-1 grid-rows-3 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card

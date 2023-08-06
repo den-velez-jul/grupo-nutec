@@ -58,6 +58,10 @@
           "placeholder": "",
           "select": null
         }
+      },
+      "company_sort_position": {
+        "type": "Number",
+        "config": { "label": "sort_position", "placeholder": "" }
       }
     }
   }

@@ -33,6 +33,6 @@ const { companyProps, title, redTitle, anchorLeft } = props;
 const titleColorStyle = redTitle ? "text-[#B40023]" : "text-dark-blue";
 const archorPositionColor = anchorLeft ? "justify-start" : "justify-end";
 
-const titleCustomStyle = `mb-10 text-[35px] md:text-[40px] lg:text-[50px] ${titleColorStyle}`;
+const titleCustomStyle = `mb-10 text-[35px] leading-[44px] md:leading-[48x] md:text-[40px] lg:text-[50px] lg:leading-[58px] xl:leading-[58px] ${titleColorStyle}`;
 const anchorCustomStyle = `mt-8 flex w-full text-[20px] xl:text-[30px] text-dark-blue ${archorPositionColor}`;
 </script>

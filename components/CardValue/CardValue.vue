@@ -1,9 +1,10 @@
 <template>
-  <article class="p-8 flex flex-col font-founders-grosteskers">
+  <article
+    class="p-8 lg:p-[28px] xl:p-5 flex flex-col font-founders-grosteskers">
     <div
       class="flex justify-between lg:flex-row-reverse lg:justify-end lg:items-center">
       <h2
-        class="text-[35px] text-dark-blue font-bold md:text-[50px] lg:text-[60px] lg:ml-5">
+        class="text-[35px] text-dark-blue font-bold md:text-[50px] lg:text-[50px] lg:ml-5 xl:text-[40px]">
         <PrismicText :field="title" />
       </h2>
       <img :src="icon.url" class="h-[48px] w-[52px]" />

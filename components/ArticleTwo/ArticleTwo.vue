@@ -4,10 +4,10 @@
       :field="topLabel"
       class="font-founders-grosteskers mb-[80px] text-dark-blue text-center font-bold" />
   </h4>
-  <div class="lg:grid lg:grid-cols-[55%_42%] lg:gap-x-10">
+  <div class="lg:grid lg:grid-cols-[58%_40%] lg:gap-x-10">
     <div class="mb-[80px]">
       <h1
-        class="text-dark-blue text-center mt-10 mb-5 lg:text-left lg:mt-0 lg:mb-10">
+        class="text-dark-blue text-center mt-10 mb-5 tracking-tight lg:text-left lg:mt-0 lg:mb-10">
         <PrismicText :field="title" />
       </h1>
       <p class="my-10">

@@ -6,12 +6,7 @@
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "UID"
-        }
-      },
+      "uid": { "type": "UID", "config": { "label": "UID" } },
       "category": {
         "type": "StructuredText",
         "config": {
@@ -42,10 +37,7 @@
       },
       "product_cta_link": {
         "type": "Link",
-        "config": {
-          "label": "product cta link",
-          "select": null
-        }
+        "config": { "label": "product cta link", "select": null }
       },
       "producto_image": {
         "type": "Image",
@@ -54,6 +46,10 @@
           "thumbnails": [],
           "label": "producto Image"
         }
+      },
+      "product_sort_post": {
+        "type": "Number",
+        "config": { "label": "product sort post", "placeholder": "" }
       }
     }
   }

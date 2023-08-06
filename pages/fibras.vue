@@ -8,7 +8,7 @@
     :divisions="hero.divisions" />
   <div class="bg-baby-blue">
     <section
-      class="py-[60px] xl:py-[100px] xl:max-w-[1720px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
+      class="py-[60px] xl:py-[100px] xl:max-w-[1920px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
       <ArticleTwo :articleProps="fibrasDescription" />
     </section>
   </div>
@@ -22,7 +22,7 @@
         <div v-for="company of companyProps" class="flex flex-col">
           <div
             class="h-[100px] py-5 bg-light-baby-blue md:h-[180px] md:py-[60px] lg:h-[220px] flex justify-center items-center">
-            <img :src="company.logo.url" alt="" />
+            <img :src="company.logo.url" alt="" class="h-full object-cover" />
           </div>
           <div
             class="flex flex-col flex-grow justify-between bg-dark-blue text-white p-6 lg:p-8 lg:pb-[60px]">
@@ -57,7 +57,7 @@
         ctaUrl="" />
       <div
         class="h-full mt-[60px] grid grid-cols-1 gap-y-[40px] lg:grid-cols-3 lg:gap-x-10 lg:gap-y-[50px]">
-        <div v-for="product of productProps">
+        <div v-for="product of productPropsSorted">
           <CardProduct
             :companyProps="product.productProps"
             :redTitle="product.redTitle"
@@ -74,7 +74,7 @@
         ctaUrl="" />
       <div
         class="h-full mt-[60px] grid grid-cols-1 gap-y-[40px] lg:grid-cols-3 lg:gap-x-10 lg:gap-y-[50px]">
-        <div v-for="solution of solutionsProps">
+        <div v-for="solution of solutionsPropsSorted">
           <CardProduct
             :companyProps="solution.solutionsProps"
             :redTitle="solution.redTitle"
@@ -93,7 +93,9 @@ const { data: fibras } = await useAsyncData("fibras", () =>
 );
 
 const { data: companies } = await useAsyncData("companies", () =>
-  client.getAllByType("company")
+  client.getAllByType("company", {
+    orderings: [{ field: "company_sort_position", direction: "asc" }],
+  })
 );
 
 const { data: products } = await useAsyncData("products", () =>
@@ -147,6 +149,7 @@ const productProps = productList.map((item) => {
     title: data.product_name[0].text,
     redTitle: false,
     anchorLeft: true,
+    position: data.product_sort_post,
   };
 });
 
@@ -162,6 +165,13 @@ const solutionsProps = solutionsList.map((item) => {
     title: data.product_name[0].text,
     redTitle: false,
     anchorLeft: true,
+    position: data.product_sort_post,
   };
 });
+
+const productPropsSorted = productProps.sort((a, b) => a.position - b.position);
+
+const solutionsPropsSorted = solutionsProps.sort(
+  (a, b) => a.position - b.position
+);
 </script>
