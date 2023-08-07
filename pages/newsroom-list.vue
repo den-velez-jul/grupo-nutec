@@ -1,8 +1,8 @@
-<template><div>news</div></template>
-<!-- <template>
-  <section id="headlineNews" class="bg-light-baby-blue">
-    <div
-      class="mx-6 pt-[100px] pb-[80px] md:mx-[50px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
+<template>
+  <div class="bg-light-baby-blue">
+    <section
+      id="headlineNews"
+      class="pt-[100px] pb-[80px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px] mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
       <h4
         class="text-[24px] font-bold text-center font-founders-grosteskers text-dark-blue md:text-[30px] xl:text-[40px]">
         Artículos y Editoriales
@@ -39,13 +39,13 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
   <div
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section
       id="groupNews"
-      class="pb-[60px] md:pt-[70px] lg:pt-[100px] lg:pb-[150px]">
+      class="pb-[70px] pt-[70px] md:pt-[80px] md:pb-[70px] lg:pt-[40px] lg:pb-[100px] xl:pb-[150px]">
       <div
         class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
         <div class=" " v-for="news of cardNews">
@@ -58,21 +58,13 @@
             :ctaLink="news.article_cta_link" />
         </div>
       </div>
-      <div class="flex justify-start mt-[30px] xl:mt-[50px]">
-        <a class="flex items-center text-dark-blue">
-          <span class="font-semibold md:text-[20px] xl:text-[30px]">
-            Explora Todos los Articulos y Editoriales
-          </span>
-          <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
-        </a>
-      </div>
     </section>
 
     <section class="pb-[60px] lg:px-5 xl:px-[225px]">
       <h4 class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
         Proximos Eventos
       </h4>
-      <CardEvent :cardEventProps="events" />
+      <CardEvent :cardEventProps="event" />
       <div class="mt-8 w-full">
         <a href="/" class="flex items-center">
           <span
@@ -88,40 +80,38 @@
 
 <script setup>
 const { client } = usePrismic();
-const { data: home } = await useAsyncData("home", () =>
-  client.getByUID("home", "homepage")
-);
 
 const { data: news } = await useAsyncData("news", () =>
-  client.getAllByType("article")
+  client.getAllByType("article", {
+    orderings: [{ field: "article_date", direction: "asc" }],
+  })
 );
 
-const homeData = home.value.data;
-const newsList = news.value;
+const { data: events } = await useAsyncData("events", () =>
+  client.getAllByType("event")
+);
 
-const events = {
-  title: homeData.events_title,
-  topLabel: homeData.event_top_label,
-  place: homeData.event_place,
-  dateStart: homeData.event_date_start,
-  dateEnd: homeData.event_date_end,
-  ctaLabel: homeData.events_cta_label,
-  ctaLink: homeData.events_cta_link,
+const newsList = news.value;
+const latestEvent = events.value[0].data;
+
+const event = {
+  title: latestEvent.title,
+  topLabel: latestEvent.label,
+  place: latestEvent.location,
+  dateStart: latestEvent.start_day,
+  dateEnd: latestEvent.end_day,
+  ctaLabel: latestEvent.event_cta_label[0].text,
+  ctaLink: latestEvent.event_cta,
 };
 
 let headlineNews;
 let cardNews = [];
 
-newsList.forEach((news) => {
-  if (news.tags.length === 0) {
-    cardNews.push(news.data);
-    return;
-  }
-  if (news.tags.includes("Hero")) {
-    heroNews = news.data;
-    return;
-  } else {
+newsList.forEach((news, index) => {
+  if (index === 0) {
     headlineNews = news.data;
+    return;
   }
+  cardNews.push(news.data);
 });
-</script> -->
+</script>

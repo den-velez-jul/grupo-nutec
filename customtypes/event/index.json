@@ -32,6 +32,10 @@
         "config": { "single": "paragraph", "label": "Label" }
       },
       "start_day": { "type": "Date", "config": { "label": "Start Day" } },
+      "end_day": {
+        "type": "Date",
+        "config": { "label": "End day", "placeholder": "" }
+      },
       "country": {
         "type": "StructuredText",
         "config": {
@@ -63,6 +67,19 @@
       "image": {
         "type": "Image",
         "config": { "constraint": {}, "thumbnails": [], "label": "Image" }
+      },
+      "event_cta": {
+        "type": "Link",
+        "config": { "label": "event CTA", "placeholder": "", "select": null }
+      },
+      "event_cta_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "event CTA label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       }
     },
     "SEO": {

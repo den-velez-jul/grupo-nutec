@@ -1394,6 +1394,17 @@ interface EventDocumentData {
   start_day: prismic.DateField;
 
   /**
+   * End day field in *Event*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.end_day
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  end_day: prismic.DateField;
+
+  /**
    * Country field in *Event*
    *
    * - **Field Type**: Rich Text
@@ -1446,7 +1457,29 @@ interface EventDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image: prismic.ImageField<never>
+  image: prismic.ImageField<never>;
+
+  /**
+   * event CTA field in *Event*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.event_cta
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  event_cta: prismic.LinkField;
+
+  /**
+   * event CTA label field in *Event*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event.event_cta_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  event_cta_label: prismic.RichTextField
   /**
    * meta keyword field in *Event*
    *
