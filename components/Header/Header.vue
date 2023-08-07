@@ -4,9 +4,9 @@
       <span class="text-white">Español (Global)</span>
     </div>
     <div
-      class="px-6 py-[10px] flex items-center justify-between md:px-[50px] lg:px-[75px] lg:py-3 xl:max-w-[1900px] 2xl:mx-auto 2xl:min-w-[1900px]">
+      class="px-6 py-3 h-[96px] flex items-center justify-between md:px-[50px] lg:px-[75px] lg:py-3 xl:max-w-[1920px] 2xl:mx-auto 2xl:min-w-[1900px]">
       <img
-        class="mr-3"
+        class="mr-3 h-full w-auto"
         src="~assets/logos/LogoGrupoNutecES.svg"
         alt="logo"
         width="51px"
@@ -41,7 +41,7 @@
             height="24px" />
         </button>
         <NuxtLink
-          class="py-3 px-9 bg-dark-blue text-white hidden lg:block capitalize font-founders-grosteskers font-semibold"
+          class="py-3 px-9 bg-dark-blue text-white hidden lg:flex capitalize font-founders-grosteskers font-semibold items-center justify-center"
           to="https://">
           contacto
         </NuxtLink>
