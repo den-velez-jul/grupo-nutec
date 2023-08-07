@@ -8,7 +8,7 @@
         <h2 v-if="title" :class="titleCustomStyle">{{ title }}</h2>
         <PrismicText
           :field="companyProps.description"
-          class="text-[20px] xl:text-[30px] font-founders-grosteskers font-bold text-dark-blue" />
+          class="text-[20px] xl:text-[30px] font-founders-grosteskers text-dark-blue text-justify" />
       </div>
       <a :href="companyProps.cta_link1.url" :class="anchorCustomStyle">
         <span class="font-bold"> {{ companyProps.cta_label1 }} </span>

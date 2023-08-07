@@ -11,7 +11,7 @@
           class="w-[150px] h-full"
           fit="cover" />
       </div>
-      <div class="ml-3 lg:max-w-[224px]">
+      <div class="ml-3 flex flex-col justify-between lg:max-w-[250px]">
         <PrismicText
           :field="division.description"
           class="text-[16px] md:leading-[20px] lg:text-[16px] xl:leading-[22px]" />

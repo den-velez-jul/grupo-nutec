@@ -117,16 +117,16 @@
         Proximos Eventos
       </h4>
       <CardEvent :cardEventProps="events" />
-      <div class="mt-8 w-full">
-        <a href="/" class="flex items-center">
-          <span
-            class="font-founders-grosteskers font-semibold md:text-[20px] text-dark-blue">
-            Conoce eventos anteriores
-          </span>
-          <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />
-        </a>
-      </div>
     </section>
+    <div class="mt-8 w-full">
+      <a href="/" class="flex items-center">
+        <span
+          class="font-founders-grosteskers font-bold xl:text-[30px] text-dark-blue">
+          Conoce eventos anteriores
+        </span>
+        <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />
+      </a>
+    </div>
   </div>
 </template>
 

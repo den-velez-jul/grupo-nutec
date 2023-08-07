@@ -13,7 +13,7 @@
       <PrismicLink
         v-if="ctaLink"
         :field="ctaLink"
-        class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white font-bold xl:text-[30px] text-[16px] md:text-[20px] z-10"
+        class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white font-bold text-[16px] z-10 md:text-[20px] xl:text-[26px]"
         >{{ ctaLabel }}
       </PrismicLink>
     </div>
@@ -27,7 +27,7 @@
       muted
       autoplay
       loop
-      class="w-full object-fill absolute left-0 right-0 h-[600px] -z-10">
+      class="w-full object-cover absolute left-0 right-0 h-[600px] -z-10">
       <source :src="video.url" type="video/mp4" />
     </video>
     <div
