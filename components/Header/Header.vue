@@ -11,9 +11,9 @@
         alt="logo"
         width="51px"
         height="48px" />
-      <nav>
+      <nav class="flex-grow flex justify-center ml-[150px]">
         <ul
-          class="hidden lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers font-semibold text-dark-blue">
+          class="hidden max-w-[500px] lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers font-semibold text-dark-blue">
           <li>
             <button @click="onShowHeaderDetails()">Que hacemos</button>
           </li>
@@ -40,11 +40,11 @@
             width="24px"
             height="24px" />
         </button>
-        <NuxtLink
+        <a
           class="py-3 px-9 bg-dark-blue text-white hidden lg:flex capitalize font-founders-grosteskers font-semibold items-center justify-center"
-          to="https://">
+          href="https://">
           <span> contacto </span>
-        </NuxtLink>
+        </a>
       </div>
     </div>
     <HeaderDetails
