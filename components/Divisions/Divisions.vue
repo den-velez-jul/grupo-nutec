@@ -4,11 +4,12 @@
     <div
       v-for="division of divisions"
       class="flex font-bold font-founders-grosteskers lg:max-w-[500px] lg:ml-[70px] max-w-[1900px]">
-      <div class="w-[152px] h-[32px]">
+      <div
+        class="w-[152px] h-[32px] min-w-[150px] flex justify-center items-center">
         <img
           :src="division.logoImg.url"
           alt=""
-          class="w-[150px] h-full"
+          class="w-auto h-auto"
           fit="cover" />
       </div>
       <div class="ml-3 flex flex-col justify-between lg:max-w-[250px]">

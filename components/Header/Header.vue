@@ -43,7 +43,7 @@
         <NuxtLink
           class="py-3 px-9 bg-dark-blue text-white hidden lg:flex capitalize font-founders-grosteskers font-semibold items-center justify-center"
           to="https://">
-          contacto
+          <span> contacto </span>
         </NuxtLink>
       </div>
     </div>

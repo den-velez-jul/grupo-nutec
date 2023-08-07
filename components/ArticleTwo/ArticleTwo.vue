@@ -23,7 +23,9 @@
       </div>
     </div>
     <div>
-      <img :src="image.url" class="w-full h-[430px] object-contain" />
+      <img
+        :src="image.url"
+        class="w-full h-[430px] object-cover lg:object-contain" />
     </div>
   </div>
 </template>

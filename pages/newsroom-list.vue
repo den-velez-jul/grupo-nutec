@@ -1,48 +1,8 @@
-<template>
-  <section
-    class="relative flex h-[800px] w-full px-6 md:px-[50px] lg:px-[270px]">
+<template><div>news</div></template>
+<!-- <template>
+  <section id="headlineNews" class="bg-light-baby-blue">
     <div
-      class="flex flex-col justify-center font-founders-grosteskers text-white z-10">
-      <span class="font-bold md:text-[20px] xl:text-[30px]">
-        <PrismicText :field="heroNews.article_top_label" />
-      </span>
-      <h1
-        class="mt-[30px] text-[35px] md:text-[50px] lg:text-[60px] xl:text-[70px]">
-        <PrismicText :field="heroNews.article_title" />
-      </h1>
-      <p class="mt-[40px]">
-        <PrismicText :field="heroNews.article_author" />
-      </p>
-      <p class="mt-[16px]">
-        {{ heroNews.article_date }}
-      </p>
-      <p class="mt-5">
-        <PrismicText :field="heroNews.article_description" />
-      </p>
-      <div class="flex justify-start mt-10">
-        <PrismicLink
-          :field="heroNews.article_cta_link"
-          class="flex items-center text-white">
-          <span class="font-semibold md:text-[20px] xl:text-[30px]">
-            {{ heroNews.article_cta_label[0].text }}
-          </span>
-          <img src="~assets/icons/arrow-white.svg" class="ml-3" />
-        </PrismicLink>
-      </div>
-    </div>
-    <div
-      class="absolute left-0 right-0 w-full h-[800px] -z-8 opacity-[.8] bg-black"></div>
-    <div class="absolute left-0 right-0 h-[800px] -z-10">
-      <img
-        :src="heroNews.article_image.url"
-        class="w-full h-full object-cover" />
-    </div>
-  </section>
-  <div
-    class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
-    <section
-      id="headlineNews"
-      class="pt-[100px] pb-[80px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px]">
+      class="mx-6 pt-[100px] pb-[80px] md:mx-[50px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
       <h4
         class="text-[24px] font-bold text-center font-founders-grosteskers text-dark-blue md:text-[30px] xl:text-[40px]">
         Artículos y Editoriales
@@ -79,7 +39,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <div
+    class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section
       id="groupNews"
       class="pb-[60px] md:pt-[70px] lg:pt-[100px] lg:pb-[150px]">
@@ -146,7 +109,6 @@ const events = {
   ctaLink: homeData.events_cta_link,
 };
 
-let heroNews;
 let headlineNews;
 let cardNews = [];
 
@@ -162,4 +124,4 @@ newsList.forEach((news) => {
     headlineNews = news.data;
   }
 });
-</script>
+</script> -->

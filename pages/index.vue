@@ -75,22 +75,22 @@
             :src="homeData.image_article.url"
             class="h-[300px] md:h-[524px] w-full object-cover" />
         </div>
-        <div
-          class="lg:flex lg:flex-col lg:justify-between font-founders-grosteskers">
+        <div class="font-founders-grosteskers">
           <h1 class="text-blue mt-8 lg:m-0">
             <PrismicText :field="divisionsNews.nutecGroup.title1" />
           </h1>
-          <p class="mt-[30px] md:mt-[50px] lg:m-0 xl:text-[20px]">
+          <p
+            class="mt-[30px] md:mt-[50px] lg:mt-[60px] xl:mt-[70px] xl:text-[20px]">
             <PrismicText :field="divisionsNews.nutecGroup.author" />
           </p>
-          <p class="mt-[30px] md:mt-[40px] lg:m-0 xl:text-[20px]">
+          <p class="mt-[30px] md:mt-[40px] xl:text-[20px]">
             {{ divisionsNews.nutecGroup.date }}
           </p>
-          <p class="mt-[15px] lg:m-0 xl:text-[20px]">
+          <p class="mt-[15px] md:mt-[20px] xl:text-[20px]">
             <PrismicRichText
               :field="divisionsNews.nutecGroup['description-news']" />
           </p>
-          <div class="flex justify-start mt-[30px] lg:m-0">
+          <div class="flex justify-start mt-[30px] lg:mt-[40px]">
             <PrismicLink
               :field="divisionsNews.nutecGroup.link_button"
               class="flex items-center text-dark-blue">
@@ -105,28 +105,30 @@
     </section>
     <section
       id="divisionNews"
-      class="grid grid-rows-2 gap-y-10 md:grid-rows-1 md:grid-cols-2 md:gap-x-10 pb-[30px] md:pb-[40px] xl:pb-[50px]">
+      class="grid grid-rows-2 gap-y-10 md:grid-rows-1 md:grid-cols-2 md:gap-x-10 pb-[100px] md:pb-[80px] lg:pb-[100px] xl:pb-[150px]">
       <CardArticule :cardArticleProps="divisionsNews.nutecFibras" />
       <CardArticule :cardArticleProps="divisionsNews.nutecBickley" />
       <AnchorIcon
         labelBtn="Explora Todos los Artículos y Editoriales"
-        class="mt-[50px]" />
+        class="" />
     </section>
-    <section class="pb-[60px] lg:px-5 xl:px-[225px]">
-      <h4 class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
-        Proximos Eventos
-      </h4>
-      <CardEvent :cardEventProps="events" />
+    <section>
+      <div class="pb-[60px] lg:px-5 xl:px-[225px]">
+        <h4 class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+          Proximos Eventos
+        </h4>
+        <CardEvent :cardEventProps="events" />
+      </div>
+      <div class="mt-8 w-full">
+        <a href="/" class="flex items-center">
+          <span
+            class="font-founders-grosteskers font-bold xl:text-[30px] text-dark-blue">
+            Conoce eventos anteriores
+          </span>
+          <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />
+        </a>
+      </div>
     </section>
-    <div class="mt-8 w-full">
-      <a href="/" class="flex items-center">
-        <span
-          class="font-founders-grosteskers font-bold xl:text-[30px] text-dark-blue">
-          Conoce eventos anteriores
-        </span>
-        <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />
-      </a>
-    </div>
   </div>
 </template>
 
