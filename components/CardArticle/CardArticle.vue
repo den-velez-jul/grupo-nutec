@@ -14,7 +14,7 @@
       <div class="mt-10">
         <PrismicLink
           :field="ctaLink"
-          class="bg-dark-blue p-4 text-white lg:text-[20px]">
+          class="p-4 bg-white text-dark-blue font-bold font-founders-grosteskers lg:text-white lg:text-[20px] lg:bg-dark-blue">
           Conoce más
         </PrismicLink>
       </div>
