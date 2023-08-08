@@ -1,0 +1,31 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"quote": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Pariatur culpa dolor et. Laborum officia est eu irure irure ut incididunt laboris ex aliquip veniam."
+						}
+					}
+				]
+			},
+			"author": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ad eiusmod proident commodo dolore aliqua aliqua reprehenderit nisi nisi eu. Esse ipsum deserunt ut do minim nisi reprehenderit sunt commodo officia culpa laboris irure ex sunt."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

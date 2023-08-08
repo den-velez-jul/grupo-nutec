@@ -61,7 +61,7 @@
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
-        "config": { "choices": { "mini_card": { "type": "SharedSlice" } } }
+        "config": { "choices": {} }
       }
     },
     "Content": {

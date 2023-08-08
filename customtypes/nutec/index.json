@@ -8,18 +8,9 @@
     "Main": {
       "company_logo": {
         "type": "Image",
-        "config": {
-          "label": "logo",
-          "constraint": {},
-          "thumbnails": []
-        }
+        "config": { "label": "logo", "constraint": {}, "thumbnails": [] }
       },
-      "uid": {
-        "type": "UID",
-        "config": {
-          "label": "Unique Identifier"
-        }
-      },
+      "uid": { "type": "UID", "config": { "label": "Unique Identifier" } },
       "company_title": {
         "type": "StructuredText",
         "config": {
@@ -68,10 +59,7 @@
     "Description": {
       "label": {
         "type": "Text",
-        "config": {
-          "label": "Label",
-          "placeholder": "Label"
-        }
+        "config": { "label": "Label", "placeholder": "Label" }
       },
       "title": {
         "type": "StructuredText",
@@ -120,10 +108,7 @@
       },
       "mission_title": {
         "type": "StructuredText",
-        "config": {
-          "single": "heading3",
-          "label": "Mission title"
-        }
+        "config": { "single": "heading3", "label": "Mission title" }
       },
       "mission_desc": {
         "type": "StructuredText",
@@ -311,19 +296,11 @@
           "placeholder": "Meta descripcion"
         }
       },
-      "meta_keyword": {
-        "type": "Text",
-        "config": {
-          "label": "Meta keyword"
-        }
-      },
+      "meta_keyword": { "type": "Text", "config": { "label": "Meta keyword" } },
       "meta_thumbnail": {
         "type": "Image",
         "config": {
-          "constraint": {
-            "width": 512,
-            "height": 512
-          },
+          "constraint": { "width": 512, "height": 512 },
           "thumbnails": [],
           "label": "Meta Thumbnail"
         }

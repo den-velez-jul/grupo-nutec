@@ -4,6 +4,7 @@ module.exports = {
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
+    "./slices/**/*.vue",
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./app.vue",
@@ -17,8 +18,10 @@ module.exports = {
       '2xl': '1921px',
     },
     fontFamily: {
-      'founders-grosteskers': ['Founders Grotesk', 'sans-serif'],
-      'untitled-sans': ['Untitled Sans', 'serif'],
+      'founders-grosteskers': ['Founders Grotesk', 'Helvetica Neue', 'Helvetica', 'Arial'],
+      'untitled-sans': ['Untitled Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+
+    
     },
     colors:{
       black: '#272727',

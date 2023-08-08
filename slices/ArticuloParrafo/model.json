@@ -1,0 +1,48 @@
+{
+  "id": "articulo_parrafo",
+  "type": "SharedSlice",
+  "name": "ArticuloParrafo",
+  "description": "ArticuloParrafo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "parrafo": {
+          "type": "StructuredText",
+          "config": {
+            "label": "parrafo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,hyperlink"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "textoAzul",
+      "name": "textoAzul",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "parrafo": {
+          "type": "StructuredText",
+          "config": {
+            "label": "parrafo",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

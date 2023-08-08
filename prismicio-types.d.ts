@@ -314,6 +314,12 @@ export type AboutUsDocument<Lang extends string = string> =
     Lang
   >;
 
+type ArticleDocumentDataSlices1Slice =
+  | ArticuloParrafoSlice
+  | TitulosSlice
+  | ArticleQuoteSlice
+  | SubtituloSlice;
+
 /**
  * Content for Article documents
  */
@@ -405,6 +411,16 @@ interface ArticleDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   article_cta_link: prismic.LinkField
+  /**
+   * Slice Zone field in *Article*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: article.slices1[]
+   * - **Tab**: Content
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */;
+  slices1: prismic.SliceZone<ArticleDocumentDataSlices1Slice>
   /**
    * meta keyword field in *Article*
    *
@@ -1677,7 +1693,7 @@ export interface HomeDocumentDataTopSlidesItem {
   video: prismic.LinkField;
 }
 
-type HomeDocumentDataSlicesSlice = MiniCardSlice;
+type HomeDocumentDataSlicesSlice = never;
 
 /**
  * Item in *Home → group_news*
@@ -4506,78 +4522,223 @@ export type AllDocumentTypes =
   | TimelineDocument;
 
 /**
- * Primary content in *MiniCard → Items*
+ * Primary content in *ArticleQuote → Primary*
  */
-export interface MiniCardSliceDefaultItem {
+export interface ArticleQuoteSliceDefaultPrimary {
   /**
-   * logoImg field in *MiniCard → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: mini_card.items[].logoImg
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  logoImg: prismic.ImageField<never>;
-
-  /**
-   * description field in *MiniCard → Items*
+   * quote field in *ArticleQuote → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: mini_card.items[].description
+   * - **API ID Path**: article_quote.primary.quote
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.RichTextField;
+  quote: prismic.RichTextField;
 
   /**
-   * url field in *MiniCard → Items*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: mini_card.items[].url
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  url: prismic.LinkField;
-
-  /**
-   * anchorLabel field in *MiniCard → Items*
+   * author field in *ArticleQuote → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: mini_card.items[].anchorLabel
+   * - **API ID Path**: article_quote.primary.author
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  anchorLabel: prismic.RichTextField;
+  author: prismic.RichTextField;
 }
 
 /**
- * Default variation for MiniCard Slice
+ * Default variation for ArticleQuote Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type MiniCardSliceDefault = prismic.SharedSliceVariation<
+export type ArticleQuoteSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
-  Simplify<MiniCardSliceDefaultItem>
+  Simplify<ArticleQuoteSliceDefaultPrimary>,
+  never
 >;
 
 /**
- * Slice variation for *MiniCard*
+ * Slice variation for *ArticleQuote*
  */
-type MiniCardSliceVariation = MiniCardSliceDefault;
+type ArticleQuoteSliceVariation = ArticleQuoteSliceDefault;
 
 /**
- * MiniCard Shared Slice
+ * ArticleQuote Shared Slice
  *
- * - **API ID**: `mini_card`
- * - **Description**: MiniCard
+ * - **API ID**: `article_quote`
+ * - **Description**: ArticleQuote
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type MiniCardSlice = prismic.SharedSlice<
-  "mini_card",
-  MiniCardSliceVariation
+export type ArticleQuoteSlice = prismic.SharedSlice<
+  "article_quote",
+  ArticleQuoteSliceVariation
+>;
+
+/**
+ * Primary content in *ArticuloParrafo → Primary*
+ */
+export interface ArticuloParrafoSliceDefaultPrimary {
+  /**
+   * parrafo field in *ArticuloParrafo → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: articulo_parrafo.primary.parrafo
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  parrafo: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ArticuloParrafo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ArticuloParrafoSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ArticuloParrafoSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Primary content in *ArticuloParrafo → Primary*
+ */
+export interface ArticuloParrafoSliceTextoAzulPrimary {
+  /**
+   * parrafo field in *ArticuloParrafo → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: articulo_parrafo.primary.parrafo
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  parrafo: prismic.RichTextField;
+}
+
+/**
+ * textoAzul variation for ArticuloParrafo Slice
+ *
+ * - **API ID**: `textoAzul`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ArticuloParrafoSliceTextoAzul = prismic.SharedSliceVariation<
+  "textoAzul",
+  Simplify<ArticuloParrafoSliceTextoAzulPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ArticuloParrafo*
+ */
+type ArticuloParrafoSliceVariation =
+  | ArticuloParrafoSliceDefault
+  | ArticuloParrafoSliceTextoAzul;
+
+/**
+ * ArticuloParrafo Shared Slice
+ *
+ * - **API ID**: `articulo_parrafo`
+ * - **Description**: ArticuloParrafo
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ArticuloParrafoSlice = prismic.SharedSlice<
+  "articulo_parrafo",
+  ArticuloParrafoSliceVariation
+>;
+
+/**
+ * Primary content in *Subtitulo → Primary*
+ */
+export interface SubtituloSliceDefaultPrimary {
+  /**
+   * Subtitulo field in *Subtitulo → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subtitulo.primary.subtitulo
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subtitulo: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Subtitulo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SubtituloSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SubtituloSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Subtitulo*
+ */
+type SubtituloSliceVariation = SubtituloSliceDefault;
+
+/**
+ * Subtitulo Shared Slice
+ *
+ * - **API ID**: `subtitulo`
+ * - **Description**: Subtitulo
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SubtituloSlice = prismic.SharedSlice<
+  "subtitulo",
+  SubtituloSliceVariation
+>;
+
+/**
+ * Primary content in *Titulos → Primary*
+ */
+export interface TitulosSliceDefaultPrimary {
+  /**
+   * Titulo field in *Titulos → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: titulos.primary.titulo
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titulo: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Titulos Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TitulosSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TitulosSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Titulos*
+ */
+type TitulosSliceVariation = TitulosSliceDefault;
+
+/**
+ * Titulos Shared Slice
+ *
+ * - **API ID**: `titulos`
+ * - **Description**: Titulos
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TitulosSlice = prismic.SharedSlice<
+  "titulos",
+  TitulosSliceVariation
 >;
 
 declare module "@prismicio/client" {
@@ -4629,9 +4790,19 @@ declare module "@prismicio/client" {
       TimelineDocument,
       TimelineDocumentData,
       AllDocumentTypes,
-      MiniCardSlice,
-      MiniCardSliceVariation,
-      MiniCardSliceDefault,
+      ArticleQuoteSlice,
+      ArticleQuoteSliceVariation,
+      ArticleQuoteSliceDefault,
+      ArticuloParrafoSlice,
+      ArticuloParrafoSliceVariation,
+      ArticuloParrafoSliceDefault,
+      ArticuloParrafoSliceTextoAzul,
+      SubtituloSlice,
+      SubtituloSliceVariation,
+      SubtituloSliceDefault,
+      TitulosSlice,
+      TitulosSliceVariation,
+      TitulosSliceDefault,
     };
   }
 }

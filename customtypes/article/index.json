@@ -73,7 +73,20 @@
         }
       }
     },
-    "Content": {},
+    "Content": {
+      "slices1": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "articulo_parrafo": { "type": "SharedSlice" },
+            "titulos": { "type": "SharedSlice" },
+            "article_quote": { "type": "SharedSlice" },
+            "subtitulo": { "type": "SharedSlice" }
+          }
+        }
+      }
+    },
     "SEO": {
       "meta_keyword": { "type": "Text", "config": { "label": "meta keyword" } },
       "meta_title": { "type": "Text", "config": { "label": "meta title" } },
