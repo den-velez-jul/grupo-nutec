@@ -62,7 +62,7 @@
       </div>
     </div>
   </section>
-  <section>
+  <section v-if="article">
     <slice-zone
       wrapper="section"
       :components="components"
@@ -113,14 +113,19 @@ const { data: article } = await useAsyncData("article", async () => {
   if (document) {
     return document;
   } else {
-    throw createError({ statusCode: 404, message: "Page not found" });
+    null;
   }
 });
-const { data: news } = await useAsyncData("news", () =>
-  client.getAllByType("article")
-);
+const { data: news } = await useAsyncData("news", async () => {
+  const document = await client.getAllByType("article");
+  if (document) {
+    return document;
+  } else {
+    null;
+  }
+});
 
-const newsList = news.value;
+const newsList = news ? news.value : [];
 
 let cardNews = [];
 let headlineNews;

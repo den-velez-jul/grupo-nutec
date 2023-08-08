@@ -54,8 +54,4 @@ const props = defineProps({
 const { ctaLabel, ctaLink, title, topLabel, bgMedia, divisions } = props;
 
 const { image, video } = bgMedia[0];
-
-const videoOptions =
-  video.url +
-  "?controls=0&rel=0&version=3&autoplay=1&showinfo=0&loop=1&playsinline=1&amp;";
 </script>

@@ -88,21 +88,41 @@ const { data: bickley } = await useAsyncData("home", () =>
   client.getByUID("about_us", "nutec-bickley")
 );
 
-const { data: ovensCeramic } = await useAsyncData("ovensCeramic", () =>
-  client.getAllByTag("ceramicos")
-);
+const { data: ovensCeramic } = await useAsyncData("ovensCeramic", async () => {
+  const document = await client.getAllByTag("ceramicos");
+  if (document) {
+    return document;
+  } else {
+    [];
+  }
+});
 
-const { data: ovensMetals } = await useAsyncData("ovensMetals", () =>
-  client.getAllByTag("metalicos")
-);
+const { data: ovensMetals } = await useAsyncData("ovensMetals", async () => {
+  const document = await client.getAllByTag("metalicos");
+  if (document) {
+    return document;
+  } else {
+    [];
+  }
+});
 
-const { data: sistems } = await useAsyncData("sistems", () =>
-  client.getAllByTag("sistemas")
-);
+const { data: sistems } = await useAsyncData("sistems", async () => {
+  const document = await client.getAllByTag("sistemas");
+  if (document) {
+    return document;
+  } else {
+    [];
+  }
+});
 
-const { data: services } = await useAsyncData("services", () =>
-  client.getAllByTag("servicios")
-);
+const { data: services } = await useAsyncData("services", async () => {
+  const document = await client.getAllByTag("servicios");
+  if (document) {
+    return document;
+  } else {
+    [];
+  }
+});
 
 const bickleyData = bickley.value.data;
 

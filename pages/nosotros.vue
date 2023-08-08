@@ -46,13 +46,24 @@
 
 <script setup>
 const { client } = usePrismic();
-const { data: aboutUs } = await useAsyncData("aboutUs", () =>
-  client.getByUID("about_us", "nutec-nosotros")
-);
+const { data: aboutUs } = await useAsyncData("aboutUs", async () => {
+  const document = await client.getByUID("about_us", "nutec-nosotros");
 
-const { data: timeline } = await useAsyncData("timeline", () =>
-  client.getByUID("timeline", "nutec-timeline")
-);
+  if (document) {
+    return document;
+  } else {
+    null;
+  }
+});
+
+const { data: timeline } = await useAsyncData("timeline", async () => {
+  const document = await client.getByUID("timeline", "nutec-timeline");
+  if (document) {
+    return document;
+  } else {
+    null;
+  }
+});
 
 const aboutUsData = aboutUs.value.data;
 
@@ -74,7 +85,7 @@ const aboutUsDescription = {
 const nutecPurposeList = aboutUsData.purpose;
 const nutecValuesList = aboutUsData.values;
 
-const timelineData = timeline.value.data;
+const timelineData = timeline.value.data || [];
 const timelineDates = [...timeline.value.data.range_time];
 
 const firstRange = [...timelineDates.splice(0, 8)];
