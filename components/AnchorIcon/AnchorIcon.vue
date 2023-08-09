@@ -20,12 +20,9 @@ const props = defineProps({
   urlTo: String,
   whiteText: Boolean,
 });
-const { labelBtn, urlTo, whiteText, icon } = props;
+const { labelBtn, urlTo, whiteText } = props;
 
 const textStyles = whiteText ? "text-white" : "text-dark-blue";
-// const iconSelected = whiteText
-//   ? "/assets/icons/arrow-white.svg"
-//   : "/assets/icons/arrow-dark-blue.svg";
 
 const stylesClass = `flex items-center text-dark-blue ${textStyles}`;
 </script>

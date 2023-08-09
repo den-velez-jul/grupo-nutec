@@ -47,6 +47,24 @@
           "label": "Full Description",
           "placeholder": "Complete job application info"
         }
+      },
+      "career_cta": {
+        "type": "Link",
+        "config": {
+          "label": "career cta",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "select": null
+        }
+      },
+      "career_cta_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "career cta label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       }
     },
     "SEO": {

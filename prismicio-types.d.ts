@@ -552,7 +552,29 @@ interface CareerDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  full_description: prismic.RichTextField
+  full_description: prismic.RichTextField;
+
+  /**
+   * career cta field in *Career*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career.career_cta
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  career_cta: prismic.LinkField;
+
+  /**
+   * career cta label field in *Career*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career.career_cta_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  career_cta_label: prismic.RichTextField
   /**
    * Meta keyword field in *Career*
    *

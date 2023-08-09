@@ -29,11 +29,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  nitro: {
-    baseURL: "http://localhost:3000",
-    prerender: {
-      crawlLinks: true,
-      failOnError: false,
-    },
-  },
 });
