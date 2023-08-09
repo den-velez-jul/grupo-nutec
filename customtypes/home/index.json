@@ -58,6 +58,48 @@
           "label": "Top Slides"
         }
       },
+      "divisions": {
+        "type": "Group",
+        "config": {
+          "label": "divisions",
+          "fields": {
+            "division_logo": {
+              "type": "Image",
+              "config": {
+                "label": "division logo",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "division_descripcion": {
+              "type": "StructuredText",
+              "config": {
+                "label": "division descripcion",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "division_cta": {
+              "type": "Link",
+              "config": {
+                "label": "division cta",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "division_cta_label": {
+              "type": "StructuredText",
+              "config": {
+                "label": "division cta label",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

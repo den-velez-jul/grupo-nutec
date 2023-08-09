@@ -72,7 +72,7 @@
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section
       id="groupNews"
-      class="mt-[140px] pb-[60px] md:pt-[70px] lg:pt-[100px] lg:pb-[150px] xl:mt-[180px]">
+      class="pb-[60px] md:pt-[70px] lg:pt-[100px] lg:pb-[40px]">
       <h4
         class="mb-[40px] text-center text-dark-blue md:mb-[60px] xl:mb-[80px]">
         Artículos Relacionados
@@ -128,17 +128,10 @@ const { data: news } = await useAsyncData("news", async () => {
 const newsList = news ? news.value : [];
 
 let cardNews = [];
-let headlineNews;
+let headlineNews = { ...article.value.data };
 
 newsList.forEach((news) => {
-  if (news.tags.length === 0) {
-    cardNews.push(news.data);
-    return;
-  }
-  if (news.tags.includes("Hero")) {
-    headlineNews = news.data;
-    return;
-  }
+  cardNews.push(news.data);
 });
 
 const timePublished = "1 minuto";

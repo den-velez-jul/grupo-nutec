@@ -82,7 +82,9 @@
             "articulo_parrafo": { "type": "SharedSlice" },
             "titulos": { "type": "SharedSlice" },
             "article_quote": { "type": "SharedSlice" },
-            "subtitulo": { "type": "SharedSlice" }
+            "subtitulo": { "type": "SharedSlice" },
+            "imagen": { "type": "SharedSlice" },
+            "list_bullets": { "type": "SharedSlice" }
           }
         }
       }

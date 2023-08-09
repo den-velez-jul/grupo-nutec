@@ -4,7 +4,7 @@ import { Content } from "@prismicio/client";
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
 defineProps(
-  getSliceComponentProps<Content.SubtituloSlice>([
+  getSliceComponentProps<Content.ImagenSlice>([
     "slice",
     "index",
     "slices",
@@ -18,8 +18,7 @@ defineProps(
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation"
     class="pt-[40px] px-6 md:px-[100px] lg:pt-[60px] lg:px-[150px] xl:px-[300px]">
-    <h4 class="text-blue text-[20px] leading-[28px]">
-      <PrismicText :field="slice.primary.subtitulo" />
-    </h4>
+    <img :src="slice.primary.imagen.url" />
+    <PrismicText :field="slice.primary.imagen_caption" />
   </section>
 </template>

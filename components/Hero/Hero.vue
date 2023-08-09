@@ -37,7 +37,7 @@
     </div>
   </section>
   <div v-if="divisions" class="bg-baby-blue">
-    <Divisions :divisions="divisions[0].items" />
+    <Divisions :divisions="divisions" />
   </div>
 </template>
 
@@ -48,7 +48,7 @@ const props = defineProps({
   title: String,
   topLabel: String,
   bgMedia: String,
-  divisions: String,
+  divisions: Array,
 });
 
 const { ctaLabel, ctaLink, title, topLabel, bgMedia, divisions } = props;

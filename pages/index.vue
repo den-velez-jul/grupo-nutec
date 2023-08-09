@@ -145,7 +145,7 @@ const hero = {
   ctaLabel: homeData.cta_label,
   ctaLink: homeData.cta_link,
   bgMedia: homeData.top_slides,
-  divisions: homeData.slices,
+  divisions: homeData.divisions,
 };
 
 const description = {

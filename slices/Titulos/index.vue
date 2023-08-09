@@ -16,7 +16,10 @@ defineProps(
 <template>
   <section
     :data-slice-type="slice.slice_type"
-    :data-slice-variation="slice.variation">
-    TITULO
+    :data-slice-variation="slice.variation"
+    class="pt-[60px] px-6 md:px-[100px] lg:pt-[80px] lg:px-[150px] xl:px-[300px]">
+    <h3 class="text-blue leading-[36px]">
+      <PrismicText :field="slice.primary.titulo" />
+    </h3>
   </section>
 </template>

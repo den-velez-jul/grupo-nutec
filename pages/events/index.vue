@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="events"
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section class="py-[60px] lg:px-5 xl:px-[225px]">
       <h4

@@ -318,7 +318,9 @@ type ArticleDocumentDataSlices1Slice =
   | ArticuloParrafoSlice
   | TitulosSlice
   | ArticleQuoteSlice
-  | SubtituloSlice;
+  | SubtituloSlice
+  | ImagenSlice
+  | ListBulletsSlice;
 
 /**
  * Content for Article documents
@@ -1693,6 +1695,51 @@ export interface HomeDocumentDataTopSlidesItem {
   video: prismic.LinkField;
 }
 
+/**
+ * Item in *Home → divisions*
+ */
+export interface HomeDocumentDataDivisionsItem {
+  /**
+   * division logo field in *Home → divisions*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.divisions[].division_logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  division_logo: prismic.ImageField<never>;
+
+  /**
+   * division descripcion field in *Home → divisions*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.divisions[].division_descripcion
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  division_descripcion: prismic.RichTextField;
+
+  /**
+   * division cta field in *Home → divisions*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.divisions[].division_cta
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  division_cta: prismic.LinkField;
+
+  /**
+   * division cta label field in *Home → divisions*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.divisions[].division_cta_label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  division_cta_label: prismic.RichTextField;
+}
+
 type HomeDocumentDataSlicesSlice = never;
 
 /**
@@ -2017,6 +2064,17 @@ interface HomeDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   top_slides: prismic.GroupField<Simplify<HomeDocumentDataTopSlidesItem>>;
+
+  /**
+   * divisions field in *Home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.divisions[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  divisions: prismic.GroupField<Simplify<HomeDocumentDataDivisionsItem>>;
 
   /**
    * Slice Zone field in *Home*
@@ -4652,6 +4710,103 @@ export type ArticuloParrafoSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Imagen → Primary*
+ */
+export interface ImagenSliceDefaultPrimary {
+  /**
+   * Imagen field in *Imagen → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: imagen.primary.imagen
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagen: prismic.ImageField<never>;
+
+  /**
+   * imagen caption field in *Imagen → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: imagen.primary.imagen_caption
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  imagen_caption: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Imagen Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImagenSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImagenSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Imagen*
+ */
+type ImagenSliceVariation = ImagenSliceDefault;
+
+/**
+ * Imagen Shared Slice
+ *
+ * - **API ID**: `imagen`
+ * - **Description**: Imagen
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImagenSlice = prismic.SharedSlice<"imagen", ImagenSliceVariation>;
+
+/**
+ * Primary content in *ListBullets → Items*
+ */
+export interface ListBulletsSliceDefaultItem {
+  /**
+   * List Item field in *ListBullets → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: list_bullets.items[].list_item
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  list_item: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ListBullets Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListBulletsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<ListBulletsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *ListBullets*
+ */
+type ListBulletsSliceVariation = ListBulletsSliceDefault;
+
+/**
+ * ListBullets Shared Slice
+ *
+ * - **API ID**: `list_bullets`
+ * - **Description**: ListBullets
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ListBulletsSlice = prismic.SharedSlice<
+  "list_bullets",
+  ListBulletsSliceVariation
+>;
+
+/**
  * Primary content in *Subtitulo → Primary*
  */
 export interface SubtituloSliceDefaultPrimary {
@@ -4797,6 +4952,12 @@ declare module "@prismicio/client" {
       ArticuloParrafoSliceVariation,
       ArticuloParrafoSliceDefault,
       ArticuloParrafoSliceTextoAzul,
+      ImagenSlice,
+      ImagenSliceVariation,
+      ImagenSliceDefault,
+      ListBulletsSlice,
+      ListBulletsSliceVariation,
+      ListBulletsSliceDefault,
       SubtituloSlice,
       SubtituloSliceVariation,
       SubtituloSliceDefault,

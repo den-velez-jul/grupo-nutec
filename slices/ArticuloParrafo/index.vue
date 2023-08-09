@@ -30,7 +30,7 @@ const parragrahStyles = `${textColor}
   <section
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation"
-    class="pt-[60px] px-6 md:px-[100px] md:pt-[70px] lg:pt-[60px] lg:px-[150px] xl:px-[300px] xl:pt-[80px]">
+    class="pt-[40px] px-6 md:px-[100px] lg:pt-[60px] lg:px-[150px] xl:px-[300px]">
     <PrismicRichText :field="slice.primary.parrafo" :class="parragrahStyles" />
   </section>
 </template>

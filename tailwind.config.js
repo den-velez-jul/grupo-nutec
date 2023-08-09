@@ -20,8 +20,6 @@ module.exports = {
     fontFamily: {
       'founders-grosteskers': ['Founders Grotesk', 'Helvetica Neue', 'Helvetica', 'Arial'],
       'untitled-sans': ['Untitled Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-
-    
     },
     colors:{
       black: '#272727',

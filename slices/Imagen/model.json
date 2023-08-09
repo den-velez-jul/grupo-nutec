@@ -1,0 +1,32 @@
+{
+  "id": "imagen",
+  "type": "SharedSlice",
+  "name": "Imagen",
+  "description": "Imagen",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "imagen": {
+          "type": "Image",
+          "config": { "label": "Imagen", "constraint": {}, "thumbnails": [] }
+        },
+        "imagen_caption": {
+          "type": "StructuredText",
+          "config": {
+            "label": "imagen caption",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
