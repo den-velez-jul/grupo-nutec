@@ -1,6 +1,6 @@
 <template>
   <section
-    class="grid lg:flex lg:justify-end grid-rows-2 md:grid-rows-1 md:grid-cols-2 md:gap-x-10 lg:gap-0 gap-y-[30px] py-5 px-6 bg-baby-blue xl:max-w-[1720px] xl:mx-auto">
+    class="grid lg:flex lg:justify-center grid-rows-2 md:grid-rows-1 md:grid-cols-2 md:gap-x-10 lg:gap-0 gap-y-[30px] py-5 px-6 bg-baby-blue xl:max-w-[1720px] xl:mx-auto">
     <div
       v-for="division of divisions"
       class="flex lg:max-w-[500px] lg:ml-[70px] max-w-[1900px]">

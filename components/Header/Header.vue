@@ -27,7 +27,7 @@
       </nav>
       <div class="flex">
         <img
-          class="mr-3"
+          class="mr-12"
           src="~assets/icons/search.svg"
           alt="logo"
           width="24px"

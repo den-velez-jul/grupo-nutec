@@ -34,14 +34,14 @@
           height="25px" />
       </div>
       <ul
-        class="grid grid-rows-4 gap-y-3 mt-[60px] font-bold md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
+        class="body-bold grid grid-rows-4 gap-y-3 mt-[60px] md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
         <li>Inicio</li>
         <li>Compañia</li>
         <li>NUTEC FIBRAS</li>
         <li>NUTEC BICKEY</li>
       </ul>
       <ul
-        class="grid grid-rows-4 gap-y-3 mt-6 font-bold md:mt-0 justify-items-center md:justify-items-start lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
+        class="body-bold grid grid-rows-4 gap-y-3 mt-6 md:mt-0 justify-items-center md:justify-items-start lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
         <li>Contacto</li>
         <li>Newroom</li>
         <li>Carrerar</li>
@@ -49,7 +49,7 @@
       </ul>
     </div>
     <span
-      class="block my-[60px] md:mt-20 md:mb-0 lg:my-0 text-center lg:text-left lg:mt-3"
+      class="block my-[60px] md:mt-20 md:mb-0 lg:my-0 text-center lg:text-left body-reg lg:mt-3"
       >Grupo NUTEC 2023</span
     >
   </footer>
