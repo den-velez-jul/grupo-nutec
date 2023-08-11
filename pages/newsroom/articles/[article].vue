@@ -1,7 +1,7 @@
 <template>
   <section
     id="headlineNews"
-    class="bg-light-baby-blue pt-[50px] pb-[60px] lg:pt-[120px] xl:pt-[150px]">
+    class="bg-baby-blue pt-[50px] pb-[60px] lg:pt-[120px] xl:pt-[150px]">
     <div
       class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
       <div class="hidden lg:flex">

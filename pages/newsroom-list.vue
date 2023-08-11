@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-baby-blue">
+  <div class="bg-baby-blue">
     <section
       id="headlineNews"
       class="pt-[100px] pb-[80px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px] mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">

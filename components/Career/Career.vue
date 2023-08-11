@@ -9,7 +9,7 @@
         <span class="text-dark-blue body-bold">Categoría:</span>
         <span class="body-reg"><PrismicText :field="category" /></span>
       </p>
-      <p class="mt-3">
+      <p class="mt-[12px]">
         <span class="text-dark-blue body-bold">Ubicacion:</span>
         <span><PrismicText :field="location" class="body-reg" /></span>
       </p>

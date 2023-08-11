@@ -21,9 +21,9 @@
       </h4>
       <div
         class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 md:gap-y-[50px] lg:grid-cols-3">
-        <div v-for="company of companyProps" class="flex flex-col">
+        <div v-for="company of companyPropsSorted" class="flex flex-col">
           <div
-            class="h-[100px] py-5 bg-light-baby-blue md:h-[180px] md:py-[60px] lg:h-[220px] flex justify-center items-center">
+            class="h-[100px] py-5 bg-baby-blue md:h-[180px] md:py-[60px] lg:h-[220px] flex justify-center items-center">
             <img :src="company.logo.url" alt="" class="h-full object-cover" />
           </div>
           <div
@@ -135,6 +135,7 @@ const companyProps = companyList.map((item) => {
     ctaLabel: data.company_cta_label[0] ? data.company_cta_label[0].text : "",
     ctaUrl: data.company_cta_url,
     logo: data.company_logo,
+    position: data.company_sort_position,
   };
 });
 
@@ -169,6 +170,8 @@ const solutionsProps = solutionsList.map((item) => {
     position: data.product_sort_post,
   };
 });
+
+const companyPropsSorted = companyProps.sort((a, b) => a.position - b.position);
 
 const productPropsSorted = productProps.sort((a, b) => a.position - b.position);
 

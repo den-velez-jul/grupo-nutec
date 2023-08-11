@@ -1,5 +1,5 @@
 <template>
-  <article class="flex flex-col bg-light-baby-blue">
+  <article class="flex flex-col bg-baby-blue">
     <div
       class="flex justify-center items-center p-[60px] h-[240px] lg:h-[290px] xl:h-[340px]">
       <img :src="image.url" alt="" class="object-contain" />

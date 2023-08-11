@@ -24,7 +24,7 @@
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
-          v-for="product of ovensCeramicList"
+          v-for="product of ovensCeramicListSorted"
           :companyProps="product.companyProps"
           :redTitle="product.redTitle"
           :anchorLeft="product.anchorLeft"
@@ -40,7 +40,7 @@
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
-          v-for="product of ovensMetalsList"
+          v-for="product of ovensMetalsListSorted"
           :companyProps="product.companyProps"
           :redTitle="product.redTitle"
           :anchorLeft="product.anchorLeft"
@@ -56,7 +56,7 @@
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
-          v-for="product of sistemsList"
+          v-for="product of sistemsListSorted"
           :companyProps="product.companyProps"
           :redTitle="product.redTitle"
           :anchorLeft="product.anchorLeft"
@@ -72,7 +72,7 @@
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
-          v-for="product of servicesList"
+          v-for="product of servicesListSorted"
           :companyProps="product.companyProps"
           :redTitle="product.redTitle"
           :anchorLeft="product.anchorLeft"
@@ -139,7 +139,7 @@ const bickleyDescription = {
   ctaLabel: bickleyData.cta_label,
   ctaLink: bickleyData.cta_link,
 };
-console.log(bickleyDescription);
+
 const ovensCeramicList = ovensCeramic.value.map((item) => {
   return {
     companyProps: {
@@ -151,6 +151,7 @@ const ovensCeramicList = ovensCeramic.value.map((item) => {
     title: item.data.product_name[0].text,
     redTitle: true,
     anchorLeft: true,
+    position: item.data.product_sort_post,
   };
 });
 
@@ -165,6 +166,7 @@ const ovensMetalsList = ovensMetals.value.map((item) => {
     title: item.data.product_name[0].text,
     redTitle: true,
     anchorLeft: true,
+    position: item.data.product_sort_post,
   };
 });
 
@@ -179,6 +181,7 @@ const sistemsList = sistems.value.map((item) => {
     title: item.data.product_name[0].text,
     redTitle: true,
     anchorLeft: true,
+    position: item.data.product_sort_post,
   };
 });
 
@@ -193,6 +196,17 @@ const servicesList = services.value.map((item) => {
     title: item.data.product_name[0].text,
     redTitle: false,
     anchorLeft: true,
+    position: item.data.product_sort_post,
   };
 });
+
+const ovensCeramicListSorted = ovensCeramicList.sort(
+  (a, b) => a.position - b.position
+);
+
+const ovensMetalsListSorted = ovensMetalsList.sort(
+  (a, b) => a.position - b.position
+);
+const sistemsListSorted = sistemsList.sort((a, b) => a.position - b.position);
+const servicesListSorted = servicesList.sort((a, b) => a.position - b.position);
 </script>

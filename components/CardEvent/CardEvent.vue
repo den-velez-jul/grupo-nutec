@@ -1,6 +1,6 @@
 <template>
   <article
-    class="grid grid-cols-1 grid-rows-2 bg-light-baby-blue lg:grid-cols-[40%_60%] lg:grid-rows-1">
+    class="grid grid-cols-1 grid-rows-2 bg-light-baby-blue lg:grid-cols-[40%_60%] lg:grid-rows-1 xl:h-[344px]">
     <div
       class="flex flex-col justify-between px-6 py-8 lg:p-10 lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-3">
       <div>
@@ -13,8 +13,15 @@
         </p>
       </div>
       <div class="flex justify-between text-blue md:text-[20px]">
-        <span><PrismicText :field="place" /></span>
-        <AnchorIcon :labelBtn="ctaLabel" :urlTo="ctaLink.url" />
+        <span class="body-bold"><PrismicText :field="place" /></span>
+        <div class="flex items-center text-blue">
+          <a :href="ctaLink.url" class="flex items-center">
+            <span class="text-med">
+              {{ ctaLabel }}
+            </span>
+            <img src="~assets/icons/arrow-blue.svg" class="ml-3" />
+          </a>
+        </div>
       </div>
     </div>
     <div
@@ -23,7 +30,7 @@
         class="text-[90px] xl:text-[120px] font-bold leading-[130px] font-founders-grosteskers">
         {{ dayRangeTitle }}
       </p>
-      <p class="text-blue text-[30px] font-bold xl:text-[40px]">
+      <p class="text-mid-blue text-[30px] font-bold">
         {{ dateTitle }}
       </p>
     </div>
