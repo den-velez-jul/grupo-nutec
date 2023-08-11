@@ -1,4 +1,5 @@
 <template>
+  <TopBanner :labelList="['Newsroom']" />
   <section
     class="relative flex h-[800px] w-full px-6 md:px-[50px] lg:px-[270px]">
     <div

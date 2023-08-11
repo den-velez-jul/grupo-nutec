@@ -1,4 +1,5 @@
 <template>
+  <TopBanner :labelList="['Carreras']" />
   <Hero
     :title="hero.title"
     :topLabel="hero.topLabel"

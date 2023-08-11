@@ -1,4 +1,5 @@
 <template>
+  <TopBanner :labelList="['Sobre Grupo NUTEC']" />
   <Hero
     :title="hero.title"
     :topLabel="hero.topLabel"

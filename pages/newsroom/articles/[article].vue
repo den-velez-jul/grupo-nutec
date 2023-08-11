@@ -1,4 +1,5 @@
 <template>
+  <TopBanner :labelList="['Newsroom', headlineNews.article_title[0].text]" />
   <section
     id="headlineNews"
     class="bg-baby-blue pt-[50px] pb-[60px] lg:pt-[120px] xl:pt-[150px]">
