@@ -8,10 +8,10 @@
         <h3 v-if="title" :class="titleCustomStyle">{{ title }}</h3>
         <PrismicText
           :field="companyProps.description"
-          class="text-[16px] xl:text-[20px] font-founders-grosteskers font-bold text-dark-blue" />
+          class="body-reg text-black" />
       </div>
       <a :href="companyProps.cta_link1.url" :class="anchorCustomStyle">
-        <span class="font-bold text-[20px] xl:text-[30px]">
+        <span class="text-big">
           {{ companyProps.cta_label1 }}
         </span>
         <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
@@ -33,6 +33,6 @@ const { companyProps, title, redTitle, anchorLeft } = props;
 const titleColorStyle = redTitle ? "text-[#B40023]" : "text-dark-blue";
 const archorPositionColor = anchorLeft ? "justify-start" : "justify-end";
 
-const titleCustomStyle = `mb-10 text-[35px] leading-[44px] md:leading-[48x] md:text-[40px] lg:text-[50px] lg:leading-[58px] xl:leading-[58px] ${titleColorStyle}`;
+const titleCustomStyle = `mb-10 heading2 ${titleColorStyle}`;
 const anchorCustomStyle = `mt-8 flex w-full text-[20px] xl:text-[30px] text-dark-blue ${archorPositionColor}`;
 </script>

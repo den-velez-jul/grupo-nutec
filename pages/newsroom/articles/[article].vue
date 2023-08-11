@@ -5,7 +5,7 @@
     <div
       class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
       <div class="hidden lg:flex">
-        <p class="font-founders-grosteskers font-bold text-[24px] text-blue">
+        <p class="body-bold text-blue">
           <PrismicText :field="headlineNews.article_top_label" />
         </p>
       </div>
@@ -17,14 +17,14 @@
             class="h-[300px] md:h-[524px] w-full object-cover" />
           <p
             class="hidden lg:flex items-center font-bold font-founders-grosteskers lg:mt-[20px] md:text-[20px] xl:text-[20px]">
-            <span>
+            <span class="body-reg text-black">
               {{ headlineNews.article_date }}
             </span>
             <img
               src="~assets/icons/icon-time.svg"
               alt=""
               class="w-5 h-5 mx-2" />
-            <span>{{ timePublished }}</span>
+            <span class="body-reg text-black">{{ timePublished }}</span>
           </p>
         </div>
         <div>
@@ -33,20 +33,18 @@
             <PrismicText :field="headlineNews.article_top_label" />
           </p>
           <div class="font-bold">
-            <h1 class="text-blue mt-10 md:text-[50px] lg:mt-0 xl:text-[70px]">
+            <h1 class="text-blue heading1 mt-10 lg:mt-0">
               <PrismicText :field="headlineNews.article_title" />
             </h1>
             <p
-              class="font-founders-grosteskers font-bold text-[24px] leading-[32px] mt-[35px] lg:mt-[70px] lg:text-[30px] lg:leading-[36px] xl:text-[20px]">
+              class="font-founders-grosteskers font-bold text-[24px] leading-[32px] mt-[35px] lg:mt-[70px] xl:text-[30px] xl:leading-[40px]">
               <PrismicText :field="headlineNews.article_description" />
             </p>
             <div class="mt-10">
-              <p
-                class="font-untitled-sans font-bold text-dark-blue md:text-[16px]">
+              <p class="body-bold text-dark-blue">
                 <PrismicText :field="headlineNews.article_author" />
               </p>
-              <p
-                class="flex items-center font-bold font-founders-grosteskers mt-[16px] md:text-[16px] lg:hidden">
+              <p class="flex items-center body-reg mt-[16px] lg:hidden">
                 <span>
                   {{ headlineNews.article_date }}
                 </span>
@@ -74,7 +72,7 @@
       id="groupNews"
       class="pb-[60px] md:pt-[70px] lg:pt-[100px] lg:pb-[40px]">
       <h4
-        class="mb-[40px] text-center text-dark-blue md:mb-[60px] xl:mb-[80px]">
+        class="heading3 mb-[40px] text-center text-dark-blue md:mb-[60px] xl:mb-[80px]">
         Artículos Relacionados
       </h4>
       <div
@@ -91,7 +89,7 @@
       </div>
       <div class="flex justify-start mt-[30px] xl:mt-[50px]">
         <a class="flex items-center text-dark-blue">
-          <span class="font-semibold md:text-[20px] xl:text-[30px]">
+          <span class="text-big">
             Explora Todos los Articulos y Editoriales
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />

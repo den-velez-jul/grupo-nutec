@@ -4,14 +4,13 @@
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section class="py-[60px] lg:px-5 xl:px-[225px]">
       <h4
-        class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-[100px]">
+        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-[100px]">
         Proximos Eventos
       </h4>
       <CardEvent :cardEventProps="event" />
       <div class="mt-8 w-full">
         <a href="/" class="flex items-center">
-          <span
-            class="font-founders-grosteskers font-semibold md:text-[20px] text-dark-blue">
+          <span class="text-big text-dark-blue">
             Conoce eventos anteriores
           </span>
           <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />

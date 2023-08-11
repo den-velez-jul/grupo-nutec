@@ -4,16 +4,16 @@
       class="flex flex-col items-center px-6 md:px-[50px] lg:px-[75px] xl:px-[270px]">
       <span
         v-if="topLabel"
-        class="text-white uppercase font-founders-grosteskers font-bold mb-6 md:mb-[30px] md:text-[30px] lg:mb-[40px] xl:mb-[48px]"
+        class="text-white uppercase heading3 mb-6 md:mb-[30px] md:text-[30px] lg:mb-[40px] xl:mb-[48px]"
         >{{ topLabel }}</span
       >
-      <h1 class="text-white text-center z-10">
+      <h1 class="heading1 text-white text-center z-10">
         {{ title }}
       </h1>
       <PrismicLink
         v-if="ctaLink"
         :field="ctaLink"
-        class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white font-bold text-[16px] z-10 md:text-[20px] xl:text-[26px]"
+        class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white text-big z-10"
         >{{ ctaLabel }}
       </PrismicLink>
     </div>

@@ -3,8 +3,7 @@
     <section
       id="headlineNews"
       class="pt-[100px] pb-[80px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px] mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
-      <h4
-        class="text-[24px] font-bold text-center font-founders-grosteskers text-dark-blue md:text-[30px] xl:text-[40px]">
+      <h4 class="heading3 text-center text-dark-blue">
         Artículos y Editoriales
       </h4>
       <div
@@ -15,23 +14,23 @@
             class="h-[300px] md:h-[524px] w-full object-cover" />
         </div>
         <div class="font-founders-grosteskers">
-          <h1 class="text-blue mt-8 lg:mt-0 xl:text-[70px]">
+          <h1 class="text-blue mt-8 lg:mt-0 heading1">
             <PrismicText :field="headlineNews.article_title" />
           </h1>
-          <p class="mt-[30px] md:mt-[50px] lg:mt-[60px] xl:text-[20px]">
+          <p class="mt-[30px] md:mt-[50px] lg:mt-[60px] body-bold">
             <PrismicText :field="headlineNews.article_author" />
           </p>
-          <p class="mt-[30px] md:mt-[40px] lg:mt-[30px] xl:text-[20px]">
+          <p class="mt-[30px] md:mt-[40px] lg:mt-[30px] body-reg">
             {{ headlineNews.article_date }}
           </p>
-          <p class="mt-[15px] lg:mt-5 xl:text-[20px]">
+          <p class="mt-[15px] lg:mt-5 body-reg">
             <PrismicText :field="headlineNews.article_description" />
           </p>
           <div class="flex justify-start mt-[30px] lg:mt-10">
             <PrismicLink
               :field="headlineNews.article_cta_link"
               class="flex items-center text-dark-blue">
-              <span class="font-semibold md:text-[20px] xl:text-[30px]">
+              <span class="text-big">
                 {{ headlineNews.article_cta_label[0].text }}
               </span>
               <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
@@ -61,14 +60,14 @@
     </section>
 
     <section class="pb-[60px] lg:px-5 xl:px-[225px]">
-      <h4 class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+      <h4
+        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
         Proximos Eventos
       </h4>
       <CardEvent :cardEventProps="event" />
       <div class="mt-8 w-full">
         <a href="/" class="flex items-center">
-          <span
-            class="font-founders-grosteskers font-semibold md:text-[20px] text-dark-blue">
+          <span class="text-big text-dark-blue">
             Conoce eventos anteriores
           </span>
           <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />

@@ -2,20 +2,22 @@
   <h4 v-if="topLabel">
     <PrismicText
       :field="topLabel"
-      class="font-founders-grosteskers mb-[80px] text-dark-blue text-center font-bold" />
+      class="heading3 mb-[80px] text-dark-blue text-center" />
   </h4>
   <div class="lg:grid lg:grid-cols-[58%_40%] lg:gap-x-10">
     <div class="mb-[80px]">
       <h1
-        class="text-dark-blue text-center mt-10 mb-5 tracking-tight lg:text-left lg:mt-0 lg:mb-10">
+        class="heading1 text-dark-blue text-center mt-10 mb-5 tracking-tight lg:text-left lg:mt-0 lg:mb-10">
         <PrismicText :field="title" />
       </h1>
       <p class="my-10">
-        <PrismicRichText :field="description" class="flex flex-col space-y-4" />
+        <PrismicRichText
+          :field="description"
+          class="body-reg flex flex-col space-y-4" />
       </p>
       <div v-if="ctaLabel" class="flex justify-center lg:justify-start">
         <a :href="ctaLink" class="flex items-center text-dark-blue">
-          <span class="font-bold md:text-[20px] xl:text-[30px]">
+          <span class="text-big">
             {{ ctaLabel }}
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
@@ -23,9 +25,7 @@
       </div>
     </div>
     <div>
-      <img
-        :src="image.url"
-        class="w-full h-[430px] object-cover lg:object-contain" />
+      <img :src="image.url" class="w-full h-[430px] object-cover" />
     </div>
   </div>
 </template>
@@ -44,4 +44,6 @@ const props = defineProps({
 
 const { title, description, ctaLabel, ctaLink, image, topLabel } =
   props.articleProps;
+
+console.log(title);
 </script>

@@ -1,8 +1,7 @@
 <template>
   <div :class="stylesClass">
     <a :href="urlTo" class="flex items-center">
-      <span
-        class="font-founders-grosteskers font-bold md:text-[20px] xl:text-[30px]">
+      <span class="text-big">
         {{ labelBtn }}
       </span>
       <img v-if="whiteText" src="~assets/icons/arrow-white.svg" class="ml-3" />

@@ -1,16 +1,16 @@
 <template>
-  <article
-    class="p-8 lg:p-[28px] xl:p-5 flex flex-col font-founders-grosteskers">
+  <article class="p-8 lg:p-[28px] xl:p-5 flex flex-col">
     <div
-      class="flex justify-between lg:flex-row-reverse lg:justify-end lg:items-center">
-      <h2
-        class="text-[35px] text-dark-blue font-bold md:text-[50px] lg:text-[50px] lg:ml-5 xl:text-[40px]">
+      class="flex justify-between h-[48px] md:h-[60px] lg:flex-row-reverse lg:justify-end lg:items-center xl:h-[80px]">
+      <h2 v-if="!titleReduced" class="heading1 text-dark-blue lg:ml-3">
         <PrismicText :field="title" />
       </h2>
-      <img :src="icon.url" class="h-[48px] w-[52px]" />
+      <h2 v-if="titleReduced" class="heading3 text-dark-blue lg:ml-3">
+        <PrismicText :field="title" />
+      </h2>
+      <img :src="icon.url" class="h-full w-auto" />
     </div>
-    <p
-      class="mt-[21.5px] font-bold font-founders-grosteskers lg:text-[16px] leading-[22px] xl:text-[20px] xl:leading-[28px]">
+    <p class="body-reg text-justify mt-4 lg:mt-[30px]">
       <PrismicText :field="description" />
     </p>
   </article>
@@ -21,7 +21,8 @@ const props = defineProps({
   title: String,
   icon: String,
   description: String,
+  titleReduced: Boolean,
 });
 
-const { title, image, description } = props;
+const { title, image, description, titleReduced } = props;
 </script>

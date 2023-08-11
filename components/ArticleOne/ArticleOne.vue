@@ -4,12 +4,11 @@
       <h1>
         <PrismicText
           :field="title"
-          class="text-dark-blue text-center mt-10 mb-5 lg:text-left lg:mt-0 lg:mb-10" />
+          class="heading1 text-dark-blue text-center mt-10 mb-5 lg:text-left lg:mt-0 lg:mb-10" />
       </h1>
       <div class="flex justify-center lg:justify-start">
         <PrismicLink :field="linkUrl" class="flex items-center text-dark-blue"
-          ><span
-            class="font-bold text-[16px] md:text-[20px] xl:text-[30px] font-founders-grosteskers">
+          ><span class="text-big">
             <PrismicText :field="linkLabel" />
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3"

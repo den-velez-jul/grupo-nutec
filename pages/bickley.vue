@@ -133,13 +133,13 @@ const hero = {
 };
 
 const bickleyDescription = {
-  title: bickleyData.titulo[0],
+  title: bickleyData.titulo,
   description: bickleyData.descripcion,
   image: bickleyData.imagen,
   ctaLabel: bickleyData.cta_label,
   ctaLink: bickleyData.cta_link,
 };
-
+console.log(bickleyDescription);
 const ovensCeramicList = ovensCeramic.value.map((item) => {
   return {
     companyProps: {

@@ -17,12 +17,8 @@ const { slice, index, slices, context } = props;
 const textColor = slice.variation === "default" ? "text-black" : "text-blue";
 const parragrahStyles = `${textColor} 
       grid
+      body-reg
       gap-y-[22px]
-      font-bold
-      leading-[22px]
-      text-[16px]
-      xl:text-[20px]
-      xl:leading-[28px]
       xl:gap-y-[28px]`;
 </script>
 

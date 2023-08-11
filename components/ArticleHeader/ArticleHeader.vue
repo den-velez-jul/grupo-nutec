@@ -1,15 +1,13 @@
 <template>
-  <div class="text-dark-blue lg:w-[60%]">
-    <p class="text-[20px] font-bold md:text-6 xl:text-[30px]">
+  <div class="text-dark-blue lg:w-[66%]">
+    <p class="uppercase text-big text-[20px] md:text-6 xl:text-[30px]">
       {{ topLabel }}
     </p>
-    <h3 class="py-5">
+    <h3 class="heading2 mt-5">
       {{ title }}
     </h3>
-    <div>
-      <a
-        :href="ctaUrl"
-        class="flex w-full text-[20px] lg:text-[30px] xl:text-[30px] text-dark-blue">
+    <div class="mt-5">
+      <a :href="ctaUrl" class="flex w-full text-big text-dark-blue">
         <span class="font-bold"> {{ ctaLabel }} </span>
         <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </a>

@@ -18,8 +18,10 @@
   <div
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <div class="pb-[60px] pt-[80px] md:pt-[120px]">
-      <h4 class="text-center text-dark-blue pb-6 md:pb-8">Nuestro propósito</h4>
-      <div class="lg:grid lg:grid-cols-3">
+      <h4 class="heading3 text-center text-dark-blue pb-[32px] lg:pb-[48px]">
+        Nuestro propósito
+      </h4>
+      <div class="lg:grid lg:grid-cols-3 w-full justify-items-center">
         <div v-for="card of nutecPurposeList">
           <CardValue
             :title="card.purpose_title"
@@ -29,15 +31,17 @@
       </div>
     </div>
     <div class="pb-[60px] pt-[80px] md:pt-[60px]">
-      <h4 class="text-center text-dark-blue pb-6 md:pb-8">
+      <h4 class="heading3 text-center text-dark-blue pb-[32px] md:pb-[48px]">
         Valores Fundamentales
       </h4>
-      <div class="lg:grid lg:grid-cols-3 xl:grid-cols-4">
+      <div
+        class="lg:grid lg:grid-cols-3 xl:grid-cols-4 w-full justify-items-center">
         <div v-for="card of nutecValuesList">
           <CardValue
             :title="card.values_title"
             :icon="card.values_image"
-            :description="card.values_description" />
+            :description="card.values_description"
+            titleReduced />
         </div>
       </div>
     </div>

@@ -16,7 +16,9 @@
   <div
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section class="pb-[60px] pt-[80px] md:pt-[120px]">
-      <h4 class="text-center text-dark-blue mb-[60px]">Nuestras compañias</h4>
+      <h4 class="heading3 text-center text-dark-blue mb-[60px]">
+        Nuestras compañias
+      </h4>
       <div
         class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 md:gap-y-[50px] lg:grid-cols-3">
         <div v-for="company of companyProps" class="flex flex-col">
@@ -27,21 +29,20 @@
           <div
             class="flex flex-col flex-grow justify-between bg-dark-blue text-white p-6 lg:p-8 lg:pb-[60px]">
             <div>
-              <h4 class="pb-5 text-[20px] font-bold lg:text-[40px] lg:pb-10">
+              <h4 class="pb-5 heading3 lg:pb-10">
                 <PrismicText :field="company.title" />
               </h4>
-              <p
-                class="pb-[30px] font-bold font-founders-grosteskers lg:text-[20px]">
+              <p class="pb-[30px] body-reg">
                 <PrismicText :field="company.description" />
               </p>
-              <p class="font-bold font-founders-grosteskers lg:text-[20px]">
+              <p class="body-reg">
                 <PrismicText :field="company.location" />
               </p>
             </div>
             <a
               v-if="company.ctaLabel.length > 0"
               :href="company.ctaUrl.url"
-              class="pt-8 flex w-full text-[16px] md:text-[20px] font-bold font-founders-grosteskers xl:text-[30px]">
+              class="pt-8 flex w-full body-big">
               <span class="font-bold"> {{ company.ctaLabel }} </span>
               <img src="~assets/icons/arrow-white.svg" class="ml-3" />
             </a>

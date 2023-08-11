@@ -8,12 +8,11 @@
   <section
     class="pt-[80px] pb-[60px] mx-6 md:mx-[50px] lg:pb-0 lg:pt-[150px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <div class="">
-      <h4
-        class="font-founders-grosteskers text-center text-dark-blue text-[24px] md:text-[30px] xl:text-[40px]">
+      <h4 class="heading3 text-center text-dark-blue">
         <PrismicText :field="careerFeedData.career_title" />
       </h4>
       <p
-        class="mt-[48px] mb-[70px] font-bold text-[16px] text-dark-blue leading-[22px] lg:mb-[140px] xl:text-center xl:text-[20px] xl:leading-[28px]">
+        class="mt-[48px] mb-[70px] text-dark-blue lg:mb-[140px] xl:text-center body-reg">
         <PrismicText :field="careerFeedData.career_description" />
       </p>
     </div>

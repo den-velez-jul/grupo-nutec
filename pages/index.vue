@@ -9,7 +9,7 @@
     <section
       id="description"
       class="py-[60px] bg-baby-blue xl:max-w-[1720px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
-      <h4 class="text-dark-blue text-center lg:text-left lg:mb-[80px]">
+      <h4 class="text-dark-blue heading3 text-center lg:text-left lg:mb-[80px]">
         <PrismicText :field="description.topLabel" />
         {{ descrptopLabel }}
       </h4>
@@ -21,7 +21,7 @@
     <section
       id="companies"
       class="pb-[80px] pt-[60px] md:pb-[100px] md:pt-[70px] lg:pt-[150px]">
-      <h4 class="text-center text-dark-blue">
+      <h4 class="text-center text-dark-blue heading3">
         <PrismicText :field="companies.title" />
       </h4>
       <div
@@ -32,30 +32,26 @@
       </div>
     </section>
     <section id="tiendaNutec" class="pb-[80px]">
-      <p
-        class="text-[24px] font-bold text-center font-founders-grosteskers text-dark-blue md:text-[30px] xl:text-[40px]">
-        Tienda NUTEC
-      </p>
+      <p class="heading3 text-dark-blue text-center">Tienda NUTEC</p>
       <div class="mt-8 lg:mt-12 lg:grid lg:grid-cols-[50%_50%]">
         <div class="lg:col-start-2 lg:col-end-3">
           <img
             src="~assets/images/dummy2.png"
-            class="w-full h-[200px] md:h-[440px] lg:h-[100%] object-cover" />
+            class="w-full h-[200px] md:h-[440px] lg:h-[100%] object-cover lg:object-fit" />
         </div>
         <div
-          class="p-8 pt-6 bg-dark-blue text-white lg:py-[78px] lg:px-[74px] lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2 lg:flex lg:flex-col lg:justify-between xl:h-[760px]">
-          <h2
-            class="text-[30px] md:text-[50px] text-center font-semibold md:text-left">
+          class="p-8 pt-6 bg-dark-blue text-white lg:py-[78px] lg:px-[74px] lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2 lg:flex lg:flex-col lg:justify-between xl:h-full">
+          <h2 class="heading1 text-center md:text-left">
             <PrismicText :field="nutecShop.title" />
           </h2>
           <PrismicText
             :field="nutecShop.description"
-            class="mt-6 mb-14 font-bold md:mt-10 md:text-[20px] leading-[22px] lg:leading-[28px]" />
+            class="body-reg mt-6 mb-14 md:mt-10" />
 
           <div class="flex justify-center md:justify-start">
             <PrismicLink
               :field="nutecShop.ctaLink"
-              class="bg-white py-4 px-5 text-dark-blue font-bold font-founders-grosteskers md:text-[20px]">
+              class="bg-white py-4 px-5 text-dark-blue text-big">
               {{ nutecShop.ctaLabel }}
             </PrismicLink>
           </div>
@@ -66,7 +62,7 @@
       <h4>
         <PrismicText
           :field="homeData.articles_title"
-          class="text-[24px] font-bold text-center font-founders-grosteskers text-dark-blue md:text-[30px] lg:text-left xl:text-[40px]" />
+          class="heading3 text-center text-dark-blue lg:text-left" />
       </h4>
       <div
         class="mt-[60px] lg:grid lg:grid-cols-2 lg:mt-[70px] lg:h-[688px] lg:gap-x-[60px] xl:h-[588px]">
@@ -75,18 +71,17 @@
             :src="homeData.image_article.url"
             class="h-[300px] md:h-[524px] w-full object-cover" />
         </div>
-        <div class="font-founders-grosteskers">
-          <h1 class="text-blue mt-8 lg:m-0">
+        <div>
+          <h1 class="heading1 text-blue mt-8 lg:m-0">
             <PrismicText :field="divisionsNews.nutecGroup.title1" />
           </h1>
-          <p
-            class="mt-[30px] md:mt-[50px] lg:mt-[60px] xl:mt-[70px] xl:text-[20px]">
+          <p class="mt-[30px] md:mt-[50px] lg:mt-[60px] xl:mt-[70px] body-bold">
             <PrismicText :field="divisionsNews.nutecGroup.author" />
           </p>
-          <p class="mt-[30px] md:mt-[40px] xl:text-[20px]">
+          <p class="mt-[30px] md:mt-[40px] body-reg">
             {{ divisionsNews.nutecGroup.date }}
           </p>
-          <p class="mt-[15px] md:mt-[20px] xl:text-[20px]">
+          <p class="mt-[15px] md:mt-[20px] body-reg">
             <PrismicRichText
               :field="divisionsNews.nutecGroup['description-news']" />
           </p>
@@ -94,7 +89,7 @@
             <PrismicLink
               :field="divisionsNews.nutecGroup.link_button"
               class="flex items-center text-dark-blue">
-              <span class="font-semibold md:text-[20px] xl:text-[30px]">
+              <span class="text-big">
                 {{ divisionsNews.nutecGroup.label_button }}
               </span>
               <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
@@ -113,16 +108,16 @@
         class="" />
     </section>
     <section>
-      <div class="pb-[60px] lg:px-5 xl:px-[225px]">
-        <h4 class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+      <div class="pb-[60px] lg:px-5 xl:px-[255px]">
+        <h4
+          class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8 heading3">
           Proximos Eventos
         </h4>
         <CardEvent :cardEventProps="events" />
       </div>
       <div class="mt-8 w-full">
         <a href="/" class="flex items-center">
-          <span
-            class="font-founders-grosteskers font-bold xl:text-[30px] text-dark-blue">
+          <span class="text-big text-dark-blue">
             Conoce eventos anteriores
           </span>
           <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />
