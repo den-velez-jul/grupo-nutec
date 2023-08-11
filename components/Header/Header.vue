@@ -40,13 +40,11 @@
             width="24px"
             height="24px" />
         </button>
-        <a
-          class="py-3 px-9 bg-dark-blue text-white hidden lg:flex capitalize font-founders-grosteskers font-semibold items-center justify-center"
+        <button
+          class="py-3 px-9 bg-dark-blue text-white hidden lg:flex items-center justify-center"
           href="https://">
-          <span class="flex h-full items-center justify-center">
-            contacto
-          </span>
-        </a>
+          <span class="text-white text-med">Contacto</span>
+        </button>
       </div>
     </div>
     <HeaderDetails
