@@ -8,6 +8,7 @@ export const components = defineSliceZoneComponents({
   articulo_parrafo: defineAsyncComponent(
     () => import("./ArticuloParrafo/index.vue")
   ),
+  formulario: defineAsyncComponent(() => import("./Formulario/index.vue")),
   imagen: defineAsyncComponent(() => import("./Imagen/index.vue")),
   list_bullets: defineAsyncComponent(() => import("./ListBullets/index.vue")),
   subtitulo: defineAsyncComponent(() => import("./Subtitulo/index.vue")),

@@ -320,7 +320,8 @@ type ArticleDocumentDataSlices1Slice =
   | ArticleQuoteSlice
   | SubtituloSlice
   | ImagenSlice
-  | ListBulletsSlice;
+  | ListBulletsSlice
+  | FormularioSlice;
 
 /**
  * Content for Article documents
@@ -4732,6 +4733,86 @@ export type ArticuloParrafoSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *Formulario → Primary*
+ */
+export interface FormularioSliceDefaultPrimary {
+  /**
+   * Form Title field in *Formulario → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: formulario.primary.form_title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  form_title: prismic.RichTextField;
+
+  /**
+   * form description field in *Formulario → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: formulario.primary.form_description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  form_description: prismic.RichTextField;
+
+  /**
+   * button label field in *Formulario → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: formulario.primary.button_label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  button_label: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Formulario → Items*
+ */
+export interface FormularioSliceDefaultItem {
+  /**
+   * formInputs field in *Formulario → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Input
+   * - **API ID Path**: formulario.items[].form_inputs
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  form_inputs: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Formulario Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FormularioSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<FormularioSliceDefaultPrimary>,
+  Simplify<FormularioSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Formulario*
+ */
+type FormularioSliceVariation = FormularioSliceDefault;
+
+/**
+ * Formulario Shared Slice
+ *
+ * - **API ID**: `formulario`
+ * - **Description**: Formulario
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type FormularioSlice = prismic.SharedSlice<
+  "formulario",
+  FormularioSliceVariation
+>;
+
+/**
  * Primary content in *Imagen → Primary*
  */
 export interface ImagenSliceDefaultPrimary {
@@ -4974,6 +5055,9 @@ declare module "@prismicio/client" {
       ArticuloParrafoSliceVariation,
       ArticuloParrafoSliceDefault,
       ArticuloParrafoSliceTextoAzul,
+      FormularioSlice,
+      FormularioSliceVariation,
+      FormularioSliceDefault,
       ImagenSlice,
       ImagenSliceVariation,
       ImagenSliceDefault,

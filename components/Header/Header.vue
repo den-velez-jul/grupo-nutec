@@ -43,7 +43,7 @@
         <button
           class="py-3 px-9 bg-dark-blue text-white hidden lg:flex items-center justify-center"
           href="https://">
-          <span class="text-white text-med">Contacto</span>
+          <span class="text-white text-med mt-1">Contacto</span>
         </button>
       </div>
     </div>

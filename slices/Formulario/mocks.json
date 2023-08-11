@@ -1,0 +1,56 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"form_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eiusmod Lorem Lorem elit deserunt amet magna do duis irure eiusmod anim irure veniam. Nostrud esse sunt labore reprehenderit. Ullamco sint consectetur ad laboris est eiusmod Lorem est incididunt."
+						}
+					}
+				]
+			},
+			"form_description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur voluptate esse dolore consequat officia anim ullamco tempor et ut ipsum dolor nulla commodo id."
+						}
+					}
+				]
+			},
+			"button_label": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur est quis qui anim. Aute quis officia reprehenderit incididunt cillum."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"form_inputs",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "rising",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	}
+]

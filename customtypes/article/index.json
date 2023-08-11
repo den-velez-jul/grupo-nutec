@@ -84,7 +84,8 @@
             "article_quote": { "type": "SharedSlice" },
             "subtitulo": { "type": "SharedSlice" },
             "imagen": { "type": "SharedSlice" },
-            "list_bullets": { "type": "SharedSlice" }
+            "list_bullets": { "type": "SharedSlice" },
+            "formulario": { "type": "SharedSlice" }
           }
         }
       }
