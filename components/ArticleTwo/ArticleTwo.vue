@@ -44,6 +44,4 @@ const props = defineProps({
 
 const { title, description, ctaLabel, ctaLink, image, topLabel } =
   props.articleProps;
-
-console.log(title);
 </script>

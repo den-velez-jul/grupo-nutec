@@ -65,6 +65,57 @@
           "allowTargetBlank": true,
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
+      },
+      "knowledge": {
+        "type": "Group",
+        "config": {
+          "label": "knowledge",
+          "fields": {
+            "knowledge_item": {
+              "type": "StructuredText",
+              "config": {
+                "label": "knowledge item",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      },
+      "education": {
+        "type": "Group",
+        "config": {
+          "label": "education",
+          "fields": {
+            "education_item": {
+              "type": "StructuredText",
+              "config": {
+                "label": "education item",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      },
+      "skills": {
+        "type": "Group",
+        "config": {
+          "label": "Skills",
+          "fields": {
+            "skills_item": {
+              "type": "StructuredText",
+              "config": {
+                "label": "skills item",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
       }
     },
     "SEO": {

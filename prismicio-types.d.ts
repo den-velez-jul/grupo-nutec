@@ -486,6 +486,51 @@ export type ArticleDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Career → knowledge*
+ */
+export interface CareerDocumentDataKnowledgeItem {
+  /**
+   * knowledge item field in *Career → knowledge*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career.knowledge[].knowledge_item
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  knowledge_item: prismic.RichTextField;
+}
+
+/**
+ * Item in *Career → education*
+ */
+export interface CareerDocumentDataEducationItem {
+  /**
+   * education item field in *Career → education*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career.education[].education_item
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  education_item: prismic.RichTextField;
+}
+
+/**
+ * Item in *Career → Skills*
+ */
+export interface CareerDocumentDataSkillsItem {
+  /**
+   * skills item field in *Career → Skills*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career.skills[].skills_item
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  skills_item: prismic.RichTextField;
+}
+
+/**
  * Content for Career documents
  */
 interface CareerDocumentData {
@@ -575,7 +620,40 @@ interface CareerDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  career_cta_label: prismic.RichTextField
+  career_cta_label: prismic.RichTextField;
+
+  /**
+   * knowledge field in *Career*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career.knowledge[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  knowledge: prismic.GroupField<Simplify<CareerDocumentDataKnowledgeItem>>;
+
+  /**
+   * education field in *Career*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career.education[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  education: prismic.GroupField<Simplify<CareerDocumentDataEducationItem>>;
+
+  /**
+   * Skills field in *Career*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career.skills[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  skills: prismic.GroupField<Simplify<CareerDocumentDataSkillsItem>>
   /**
    * Meta keyword field in *Career*
    *
@@ -732,7 +810,39 @@ interface CareerFeedDocumentData {
    * - **Tab**: SEO
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image1: prismic.ImageField<never>;
+  image1: prismic.ImageField<never>
+  /**
+   * career form title field in *Career Feed*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_feed.career_form_title
+   * - **Tab**: Form Career
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  career_form_title: prismic.RichTextField;
+
+  /**
+   * career form description field in *Career Feed*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_feed.career_form_description
+   * - **Tab**: Form Career
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  career_form_description: prismic.RichTextField;
+
+  /**
+   * career form caption field in *Career Feed*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: career_feed.career_form_caption
+   * - **Tab**: Form Career
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  career_form_caption: prismic.RichTextField;
 }
 
 /**

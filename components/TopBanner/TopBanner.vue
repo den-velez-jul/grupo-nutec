@@ -20,6 +20,4 @@ const props = defineProps({
 });
 
 const { labelList } = props;
-
-console.log(labelList);
 </script>

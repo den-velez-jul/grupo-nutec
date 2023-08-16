@@ -45,6 +45,35 @@
         "type": "Image",
         "config": { "constraint": {}, "thumbnails": [], "label": "image" }
       }
+    },
+    "Form Career": {
+      "career_form_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "career form title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "career_form_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "career form description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "career_form_caption": {
+        "type": "StructuredText",
+        "config": {
+          "label": "career form caption",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
     }
   }
 }
