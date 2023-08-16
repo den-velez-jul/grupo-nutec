@@ -180,6 +180,15 @@
                 "label": "link CTA",
                 "select": null
               }
+            },
+            "link_cta_label": {
+              "type": "StructuredText",
+              "config": {
+                "label": "link CTA label",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
             }
           },
           "label": "compañias"
@@ -190,6 +199,10 @@
       "map_label": {
         "type": "StructuredText",
         "config": { "single": "paragraph", "label": "Map Label" }
+      },
+      "world_map": {
+        "type": "Image",
+        "config": { "label": "world map", "constraint": {}, "thumbnails": [] }
       },
       "nutec_inc_title": {
         "type": "StructuredText",

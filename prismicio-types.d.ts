@@ -1037,6 +1037,16 @@ export interface ContactDocumentDataCompaniasItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link_cta: prismic.LinkField;
+
+  /**
+   * link CTA label field in *Contact → compañias*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.companias[].link_cta_label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  link_cta_label: prismic.RichTextField;
 }
 
 /**
@@ -1258,6 +1268,17 @@ interface ContactDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */;
   map_label: prismic.RichTextField;
+
+  /**
+   * world map field in *Contact*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.world_map
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  world_map: prismic.ImageField<never>;
 
   /**
    * Nutec Inc Title field in *Contact*
