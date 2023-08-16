@@ -4252,6 +4252,12 @@ interface PageDocumentData {
 export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
+type PrivacyPolicyDocumentDataSlicesSlice =
+  | PrivacySubtitleSlice
+  | PrivacyParagraphSlice
+  | PrivacyListSlice
+  | PrivacyHeadlineSlice;
+
 /**
  * Content for Privacy Policy documents
  */
@@ -4287,7 +4293,18 @@ interface PrivacyPolicyDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  description: prismic.RichTextField
+  description: prismic.RichTextField;
+
+  /**
+   * Slice Zone field in *Privacy Policy*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: privacy_policy.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<PrivacyPolicyDocumentDataSlicesSlice>
   /**
    * meta keyword field in *Privacy Policy*
    *
@@ -5020,6 +5037,186 @@ export type ListBulletsSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *PrivacyHeadline → Primary*
+ */
+export interface PrivacyHeadlineSliceDefaultPrimary {
+  /**
+   * headline field in *PrivacyHeadline → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: privacy_headline.primary.headline
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  headline: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PrivacyHeadline Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrivacyHeadlineSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PrivacyHeadlineSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PrivacyHeadline*
+ */
+type PrivacyHeadlineSliceVariation = PrivacyHeadlineSliceDefault;
+
+/**
+ * PrivacyHeadline Shared Slice
+ *
+ * - **API ID**: `privacy_headline`
+ * - **Description**: PrivacyHeadline
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrivacyHeadlineSlice = prismic.SharedSlice<
+  "privacy_headline",
+  PrivacyHeadlineSliceVariation
+>;
+
+/**
+ * Primary content in *PrivacyList → Items*
+ */
+export interface PrivacyListSliceDefaultItem {
+  /**
+   * list item field in *PrivacyList → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: privacy_list.items[].list_item
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  list_item: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PrivacyList Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrivacyListSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<PrivacyListSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *PrivacyList*
+ */
+type PrivacyListSliceVariation = PrivacyListSliceDefault;
+
+/**
+ * PrivacyList Shared Slice
+ *
+ * - **API ID**: `privacy_list`
+ * - **Description**: PrivacyList
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrivacyListSlice = prismic.SharedSlice<
+  "privacy_list",
+  PrivacyListSliceVariation
+>;
+
+/**
+ * Primary content in *PrivacyParagraph → Primary*
+ */
+export interface PrivacyParagraphSliceDefaultPrimary {
+  /**
+   * paragraph field in *PrivacyParagraph → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: privacy_paragraph.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PrivacyParagraph Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrivacyParagraphSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PrivacyParagraphSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PrivacyParagraph*
+ */
+type PrivacyParagraphSliceVariation = PrivacyParagraphSliceDefault;
+
+/**
+ * PrivacyParagraph Shared Slice
+ *
+ * - **API ID**: `privacy_paragraph`
+ * - **Description**: PrivacyParagraph
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrivacyParagraphSlice = prismic.SharedSlice<
+  "privacy_paragraph",
+  PrivacyParagraphSliceVariation
+>;
+
+/**
+ * Primary content in *PrivacySubtitle → Primary*
+ */
+export interface PrivacySubtitleSliceDefaultPrimary {
+  /**
+   * subtitle field in *PrivacySubtitle → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: privacy_subtitle.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subtitle: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PrivacySubtitle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrivacySubtitleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PrivacySubtitleSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PrivacySubtitle*
+ */
+type PrivacySubtitleSliceVariation = PrivacySubtitleSliceDefault;
+
+/**
+ * PrivacySubtitle Shared Slice
+ *
+ * - **API ID**: `privacy_subtitle`
+ * - **Description**: PrivacySubtitle
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PrivacySubtitleSlice = prismic.SharedSlice<
+  "privacy_subtitle",
+  PrivacySubtitleSliceVariation
+>;
+
+/**
  * Primary content in *Subtitulo → Primary*
  */
 export interface SubtituloSliceDefaultPrimary {
@@ -5174,6 +5371,18 @@ declare module "@prismicio/client" {
       ListBulletsSlice,
       ListBulletsSliceVariation,
       ListBulletsSliceDefault,
+      PrivacyHeadlineSlice,
+      PrivacyHeadlineSliceVariation,
+      PrivacyHeadlineSliceDefault,
+      PrivacyListSlice,
+      PrivacyListSliceVariation,
+      PrivacyListSliceDefault,
+      PrivacyParagraphSlice,
+      PrivacyParagraphSliceVariation,
+      PrivacyParagraphSliceDefault,
+      PrivacySubtitleSlice,
+      PrivacySubtitleSliceVariation,
+      PrivacySubtitleSliceDefault,
       SubtituloSlice,
       SubtituloSliceVariation,
       SubtituloSliceDefault,

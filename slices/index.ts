@@ -11,6 +11,16 @@ export const components = defineSliceZoneComponents({
   formulario: defineAsyncComponent(() => import("./Formulario/index.vue")),
   imagen: defineAsyncComponent(() => import("./Imagen/index.vue")),
   list_bullets: defineAsyncComponent(() => import("./ListBullets/index.vue")),
+  privacy_headline: defineAsyncComponent(
+    () => import("./PrivacyHeadline/index.vue")
+  ),
+  privacy_list: defineAsyncComponent(() => import("./PrivacyList/index.vue")),
+  privacy_paragraph: defineAsyncComponent(
+    () => import("./PrivacyParagraph/index.vue")
+  ),
+  privacy_subtitle: defineAsyncComponent(
+    () => import("./PrivacySubtitle/index.vue")
+  ),
   subtitulo: defineAsyncComponent(() => import("./Subtitulo/index.vue")),
   titulos: defineAsyncComponent(() => import("./Titulos/index.vue")),
 });

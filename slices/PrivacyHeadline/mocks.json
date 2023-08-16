@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"headline": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sunt consectetur proident officia sint fugiat. Fugiat qui non do ut pariatur."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
