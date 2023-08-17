@@ -37,14 +37,14 @@
         class="body-bold grid grid-rows-4 gap-y-3 mt-[60px] md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
         <li>Inicio</li>
         <li>Compañia</li>
-        <li>NUTEC FIBRAS</li>
-        <li>NUTEC BICKEY</li>
+        <li>NUTEC Fibras</li>
+        <li>NUTEC Bickley</li>
       </ul>
       <ul
         class="body-bold grid grid-rows-4 gap-y-3 mt-6 md:mt-0 justify-items-center md:justify-items-start lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
         <li>Contacto</li>
-        <li>Newroom</li>
-        <li>Carrerar</li>
+        <li>Newsroom</li>
+        <li>Carreras</li>
         <li>Politica de Privacidad</li>
       </ul>
     </div>

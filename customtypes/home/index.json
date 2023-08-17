@@ -326,6 +326,14 @@
                 "allowTargetBlank": true,
                 "select": null
               }
+            },
+            "companias_logo": {
+              "type": "Image",
+              "config": {
+                "label": "companias logo",
+                "constraint": {},
+                "thumbnails": []
+              }
             }
           },
           "label": "compañias"

@@ -124,6 +124,9 @@
 
 <script setup>
 const { client } = usePrismic();
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
+
 const { data: home } = await useAsyncData("home", () =>
   client.getByUID("home", "homepage")
 );
@@ -151,8 +154,37 @@ let cardNews = [];
 
 newsList.forEach((news) => {
   if (news.tags.length === 0) {
+    if (news.data.article_date) {
+      const dateUpdated = format(
+        new Date(news.data.article_date),
+        "dd/MM/yyyy",
+        {
+          locale: es,
+        }
+      );
+
+      news.data.article_date = dateUpdated;
+    }
     cardNews.push(news.data);
     return;
+  }
+  if (news.data.article_date) {
+    const dateUpdated = format(
+      new Date(news.data.article_date),
+      "dd MMMM yyyy",
+      {
+        locale: es,
+      }
+    );
+    const dateUpdatedArray = dateUpdated.split(" ");
+    const dataFormatted =
+      dateUpdatedArray[0] +
+      " de " +
+      dateUpdatedArray[1] +
+      " de " +
+      dateUpdatedArray[2];
+
+    news.data.article_date = dataFormatted;
   }
   if (news.tags.includes("Hero")) {
     heroNews = news.data;

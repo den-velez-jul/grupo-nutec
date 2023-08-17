@@ -27,7 +27,9 @@
           <p class="mt-[15px] lg:mt-5 body-reg">
             <PrismicText :field="headlineNews.article_description" />
           </p>
-          <div class="flex justify-start mt-[30px] lg:mt-10">
+          <div
+            v-if="headlineNews.article_cta_label"
+            class="flex justify-start mt-[30px] lg:mt-10">
             <PrismicLink
               :field="headlineNews.article_cta_link"
               class="flex items-center text-dark-blue">
@@ -41,6 +43,7 @@
       </div>
     </section>
   </div>
+
   <div
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section
@@ -80,6 +83,8 @@
 
 <script setup>
 const { client } = usePrismic();
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
 
 const { data: news } = await useAsyncData("news", () =>
   client.getAllByType("article", {
@@ -109,9 +114,37 @@ let cardNews = [];
 
 newsList.forEach((news, index) => {
   if (index === 0) {
+    if (news.data.article_date) {
+      const dateUpdated = format(
+        new Date(news.data.article_date),
+        "dd MMMM yyyy",
+        {
+          locale: es,
+        }
+      );
+      const dateUpdatedArray = dateUpdated.split(" ");
+      const dataFormatted =
+        dateUpdatedArray[0] +
+        " de " +
+        dateUpdatedArray[1] +
+        " de " +
+        dateUpdatedArray[2];
+
+      news.data.article_date = dataFormatted;
+    }
     headlineNews = news.data;
     return;
   }
+
+  if (news.data.article_date) {
+    const dateUpdated = format(new Date(news.data.article_date), "dd/MM/yyyy", {
+      locale: es,
+    });
+
+    news.data.article_date = dateUpdated;
+  }
   cardNews.push(news.data);
 });
+
+console.log(cardNews);
 </script>

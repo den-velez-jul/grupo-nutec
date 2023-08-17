@@ -4,6 +4,12 @@
       :src="companyProps.imagen.url"
       class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px] object-cover" />
     <div class="p-8 flex-grow flex flex-col justify-between">
+      <div v-if="companyProps.companias_logo" class="my-5 flex h-[100px]">
+        <img
+          class="w-full h-full object-cover lg:w-[60%] lg:h-auto xl:w-[45%]"
+          :src="companyProps.companias_logo.url"
+          :alt="companyProps.companias_logo.alt" />
+      </div>
       <div>
         <h2 v-if="title" :class="titleCustomStyle">{{ title }}</h2>
         <PrismicText

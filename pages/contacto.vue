@@ -112,7 +112,4 @@ const mapsData = {
   title: contactData.map_label,
   image: contactData.world_map,
 };
-
-console.log();
-// const companyPropsSorted = companyProps.sort((a, b) => a.position - b.position);
 </script>

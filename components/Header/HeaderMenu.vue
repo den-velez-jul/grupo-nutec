@@ -64,11 +64,11 @@ const dataButton = [
     },
     links: [
       {
-        label: "NUTEC FIBRAS",
+        label: "NUTEC Fibras",
         url: "/",
       },
       {
-        label: "NUTEC Bicley",
+        label: "NUTEC Bickley",
         url: "/",
       },
     ],
@@ -83,11 +83,11 @@ const dataButton = [
     },
     links: [
       {
-        label: "NUTEC FIBRAS",
+        label: "NUTEC Fibras",
         url: "/",
       },
       {
-        label: "NUTEC Bicley",
+        label: "NUTEC Bickley",
         url: "/",
       },
     ],
@@ -102,11 +102,11 @@ const dataButton = [
     },
     links: [
       {
-        label: "NUTEC FIBRAS",
+        label: "NUTEC Fibras",
         url: "/",
       },
       {
-        label: "NUTEC Bicley",
+        label: "NUTEC Bickley",
         url: "/",
       },
     ],

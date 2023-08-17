@@ -73,11 +73,11 @@ const headerDetails1 = {
   },
   links: [
     {
-      label: "NUTEC FIBRAS",
+      label: "NUTEC Fibras",
       url: "/",
     },
     {
-      label: "NUTEC Bicley",
+      label: "NUTEC Bickley",
       url: "/",
     },
   ],

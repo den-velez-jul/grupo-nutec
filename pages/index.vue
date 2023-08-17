@@ -28,7 +28,8 @@
         class="grid mt-10 md:mt-[60px] lg:mt-12 gap-y-[30px] md:grid-cols-2 md:gap-x-10">
         <Card
           v-for="company of companies.companiesList"
-          :companyProps="company" />
+          :companyProps="company"
+          :anchor-left="true" />
       </div>
     </section>
     <section id="tiendaNutec" class="pb-[80px]">
@@ -140,7 +141,6 @@ const hero = {
   ctaLabel: homeData.cta_label,
   ctaLink: homeData.cta_link,
   bgMedia: homeData.top_slides,
-  divisions: homeData.divisions,
 };
 
 const description = {

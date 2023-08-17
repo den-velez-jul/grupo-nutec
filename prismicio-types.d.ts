@@ -2114,6 +2114,16 @@ export interface HomeDocumentDataCompaniasItem {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link1: prismic.LinkField;
+
+  /**
+   * companias logo field in *Home → compañias*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.companias[].companias_logo
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  companias_logo: prismic.ImageField<never>;
 }
 
 /**

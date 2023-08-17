@@ -1,5 +1,6 @@
 <template>
-  <section class="relative flex justify-center items-center h-[600px] w-full">
+  <section
+    class="relative flex justify-center items-center h-[700px] md:h-[600px] lg:h-[800px] w-full">
     <div
       class="flex flex-col items-center px-6 md:px-[50px] lg:px-[75px] xl:px-[270px]">
       <span
@@ -19,7 +20,7 @@
     </div>
     <div
       v-if="video.url"
-      class="absolute left-0 right-0 w-full h-[600px] -z-8 opacity-[.8] bg-black"></div>
+      class="absolute left-0 right-0 w-full h-full -z-8 opacity-[.8] bg-black"></div>
     <video
       v-if="video.url"
       preload="none"
@@ -27,7 +28,7 @@
       muted
       autoplay
       loop
-      class="w-full object-cover absolute left-0 right-0 h-[600px] -z-10">
+      class="w-full h-full object-cover absolute left-0 right-0 -z-10">
       <source :src="video.url" type="video/mp4" />
     </video>
     <div
@@ -36,9 +37,7 @@
       <img :src="image.url" class="w-full h-full object-cover" />
     </div>
   </section>
-  <div v-if="divisions" class="bg-baby-blue">
-    <Divisions :divisions="divisions" />
-  </div>
+  <div v-if="divisions" class="bg-baby-blue"></div>
 </template>
 
 <script setup>
