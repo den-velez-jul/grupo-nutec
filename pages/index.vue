@@ -8,7 +8,7 @@
   <div class="bg-baby-blue w-full">
     <section
       id="description"
-      class="py-[60px] bg-baby-blue xl:max-w-[1720px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
+      class="py-[60px] bg-baby-blue xl:max-w-[1920px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
       <h4 class="text-dark-blue heading3 text-center lg:text-left lg:mb-[80px]">
         <PrismicText :field="description.topLabel" />
         {{ descrptopLabel }}

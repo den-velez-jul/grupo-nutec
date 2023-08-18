@@ -152,5 +152,4 @@ const headlineNews = {
   article_date: dataUp,
   timePublished: "...",
 };
-console.log(headlineNews.timePublished);
 </script>
