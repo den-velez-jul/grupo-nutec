@@ -1,0 +1,58 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "footer_logo": {
+        "type": "Image",
+        "config": { "label": "footer logo", "constraint": {}, "thumbnails": [] }
+      },
+      "footer_logo_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "footer logo label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "footer_navigation": {
+        "type": "Group",
+        "config": {
+          "label": "footer navigation",
+          "fields": {
+            "label": {
+              "type": "StructuredText",
+              "config": {
+                "label": "label ",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": { "label": "link", "placeholder": "", "select": null }
+            }
+          }
+        }
+      },
+      "linkedin_url": {
+        "type": "Link",
+        "config": { "label": "linkedin_url", "placeholder": "", "select": null }
+      },
+      "facebook_url": {
+        "type": "Link",
+        "config": { "label": "facebook_url", "placeholder": "", "select": null }
+      },
+      "x_url": {
+        "type": "Link",
+        "config": { "label": "x_url", "placeholder": "", "select": null }
+      }
+    }
+  }
+}

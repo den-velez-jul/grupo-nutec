@@ -1795,6 +1795,116 @@ export type EventFeedDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *Footer → footer navigation*
+ */
+export interface FooterDocumentDataFooterNavigationItem {
+  /**
+   * label  field in *Footer → footer navigation*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footer_navigation[].label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  label: prismic.RichTextField;
+
+  /**
+   * link field in *Footer → footer navigation*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footer_navigation[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * footer logo field in *Footer*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footer_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  footer_logo: prismic.ImageField<never>;
+
+  /**
+   * footer logo label field in *Footer*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footer_logo_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  footer_logo_label: prismic.RichTextField;
+
+  /**
+   * footer navigation field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.footer_navigation[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  footer_navigation: prismic.GroupField<
+    Simplify<FooterDocumentDataFooterNavigationItem>
+  >;
+
+  /**
+   * linkedin_url field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.linkedin_url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linkedin_url: prismic.LinkField;
+
+  /**
+   * facebook_url field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.facebook_url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  facebook_url: prismic.LinkField;
+
+  /**
+   * x_url field in *Footer*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.x_url
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  x_url: prismic.LinkField;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<FooterDocumentData>, "footer", Lang>;
+
 interface GrupoNutecDocumentData {}
 
 /**
@@ -4748,6 +4858,7 @@ export type AllDocumentTypes =
   | ContactDocument
   | EventDocument
   | EventFeedDocument
+  | FooterDocument
   | GrupoNutecDocument
   | HomeDocument
   | MenuFooterDocument
@@ -5351,6 +5462,7 @@ declare module "@prismicio/client" {
       AboutUsDocumentData,
       ArticleDocument,
       ArticleDocumentData,
+      ArticleDocumentDataSlices1Slice,
       CareerDocument,
       CareerDocumentData,
       CareerFeedDocument,
@@ -5363,10 +5475,13 @@ declare module "@prismicio/client" {
       EventDocumentData,
       EventFeedDocument,
       EventFeedDocumentData,
+      FooterDocument,
+      FooterDocumentData,
       GrupoNutecDocument,
       GrupoNutecDocumentData,
       HomeDocument,
       HomeDocumentData,
+      HomeDocumentDataSlicesSlice,
       MenuFooterDocument,
       MenuFooterDocumentData,
       MenuSectionDocument,
@@ -5377,8 +5492,29 @@ declare module "@prismicio/client" {
       NutecDocumentData,
       PageDocument,
       PageDocumentData,
+      PageDocumentDataSlicesAlternateGridSlicePrimary,
+      PageDocumentDataSlicesAlternateGridSliceItem,
+      PageDocumentDataSlicesCallToActionSlicePrimary,
+      PageDocumentDataSlicesCardsCarouselSlicePrimary,
+      PageDocumentDataSlicesCardsCarouselSliceItem,
+      PageDocumentDataSlicesCustomerLogosSlicePrimary,
+      PageDocumentDataSlicesCustomerLogosSliceItem,
+      PageDocumentDataSlicesFaqSectionSlicePrimary,
+      PageDocumentDataSlicesFaqSectionSliceItem,
+      PageDocumentDataSlicesFeatureTestimonialsSlicePrimary,
+      PageDocumentDataSlicesFeatureTestimonialsSliceItem,
+      PageDocumentDataSlicesImagesSliderSlicePrimary,
+      PageDocumentDataSlicesImagesSliderSliceItem,
+      PageDocumentDataSlicesPricingTableSlicePrimary,
+      PageDocumentDataSlicesPricingTableSliceItem,
+      PageDocumentDataSlicesTestimonialsSliderSlicePrimary,
+      PageDocumentDataSlicesTestimonialsSliderSliceItem,
+      PageDocumentDataSlicesVideoHighlightsSlicePrimary,
+      PageDocumentDataSlicesVideoHighlightsSliceItem,
+      PageDocumentDataSlicesSlice,
       PrivacyPolicyDocument,
       PrivacyPolicyDocumentData,
+      PrivacyPolicyDocumentDataSlicesSlice,
       ProductDocument,
       ProductDocumentData,
       SearchDocument,
@@ -5387,37 +5523,50 @@ declare module "@prismicio/client" {
       TimelineDocumentData,
       AllDocumentTypes,
       ArticleQuoteSlice,
+      ArticleQuoteSliceDefaultPrimary,
       ArticleQuoteSliceVariation,
       ArticleQuoteSliceDefault,
       ArticuloParrafoSlice,
+      ArticuloParrafoSliceDefaultPrimary,
+      ArticuloParrafoSliceTextoAzulPrimary,
       ArticuloParrafoSliceVariation,
       ArticuloParrafoSliceDefault,
       ArticuloParrafoSliceTextoAzul,
       FormularioSlice,
+      FormularioSliceDefaultPrimary,
+      FormularioSliceDefaultItem,
       FormularioSliceVariation,
       FormularioSliceDefault,
       ImagenSlice,
+      ImagenSliceDefaultPrimary,
       ImagenSliceVariation,
       ImagenSliceDefault,
       ListBulletsSlice,
+      ListBulletsSliceDefaultItem,
       ListBulletsSliceVariation,
       ListBulletsSliceDefault,
       PrivacyHeadlineSlice,
+      PrivacyHeadlineSliceDefaultPrimary,
       PrivacyHeadlineSliceVariation,
       PrivacyHeadlineSliceDefault,
       PrivacyListSlice,
+      PrivacyListSliceDefaultItem,
       PrivacyListSliceVariation,
       PrivacyListSliceDefault,
       PrivacyParagraphSlice,
+      PrivacyParagraphSliceDefaultPrimary,
       PrivacyParagraphSliceVariation,
       PrivacyParagraphSliceDefault,
       PrivacySubtitleSlice,
+      PrivacySubtitleSliceDefaultPrimary,
       PrivacySubtitleSliceVariation,
       PrivacySubtitleSliceDefault,
       SubtituloSlice,
+      SubtituloSliceDefaultPrimary,
       SubtituloSliceVariation,
       SubtituloSliceDefault,
       TitulosSlice,
+      TitulosSliceDefaultPrimary,
       TitulosSliceVariation,
       TitulosSliceDefault,
     };
