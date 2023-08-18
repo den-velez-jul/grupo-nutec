@@ -153,29 +153,13 @@ let headlineNews;
 let cardNews = [];
 
 newsList.forEach((news) => {
-  if (news.tags.length === 0) {
-    if (news.data.article_date) {
-      const dateUpdated = format(
-        new Date(news.data.article_date),
-        "dd/MM/yyyy",
-        {
-          locale: es,
-        }
-      );
-
-      news.data.article_date = dateUpdated;
-    }
-    cardNews.push(news.data);
-    return;
-  }
-  if (news.data.article_date) {
-    const dateUpdated = format(
-      new Date(news.data.article_date),
-      "dd MMMM yyyy",
-      {
-        locale: es,
-      }
-    );
+  if (news.tags.length > 0) {
+    const dateToTransfom = news.data.article_date
+      ? new Date(news.data.article_date)
+      : new Date();
+    const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
+      locale: es,
+    });
     const dateUpdatedArray = dateUpdated.split(" ");
     const dataFormatted =
       dateUpdatedArray[0] +
@@ -184,13 +168,25 @@ newsList.forEach((news) => {
       " de " +
       dateUpdatedArray[2];
 
-    news.data.article_date = dataFormatted;
+    if (news.tags.includes("Hero")) {
+      heroNews = { ...news.data, article_date: dataFormatted };
+      return;
+    } else {
+      headlineNews = { ...news.data, article_date: dataFormatted };
+    }
   }
-  if (news.tags.includes("Hero")) {
-    heroNews = news.data;
-    return;
-  } else {
-    headlineNews = news.data;
-  }
+
+  const dateToTransfom = news.data.article_date
+    ? new Date(news.data.article_date)
+    : new Date();
+
+  const dateFixed = format(dateToTransfom, "dd/MM/yyyy", { locale: es });
+
+  const dataUpdated = {
+    ...news.data,
+    article_date: dateFixed,
+  };
+  cardNews.push(dataUpdated);
+  return;
 });
 </script>

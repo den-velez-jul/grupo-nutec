@@ -6,7 +6,7 @@
       <div>
         <img
           src="~assets/logos/LogoGrupoNutecES.svg"
-          alt="logo"
+          alt="logo "
           width="120px"
           height="110px" />
       </div>
