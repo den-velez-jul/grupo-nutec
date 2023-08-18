@@ -114,35 +114,37 @@ let cardNews = [];
 
 newsList.forEach((news, index) => {
   if (index === 0) {
-    if (news.data.article_date) {
-      const dateUpdated = format(
-        new Date(news.data.article_date),
-        "dd MMMM yyyy",
-        {
-          locale: es,
-        }
-      );
-      const dateUpdatedArray = dateUpdated.split(" ");
-      const dataFormatted =
-        dateUpdatedArray[0] +
-        " de " +
-        dateUpdatedArray[1] +
-        " de " +
-        dateUpdatedArray[2];
+    const dateToTransfom = news.data.article_date
+      ? new Date(news.data.article_date)
+      : new Date();
+    const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
+      locale: es,
+    });
+    const dateUpdatedArray = dateUpdated.split(" ");
+    const dataFormatted =
+      dateUpdatedArray[0] +
+      " de " +
+      dateUpdatedArray[1] +
+      " de " +
+      dateUpdatedArray[2];
 
-      news.data.article_date = dataFormatted;
-    }
-    headlineNews = { ...news.data };
+    headlineNews = { ...news.data, article_date: dataFormatted };
     return;
   }
 
-  if (news.data.article_date) {
-    const dateUpdated = format(new Date(news.data.article_date), "dd/MM/yyyy", {
-      locale: es,
-    });
+  const dateToTransfom = news.data.article_date
+    ? new Date(news.data.article_date)
+    : new Date();
 
-    news.data.article_date = dateUpdated;
-  }
-  cardNews.push(news.data);
+  const dateUpdated = format(dateToTransfom, "dd/MM/yyyy", {
+    locale: es,
+  });
+
+  const dataUpdated = {
+    ...news.data,
+    article_date: dateUpdated,
+  };
+
+  cardNews.push(dataUpdated);
 });
 </script>
