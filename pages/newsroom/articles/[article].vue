@@ -25,7 +25,9 @@
               src="~assets/icons/icon-time.svg"
               alt=""
               class="w-5 h-5 mx-2" />
-            <span class="body-reg text-black">{{ timePublished }}</span>
+            <span class="body-reg text-black">{{
+              headlineNews.timePublished
+            }}</span>
           </p>
         </div>
         <div>
@@ -53,7 +55,7 @@
                   src="~assets/icons/icon-time.svg"
                   alt=""
                   class="w-5 h-5 mx-2" />
-                <span>{{ timePublished }}</span>
+                <span>{{ headlineNews.timePublished }}</span>
               </p>
             </div>
           </div>
@@ -104,6 +106,9 @@
 import { components } from "~/slices";
 const { client } = usePrismic();
 const route = useRoute();
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
+// import { intervalToDuration } from "date-fns";
 
 const articleUID = route.params.article;
 const { data: article } = await useAsyncData("article", async () => {
@@ -127,11 +132,25 @@ const { data: news } = await useAsyncData("news", async () => {
 const newsList = news ? news.value : [];
 
 let cardNews = [];
-let headlineNews = { ...article.value.data };
+let headlineNews2 = { ...article.value.data };
 
 newsList.forEach((news) => {
-  cardNews.push(news.data);
+  const dateUpdated = format(new Date(news.data.article_date), "dd/MM/yyyy");
+  const newArt = { ...news.data, article_date: dateUpdated };
+  cardNews.push(newArt);
 });
 
-const timePublished = "1 minuto";
+const updateFormatDAte = (date) => {
+  const dateFormated = format(new Date(date), "dd/MM/yyyy");
+  return dateFormated;
+};
+
+const dataUp = updateFormatDAte(article.value.data.article_date);
+
+const headlineNews = {
+  ...article.value.data,
+  article_date: dataUp,
+  timePublished: "...",
+};
+console.log(headlineNews.timePublished);
 </script>

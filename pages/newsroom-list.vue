@@ -132,7 +132,7 @@ newsList.forEach((news, index) => {
 
       news.data.article_date = dataFormatted;
     }
-    headlineNews = news.data;
+    headlineNews = { ...news.data };
     return;
   }
 
@@ -145,6 +145,4 @@ newsList.forEach((news, index) => {
   }
   cardNews.push(news.data);
 });
-
-console.log(cardNews);
 </script>
