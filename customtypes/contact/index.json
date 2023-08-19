@@ -307,6 +307,114 @@
           "multi": "paragraph,strong",
           "label": "Nutec Ibar Description"
         }
+      },
+      "nutec_bickley_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec bickley title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_bickley_subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec bickley subtitle",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_bickley_location": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec bickley location",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_bickley_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec bickley description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_global_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec global title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_global_subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec global subtitle",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_global_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec global description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_global_location": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec global location",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_bickley_eu_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec bickley eu title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_bickley_eu_subtitle": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec bickley eu subtitle",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_bickley_eu_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec bickley eu description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "nutec_bickley_eu_location": {
+        "type": "StructuredText",
+        "config": {
+          "label": "nutec bickley eu location",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
       }
     }
   }

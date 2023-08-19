@@ -15,8 +15,6 @@ const footerDataProps = {
   facebook: footerData.facebook_url,
   xUrl: footerData.x_url,
 };
-
-console.log(footerDataProps);
 </script>
 
 <template>

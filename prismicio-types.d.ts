@@ -1499,6 +1499,138 @@ interface ContactDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   nutec_ibar_description: prismic.RichTextField;
+
+  /**
+   * nutec bickley title field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_bickley_title
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_bickley_title: prismic.RichTextField;
+
+  /**
+   * nutec bickley subtitle field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_bickley_subtitle
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_bickley_subtitle: prismic.RichTextField;
+
+  /**
+   * nutec bickley location field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_bickley_location
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_bickley_location: prismic.RichTextField;
+
+  /**
+   * nutec bickley description field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_bickley_description
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_bickley_description: prismic.RichTextField;
+
+  /**
+   * nutec global title field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_global_title
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_global_title: prismic.RichTextField;
+
+  /**
+   * nutec global subtitle field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_global_subtitle
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_global_subtitle: prismic.RichTextField;
+
+  /**
+   * nutec global description field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_global_description
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_global_description: prismic.RichTextField;
+
+  /**
+   * nutec global location field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_global_location
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_global_location: prismic.RichTextField;
+
+  /**
+   * nutec bickley eu title field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_bickley_eu_title
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_bickley_eu_title: prismic.RichTextField;
+
+  /**
+   * nutec bickley eu subtitle field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_bickley_eu_subtitle
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_bickley_eu_subtitle: prismic.RichTextField;
+
+  /**
+   * nutec bickley eu description field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_bickley_eu_description
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_bickley_eu_description: prismic.RichTextField;
+
+  /**
+   * nutec bickley eu location field in *Contact*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.nutec_bickley_eu_location
+   * - **Tab**: Map
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  nutec_bickley_eu_location: prismic.RichTextField;
 }
 
 /**
