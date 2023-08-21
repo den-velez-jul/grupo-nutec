@@ -1,7 +1,33 @@
 <template>
   <header class="flex flex-col">
     <div class="hidden lg:flex justify-end bg-dark-blue px-[75px] py-3">
-      <span class="text-white">Español (Global)</span>
+      <div class="relative flex flex-col bg-dark-blue">
+        <div class="relative flex items-center" @click="openLangSwithcher()">
+          <span class="text-white font-bold"
+            >{{ showHeaderDetails.localeLabel }} (Global)</span
+          >
+          <img
+            class="ml-1"
+            src="~assets/icons/dropdown-arrow.svg"
+            alt="arrow icon"
+            width="10px"
+            height="auto" />
+        </div>
+        <div
+          v-if="showHeaderDetails.showLocales"
+          class="absolute flex flex-col gap-2 left-[-20px] top-9 bg-dark-blue text-white text-left font-bold py-4 w-[180px] z-[999]">
+          <button
+            v-if="showHeaderDetails.localeLabel != 'English'"
+            @click="langSwitcher('en')">
+            English (Global)
+          </button>
+          <button
+            v-if="showHeaderDetails.localeLabel != 'Español'"
+            @click="langSwitcher('es')">
+            Español (Global)
+          </button>
+        </div>
+      </div>
     </div>
     <div
       class="px-6 py-3 h-[96px] flex items-center justify-between md:px-[50px] lg:px-[75px] lg:py-3 xl:max-w-[1920px] 2xl:mx-auto 2xl:min-w-[1900px]">
@@ -96,6 +122,8 @@
 </template>
 
 <script setup>
+const { setLocale, localeProperties } = useI18n();
+
 const props = defineProps({
   headerData: {
     logo: String,
@@ -131,6 +159,8 @@ const { logo, btnLogo, firstOption, secondOption, thirdOption } =
   props.headerData;
 
 let showHeaderDetails = reactive({
+  localeLabel: localeProperties.value.localeName,
+  showLocales: false,
   optionSelected: "",
   isDetailsOpen: false,
   isMenuOpen: false,
@@ -177,5 +207,20 @@ const menuProps = {
     thirdOption.navLabel[0].text,
   ],
   menuOptions: [firstOption, secondOption, thirdOption],
+};
+
+function openLangSwithcher() {
+  const newValue = !showHeaderDetails.showLocales;
+  showHeaderDetails.showLocales = newValue;
+}
+
+const langSwitcher = (value) => {
+  if (value === "es") {
+    showHeaderDetails.localeLabel = "Español";
+  } else {
+    showHeaderDetails.localeLabel = "English";
+  }
+  setLocale(value);
+  openLangSwithcher();
 };
 </script>

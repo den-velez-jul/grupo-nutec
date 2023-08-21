@@ -129,9 +129,11 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const { data: home } = await useAsyncData("home", () =>
-  client.getByUID("home", "homepage")
+  client.getByUID("home", "homepage", { lang: localeIso })
 );
 
 const homeData = home.value.data;
@@ -191,3 +193,5 @@ const events = {
   ctaLink: homeData.events_cta_link,
 };
 </script>
+
+<script></script>

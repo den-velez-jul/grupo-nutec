@@ -1,7 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/prismic", "@nuxt/image"],
+  modules: ["@nuxtjs/prismic", "@nuxt/image", "@nuxtjs/i18n"],
+  i18n: {
+    locales: [
+      { code: "en", iso: "en-us", localeName: "English" },
+      { code: "es", iso: "es-mx", localeName: "Español" },
+    ],
+    defaultLocale: "es",
+    strategy: "prefix",
+  },
   image: {
     provider: "ipx",
     dir: "dist",
@@ -12,11 +20,12 @@ export default defineNuxtConfig({
       routes: [
         {
           type: "home",
-          path: "/",
+          lang: "en",
+          path: "/en",
         },
         {
           type: "home",
-          lang: "es-mx",
+          lang: "es",
           path: "/es",
         },
       ],
