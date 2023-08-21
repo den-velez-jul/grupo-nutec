@@ -40,17 +40,17 @@
       <ul
         class="body-bold grid grid-rows-4 gap-y-3 mt-[60px] md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
         <li v-for="item of navigationArray1">
-          <PrismicLink :field="item.link">
-            {{ item.label[0].text }}
-          </PrismicLink>
+          <NuxtLink :to="item.url">
+            {{ item.label }}
+          </NuxtLink>
         </li>
       </ul>
       <ul
         class="body-bold grid grid-rows-4 gap-y-3 mt-6 md:mt-0 justify-items-center md:justify-items-start lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
         <li v-for="item of navigationArray2">
-          <PrismicLink :field="item.link">
-            {{ item.label[0].text }}
-          </PrismicLink>
+          <NuxtLink :to="item.url">
+            {{ item.label }}
+          </NuxtLink>
         </li>
       </ul>
     </div>
@@ -62,6 +62,8 @@
 </template>
 
 <script setup>
+const { locale } = useI18n();
+
 const props = defineProps({
   footerData: {
     logo: Object,
@@ -73,16 +75,84 @@ const props = defineProps({
   },
 });
 
-const { logo, logoLabel, navLink, linkedIn, facebook, xUrl } = props.footerData;
+const { logo, logoLabel, linkedIn, facebook, xUrl } = props.footerData;
 
-const navigationArray1 = [];
-const navigationArray2 = [];
+const navigationArray1ES = [
+  {
+    label: "Inicio",
+    url: "/es/",
+  },
+  {
+    label: "Nosotros",
+    url: "/es/nosotros",
+  },
+  {
+    label: "Nutec",
+    url: "/es/fibras",
+  },
+  {
+    label: "Nutec Bickley",
+    url: "/es/bickley",
+  },
+];
+const navigationArray2ES = [
+  {
+    label: "Contacto",
+    url: "/es/contacto",
+  },
+  {
+    label: "Newsroom",
+    url: "/es/newsroom",
+  },
+  {
+    label: "Carreras",
+    url: "/es/carreras",
+  },
+  {
+    label: "Política de Privacidad",
+    url: "/es/politicas-privacidad",
+  },
+];
 
-navLink.forEach((item, index) => {
-  if (index < 4) {
-    navigationArray1.push(item);
-  } else {
-    navigationArray2.push(item);
-  }
-});
+const navigationArray1EN = [
+  {
+    label: "Home",
+    url: "/en",
+  },
+  {
+    label: "About Us",
+    url: "/en/nosotros",
+  },
+  {
+    label: "Nutec",
+    url: "/en/fibras",
+  },
+  {
+    label: "Nutec Bickley",
+    url: "/en/bickley",
+  },
+];
+const navigationArray2EN = [
+  {
+    label: "Contact",
+    url: "/en/contacto",
+  },
+  {
+    label: "Newsroom",
+    url: "/en/newsroom",
+  },
+  {
+    label: "Carrers",
+    url: "/en/carreras",
+  },
+  {
+    label: "Privacy Policies",
+    url: "/en/politicas-privacidad",
+  },
+];
+
+const navigationArray1 =
+  locale.value == "en" ? navigationArray1EN : navigationArray1ES;
+const navigationArray2 =
+  locale.value == "en" ? navigationArray2EN : navigationArray2ES;
 </script>

@@ -121,7 +121,7 @@
           <span class="text-big text-dark-blue">
             Conoce eventos anteriores
           </span>
-          <img src="/assets/icons/arrow-dark-blue.svg" class="ml-3" />
+          <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
       </div>
     </section>

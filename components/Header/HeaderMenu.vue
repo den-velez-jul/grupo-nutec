@@ -67,68 +67,6 @@ const props = defineProps({
 });
 
 const { buttonLabels, menuOptions } = props.menuMobileProps;
-console.log(buttonLabels);
-console.log(menuOptions);
-
-// const dataButton = [
-//   {
-//     title: "Que hacemos",
-//     paragraph:
-//       "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
-//     moreDetails: {
-//       label: "CONOCE MÁS SOBRE QUE HACEMOS",
-//       url: "/",
-//     },
-//     links: [
-//       {
-//         label: "NUTEC Fibras",
-//         url: "/",
-//       },
-//       {
-//         label: "NUTEC Bickley",
-//         url: "/",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Que hacemos",
-//     paragraph:
-//       "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
-//     moreDetails: {
-//       label: "CONOCE MÁS SOBRE QUE HACEMOS2",
-//       url: "/",
-//     },
-//     links: [
-//       {
-//         label: "NUTEC Fibras",
-//         url: "/",
-//       },
-//       {
-//         label: "NUTEC Bickley",
-//         url: "/",
-//       },
-//     ],
-//   },
-//   {
-//     title: "Que hacemos",
-//     paragraph:
-//       "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
-//     moreDetails: {
-//       label: "CONOCE MÁS SOBRE QUE HACEMOS3",
-//       url: "/",
-//     },
-//     links: [
-//       {
-//         label: "NUTEC Fibras",
-//         url: "/",
-//       },
-//       {
-//         label: "NUTEC Bickley",
-//         url: "/",
-//       },
-//     ],
-//   },
-// ];
 
 let optionSelected = reactive({ isShow: false, optionToDisplay: {} });
 

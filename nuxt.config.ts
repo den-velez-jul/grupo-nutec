@@ -16,20 +16,6 @@ export default defineNuxtConfig({
   },
   prismic: {
     endpoint: "nutec",
-    clientConfig: {
-      routes: [
-        {
-          type: "home",
-          lang: "en",
-          path: "/en",
-        },
-        {
-          type: "home",
-          lang: "es",
-          path: "/es",
-        },
-      ],
-    },
   },
   css: ["~/assets/css/main.css"],
   postcss: {

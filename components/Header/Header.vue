@@ -190,7 +190,6 @@ function onShowHeaderDetails(optionSelected) {
   } else {
     showHeaderDetails.optionSelected = optionSelected;
     showHeaderDetails.isDetailsOpen = true;
-    console.log(showHeaderDetails.headerDetails);
   }
 }
 
