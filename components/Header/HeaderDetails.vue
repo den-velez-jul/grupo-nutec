@@ -10,7 +10,7 @@
       <NuxtLink class="uppercase text-[18px]">{{ moreDetails.label }}</NuxtLink>
     </div>
     <div class="flex flex-col font-bold pl-[30px] pt-3 text-[18px]">
-      <NuxtLink class="mb-3" v-for="link of links" to="">
+      <NuxtLink class="mb-3" v-for="link of links" :to="link.internal_path">
         {{ link.label[0].text }}
       </NuxtLink>
     </div>

@@ -50,7 +50,7 @@
         <NuxtLink
           class="mb-3"
           v-for="link of optionSelected.optionToDisplay.linksDetails"
-          to="">
+          :to="link.internal_path">
           <PrismicText :field="link.label" />
         </NuxtLink>
       </div>

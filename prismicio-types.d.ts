@@ -2078,6 +2078,16 @@ export interface HeaderDocumentDataHeaderDetails1Item {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   label: prismic.RichTextField;
+
+  /**
+   * internal path field in *Header → header details 1*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_1[].internal_path
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  internal_path: prismic.KeyTextField;
 }
 
 /**
@@ -2103,6 +2113,16 @@ export interface HeaderDocumentDataHeaderDetails2Item {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   label: prismic.RichTextField;
+
+  /**
+   * internal_path field in *Header → header details 2*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_2[].internal_path
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  internal_path: prismic.KeyTextField;
 }
 
 /**
@@ -2128,6 +2148,16 @@ export interface HeaderDocumentDataHeaderDetails3Item {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   label: prismic.RichTextField;
+
+  /**
+   * internal_path field in *Header → header details 3*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_3[].internal_path
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  internal_path: prismic.KeyTextField;
 }
 
 /**
