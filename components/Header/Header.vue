@@ -7,21 +7,27 @@
       class="px-6 py-3 h-[96px] flex items-center justify-between md:px-[50px] lg:px-[75px] lg:py-3 xl:max-w-[1920px] 2xl:mx-auto 2xl:min-w-[1900px]">
       <img
         class="mr-3 h-full w-auto"
-        src="~assets/logos/LogoGrupoNutecES.svg"
-        alt="logo"
+        :src="logo.url"
+        :alt="logo.alt"
         width="51px"
         height="48px" />
       <nav class="flex-grow flex justify-center ml-[150px]">
         <ul
           class="hidden max-w-[500px] lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers font-semibold text-dark-blue">
           <li>
-            <button @click="onShowHeaderDetails()">Que hacemos</button>
+            <button @click="onShowHeaderDetails('about')">
+              {{ firstOption.navLabel[0].text }}
+            </button>
           </li>
           <li>
-            <button @click="onShowHeaderDetails()">Compañia</button>
+            <button @click="onShowHeaderDetails('company')">
+              {{ secondOption.navLabel[0].text }}
+            </button>
           </li>
           <li>
-            <button @click="onShowHeaderDetails()">Recursos</button>
+            <button @click="onShowHeaderDetails('resources')">
+              {{ thirdOption.navLabel[0].text }}
+            </button>
           </li>
         </ul>
       </nav>
@@ -40,55 +46,122 @@
             width="24px"
             height="24px" />
         </button>
-        <button
+        <NuxtLink
           class="py-3 px-9 bg-dark-blue text-white hidden lg:flex items-center justify-center"
-          href="https://">
-          <span class="text-white text-med mt-1">Contacto</span>
-        </button>
+          href="contacto">
+          <span class="text-white text-med mt-1">{{ btnLogo[0].text }}</span>
+        </NuxtLink>
       </div>
     </div>
     <HeaderDetails
-      v-if="showHeaderDetails.isDetailsOpen"
-      :title="headerDetails1.title"
-      :paragraph="headerDetails1.paragraph"
-      :moreDetails="headerDetails1.moreDetails"
-      :links="headerDetails1.links" />
+      v-if="
+        showHeaderDetails.isDetailsOpen &&
+        showHeaderDetails.optionSelected == 'about'
+      "
+      :title="showHeaderDetails.headerDetails.title[0].text"
+      :paragraph="showHeaderDetails.headerDetails.description[0].text"
+      :moreDetails="{
+        url: showHeaderDetails.headerDetails.linkUrl.url,
+        label: showHeaderDetails.headerDetails.linkLabel[0].text,
+      }"
+      :links="showHeaderDetails.headerDetails.linksDetails" />
+    <HeaderDetails
+      v-if="
+        showHeaderDetails.isDetailsOpen &&
+        showHeaderDetails.optionSelected == 'company'
+      "
+      :title="showHeaderDetails.headerDetails.title[0].text"
+      :paragraph="showHeaderDetails.headerDetails.description[0].text"
+      :moreDetails="{
+        url: showHeaderDetails.headerDetails.linkUrl.url,
+        label: showHeaderDetails.headerDetails.linkLabel[0].text,
+      }"
+      :links="showHeaderDetails.headerDetails.linksDetails" />
+    <HeaderDetails
+      v-if="
+        showHeaderDetails.isDetailsOpen &&
+        showHeaderDetails.optionSelected == 'resources'
+      "
+      :title="showHeaderDetails.headerDetails.title[0].text"
+      :paragraph="showHeaderDetails.headerDetails.description[0].text"
+      :moreDetails="{
+        url: showHeaderDetails.headerDetails.linkUrl.url,
+        label: showHeaderDetails.headerDetails.linkLabel[0].text,
+      }"
+      :links="showHeaderDetails.headerDetails.linksDetails" />
     <HeaderMenu
       v-if="showHeaderDetails.isMenuOpen"
-      :title="headerDetails1.title"
-      :paragraph="headerDetails1.paragraph"
-      :moreDetails="headerDetails1.moreDetails"
-      :links="headerDetails1.links" />
+      :menuMobileProps="menuProps" />
   </header>
 </template>
 
 <script setup>
-const headerDetails1 = {
-  title: "Qué Hacemos",
-  paragraph:
-    "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
-  moreDetails: {
-    label: "CONOCE MÁS SOBRE QUE HACEMOS",
-    url: "/",
+const props = defineProps({
+  headerData: {
+    logo: String,
+    btnLogo: String,
+    firstOption: {
+      navLabel: String,
+      title: String,
+      description: String,
+      linkUrl: String,
+      linkLabel: String,
+      linksDetails: Array,
+    },
+    secondOption: {
+      navLabel: String,
+      title: String,
+      description: String,
+      linkUrl: String,
+      linkLabel: String,
+      linksDetails: Array,
+    },
+    thirdOption: {
+      navLabel: String,
+      title: String,
+      description: String,
+      linkUrl: String,
+      linkLabel: String,
+      linksDetails: Array,
+    },
   },
-  links: [
-    {
-      label: "NUTEC Fibras",
-      url: "/",
-    },
-    {
-      label: "NUTEC Bickley",
-      url: "/",
-    },
-  ],
-};
+});
 
-let showHeaderDetails = reactive({ isDetailsOpen: false, isMenuOpen: false });
+const { logo, btnLogo, firstOption, secondOption, thirdOption } =
+  props.headerData;
 
-function onShowHeaderDetails() {
-  const newValue = !showHeaderDetails.isDetailsOpen;
+let showHeaderDetails = reactive({
+  optionSelected: "",
+  isDetailsOpen: false,
+  isMenuOpen: false,
+  headerDetails: {},
+});
 
-  showHeaderDetails.isDetailsOpen = newValue;
+function onShowHeaderDetails(optionSelected) {
+  let newHeaderDetails;
+
+  switch (optionSelected) {
+    case "about":
+      showHeaderDetails.headerDetails = firstOption;
+      break;
+    case "company":
+      showHeaderDetails.headerDetails = secondOption;
+      break;
+    case "resources":
+      showHeaderDetails.headerDetails = thirdOption;
+      break;
+    default:
+      break;
+  }
+
+  if (showHeaderDetails.optionSelected == optionSelected) {
+    showHeaderDetails.isDetailsOpen = false;
+    showHeaderDetails.optionSelected = "";
+  } else {
+    showHeaderDetails.optionSelected = optionSelected;
+    showHeaderDetails.isDetailsOpen = true;
+    console.log(showHeaderDetails.headerDetails);
+  }
 }
 
 function onShowMenu() {
@@ -96,4 +169,13 @@ function onShowMenu() {
 
   showHeaderDetails.isMenuOpen = newValue;
 }
+
+const menuProps = {
+  buttonLabels: [
+    firstOption.navLabel[0].text,
+    secondOption.navLabel[0].text,
+    thirdOption.navLabel[0].text,
+  ],
+  menuOptions: [firstOption, secondOption, thirdOption],
+};
 </script>

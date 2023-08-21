@@ -2056,6 +2056,321 @@ export type GrupoNutecDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Header → header details 1*
+ */
+export interface HeaderDocumentDataHeaderDetails1Item {
+  /**
+   * url field in *Header → header details 1*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_1[].url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField;
+
+  /**
+   * label field in *Header → header details 1*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_1[].label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  label: prismic.RichTextField;
+}
+
+/**
+ * Item in *Header → header details 2*
+ */
+export interface HeaderDocumentDataHeaderDetails2Item {
+  /**
+   * url field in *Header → header details 2*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_2[].url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField;
+
+  /**
+   * label field in *Header → header details 2*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_2[].label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  label: prismic.RichTextField;
+}
+
+/**
+ * Item in *Header → header details 3*
+ */
+export interface HeaderDocumentDataHeaderDetails3Item {
+  /**
+   * url field in *Header → header details 3*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_3[].url
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  url: prismic.LinkField;
+
+  /**
+   * label field in *Header → header details 3*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_3[].label
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  label: prismic.RichTextField;
+}
+
+/**
+ * Content for Header documents
+ */
+interface HeaderDocumentData {
+  /**
+   * header logo field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  header_logo: prismic.ImageField<never>;
+
+  /**
+   * header button label field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_boton_label
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_boton_label: prismic.RichTextField
+  /**
+   * header nav 1 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_nav_1
+   * - **Tab**: Que hacemos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  header_nav_1: prismic.RichTextField;
+
+  /**
+   * header title 1 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_title_1
+   * - **Tab**: Que hacemos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_title_1: prismic.RichTextField;
+
+  /**
+   * header_description_1 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_description_1
+   * - **Tab**: Que hacemos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_description_1: prismic.RichTextField;
+
+  /**
+   * header link url 1 field in *Header*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_link_url_1
+   * - **Tab**: Que hacemos
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  header_link_url_1: prismic.LinkField;
+
+  /**
+   * header link label 1 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_link_label_1
+   * - **Tab**: Que hacemos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_link_label_1: prismic.RichTextField;
+
+  /**
+   * header details 1 field in *Header*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_1[]
+   * - **Tab**: Que hacemos
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  header_details_1: prismic.GroupField<
+    Simplify<HeaderDocumentDataHeaderDetails1Item>
+  >
+  /**
+   * header nav 2 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_nav_2
+   * - **Tab**: sobre Nutec
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  header_nav_2: prismic.RichTextField;
+
+  /**
+   * header title 2 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_title_2
+   * - **Tab**: sobre Nutec
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_title_2: prismic.RichTextField;
+
+  /**
+   * header description 2 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_description_2
+   * - **Tab**: sobre Nutec
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_description_2: prismic.RichTextField;
+
+  /**
+   * header link url 2 field in *Header*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_link_url_2
+   * - **Tab**: sobre Nutec
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  header_link_url_2: prismic.LinkField;
+
+  /**
+   * header link label 2 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_link_label_2
+   * - **Tab**: sobre Nutec
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_link_label_2: prismic.RichTextField;
+
+  /**
+   * header details 2 field in *Header*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_2[]
+   * - **Tab**: sobre Nutec
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  header_details_2: prismic.GroupField<
+    Simplify<HeaderDocumentDataHeaderDetails2Item>
+  >
+  /**
+   * header nav 3 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_nav_3
+   * - **Tab**: Recursos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  header_nav_3: prismic.RichTextField;
+
+  /**
+   * header title 3 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_title_3
+   * - **Tab**: Recursos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_title_3: prismic.RichTextField;
+
+  /**
+   * header description 3 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_description_3
+   * - **Tab**: Recursos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_description_3: prismic.RichTextField;
+
+  /**
+   * header link url 3 field in *Header*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_link_url_3
+   * - **Tab**: Recursos
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  header_link_url_3: prismic.LinkField;
+
+  /**
+   * header link label 3 field in *Header*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_link_label_3
+   * - **Tab**: Recursos
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  header_link_label_3: prismic.RichTextField;
+
+  /**
+   * header details 3 field in *Header*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.header_details_3[]
+   * - **Tab**: Recursos
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  header_details_3: prismic.GroupField<
+    Simplify<HeaderDocumentDataHeaderDetails3Item>
+  >;
+}
+
+/**
+ * Header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<HeaderDocumentData>, "header", Lang>;
+
+/**
  * Item in *Home → Top Slides*
  */
 export interface HomeDocumentDataTopSlidesItem {
@@ -4992,6 +5307,7 @@ export type AllDocumentTypes =
   | EventFeedDocument
   | FooterDocument
   | GrupoNutecDocument
+  | HeaderDocument
   | HomeDocument
   | MenuFooterDocument
   | MenuSectionDocument
@@ -5611,6 +5927,8 @@ declare module "@prismicio/client" {
       FooterDocumentData,
       GrupoNutecDocument,
       GrupoNutecDocumentData,
+      HeaderDocument,
+      HeaderDocumentData,
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataSlicesSlice,

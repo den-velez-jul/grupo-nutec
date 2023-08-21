@@ -1,0 +1,227 @@
+{
+  "id": "header",
+  "label": "Header",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "type": "UID", "config": { "label": "UID", "placeholder": "" } },
+      "header_logo": {
+        "type": "Image",
+        "config": { "label": "header logo", "constraint": {}, "thumbnails": [] }
+      },
+      "header_boton_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header button label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      }
+    },
+    "Que hacemos": {
+      "header_nav_1": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header nav 1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_title_1": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header title 1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_description_1": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header_description_1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_link_url_1": {
+        "type": "Link",
+        "config": {
+          "label": "header link url 1",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "select": null
+        }
+      },
+      "header_link_label_1": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header link label 1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_details_1": {
+        "type": "Group",
+        "config": {
+          "label": "header details 1",
+          "fields": {
+            "url": {
+              "type": "Link",
+              "config": { "label": "url", "placeholder": "", "select": null }
+            },
+            "label": {
+              "type": "StructuredText",
+              "config": {
+                "label": "label",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      }
+    },
+    "sobre Nutec": {
+      "header_nav_2": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header nav 2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_title_2": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header title 2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_description_2": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header description 2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_link_url_2": {
+        "type": "Link",
+        "config": {
+          "label": "header link url 2",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "header_link_label_2": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header link label 2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_details_2": {
+        "type": "Group",
+        "config": {
+          "label": "header details 2",
+          "fields": {
+            "url": {
+              "type": "Link",
+              "config": { "label": "url", "placeholder": "", "select": null }
+            },
+            "label": {
+              "type": "StructuredText",
+              "config": {
+                "label": "label",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Recursos": {
+      "header_nav_3": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header nav 3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_title_3": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header title 3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_description_3": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header description 3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_link_url_3": {
+        "type": "Link",
+        "config": {
+          "label": "header link url 3",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "header_link_label_3": {
+        "type": "StructuredText",
+        "config": {
+          "label": "header link label 3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "header_details_3": {
+        "type": "Group",
+        "config": {
+          "label": "header details 3",
+          "fields": {
+            "url": {
+              "type": "Link",
+              "config": { "label": "url", "placeholder": "", "select": null }
+            },
+            "label": {
+              "type": "StructuredText",
+              "config": {
+                "label": "label",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

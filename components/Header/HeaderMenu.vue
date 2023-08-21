@@ -13,9 +13,10 @@
       </span>
     </button>
     <div class="flex justify-end bg-dark-blue px-[50px] py-[40px]">
-      <span
+      <NuxtLink
+        to="contacto"
         class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold"
-        >Contacto</span
+        >Contacto</NuxtLink
       >
     </div>
     <div
@@ -24,26 +25,33 @@
       <span>Ingles Global</span>
     </div>
   </div>
-  <div v-if="optionSelected.isShow" class="flex flex-col bg-light-baby-blue">
+  <div
+    v-if="optionSelected.isShow"
+    class="flex flex-col bg-light-baby-blue lg:hidden">
     <button
       @click="() => closeOptionSelected()"
       class="flex items-center px-[50px] py-[40px] font-bold text-dark-blue text-[30px]">
       <img src="~assets/icons/arrow-dark-blue.svg" class="-scale-100" />
       <span class="ml-6">
-        {{ optionSelected.optionToDisplay.title }}
+        {{ optionSelected.optionToDisplay.title[0].text }}
       </span>
     </button>
-    <div class="py-[50px] px-[40px] h-[500px]">
-      <!-- <p class="text-[20px] font-semibold">
-        {{ optionSelected.optionToDisplay.paragraph }}
-      </p> -->
-      <div
-        class="flex flex-col md:flex-row justify-around font-semibold text-[20px] py-[50px] px-[40px]">
+    <div class="px-[50px] py-[40px] h-[500px]">
+      <div class="flex flex-col font-bold pl-[30px] pt-3 text-[18px]">
         <NuxtLink
-          class="uppercase mb-3"
-          v-for="link of optionSelected.optionToDisplay.links"
+          class="mb-3"
+          v-for="link of optionSelected.linksDetails"
           to="">
-          {{ link.label }}
+          {{ link.label[0].text }}
+        </NuxtLink>
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-y-10 font-semibold text-[20px]">
+        <NuxtLink
+          class="mb-3"
+          v-for="link of optionSelected.optionToDisplay.linksDetails"
+          to="">
+          <PrismicText :field="link.label" />
         </NuxtLink>
       </div>
     </div>
@@ -51,73 +59,82 @@
 </template>
 
 <script setup>
-const buttonLabels = ["Que hacemos", "Compañia", "Recursos"];
+const props = defineProps({
+  menuMobileProps: {
+    buttonLabels: Array,
+    menuOptions: Array,
+  },
+});
 
-const dataButton = [
-  {
-    title: "Que hacemos",
-    paragraph:
-      "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
-    moreDetails: {
-      label: "CONOCE MÁS SOBRE QUE HACEMOS",
-      url: "/",
-    },
-    links: [
-      {
-        label: "NUTEC Fibras",
-        url: "/",
-      },
-      {
-        label: "NUTEC Bickley",
-        url: "/",
-      },
-    ],
-  },
-  {
-    title: "Que hacemos",
-    paragraph:
-      "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
-    moreDetails: {
-      label: "CONOCE MÁS SOBRE QUE HACEMOS2",
-      url: "/",
-    },
-    links: [
-      {
-        label: "NUTEC Fibras",
-        url: "/",
-      },
-      {
-        label: "NUTEC Bickley",
-        url: "/",
-      },
-    ],
-  },
-  {
-    title: "Que hacemos",
-    paragraph:
-      "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
-    moreDetails: {
-      label: "CONOCE MÁS SOBRE QUE HACEMOS3",
-      url: "/",
-    },
-    links: [
-      {
-        label: "NUTEC Fibras",
-        url: "/",
-      },
-      {
-        label: "NUTEC Bickley",
-        url: "/",
-      },
-    ],
-  },
-];
+const { buttonLabels, menuOptions } = props.menuMobileProps;
+console.log(buttonLabels);
+console.log(menuOptions);
+
+// const dataButton = [
+//   {
+//     title: "Que hacemos",
+//     paragraph:
+//       "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
+//     moreDetails: {
+//       label: "CONOCE MÁS SOBRE QUE HACEMOS",
+//       url: "/",
+//     },
+//     links: [
+//       {
+//         label: "NUTEC Fibras",
+//         url: "/",
+//       },
+//       {
+//         label: "NUTEC Bickley",
+//         url: "/",
+//       },
+//     ],
+//   },
+//   {
+//     title: "Que hacemos",
+//     paragraph:
+//       "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
+//     moreDetails: {
+//       label: "CONOCE MÁS SOBRE QUE HACEMOS2",
+//       url: "/",
+//     },
+//     links: [
+//       {
+//         label: "NUTEC Fibras",
+//         url: "/",
+//       },
+//       {
+//         label: "NUTEC Bickley",
+//         url: "/",
+//       },
+//     ],
+//   },
+//   {
+//     title: "Que hacemos",
+//     paragraph:
+//       "Una amplia gama de productos y soluciones de aislamiento de alta temperatura para afrontar los retos térmicos más exigentes.",
+//     moreDetails: {
+//       label: "CONOCE MÁS SOBRE QUE HACEMOS3",
+//       url: "/",
+//     },
+//     links: [
+//       {
+//         label: "NUTEC Fibras",
+//         url: "/",
+//       },
+//       {
+//         label: "NUTEC Bickley",
+//         url: "/",
+//       },
+//     ],
+//   },
+// ];
 
 let optionSelected = reactive({ isShow: false, optionToDisplay: {} });
 
 function onShowOptionSelected(index) {
   optionSelected.isShow = true;
-  optionSelected.optionToDisplay = dataButton[index];
+  optionSelected.optionToDisplay = menuOptions[index];
 }
 
 function closeOptionSelected() {

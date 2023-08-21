@@ -11,7 +11,7 @@
     </div>
     <div class="flex flex-col font-bold pl-[30px] pt-3 text-[18px]">
       <NuxtLink class="mb-3" v-for="link of links" to="">
-        {{ link.label }}
+        {{ link.label[0].text }}
       </NuxtLink>
     </div>
   </div>
