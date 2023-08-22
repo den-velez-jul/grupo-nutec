@@ -129,6 +129,8 @@
 </template>
 
 <script setup>
+import { format } from "date-fns";
+import { es } from "date-fns/locale";
 const { localeProperties } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
@@ -165,8 +167,22 @@ const nutecShop = {
   ctaLabel: homeData.shop_cta_label,
 };
 
+const dateToTransfom = homeData.group_news[0].date
+  ? new Date(homeData.group_news[0].date)
+  : new Date();
+const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
+  locale: es,
+});
+const dateUpdatedArray = dateUpdated.split(" ");
+const dataFormatted =
+  dateUpdatedArray[0] +
+  " de " +
+  dateUpdatedArray[1] +
+  " de " +
+  dateUpdatedArray[2];
+
 const divisionsNews = {
-  nutecGroup: homeData.group_news[0],
+  nutecGroup: { ...homeData.group_news[0], date: dataFormatted },
   nutecFibras: {
     image: homeData.group_division_fibras[0].image_fibras,
     title: homeData.group_division_fibras[0].title_fibras,

@@ -4,9 +4,11 @@
       :src="companyProps.imagen.url"
       class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px] object-cover" />
     <div class="p-8 flex-grow flex flex-col justify-between">
-      <div v-if="companyProps.companias_logo" class="my-5 flex h-[100px]">
+      <div
+        v-if="companyProps.companias_logo"
+        class="my-5 flex h-[80px] justify-start">
         <img
-          class="w-full h-full object-cover lg:w-[60%] lg:h-auto xl:w-[45%]"
+          class="w-full h-full object-contain lg:w-auto lg:h-full xl:w-[25%]"
           :src="companyProps.companias_logo.url"
           :alt="companyProps.companias_logo.alt" />
       </div>

@@ -127,16 +127,18 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
 const { data: home } = await useAsyncData("home", () =>
-  client.getByUID("home", "homepage")
+  client.getByUID("home", "homepage", { lang: localeIso })
 );
 
 const { data: news } = await useAsyncData("news", () =>
-  client.getAllByType("article")
+  client.getAllByType("article", { lang: localeIso })
 );
 
 const homeData = home.value.data;

@@ -16,7 +16,7 @@
           class="body-reg flex flex-col space-y-4" />
       </p>
       <div v-if="ctaLabel" class="flex justify-center lg:justify-start">
-        <a :href="ctaLink" class="flex items-center text-dark-blue">
+        <a :href="ctaLink.url" class="flex items-center text-dark-blue">
           <span class="text-big">
             {{ ctaLabel }}
           </span>

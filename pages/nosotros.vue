@@ -52,9 +52,13 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const { data: aboutUs } = await useAsyncData("aboutUs", async () => {
-  const document = await client.getByUID("about_us", "nutec-nosotros");
+  const document = await client.getByUID("about_us", "nutec-nosotros", {
+    lang: localeIso,
+  });
 
   if (document) {
     return document;
@@ -64,7 +68,9 @@ const { data: aboutUs } = await useAsyncData("aboutUs", async () => {
 });
 
 const { data: timeline } = await useAsyncData("timeline", async () => {
-  const document = await client.getByUID("timeline", "nutec-timeline");
+  const document = await client.getByUID("timeline", "nutec-timeline", {
+    lang: localeIso,
+  });
   if (document) {
     return document;
   } else {

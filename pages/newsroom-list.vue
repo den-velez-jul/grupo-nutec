@@ -84,22 +84,35 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
 const { data: news } = await useAsyncData("news", () =>
   client.getAllByType("article", {
-    orderings: [{ field: "article_date", direction: "asc" }],
+    lang: localeIso,
   })
 );
 
 const { data: events } = await useAsyncData("events", () =>
-  client.getAllByType("event")
+  client.getAllByType("event", { lang: localeIso })
 );
 
 const newsList = news.value;
 const latestEvent = events.value[0].data;
+
+const newsListSorted = newsList.sort((a, b) => {
+  if (new Date(a.data.article_date) < new Date(b.data.article_date)) {
+    return -1;
+  }
+  if (new Date(a.data.article_date) > new Date(b.data.article_date)) {
+    return 1;
+  }
+  return 0;
+});
+newsListSorted.reverse();
 
 const event = {
   title: latestEvent.title,
@@ -114,8 +127,8 @@ const event = {
 let headlineNews;
 let cardNews = [];
 
-newsList.forEach((news, index) => {
-  if (index === 0) {
+newsListSorted.forEach((news, index) => {
+  if (index == 0) {
     const dateToTransfom = news.data.article_date
       ? new Date(news.data.article_date)
       : new Date();
@@ -129,7 +142,6 @@ newsList.forEach((news, index) => {
       dateUpdatedArray[1] +
       " de " +
       dateUpdatedArray[2];
-
     headlineNews = { ...news.data, article_date: dataFormatted };
     return;
   }

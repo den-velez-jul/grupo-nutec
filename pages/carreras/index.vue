@@ -26,13 +26,15 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const { data: careerFeed } = await useAsyncData("careerFeed", () =>
-  client.getByUID("career_feed", "careerpage")
+  client.getByUID("career_feed", "careerpage", { lang: localeIso })
 );
 
 const { data: career } = await useAsyncData("career", () =>
-  client.getAllByType("career")
+  client.getAllByType("career", { lang: localeIso })
 );
 
 const careerFeedData = careerFeed.value.data;

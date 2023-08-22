@@ -105,6 +105,8 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 import { components } from "~/slices";
 const { client } = usePrismic();
 const route = useRoute();
@@ -114,7 +116,9 @@ import { es } from "date-fns/locale";
 
 const articleUID = route.params.article;
 const { data: article } = await useAsyncData("article", async () => {
-  const document = await client.getByUID("article", articleUID);
+  const document = await client.getByUID("article", articleUID, {
+    lang: localeIso,
+  });
 
   if (document) {
     return document;
@@ -123,7 +127,7 @@ const { data: article } = await useAsyncData("article", async () => {
   }
 });
 const { data: news } = await useAsyncData("news", async () => {
-  const document = await client.getAllByType("article");
+  const document = await client.getAllByType("article", { lang: localeIso });
   if (document) {
     return document;
   } else {

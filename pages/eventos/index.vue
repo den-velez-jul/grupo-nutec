@@ -8,7 +8,7 @@
     <section class="py-[60px] lg:px-5 xl:px-[225px]">
       <h4
         class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-[100px]">
-        Proximos Eventos
+        Próximos Eventos
       </h4>
       <CardEvent :cardEventProps="event" />
       <div class="mt-8 w-full">
@@ -24,10 +24,12 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 
 const { data: events } = await useAsyncData("events", () =>
-  client.getAllByType("event")
+  client.getAllByType("event", { lang: localeIso })
 );
 
 const latestEvent = events.value[0].data;

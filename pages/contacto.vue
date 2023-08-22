@@ -208,9 +208,11 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const { data: contact } = await useAsyncData("contacto", () =>
-  client.getByUID("contact", "contact")
+  client.getByUID("contact", "contact", { lang: localeIso })
 );
 
 const contactData = contact.value.data;

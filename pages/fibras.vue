@@ -20,14 +20,17 @@
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section class="pb-[60px] pt-[80px] md:pt-[120px]">
       <h4 class="heading3 text-center text-dark-blue mb-[60px]">
-        Nuestras compañias
+        Nuestras compañías
       </h4>
       <div
         class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 md:gap-y-[50px] lg:grid-cols-3">
         <div v-for="company of companyPropsSorted" class="flex flex-col">
           <div
-            class="h-[100px] py-5 bg-baby-blue md:h-[180px] md:py-[60px] lg:h-[220px] flex justify-center items-center">
-            <img :src="company.logo.url" alt="" class="h-full object-cover" />
+            class="h-[100px] py-5 px-5 bg-baby-blue md:h-[180px] md:py-[60px] lg:h-[220px] flex justify-center items-center">
+            <img
+              :src="company.logo.url"
+              alt=""
+              class="h-full object-cover lg:object-contain" />
           </div>
           <div
             class="flex flex-col flex-grow justify-between bg-dark-blue text-white p-6 lg:p-8 lg:pb-[60px]">
@@ -43,6 +46,7 @@
               </p>
             </div>
             <a
+              target="_blank"
               v-if="company.ctaLabel.length > 0"
               :href="company.ctaUrl.url"
               class="pt-8 flex w-full body-big">
@@ -91,23 +95,26 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const { data: fibras } = await useAsyncData("fibras", () =>
-  client.getByUID("about_us", "nutec-fibras")
+  client.getByUID("about_us", "nutec-fibras", { lang: localeIso })
 );
 
 const { data: companies } = await useAsyncData("companies", () =>
   client.getAllByType("company", {
+    lang: localeIso,
     orderings: [{ field: "company_sort_position", direction: "asc" }],
   })
 );
 
 const { data: products } = await useAsyncData("products", () =>
-  client.getAllByEveryTag(["fibras", "products"])
+  client.getAllByEveryTag(["fibras", "products"], { lang: localeIso })
 );
 
 const { data: solutions } = await useAsyncData("solutions", () =>
-  client.getAllByEveryTag(["fibras", "solutions"])
+  client.getAllByEveryTag(["fibras", "solutions"], { lang: localeIso })
 );
 
 const fibrasData = fibras.value.data;

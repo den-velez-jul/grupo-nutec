@@ -125,16 +125,20 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const route = useRoute();
 
 const { data: careerFeed } = await useAsyncData("careerFeed", () =>
-  client.getByUID("career_feed", "careerpage")
+  client.getByUID("career_feed", "careerpage", { lang: localeIso })
 );
 
 const careerUID = route.params.career;
 const { data: career } = await useAsyncData("career", async () => {
-  const document = await client.getByUID("career", careerUID);
+  const document = await client.getByUID("career", careerUID, {
+    lang: localeIso,
+  });
 
   if (document) {
     return document;

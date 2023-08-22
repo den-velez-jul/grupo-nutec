@@ -23,7 +23,7 @@
         topLabel="Hornos Industriales para Cerámica y Materiales Avanzados"
         title="Tecnología líder en la industria, resultados basados ​​en el rendimiento"
         ctaLabel="Conoce más"
-        ctaUrl="" />
+        ctaUrl="https://nutecbickley.com/es/que-hacemos/hornos-industriales-para-metales" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -39,7 +39,7 @@
         topLabel="HORNOS INDUSTRIALES PARA METALES"
         title="Forja el futuro con nuestros Hornos Industriales para metales de alta tecnología"
         ctaLabel="Conoce más"
-        ctaUrl="" />
+        ctaUrl="https://nutecbickley.com/es/que-hacemos/hornos-industriales-para-metales" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -55,7 +55,7 @@
         topLabel="SISTEMAS DE COMBUSTIÓN Y CONTROL"
         title="Eficiencia y sostenibilidad para tus necesidades de equipos térmicos industriales"
         ctaLabel="Conoce más"
-        ctaUrl="" />
+        ctaUrl="https://nutecbickley.com/es/que-hacemos/sistemas-de-combustion-y-control" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -71,7 +71,7 @@
         topLabel="SERVICIOS DE FABRICACIÓN E INSTALACIÓN"
         title="Deja que los expertos de NUTEC Bickley hagan el trabajo por tu negocio"
         ctaLabel="Conoce más"
-        ctaUrl="" />
+        ctaUrl="https://nutecbickley.com/es/que-hacemos/servicios-de-fabricacion-e-instalacion" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -86,13 +86,15 @@
 </template>
 
 <script setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const { data: bickley } = await useAsyncData("home", () =>
-  client.getByUID("about_us", "nutec-bickley")
+  client.getByUID("about_us", "nutec-bickley", { lang: localeIso })
 );
 
 const { data: ovensCeramic } = await useAsyncData("ovensCeramic", async () => {
-  const document = await client.getAllByTag("ceramicos");
+  const document = await client.getAllByTag("ceramicos", { lang: localeIso });
   if (document) {
     return document;
   } else {
@@ -101,7 +103,7 @@ const { data: ovensCeramic } = await useAsyncData("ovensCeramic", async () => {
 });
 
 const { data: ovensMetals } = await useAsyncData("ovensMetals", async () => {
-  const document = await client.getAllByTag("metalicos");
+  const document = await client.getAllByTag("metalicos", { lang: localeIso });
   if (document) {
     return document;
   } else {
@@ -110,7 +112,7 @@ const { data: ovensMetals } = await useAsyncData("ovensMetals", async () => {
 });
 
 const { data: sistems } = await useAsyncData("sistems", async () => {
-  const document = await client.getAllByTag("sistemas");
+  const document = await client.getAllByTag("sistemas", { lang: localeIso });
   if (document) {
     return document;
   } else {
@@ -119,7 +121,7 @@ const { data: sistems } = await useAsyncData("sistems", async () => {
 });
 
 const { data: services } = await useAsyncData("services", async () => {
-  const document = await client.getAllByTag("servicios");
+  const document = await client.getAllByTag("servicios", { lang: localeIso });
   if (document) {
     return document;
   } else {
