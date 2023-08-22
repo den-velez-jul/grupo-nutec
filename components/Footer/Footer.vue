@@ -3,12 +3,12 @@
     class="px-6 pt-6 pb-[80px] text-dark-blue font-semibold md:px-[50px] lg:px-[100px] lg:py-[150px]">
     <div
       class="flex flex-col items-center md:grid lg:grid-cols-4 md:content-center md:grid-cols-2 md:grid-rows-2 lg:grid-rows-1 md:gap-y-[60px] lg:gap-y-0">
-      <div class="flex flex-col">
+      <div class="flex flex-col items-center justify-center pr-14">
         <img
           :src="logo.url"
           :alt="logo.alt"
           class="w-[120px] h-full object-cover" />
-        <span class="hidden w-full lg:text-left body-bold lg:block lg:mt-3">
+        <span class="hidden w-full lg:text-center body-bold lg:block lg:mt-3">
           {{ logoLabel[0].text }}
         </span>
       </div>
@@ -44,7 +44,7 @@
         </a>
       </div>
       <ul
-        class="body-bold grid grid-rows-4 gap-y-3 mt-[60px] md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:p-0">
+        class="body-bold grid grid-rows-4 gap-y-1 mt-[60px] md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:p-0">
         <li v-for="item of navigationArray1">
           <NuxtLink :to="item.url">
             {{ item.label }}
@@ -52,7 +52,7 @@
         </li>
       </ul>
       <ul
-        class="body-bold grid grid-rows-4 gap-y-3 mt-6 md:mt-0 justify-items-center md:justify-items-start lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
+        class="body-bold grid grid-rows-4 gap-y-1 mt-6 md:mt-0 justify-items-center md:justify-items-start lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
         <li v-for="item of navigationArray2">
           <NuxtLink :to="item.url">
             {{ item.label }}

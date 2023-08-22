@@ -1,10 +1,12 @@
 <template>
-  <Hero
-    :title="hero.title"
-    :cta-label="hero.ctaLabel"
-    :cta-link="hero.ctaLink"
-    :bgMedia="hero.bgMedia"
-    :divisions="hero.divisions" />
+  <div class="mt-[96px] lg:mt-[144px]">
+    <Hero
+      :title="hero.title"
+      :cta-label="hero.ctaLabel"
+      :cta-link="hero.ctaLink"
+      :bgMedia="hero.bgMedia"
+      :divisions="hero.divisions" />
+  </div>
   <div class="bg-baby-blue w-full">
     <section
       id="description"

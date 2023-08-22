@@ -1,6 +1,6 @@
 <template>
   <section
-    class="pt-[280px] relative flex justify-center items-center h-[700px] md:h-[600px] lg:h-[800px] w-full">
+    class="relative flex justify-center items-center h-[700px] md:h-[600px] lg:h-[800px] w-full">
     <div
       class="flex flex-col items-center px-6 md:px-[50px] lg:px-[75px] xl:px-[270px]">
       <span
@@ -28,12 +28,10 @@
       muted
       autoplay
       loop
-      class="w-full h-full object-cover absolute left-0 right-0 -z-10">
+      class="w-full h-full object-cover absolute inset-0 -z-10">
       <source :src="video.url" type="video/mp4" />
     </video>
-    <div
-      v-if="!video.url && image.url"
-      class="absolute left-0 right-0 h-[700px] md:h-[600px] lg:h-[800px] -z-10">
+    <div v-if="!video.url && image.url" class="absolute inset-0 -z-10">
       <img :src="image.url" class="w-full h-full object-cover" />
     </div>
   </section>
