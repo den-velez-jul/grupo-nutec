@@ -1,5 +1,7 @@
 <template>
-  <TopBanner :labelList="['Carreras']" />
+  <div class="pt-[146px]">
+    <TopBanner :labelList="['Carreras']" />
+  </div>
   <Hero
     :title="hero.title"
     :topLabel="hero.topLabel"

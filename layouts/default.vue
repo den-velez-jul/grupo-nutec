@@ -53,7 +53,7 @@ const headerDataProps = {
 </script>
 
 <template>
-  <div>
+  <div class="static">
     <Header :headerData="headerDataProps" />
     <slot />
     <div class="max-w-[1900px] mx-auto">

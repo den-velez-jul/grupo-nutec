@@ -1,3 +1,5 @@
+functions = 'functions'
+
 [[headers]]
 for = "/*"
 

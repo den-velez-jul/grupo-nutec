@@ -1,5 +1,7 @@
 <template>
-  <TopBanner :labelList="['NUTEC Bickley']" />
+  <div class="pt-[146px]">
+    <TopBanner :labelList="['NUTEC Bickley']" />
+  </div>
   <Hero
     :title="hero.title"
     :topLabel="hero.topLabel"

@@ -1,5 +1,7 @@
 <template>
-  <TopBanner :labelList="['Carreras', careerData.title[0].text]" />
+  <div class="pt-[146px]">
+    <TopBanner :labelList="['Carreras', careerData.title[0].text]" />
+  </div>
   <section
     class="pt-[80px] pb-[60px] mx-6 md:mx-[50px] lg:pb-0 lg:pt-[150px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <h1>

@@ -1,5 +1,5 @@
 <template>
-  <header class="flex flex-col">
+  <header class="flex flex-col fixed bg-white inset-x-0 top-0 z-20">
     <div class="hidden lg:flex justify-end bg-dark-blue px-[75px] py-3">
       <div class="relative flex flex-col bg-dark-blue">
         <div class="relative flex items-center" @click="openLangSwithcher()">
@@ -31,27 +31,31 @@
     </div>
     <div
       class="px-6 py-3 h-[96px] flex items-center justify-between md:px-[50px] lg:px-[75px] lg:py-3 xl:max-w-[1920px] 2xl:mx-auto 2xl:min-w-[1900px]">
-      <img
-        class="mr-3 h-full w-auto"
-        :src="logo.url"
-        :alt="logo.alt"
-        width="51px"
-        height="48px" />
+      <a href="/" class="h-full">
+        <img
+          class="mr-3 h-full w-auto"
+          :src="logo.url"
+          :alt="logo.alt"
+          width="51px"
+          height="48px" />
+      </a>
       <nav class="flex-grow flex justify-center ml-[150px]">
         <ul
-          class="hidden max-w-[500px] lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers font-semibold text-dark-blue">
+          class="hidden max-w-[600px] lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers text-med text-dark-blue justify-items-center">
           <li>
-            <button @click="onShowHeaderDetails('about')">
+            <button class="text-[20px]" @click="onShowHeaderDetails('about')">
               {{ firstOption.navLabel[0].text }}
             </button>
           </li>
           <li>
-            <button @click="onShowHeaderDetails('company')">
+            <button class="text-[20px]" @click="onShowHeaderDetails('company')">
               {{ secondOption.navLabel[0].text }}
             </button>
           </li>
           <li>
-            <button @click="onShowHeaderDetails('resources')">
+            <button
+              class="text-[20px]"
+              @click="onShowHeaderDetails('resources')">
               {{ thirdOption.navLabel[0].text }}
             </button>
           </li>

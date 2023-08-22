@@ -1,6 +1,9 @@
 <template>
-  <TopBanner :labelList="['Newsroom']" />
+  <div class="pt-[146px]">
+    <TopBanner :labelList="['Newsroom']" />
+  </div>
   <section
+    v-if="heroNews"
     class="relative flex h-[800px] w-full px-6 md:px-[50px] lg:px-[270px]">
     <div
       class="flex flex-col justify-center font-founders-grosteskers text-white z-10">
@@ -41,6 +44,7 @@
   <div
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section
+      v-if="headlineNews"
       id="headlineNews"
       class="pt-[100px] pb-[80px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px]">
       <h4 class="heading3 text-dark-blue text-center">
@@ -148,8 +152,8 @@ const events = {
   ctaLink: homeData.events_cta_link,
 };
 
-let heroNews;
-let headlineNews;
+let heroNews = null;
+let headlineNews = null;
 let cardNews = [];
 
 newsList.forEach((news) => {

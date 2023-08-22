@@ -193,5 +193,3 @@ const events = {
   ctaLink: homeData.events_cta_link,
 };
 </script>
-
-<script></script>
