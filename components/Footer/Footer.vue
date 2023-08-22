@@ -3,8 +3,14 @@
     class="px-6 pt-6 pb-[80px] text-dark-blue font-semibold md:px-[50px] lg:px-[100px] lg:py-[150px]">
     <div
       class="flex flex-col items-center md:grid lg:grid-cols-4 md:content-center md:grid-cols-2 md:grid-rows-2 lg:grid-rows-1 md:gap-y-[60px] lg:gap-y-0">
-      <div>
-        <img :src="logo.url" :alt="logo.alt" width="120px" height="110px" />
+      <div class="flex flex-col">
+        <img
+          :src="logo.url"
+          :alt="logo.alt"
+          class="w-[120px] h-full object-cover" />
+        <span class="hidden w-full lg:text-left body-bold lg:block lg:mt-3">
+          {{ logoLabel[0].text }}
+        </span>
       </div>
       <div
         class="grid grid-cols-[25px_25px_25px_25px] gap-x-6 my-[60px] md:my-0 md:self-start lg:col-start-4 lg:col-end-5 lg:row-start-1 lg:row-end-2">
@@ -29,7 +35,7 @@
             width="25px"
             height="25px" />
         </a>
-        <a href="mailto:abc@example.com?subject = Feedback&body = Message">
+        <a href="mailto:gruponutec@nutec.com? subject=Feedback&body= Message">
           <img
             src="~assets/icons/icon-email.svg"
             alt="logo email"
@@ -38,7 +44,7 @@
         </a>
       </div>
       <ul
-        class="body-bold grid grid-rows-4 gap-y-3 mt-[60px] md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2">
+        class="body-bold grid grid-rows-4 gap-y-3 mt-[60px] md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:p-0">
         <li v-for="item of navigationArray1">
           <NuxtLink :to="item.url">
             {{ item.label }}
@@ -55,7 +61,7 @@
       </ul>
     </div>
     <span
-      class="block my-[60px] md:mt-20 md:mb-0 lg:my-0 text-center lg:text-left body-reg lg:mt-3"
+      class="block my-[60px] md:mt-20 md:mb-0 lg:my-0 text-center lg:text-left body-bold lg:mt-3 lg:hidden"
       >{{ logoLabel[0].text }}</span
     >
   </footer>

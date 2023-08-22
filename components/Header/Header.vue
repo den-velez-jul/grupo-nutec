@@ -1,4 +1,8 @@
 <template>
+  <div
+    v-if="showHeaderDetails.isDetailsOpen"
+    @click="onCloseHeaderDetails()"
+    class="fixed inset-0 z-[19]"></div>
   <header class="flex flex-col fixed bg-white inset-x-0 top-0 z-20">
     <div class="hidden lg:flex justify-end bg-dark-blue px-[75px] py-3">
       <div class="relative flex flex-col bg-dark-blue">
@@ -94,7 +98,8 @@
         url: showHeaderDetails.headerDetails.linkUrl.url,
         label: showHeaderDetails.headerDetails.linkLabel[0].text,
       }"
-      :links="showHeaderDetails.headerDetails.linksDetails" />
+      :links="showHeaderDetails.headerDetails.linksDetails"
+      @close-modal="onCloseHeaderDetails" />
     <HeaderDetails
       v-if="
         showHeaderDetails.isDetailsOpen &&
@@ -106,7 +111,9 @@
         url: showHeaderDetails.headerDetails.linkUrl.url,
         label: showHeaderDetails.headerDetails.linkLabel[0].text,
       }"
-      :links="showHeaderDetails.headerDetails.linksDetails" />
+      :links="showHeaderDetails.headerDetails.linksDetails"
+      :onCloseHeader="onCloseHeaderDetails"
+      @close-modal="onCloseHeaderDetails" />
     <HeaderDetails
       v-if="
         showHeaderDetails.isDetailsOpen &&
@@ -118,7 +125,8 @@
         url: showHeaderDetails.headerDetails.linkUrl.url,
         label: showHeaderDetails.headerDetails.linkLabel[0].text,
       }"
-      :links="showHeaderDetails.headerDetails.linksDetails" />
+      :links="showHeaderDetails.headerDetails.linksDetails"
+      @close-modal="onCloseHeaderDetails" />
     <HeaderMenu
       v-if="showHeaderDetails.isMenuOpen"
       :menuMobileProps="menuProps" />
@@ -195,6 +203,10 @@ function onShowHeaderDetails(optionSelected) {
     showHeaderDetails.optionSelected = optionSelected;
     showHeaderDetails.isDetailsOpen = true;
   }
+}
+function onCloseHeaderDetails() {
+  showHeaderDetails.isDetailsOpen = false;
+  showHeaderDetails.optionSelected = "";
 }
 
 function onShowMenu() {
