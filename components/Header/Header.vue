@@ -47,18 +47,22 @@
         <ul
           class="hidden max-w-[600px] lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers text-med text-dark-blue justify-items-center">
           <li>
-            <button class="text-[20px]" @click="onShowHeaderDetails('about')">
+            <button
+              class="text-[14px] xl:text-[20px]"
+              @click="onShowHeaderDetails('about')">
               {{ firstOption.navLabel[0].text }}
             </button>
           </li>
           <li>
-            <button class="text-[20px]" @click="onShowHeaderDetails('company')">
+            <button
+              class="text-[14px] xl:text-[20px]"
+              @click="onShowHeaderDetails('company')">
               {{ secondOption.navLabel[0].text }}
             </button>
           </li>
           <li>
             <button
-              class="text-[20px]"
+              class="text-[14px] xl:text-[20px]"
               @click="onShowHeaderDetails('resources')">
               {{ thirdOption.navLabel[0].text }}
             </button>

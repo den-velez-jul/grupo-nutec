@@ -1,7 +1,12 @@
-import { SMTPClient } from 'emailjs'
+// import { SMTPClient } from 'emailjs'
 
-exports.handler = async function(event) {
+exports.handler = async function() {
 
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: 'uno' })
+  }
+}
 
   // const data = JSON.parse(event.body)
 
@@ -32,8 +37,3 @@ exports.handler = async function(event) {
   // }
   
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: process.env.SENDER_EMAIL })
-  }
-}

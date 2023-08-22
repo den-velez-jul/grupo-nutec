@@ -1,6 +1,6 @@
 <template>
   <section
-    class="relative flex justify-center items-center h-[700px] md:h-[600px] lg:h-[800px] w-full">
+    class="pt-[280px] relative flex justify-center items-center h-[700px] md:h-[600px] lg:h-[800px] w-full">
     <div
       class="flex flex-col items-center px-6 md:px-[50px] lg:px-[75px] xl:px-[270px]">
       <span
