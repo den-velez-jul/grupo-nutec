@@ -20,7 +20,7 @@
     </div>
     <div
       v-if="video.url"
-      class="absolute left-0 right-0 w-full h-full -z-8 opacity-[.8] bg-black"></div>
+      class="absolute inset-0 -z-8 opacity-[.8] bg-black"></div>
     <video
       v-if="video.url"
       preload="none"
