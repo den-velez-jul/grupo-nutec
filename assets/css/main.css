@@ -4,6 +4,19 @@
 
 html {
   font-family: "Untitled Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-feature-settings: "kern"; /* turns on kerning */
+  text-rendering: optimizeLegibility; /* emphasise on legibility when rendering, turns on ligatures and kerning */
+  -webkit-font-smoothing: antialiased; /* apply font anti-aliasing for Webkit on OSX */
+  -moz-osx-font-smoothing: grayscale; /* apply font anti-aliasing for Firefox on OSX */
+  /* word-spacing: 1px; */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  /* -ms-overflow-style: none; /* IE 10+ */
+  /* scrollbar-width: none; /*Firefox */
+  /* scrollbar-width: thin;
+  scrollbar-color: var(--white-80) transparent; */
+  scroll-behavior: smooth;
 }
 
 input,
