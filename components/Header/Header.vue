@@ -39,8 +39,8 @@
       <a href="/" class="h-full">
         <img
           class="mr-3 h-full w-auto"
-          :src="logo.url"
-          :alt="logo.alt"
+          :src="showHeaderDetails.logo.url"
+          :alt="showHeaderDetails.logo.alt"
           width="51px"
           height="48px" />
       </a>
@@ -52,7 +52,7 @@
               class="text-[14px] xl:text-[20px]"
               @mouseover="onShowHeaderDetails('about')"
               @click="onShowHeaderDetails('about')">
-              {{ firstOption.navLabel[0].text }}
+              {{ showHeaderDetails.firstOption.navLabel[0].text }}
             </button>
           </li>
           <li>
@@ -60,7 +60,7 @@
               class="text-[14px] xl:text-[20px]"
               @mouseover="onShowHeaderDetails('company')"
               @click="onShowHeaderDetails('company')">
-              {{ secondOption.navLabel[0].text }}
+              {{ showHeaderDetails.secondOption.navLabel[0].text }}
             </button>
           </li>
           <li>
@@ -68,7 +68,7 @@
               class="text-[14px] xl:text-[20px]"
               @mouseover="onShowHeaderDetails('resources')"
               @click="onShowHeaderDetails('resources')">
-              {{ thirdOption.navLabel[0].text }}
+              {{ showHeaderDetails.thirdOption.navLabel[0].text }}
             </button>
           </li>
         </ul>
@@ -91,7 +91,9 @@
         <NuxtLink
           class="py-3 px-9 bg-dark-blue text-white hidden lg:flex items-center justify-center"
           href="contacto">
-          <span class="text-white text-med mt-1">{{ btnLogo[0].text }}</span>
+          <span class="text-white text-med mt-1">{{
+            showHeaderDetails.btnLogo[0].text
+          }}</span>
         </NuxtLink>
       </div>
     </div>
@@ -137,7 +139,7 @@
       @close-modal="onCloseHeaderDetails" />
     <HeaderMenu
       v-if="showHeaderDetails.isMenuOpen"
-      :menuMobileProps="menuProps" />
+      :menuMobileProps="showHeaderDetails.menuProps" />
   </header>
 </template>
 
@@ -175,10 +177,59 @@ const props = defineProps({
       linksDetails: Array,
     },
   },
+  headerDataEN: {
+    logoEN: String,
+    btnLogoEN: String,
+    firstOptionEN: {
+      navLabel: String,
+      title: String,
+      description: String,
+      linkUrl: String,
+      linkLabel: String,
+      linksDetails: Array,
+    },
+    secondOptionEN: {
+      navLabel: String,
+      title: String,
+      description: String,
+      linkUrl: String,
+      linkLabel: String,
+      linksDetails: Array,
+    },
+    thirdOptionEN: {
+      navLabel: String,
+      title: String,
+      description: String,
+      linkUrl: String,
+      linkLabel: String,
+      linksDetails: Array,
+    },
+  },
 });
 
 const { logo, btnLogo, firstOption, secondOption, thirdOption } =
   props.headerData;
+
+const { logoEN, btnLogoEN, firstOptionEN, secondOptionEN, thirdOptionEN } =
+  props.headerDataEN;
+
+const menuProps = {
+  buttonLabels: [
+    firstOption.navLabel[0].text,
+    secondOption.navLabel[0].text,
+    thirdOption.navLabel[0].text,
+  ],
+  menuOptions: [firstOption, secondOption, thirdOption],
+};
+
+const menuPropsEN = {
+  buttonLabels: [
+    firstOptionEN.navLabel[0].text,
+    secondOptionEN.navLabel[0].text,
+    thirdOptionEN.navLabel[0].text,
+  ],
+  menuOptions: [firstOptionEN, secondOptionEN, thirdOptionEN],
+};
 
 let showHeaderDetails = reactive({
   localeLabel: localeProperties.value.localeName,
@@ -187,20 +238,27 @@ let showHeaderDetails = reactive({
   isDetailsOpen: false,
   isMenuOpen: false,
   headerDetails: {},
+  logo: locale.value == "en" ? logoEN : logo,
+  btnLogo: locale.value == "en" ? btnLogoEN : btnLogo,
+  firstOption: locale.value == "en" ? firstOptionEN : firstOption,
+  secondOption: locale.value == "en" ? secondOptionEN : secondOption,
+  thirdOption: locale.value == "en" ? thirdOptionEN : thirdOption,
+  menuProps: locale.value == "en" ? menuPropsEN : menuProps,
 });
 
 function onShowHeaderDetails(optionSelected) {
-  let newHeaderDetails;
-
   switch (optionSelected) {
     case "about":
-      showHeaderDetails.headerDetails = firstOption;
+      showHeaderDetails.headerDetails =
+        locale.value == "en" ? firstOptionEN : firstOption;
       break;
     case "company":
-      showHeaderDetails.headerDetails = secondOption;
+      showHeaderDetails.headerDetails =
+        locale.value == "en" ? secondOptionEN : secondOption;
       break;
     case "resources":
-      showHeaderDetails.headerDetails = thirdOption;
+      showHeaderDetails.headerDetails =
+        locale.value == "en" ? thirdOptionEN : thirdOption;
       break;
     default:
       break;
@@ -214,6 +272,7 @@ function onShowHeaderDetails(optionSelected) {
     showHeaderDetails.isDetailsOpen = true;
   }
 }
+
 function onCloseHeaderDetails() {
   showHeaderDetails.isDetailsOpen = false;
   showHeaderDetails.optionSelected = "";
@@ -225,15 +284,6 @@ function onShowMenu() {
   showHeaderDetails.isMenuOpen = newValue;
 }
 
-const menuProps = {
-  buttonLabels: [
-    firstOption.navLabel[0].text,
-    secondOption.navLabel[0].text,
-    thirdOption.navLabel[0].text,
-  ],
-  menuOptions: [firstOption, secondOption, thirdOption],
-};
-
 function openLangSwithcher() {
   const newValue = !showHeaderDetails.showLocales;
   showHeaderDetails.showLocales = newValue;
@@ -242,8 +292,20 @@ function openLangSwithcher() {
 const langSwitcher = (value) => {
   if (value === "es") {
     showHeaderDetails.localeLabel = "Español";
+    showHeaderDetails.logo = logo;
+    showHeaderDetails.btnLogo = btnLogo;
+    showHeaderDetails.firstOption = firstOption;
+    showHeaderDetails.secondOption = secondOption;
+    showHeaderDetails.thirdOption = thirdOption;
+    showHeaderDetails.menuProps = menuProps;
   } else {
     showHeaderDetails.localeLabel = "English";
+    showHeaderDetails.logo = logoEN;
+    showHeaderDetails.btnLogo = btnLogoEN;
+    showHeaderDetails.firstOption = firstOptionEN;
+    showHeaderDetails.secondOption = secondOptionEN;
+    showHeaderDetails.thirdOption = thirdOptionEN;
+    showHeaderDetails.menuProps = menuPropsEN;
   }
   setLocale(value);
   store.setLocale(value);

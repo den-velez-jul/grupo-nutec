@@ -3,7 +3,7 @@
     class="px-6 pt-6 pb-[80px] text-dark-blue font-semibold md:px-[50px] lg:px-[100px] lg:py-[150px]">
     <div
       class="flex flex-col items-center md:grid lg:grid-cols-4 md:content-center md:grid-cols-2 md:grid-rows-2 lg:grid-rows-1 md:gap-y-[60px] lg:gap-y-0">
-      <div class="flex flex-col items-center justify-center pr-14">
+      <div class="flex flex-col items-center justify-center xl:pr-14">
         <img
           :src="logo.url"
           :alt="logo.alt"
@@ -78,7 +78,6 @@
 </template>
 
 <script setup>
-const { locale } = useI18n();
 import { useLocaleStore } from "../../store/myStore.js";
 const store = useLocaleStore();
 
