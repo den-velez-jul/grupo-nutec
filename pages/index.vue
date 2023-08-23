@@ -35,7 +35,12 @@
       </div>
     </section>
     <section id="tiendaNutec" class="pb-[80px]">
-      <p class="heading3 text-dark-blue text-center">Tienda NUTEC</p>
+      <p v-if="lang == 'es'" class="heading3 text-dark-blue text-center">
+        Tienda NUTEC
+      </p>
+      <p v-if="lang == 'en'" class="heading3 text-dark-blue text-center">
+        NUTEC Store
+      </p>
       <div class="mt-8 lg:mt-12 lg:grid lg:grid-cols-[50%_50%]">
         <div class="lg:col-start-2 lg:col-end-3">
           <img
@@ -107,21 +112,35 @@
       <CardArticule :cardArticleProps="divisionsNews.nutecFibras" />
       <CardArticule :cardArticleProps="divisionsNews.nutecBickley" />
       <AnchorIcon
-        labelBtn="Explora Todos los Artículos y Editoriales"
-        class="" />
+        v-if="lang == 'es'"
+        urlTo="/newsroom-list"
+        labelBtn="Explora Todos los Artículos y Editoriales" />
+      <AnchorIcon
+        v-if="lang == 'en'"
+        urlTo="/newsroom-list"
+        labelBtn="Explore All Articles and Editorials" />
     </section>
     <section>
       <div class="pb-[60px] lg:px-5 xl:px-[255px]">
         <h4
+          v-if="lang == 'es'"
           class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8 heading3">
           Proximos Eventos
+        </h4>
+        <h4
+          v-if="lang == 'en'"
+          class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8 heading3">
+          Upcoming Events
         </h4>
         <CardEvent :cardEventProps="events" />
       </div>
       <div class="mt-8 w-full">
-        <a href="/" class="flex items-center">
-          <span class="text-big text-dark-blue">
+        <a href="/eventos" class="flex items-center">
+          <span v-if="lang == 'es'" class="text-big text-dark-blue">
             Conoce eventos anteriores
+          </span>
+          <span v-if="lang == 'en'" class="text-big text-dark-blue">
+            Discover Previous Events
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
@@ -133,13 +152,13 @@
 <script setup>
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const { data: home } = await useAsyncData("home", () =>
   client.getByUID("home", "homepage", { lang: localeIso })
 );
-
+const lang = locale.value;
 const homeData = home.value.data;
 
 const hero = {
