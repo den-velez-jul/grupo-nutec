@@ -58,6 +58,13 @@ a {
   color: inherit;
   transition: all 0.5s ease;
 }
+a:hover {
+  color: #69b9fc;
+}
+
+button:hover {
+  color: #69b9fc;
+}
 
 svg {
   width: 100%;

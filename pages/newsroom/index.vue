@@ -47,8 +47,11 @@
       v-if="headlineNews"
       id="headlineNews"
       class="pt-[100px] pb-[80px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px]">
-      <h4 class="heading3 text-dark-blue text-center">
+      <h4 v-if="lang == 'es'" class="heading3 text-dark-blue text-center">
         Artículos y Editoriales
+      </h4>
+      <h4 v-if="lang == 'en'" class="heading3 text-center text-dark-blue">
+        Articles and Editorials
       </h4>
       <div
         class="mt-[60px] lg:grid lg:grid-cols-2 lg:mt-[70px] lg:gap-x-[60px]">
@@ -111,18 +114,20 @@
       </div>
     </section>
 
-    <section class="pb-[60px] lg:px-5 xl:px-[225px]">
-      <h4
-        v-if="lang == 'es'"
-        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
-        Proximos Eventos
-      </h4>
-      <h4
-        v-if="lang == 'en'"
-        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
-        Upcoming Events
-      </h4>
-      <CardEvent :cardEventProps="events" />
+    <section class="pb-[60px]">
+      <div class="lg:px-5 xl:px-[225px]">
+        <h4
+          v-if="lang == 'es'"
+          class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+          Proximos Eventos
+        </h4>
+        <h4
+          v-if="lang == 'en'"
+          class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+          Upcoming Events
+        </h4>
+        <CardEvent :cardEventProps="events" />
+      </div>
       <div class="mt-8 w-full">
         <a href="/eventos" class="flex items-center">
           <span v-if="lang == 'es'" class="text-big text-dark-blue">

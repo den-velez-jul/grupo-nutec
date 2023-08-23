@@ -68,18 +68,20 @@
       </div>
     </section>
 
-    <section class="pb-[60px] lg:px-5 xl:px-[225px]">
-      <h4
-        v-if="lang == 'es'"
-        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
-        Proximos Eventos
-      </h4>
-      <h4
-        v-if="lang == 'en'"
-        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
-        Upcoming Events
-      </h4>
-      <CardEvent :cardEventProps="event" />
+    <section class="pb-[60px]">
+      <div class="lg:px-5 xl:px-[225px]">
+        <h4
+          v-if="lang == 'es'"
+          class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+          Proximos Eventos
+        </h4>
+        <h4
+          v-if="lang == 'en'"
+          class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+          Upcoming Events
+        </h4>
+        <CardEvent :cardEventProps="event" />
+      </div>
       <div class="mt-8 w-full">
         <a href="/eventos" class="flex items-center">
           <span v-if="lang == 'es'" class="text-big text-dark-blue">

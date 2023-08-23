@@ -15,7 +15,7 @@
       <div class="flex justify-between text-blue md:text-[20px]">
         <span class="body-bold"><PrismicText :field="place" /></span>
         <div class="flex items-center text-blue">
-          <a :href="ctaLink.url" class="flex items-center">
+          <a target="_blank" :href="ctaLink.url" class="flex items-center">
             <span class="text-med">
               {{ ctaLabel }}
             </span>
@@ -30,14 +30,19 @@
         class="text-[90px] xl:text-[120px] font-bold leading-[130px] font-founders-grosteskers">
         {{ dayRangeTitle }}
       </p>
-      <p class="text-mid-blue text-[30px] font-bold">
+      <p v-if="lang == 'es'" class="text-mid-blue text-[30px] font-bold">
         {{ dateTitle }}
+      </p>
+      <p v-if="lang == 'en'" class="text-mid-blue text-[30px] font-bold">
+        {{ dateTitleEN }}
       </p>
     </div>
   </article>
 </template>
 
 <script setup>
+const { locale } = useI18n();
+const lang = locale.value;
 const props = defineProps({
   cardEventProps: {
     title: String,
@@ -65,12 +70,28 @@ const months = [
   "Diciembre",
 ];
 
+const monthsEN = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 const { title, topLabel, place, dateStart, dateEnd, ctaLabel, ctaLink } =
   props.cardEventProps;
 
 const yearStart = dateStart.slice(0, 4);
 const monthStart = parseInt(dateStart.slice(5, 7), 10) - 1;
 const dateTitle = months[monthStart] + " " + yearStart;
+const dateTitleEN = monthsEN[monthStart] + " " + yearStart;
 
 const dayRangeTitle = dateStart.slice(8, 10) + "-" + dateEnd.slice(8, 10);
 </script>
