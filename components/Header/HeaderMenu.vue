@@ -12,17 +12,28 @@
         <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </span>
     </button>
-    <div class="flex justify-end bg-dark-blue px-[50px] py-[40px]">
+    <div class="flex justify-center bg-dark-blue px-[50px] py-[40px]">
       <NuxtLink
+        v-if="labelContact == 'es'"
         to="contacto"
         class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold"
         >Contacto</NuxtLink
       >
+      <NuxtLink
+        v-if="labelContact == 'en'"
+        to="contacto"
+        class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold"
+        >Contact</NuxtLink
+      >
     </div>
     <div
-      class="flex flex-col items-center bg-blue px-[50px] py-[40px] text-white text-[12px] font-bold font-founders-grosteskers">
-      <span class="mb-6">Español Global</span>
-      <span>Ingles Global</span>
+      class="flex flex-col items-center gap-3 bg-blue px-[50px] py-[40px] text-white text-[12px] font-bold font-founders-grosteskers">
+      <button @click="langES">
+        <span class="mb-6">Español (Global)</span>
+      </button>
+      <button @click="langEN">
+        <span>Ingles (Global)</span>
+      </button>
     </div>
   </div>
   <div
@@ -59,7 +70,8 @@
 </template>
 
 <script setup>
-const emits = defineEmits(["close-modal"]);
+const { locale } = useI18n();
+const emits = defineEmits(["close-modal", "lang-es", "lang-en"]);
 const router = useRouter();
 const props = defineProps({
   menuMobileProps: {
@@ -67,6 +79,8 @@ const props = defineProps({
     menuOptions: Array,
   },
 });
+
+const labelContact = locale.value;
 
 const { buttonLabels, menuOptions } = props.menuMobileProps;
 
@@ -84,6 +98,15 @@ function closeOptionSelected() {
 
 const redirectTo = (path) => {
   router.push(path);
+  emits("close-modal");
+};
+
+const langES = () => {
+  emits("lang-es");
+  emits("close-modal");
+};
+const langEN = () => {
+  emits("lang-en");
   emits("close-modal");
 };
 </script>

@@ -144,7 +144,9 @@
     <HeaderMenu
       v-if="showHeaderDetails.isMenuOpen"
       :menuMobileProps="showHeaderDetails.menuProps"
-      @close-modal="onShowMenu" />
+      @close-modal="onShowMenu"
+      @lang-es="langSwitcher('es')"
+      @lang-en="langSwitcher('en')" />
   </header>
 </template>
 
