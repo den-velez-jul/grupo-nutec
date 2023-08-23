@@ -4,6 +4,10 @@
     @mouseover="onCloseHeaderDetails()"
     @click="onCloseHeaderDetails()"
     class="fixed inset-0 z-[19]"></div>
+  <div
+    v-if="showHeaderDetails.isMenuOpen"
+    @click="onShowMenu()"
+    class="fixed inset-0 z-[19]"></div>
   <header class="flex flex-col fixed bg-white inset-x-0 top-0 z-20">
     <div class="hidden lg:flex justify-end bg-dark-blue px-[75px] py-3">
       <div class="relative flex flex-col bg-dark-blue">
@@ -139,7 +143,8 @@
       @close-modal="onCloseHeaderDetails" />
     <HeaderMenu
       v-if="showHeaderDetails.isMenuOpen"
-      :menuMobileProps="showHeaderDetails.menuProps" />
+      :menuMobileProps="showHeaderDetails.menuProps"
+      @close-modal="onShowMenu" />
   </header>
 </template>
 

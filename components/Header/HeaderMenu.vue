@@ -47,18 +47,20 @@
       </div>
       <div
         class="grid grid-cols-1 md:grid-cols-2 gap-y-10 font-semibold text-[20px]">
-        <NuxtLink
+        <button
           class="mb-3"
           v-for="link of optionSelected.optionToDisplay.linksDetails"
-          :to="link.internal_path">
+          @click="redirectTo(link.internal_path)">
           <PrismicText :field="link.label" />
-        </NuxtLink>
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+const emits = defineEmits(["close-modal"]);
+const router = useRouter();
 const props = defineProps({
   menuMobileProps: {
     buttonLabels: Array,
@@ -79,4 +81,9 @@ function closeOptionSelected() {
   optionSelected.isShow = false;
   optionSelected.optionToDisplay = {};
 }
+
+const redirectTo = (path) => {
+  router.push(path);
+  emits("close-modal");
+};
 </script>
