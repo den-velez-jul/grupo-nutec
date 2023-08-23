@@ -20,10 +20,17 @@
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1720px] xl:px-[100px]">
     <section class="pt-[80px] pb-[60px] md:pt-[120px] lg:pt-[150px]">
       <ArticleHeader
+        v-if="lang == 'es'"
         topLabel="Hornos Industriales para Cerámica y Materiales Avanzados"
         title="Tecnología líder en la industria, resultados basados ​​en el rendimiento"
         ctaLabel="Conoce más"
         ctaUrl="https://nutecbickley.com/es/que-hacemos/hornos-industriales-para-metales" />
+      <ArticleHeader
+        v-if="lang == 'en'"
+        topLabel="Industrial Furnaces for Ceramics and Advanced Materials"
+        title="Industry-leading Technology, Performance-based Results"
+        ctaLabel="Learn more"
+        ctaUrl="https://nutecbickley.com/what-we-do/kilns-for-ceramics-and-advanced-materials" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -36,10 +43,17 @@
     </section>
     <section class="pt-[80px] pb-[60px]">
       <ArticleHeader
+        v-if="lang == 'es'"
         topLabel="HORNOS INDUSTRIALES PARA METALES"
         title="Forja el futuro con nuestros Hornos Industriales para metales de alta tecnología"
         ctaLabel="Conoce más"
         ctaUrl="https://nutecbickley.com/es/que-hacemos/hornos-industriales-para-metales" />
+      <ArticleHeader
+        v-if="lang == 'en'"
+        topLabel="Industrial Furnaces for Metals"
+        title="Forge the future with our high-tech Industrial Furnaces for metals."
+        ctaLabel="Learn more"
+        ctaUrl="https://nutecbickley.com/what-we-do/kilns-for-ceramics-and-advanced-materials" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -52,10 +66,17 @@
     </section>
     <section class="pt-[80px] pb-[60px]">
       <ArticleHeader
+        v-if="lang == 'es'"
         topLabel="SISTEMAS DE COMBUSTIÓN Y CONTROL"
         title="Eficiencia y sostenibilidad para tus necesidades de equipos térmicos industriales"
         ctaLabel="Conoce más"
         ctaUrl="https://nutecbickley.com/es/que-hacemos/sistemas-de-combustion-y-control" />
+      <ArticleHeader
+        v-if="lang == 'en'"
+        topLabel="Combustion and Control Systems"
+        title="Efficiency and Sustainability for your Industrial Thermal Equipment Needs"
+        ctaLabel="Learn more"
+        ctaUrl="https://nutecbickley.com/what-we-do/combustion-and-control-systems" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -68,10 +89,17 @@
     </section>
     <section class="pt-[80px] pb-[60px]">
       <ArticleHeader
+        v-if="lang == 'es'"
         topLabel="SERVICIOS DE FABRICACIÓN E INSTALACIÓN"
         title="Deja que los expertos de NUTEC Bickley hagan el trabajo por tu negocio"
         ctaLabel="Conoce más"
         ctaUrl="https://nutecbickley.com/es/que-hacemos/servicios-de-fabricacion-e-instalacion" />
+      <ArticleHeader
+        v-if="lang == 'en'"
+        topLabel="MANUFACTURING AND INSTALLATION SERVICES"
+        title="Let NUTEC Bickley's experts do the work for your business."
+        ctaLabel="Learn more"
+        ctaUrl="https://nutecbickley.com/what-we-do/fabrication-and-installation-services" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
         <Card
@@ -86,9 +114,10 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
+const lang = locale.value;
 const { data: bickley } = await useAsyncData("home", () =>
   client.getByUID("about_us", "nutec-bickley", { lang: localeIso })
 );

@@ -106,7 +106,7 @@
           <div>
             <AnchorIcon
               :label-btn="division.link_cta_label[0].text"
-              :url-to="division.link_cta" />
+              :url-to="division.link_cta.url" />
           </div>
         </div>
       </div>

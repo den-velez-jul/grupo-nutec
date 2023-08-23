@@ -19,8 +19,15 @@
   <div
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section class="pb-[60px] pt-[80px] md:pt-[120px]">
-      <h4 class="heading3 text-center text-dark-blue mb-[60px]">
+      <h4
+        v-if="lang == 'es'"
+        class="heading3 text-center text-dark-blue mb-[60px]">
         Nuestras compañías
+      </h4>
+      <h4
+        v-if="lang == 'en'"
+        class="heading3 text-center text-dark-blue mb-[60px]">
+        Our companies
       </h4>
       <div
         class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 md:gap-y-[50px] lg:grid-cols-3">
@@ -59,10 +66,17 @@
     </section>
     <section class="pb-[60px] pt-[80px] md:pt-[120px]">
       <ArticleHeader
+        v-if="lang == 'es'"
         topLabel="PRODUCTOS E INGENIERÍA"
         title="Creados para los Desafíos Térmicos más Extremos"
         ctaLabel="Conoce más"
-        ctaUrl="" />
+        ctaUrl="https://nutec.com/es/productos-e-ingenieria" />
+      <ArticleHeader
+        v-if="lang == 'en'"
+        topLabel="PRODUCTS AND ENGINEERING"
+        title="Designed for the Most Extreme Thermal Challenges"
+        ctaLabel="Learn more"
+        ctaUrl="https://nutec.com/products-engineering" />
       <div
         class="h-full mt-[60px] grid grid-cols-1 gap-y-[40px] lg:grid-cols-3 lg:gap-x-10 lg:gap-y-[50px]">
         <div v-for="product of productPropsSorted">
@@ -76,10 +90,17 @@
     </section>
     <section class="pb-[60px] pt-[80px] md:pt-[120px]">
       <ArticleHeader
+        v-if="lang == 'es'"
         topLabel="SOLUCIONES DE INGENIERÍA"
         title="Soluciones de Ingeniería Innovadoras y Personalizadas"
         ctaLabel="Conoce más"
-        ctaUrl="" />
+        ctaUrl="https://nutec.com/es/productos-e-ingenieria/soluciones-de-ingenieria" />
+      <ArticleHeader
+        v-if="lang == 'en'"
+        topLabel="ENGINEERING SOLUTIONS"
+        title="Innovative and Customized Engineering Solutions"
+        ctaLabel="Learn more"
+        ctaUrl="https://nutec.com/products-engineering/engineered-solutions" />
       <div
         class="h-full mt-[60px] grid grid-cols-1 gap-y-[40px] lg:grid-cols-3 lg:gap-x-10 lg:gap-y-[50px]">
         <div v-for="solution of solutionsPropsSorted">
@@ -95,8 +116,9 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
+const lang = locale.value;
 const { client } = usePrismic();
 const { data: fibras } = await useAsyncData("fibras", () =>
   client.getByUID("about_us", "nutec-fibras", { lang: localeIso })

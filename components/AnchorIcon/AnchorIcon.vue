@@ -1,6 +1,6 @@
 <template>
   <div :class="stylesClass">
-    <a :href="urlTo" class="flex items-center">
+    <a :href="urlTo" target="_blank" class="flex items-center">
       <span class="text-big">
         {{ labelBtn }}
       </span>

@@ -7,7 +7,10 @@
       {{ title }}
     </h3>
     <div class="mt-5">
-      <a :href="ctaUrl" class="flex w-full text-big text-dark-blue">
+      <a
+        :href="ctaUrl"
+        target="_blank"
+        class="flex w-full text-big text-dark-blue">
         <span class="font-bold"> {{ ctaLabel }} </span>
         <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </a>

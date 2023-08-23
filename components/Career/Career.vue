@@ -6,11 +6,21 @@
         <PrismicText :field="title" />
       </p>
       <p class="mt-[30px]">
-        <span class="text-dark-blue body-bold">Categoría:</span>
+        <span v-if="lang == 'es'" class="text-dark-blue body-bold"
+          >Categoría:</span
+        >
+        <span v-if="lang == 'en'" class="text-dark-blue body-bold"
+          >Category:</span
+        >
         <span class="body-reg"><PrismicText :field="category" /></span>
       </p>
       <p class="mt-[12px]">
-        <span class="text-dark-blue body-bold">Ubicacion:</span>
+        <span v-if="lang == 'es'" class="text-dark-blue body-bold"
+          >Ubicacion:</span
+        >
+        <span v-if="lang == 'en'" class="text-dark-blue body-bold"
+          >Location:</span
+        >
         <span><PrismicText :field="location" class="body-reg" /></span>
       </p>
     </div>
@@ -28,6 +38,8 @@
 </template>
 
 <script setup>
+const { locale } = useI18n();
+const lang = locale.value;
 const props = defineProps({
   careerProps: {
     title: String,
