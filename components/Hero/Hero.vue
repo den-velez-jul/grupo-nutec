@@ -17,6 +17,12 @@
         class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white text-big z-10"
         >{{ ctaLabel }}
       </PrismicLink>
+      <a
+        :href="internalLink"
+        v-if="internalLink"
+        class="mt-12 md:mt-16 bg-blue py-4 px-9 text-white text-big z-10"
+        >{{ ctaLabel }}
+      </a>
     </div>
     <div
       v-if="video.url"
@@ -42,6 +48,7 @@
 const props = defineProps({
   ctaLabel: String,
   ctaLink: String,
+  internalLink: String,
   title: String,
   topLabel: String,
   bgMedia: String,

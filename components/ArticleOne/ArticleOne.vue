@@ -7,12 +7,12 @@
           class="heading1 text-dark-blue text-center mt-10 mb-5 lg:text-left lg:mt-0 lg:mb-10" />
       </h1>
       <div class="flex justify-center lg:justify-start">
-        <PrismicLink :field="linkUrl" class="flex items-center text-dark-blue"
+        <a :href="linkUrl.url" class="flex items-center text-dark-blue"
           ><span class="text-big">
             <PrismicText :field="linkLabel" />
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3"
-        /></PrismicLink>
+        /></a>
       </div>
     </div>
     <div>

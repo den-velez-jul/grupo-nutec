@@ -3,8 +3,8 @@
     <Hero
       :title="hero.title"
       :cta-label="hero.ctaLabel"
-      :cta-link="hero.ctaLink"
       :bgMedia="hero.bgMedia"
+      :internalLink="'#companies'"
       :divisions="hero.divisions" />
   </div>
   <div class="bg-baby-blue w-full">
@@ -176,7 +176,7 @@ const description = {
   title: homeData.descriptionTitle,
   image: homeData.descriptionImage,
   linkLabel: homeData.descriptionLinkLabel,
-  linkUrl: homeData.descriptionLink,
+  linkUrl: { url: "/nosotros" },
 };
 
 const companies = {
