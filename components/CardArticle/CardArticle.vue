@@ -9,13 +9,18 @@
           {{ title[0].text }}
         </h5>
         <p v-if="title" class="mt-6 xl:text-[20px]">{{ author[0].text }}</p>
-        <p v-if="title" class="mt-2 xl:text-[20px]">Publicado: {{ date }}</p>
+        <p v-if="title && lang == 'es'" class="mt-2 xl:text-[20px]">
+          Publicado: {{ date }}
+        </p>
+        <p v-if="title && lang == 'en'" class="mt-2 xl:text-[20px]">
+          Published: {{ date }}
+        </p>
       </div>
       <div class="mt-10">
         <PrismicLink
           :field="ctaLink"
           class="p-4 bg-white text-dark-blue font-bold font-founders-grosteskers lg:text-white lg:text-[20px] lg:bg-dark-blue">
-          Conoce más
+          {{ ctaLabel[0].text }}
         </PrismicLink>
       </div>
     </div>
@@ -23,6 +28,8 @@
 </template>
 
 <script setup>
+const { locale } = useI18n();
+const lang = locale.value;
 const props = defineProps({
   title: String,
   image: String,

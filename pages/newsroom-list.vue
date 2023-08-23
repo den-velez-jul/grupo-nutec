@@ -6,8 +6,11 @@
     <section
       id="headlineNews"
       class="pt-[100px] pb-[80px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px] mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
-      <h4 class="heading3 text-center text-dark-blue">
+      <h4 v-if="lang == 'es'" class="heading3 text-center text-dark-blue">
         Artículos y Editoriales
+      </h4>
+      <h4 v-if="lang == 'en'" class="heading3 text-center text-dark-blue">
+        Articles and Editorials
       </h4>
       <div
         class="mt-[60px] lg:grid lg:grid-cols-2 lg:mt-[70px] lg:gap-x-[60px]">
@@ -67,14 +70,23 @@
 
     <section class="pb-[60px] lg:px-5 xl:px-[225px]">
       <h4
+        v-if="lang == 'es'"
         class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
         Proximos Eventos
       </h4>
+      <h4
+        v-if="lang == 'en'"
+        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+        Upcoming Events
+      </h4>
       <CardEvent :cardEventProps="event" />
       <div class="mt-8 w-full">
-        <a href="/" class="flex items-center">
-          <span class="text-big text-dark-blue">
+        <a href="/eventos" class="flex items-center">
+          <span v-if="lang == 'es'" class="text-big text-dark-blue">
             Conoce eventos anteriores
+          </span>
+          <span v-if="lang == 'en'" class="text-big text-dark-blue">
+            Discover Previous Events
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
@@ -84,12 +96,13 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 
+const lang = locale.value;
 const { data: news } = await useAsyncData("news", () =>
   client.getAllByType("article", {
     lang: localeIso,

@@ -77,8 +77,14 @@
       id="groupNews"
       class="pb-[60px] md:pt-[70px] lg:pt-[100px] lg:pb-[40px]">
       <h4
+        v-if="lang == 'es'"
         class="heading3 mb-[40px] text-center text-dark-blue md:mb-[60px] xl:mb-[80px]">
         Artículos Relacionados
+      </h4>
+      <h4
+        v-if="lang == 'en'"
+        class="heading3 mb-[40px] text-center text-dark-blue md:mb-[60px] xl:mb-[80px]">
+        Related Articles
       </h4>
       <div
         class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
@@ -93,9 +99,12 @@
         </div>
       </div>
       <div class="flex justify-start mt-[30px] xl:mt-[50px]">
-        <a class="flex items-center text-dark-blue">
-          <span class="text-big">
+        <a class="flex items-center text-dark-blue" href="/newsroom-list">
+          <span v-if="lang == 'es'" class="text-big">
             Explora Todos los Articulos y Editoriales
+          </span>
+          <span v-if="lang == 'en'" class="text-big">
+            Explore All Articles and Editorials
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
@@ -105,7 +114,7 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 import { components } from "~/slices";
 const { client } = usePrismic();
@@ -113,6 +122,8 @@ const route = useRoute();
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 // import { intervalToDuration } from "date-fns";
+
+const lang = locale.value;
 
 const articleUID = route.params.article;
 const { data: article } = await useAsyncData("article", async () => {

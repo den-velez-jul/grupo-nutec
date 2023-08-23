@@ -7,15 +7,26 @@
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <section class="py-[60px] lg:px-5 xl:px-[225px]">
       <h4
+        v-if="lang == 'es'"
         class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-[100px]">
         Próximos Eventos
       </h4>
+      <h4
+        v-if="lang == 'en'"
+        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-[100px]">
+        Upcoming Events
+      </h4>
+
       <CardEvent :cardEventProps="event" />
       <div class="mt-8 w-full">
         <a href="/" class="flex items-center">
-          <span class="text-big text-dark-blue">
+          <span v-if="lang == 'es'" class="text-big text-dark-blue">
             Conoce eventos anteriores
           </span>
+          <span v-if="lang == 'en'" class="text-big text-dark-blue">
+            Discover Previous Events
+          </span>
+
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
       </div>
@@ -24,9 +35,11 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
+
+const lang = locale.value;
 
 const { data: events } = await useAsyncData("events", () =>
   client.getAllByType("event", { lang: localeIso })

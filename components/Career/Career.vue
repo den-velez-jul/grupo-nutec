@@ -19,7 +19,11 @@
         <PrismicText :field="full_description" class="body-reg" />
       </span>
     </div>
-    <div class="mt-5"><AnchorIcon labelBtn="Aplicar" /></div>
+    <div class="mt-5">
+      <AnchorIcon
+        :labelBtn="career_cta_label[0].text"
+        :urlTo="career_cta.url" />
+    </div>
   </div>
 </template>
 

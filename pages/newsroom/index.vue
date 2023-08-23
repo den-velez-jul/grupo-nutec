@@ -99,9 +99,12 @@
         </div>
       </div>
       <div class="flex justify-start mt-[30px] xl:mt-[50px]">
-        <a class="flex items-center text-dark-blue">
-          <span class="text-big">
+        <a class="flex items-center text-dark-blue" href="newsroom-list">
+          <span v-if="lang == 'es'" class="text-big">
             Explora Todos los Articulos y Editoriales
+          </span>
+          <span v-if="lang == 'en'" class="text-big">
+            Explore All Articles and Editorials
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
@@ -110,14 +113,23 @@
 
     <section class="pb-[60px] lg:px-5 xl:px-[225px]">
       <h4
+        v-if="lang == 'es'"
         class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
         Proximos Eventos
       </h4>
+      <h4
+        v-if="lang == 'en'"
+        class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
+        Upcoming Events
+      </h4>
       <CardEvent :cardEventProps="events" />
       <div class="mt-8 w-full">
-        <a href="/" class="flex items-center">
-          <span class="text-big text-dark-blue">
+        <a href="/eventos" class="flex items-center">
+          <span v-if="lang == 'es'" class="text-big text-dark-blue">
             Conoce eventos anteriores
+          </span>
+          <span v-if="lang == 'en'" class="text-big text-dark-blue">
+            Discover Previous Events
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
@@ -127,7 +139,8 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
+const lang = locale.value;
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 import { format } from "date-fns";
