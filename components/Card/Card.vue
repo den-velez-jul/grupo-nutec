@@ -18,7 +18,10 @@
           :field="companyProps.description"
           class="body-reg text-justify" />
       </div>
-      <a :href="companyProps.cta_link1.url" :class="anchorCustomStyle">
+      <a
+        target="_blank"
+        :href="companyProps.cta_link1.url"
+        :class="anchorCustomStyle">
         <span class="font-bold text-big"> {{ companyProps.cta_label1 }} </span>
         <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </a>

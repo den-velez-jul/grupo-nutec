@@ -10,7 +10,10 @@
           :field="companyProps.description"
           class="body-reg text-black" />
       </div>
-      <a :href="companyProps.cta_link1.url" :class="anchorCustomStyle">
+      <a
+        target="_blank"
+        :href="companyProps.cta_link1.url"
+        :class="anchorCustomStyle">
         <span class="text-big">
           {{ companyProps.cta_label1 }}
         </span>

@@ -58,6 +58,7 @@
 
           <div class="flex justify-center md:justify-start">
             <PrismicLink
+              target="_blank"
               :field="nutecShop.ctaLink"
               class="bg-white py-4 px-5 text-dark-blue text-big">
               {{ nutecShop.ctaLabel }}
@@ -94,14 +95,16 @@
               :field="divisionsNews.nutecGroup['description-news']" />
           </p>
           <div class="flex justify-start mt-[30px] lg:mt-[40px]">
-            <PrismicLink
+            <a
+              target="_blank"
+              href="newsroom/articles/grupo-nutec-anuncia-nuevo-presidente-para-nutec-division-fibras"
               :field="divisionsNews.nutecGroup.link_button"
               class="flex items-center text-dark-blue">
               <span class="text-big">
                 {{ divisionsNews.nutecGroup.label_button }}
               </span>
               <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
-            </PrismicLink>
+            </a>
           </div>
         </div>
       </div>

@@ -15,13 +15,13 @@
     <div class="flex justify-center bg-dark-blue px-[50px] py-[40px]">
       <NuxtLink
         v-if="labelContact == 'es'"
-        to="contacto"
+        to="/contacto"
         class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold"
         >Contacto</NuxtLink
       >
       <NuxtLink
         v-if="labelContact == 'en'"
-        to="contacto"
+        to="/contacto"
         class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold"
         >Contact</NuxtLink
       >
