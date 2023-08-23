@@ -1,6 +1,6 @@
 <template>
   <main
-    class="pt-[140px] lg:pt-[200px] pb-[80px] xl:py-[100px] xl:max-w-[1920px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
+    class="pt-[140px] lg:pt-[230px] xl:pt-[230px] pb-[80px] xl:py-[100px] xl:max-w-[1920px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
     <h1
       v-if="title"
       class="heading2 text-dark-blue mb-5 max-w-[800px] lg:mx-auto xl:mb-10">
@@ -16,6 +16,9 @@
 </template>
 
 <script setup>
+import { useLocaleStore } from "../store/myStore.js";
+const store = useLocaleStore();
+
 const { localeProperties } = useI18n();
 const localeIso = localeProperties.value.iso;
 import { components } from "~/slices";

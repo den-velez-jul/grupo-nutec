@@ -1,12 +1,14 @@
 <script lang="ts" setup>
+const { localeProperties } = useI18n();
+const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 
 const { data: footer } = await useAsyncData("footer", () =>
-  client.getByUID("footer", "footer")
+  client.getByUID("footer", "footer", { lang: localeIso })
 );
 
 const { data: header } = await useAsyncData("header", () =>
-  client.getByUID("header", "header")
+  client.getByUID("header", "header", { lang: localeIso })
 );
 
 const footerData = footer.value ? footer.value.data : {};

@@ -45,7 +45,12 @@
       </div>
       <ul
         class="body-bold grid grid-rows-4 gap-y-1 mt-[60px] md:mt-0 justify-items-center md:justify-items-start lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:p-0">
-        <li v-for="item of navigationArray1">
+        <li v-if="store.locale == 'es'" v-for="item of navigationArray1ES">
+          <NuxtLink :to="item.url">
+            {{ item.label }}
+          </NuxtLink>
+        </li>
+        <li v-if="store.locale == 'en'" v-for="item of navigationArray1EN">
           <NuxtLink :to="item.url">
             {{ item.label }}
           </NuxtLink>
@@ -53,7 +58,12 @@
       </ul>
       <ul
         class="body-bold grid grid-rows-4 gap-y-1 mt-6 md:mt-0 justify-items-center md:justify-items-start lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2">
-        <li v-for="item of navigationArray2">
+        <li v-if="store.locale == 'es'" v-for="item of navigationArray2ES">
+          <NuxtLink :to="item.url">
+            {{ item.label }}
+          </NuxtLink>
+        </li>
+        <li v-if="store.locale == 'en'" v-for="item of navigationArray2EN">
           <NuxtLink :to="item.url">
             {{ item.label }}
           </NuxtLink>
@@ -69,6 +79,8 @@
 
 <script setup>
 const { locale } = useI18n();
+import { useLocaleStore } from "../../store/myStore.js";
+const store = useLocaleStore();
 
 const props = defineProps({
   footerData: {
@@ -156,9 +168,4 @@ const navigationArray2EN = [
     url: "/en/politicas-privacidad",
   },
 ];
-
-const navigationArray1 =
-  locale.value == "en" ? navigationArray1EN : navigationArray1ES;
-const navigationArray2 =
-  locale.value == "en" ? navigationArray2EN : navigationArray2ES;
 </script>

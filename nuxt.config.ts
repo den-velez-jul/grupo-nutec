@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/prismic", "@nuxt/image", "@nuxtjs/i18n"],
+  modules: ["@nuxtjs/prismic", "@nuxt/image", "@nuxtjs/i18n", "@pinia/nuxt"],
   i18n: {
     locales: [
       { code: "en", iso: "en-us", localeName: "English" },

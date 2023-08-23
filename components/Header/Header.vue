@@ -1,6 +1,7 @@
 <template>
   <div
     v-if="showHeaderDetails.isDetailsOpen"
+    @mouseover="onCloseHeaderDetails()"
     @click="onCloseHeaderDetails()"
     class="fixed inset-0 z-[19]"></div>
   <header class="flex flex-col fixed bg-white inset-x-0 top-0 z-20">
@@ -49,6 +50,7 @@
           <li>
             <button
               class="text-[14px] xl:text-[20px]"
+              @mouseover="onShowHeaderDetails('about')"
               @click="onShowHeaderDetails('about')">
               {{ firstOption.navLabel[0].text }}
             </button>
@@ -56,6 +58,7 @@
           <li>
             <button
               class="text-[14px] xl:text-[20px]"
+              @mouseover="onShowHeaderDetails('company')"
               @click="onShowHeaderDetails('company')">
               {{ secondOption.navLabel[0].text }}
             </button>
@@ -63,6 +66,7 @@
           <li>
             <button
               class="text-[14px] xl:text-[20px]"
+              @mouseover="onShowHeaderDetails('resources')"
               @click="onShowHeaderDetails('resources')">
               {{ thirdOption.navLabel[0].text }}
             </button>
@@ -138,7 +142,9 @@
 </template>
 
 <script setup>
-const { setLocale, localeProperties } = useI18n();
+const { setLocale, localeProperties, locale } = useI18n();
+import { useLocaleStore } from "../../store/myStore.js";
+const store = useLocaleStore();
 
 const props = defineProps({
   headerData: {
@@ -240,6 +246,11 @@ const langSwitcher = (value) => {
     showHeaderDetails.localeLabel = "English";
   }
   setLocale(value);
+  store.setLocale(value);
   openLangSwithcher();
 };
+
+if (store.locale != locale.value) {
+  store.setLocale(locale.value);
+}
 </script>
