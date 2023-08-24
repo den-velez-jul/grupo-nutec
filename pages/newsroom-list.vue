@@ -36,6 +36,7 @@
             v-if="headlineNews.article_cta_label"
             class="flex justify-start mt-[30px] lg:mt-10">
             <PrismicLink
+              target="_blank"
               :field="headlineNews.article_cta_link"
               class="flex items-center text-dark-blue">
               <span class="text-big">
@@ -143,7 +144,7 @@ let headlineNews;
 let cardNews = [];
 
 newsListSorted.forEach((news, index) => {
-  if (index == 0) {
+  if (news.tags.includes("Hero")) {
     const dateToTransfom = news.data.article_date
       ? new Date(news.data.article_date)
       : new Date();

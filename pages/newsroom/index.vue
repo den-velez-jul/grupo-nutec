@@ -24,6 +24,7 @@
       </p>
       <div class="flex justify-start mt-10">
         <PrismicLink
+          target="_blank"
           :field="heroNews.article_cta_link"
           class="flex items-center text-white">
           <span class="text-big">

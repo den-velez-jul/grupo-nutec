@@ -16,6 +16,14 @@ export default defineNuxtConfig({
   },
   prismic: {
     endpoint: "nutec",
+    clientConfig: {
+      routes: [
+        {
+          type: "article",
+          path: "/newsroom/articles/:uid",
+        },
+      ],
+    },
   },
   css: ["~/assets/css/main.css"],
   postcss: {

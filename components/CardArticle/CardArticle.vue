@@ -18,6 +18,7 @@
       </div>
       <div class="mt-10">
         <PrismicLink
+          target="_blank"
           :field="ctaLink"
           class="p-4 bg-white text-dark-blue font-bold font-founders-grosteskers lg:text-white lg:text-[20px] lg:bg-dark-blue">
           {{ ctaLabel[0].text }}
