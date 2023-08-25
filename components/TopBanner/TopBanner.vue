@@ -3,7 +3,8 @@
     <div
       class="flex items-center mx-6 md:mx-[50px] lg:mx-[75px] max-w-[1920px] xl:px-[100px] xl:w-[1920px] xl:mx-auto text-white">
       <a href="/">
-        <span class="font-bold">Inicio</span>
+        <span v-if="lang == 'es'" class="font-bold">Inicio</span>
+        <span v-if="lang == 'en'" class="font-bold">Home</span>
       </a>
       <div class="flex items-center" v-for="item of labelList">
         <img
@@ -17,6 +18,8 @@
 </template>
 
 <script setup>
+const { locale } = useI18n();
+const lang = locale.value;
 const props = defineProps({
   labelList: Array,
 });
