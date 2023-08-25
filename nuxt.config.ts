@@ -22,6 +22,10 @@ export default defineNuxtConfig({
           type: "article",
           path: "/newsroom/articles/:uid",
         },
+        {
+          type: "career",
+          path: "/carreras/:uid",
+        },
       ],
     },
   },

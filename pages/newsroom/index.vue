@@ -47,7 +47,7 @@
     <section
       v-if="headlineNews"
       id="headlineNews"
-      class="pt-[100px] pb-[80px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px]">
+      class="pt-[100px] md:pt-[80px] lg:pt-[150px] lg:pb-[100px]">
       <h4 v-if="lang == 'es'" class="heading3 text-dark-blue text-center">
         Artículos y Editoriales
       </h4>
@@ -89,7 +89,7 @@
     </section>
     <section
       id="groupNews"
-      class="pb-[60px] md:pt-[70px] lg:pt-[100px] lg:pb-[150px]">
+      class="pt-[80px] pb-[60px] md:pt-[70px] lg:pt-[100px] lg:pb-[150px]">
       <div
         class="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-10 lg:grid-cols-3">
         <div class=" " v-for="news of cardNews">
@@ -120,7 +120,7 @@
         <h4
           v-if="lang == 'es'"
           class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
-          Proximos Eventos
+          Próximos Eventos
         </h4>
         <h4
           v-if="lang == 'en'"

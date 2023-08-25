@@ -1,6 +1,7 @@
 <template>
-  <div class="pt-[146px]">
-    <TopBanner :labelList="['Carreras']" />
+  <div class="pt-[96px] lg:pt-[146px]">
+    <TopBanner v-if="lang == 'es'" :labelList="['Carreras']" />
+    <TopBanner v-if="lang == 'en'" :labelList="['Careers']" />
   </div>
   <Hero
     :title="hero.title"
@@ -26,9 +27,10 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
+const lang = locale.value;
 const { data: careerFeed } = await useAsyncData("careerFeed", () =>
   client.getByUID("career_feed", "careerpage", { lang: localeIso })
 );

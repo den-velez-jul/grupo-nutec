@@ -1,6 +1,11 @@
 <template>
-  <div class="pt-[146px]">
-    <TopBanner :labelList="['Newsroom', 'Artículos y Editoriales']" />
+  <div class="pt-[96px] lg:pt-[146px]">
+    <TopBanner
+      v-if="lang == 'es'"
+      :labelList="['Newsroom', 'Artículos y Editoriales']" />
+    <TopBanner
+      v-if="lang == 'en'"
+      :labelList="['Newsroom', 'Articles y Editorials']" />
   </div>
   <div class="bg-baby-blue">
     <section
@@ -74,7 +79,7 @@
         <h4
           v-if="lang == 'es'"
           class="heading3 mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8">
-          Proximos Eventos
+          Próximos Eventos
         </h4>
         <h4
           v-if="lang == 'en'"

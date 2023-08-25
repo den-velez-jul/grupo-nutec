@@ -1,6 +1,7 @@
 <template>
-  <div class="pt-[146px]">
-    <TopBanner :labelList="['Contacto']" />
+  <div class="pt-[96px] lg:pt-[146px]">
+    <TopBanner v-if="lang == 'es'" :labelList="['Contacto']" />
+    <TopBanner v-if="lang == 'en'" :labelList="['Contact']" />
   </div>
   <Hero
     :title="hero.title"
@@ -208,9 +209,12 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
+
+const lang = locale.value;
+
 const { data: contact } = await useAsyncData("contacto", () =>
   client.getByUID("contact", "contact", { lang: localeIso })
 );

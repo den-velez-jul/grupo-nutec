@@ -1,6 +1,11 @@
 <template>
-  <div class="pt-[146px]">
-    <TopBanner :labelList="['Carreras', careerData.title[0].text]" />
+  <div class="pt-[96px] lg:pt-[146px]">
+    <TopBanner
+      v-if="lang == 'es'"
+      :labelList="['Carreras', careerData.title[0].text]" />
+    <TopBanner
+      v-if="lang == 'en'"
+      :labelList="['Carrers', careerData.title[0].text]" />
   </div>
   <section
     class="pt-[80px] pb-[60px] mx-6 md:mx-[50px] lg:pb-0 lg:pt-[150px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
@@ -125,10 +130,11 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 const route = useRoute();
+const lang = locale.value;
 
 const { data: careerFeed } = await useAsyncData("careerFeed", () =>
   client.getByUID("career_feed", "careerpage", { lang: localeIso })

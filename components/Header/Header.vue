@@ -42,7 +42,7 @@
       class="px-6 py-3 h-[96px] flex items-center justify-between md:px-[50px] lg:px-[75px] lg:py-3 xl:max-w-[1920px] 2xl:mx-auto 2xl:min-w-[1900px]">
       <a href="/" class="h-full">
         <img
-          class="mr-3 h-full w-auto"
+          class="mr-3 h-full w-auto min-w-[51px]"
           :src="showHeaderDetails.logo.url"
           :alt="showHeaderDetails.logo.alt"
           width="51px"
@@ -79,12 +79,12 @@
       </nav>
       <div class="flex">
         <img
-          class="mr-12"
+          class="mr-12 min-w-[24px]"
           src="~assets/icons/search.svg"
           alt="logo"
           width="24px"
           height="24px" />
-        <button @click="() => onShowMenu()">
+        <button @click="() => onShowMenu()" class="min-w-[24px]">
           <img
             class="lg:hidden"
             src="~assets/icons/menu.svg"

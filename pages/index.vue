@@ -123,12 +123,12 @@
         urlTo="/newsroom-list"
         labelBtn="Explore All Articles and Editorials" />
     </section>
-    <section>
-      <div class="pb-[60px] lg:px-5 xl:px-[255px]">
+    <section class="pb-[60px]">
+      <div class="lg:px-5 xl:px-[255px]">
         <h4
           v-if="lang == 'es'"
           class="mb-[50px] text-center text-dark-blue md:mb-[72px] lg:mb-8 heading3">
-          Proximos Eventos
+          Próximos Eventos
         </h4>
         <h4
           v-if="lang == 'en'"

@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[146px]">
+  <div class="pt-[96px] lg:pt-[146px]">
     <TopBanner :labelList="['NUTEC Fibras']" />
   </div>
   <Hero

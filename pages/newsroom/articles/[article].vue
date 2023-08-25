@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[146px]">
+  <div class="pt-[96px] lg:pt-[146px]">
     <TopBanner :labelList="['Newsroom', headlineNews.article_title[0].text]" />
   </div>
   <section
@@ -152,6 +152,7 @@ let cardNews = [];
 let headlineNews2 = { ...article.value.data };
 
 newsList.forEach((news) => {
+  if (news.uid == articleUID) return;
   const dateUpdated = format(new Date(news.data.article_date), "dd/MM/yyyy");
   const newArt = { ...news.data, article_date: dateUpdated };
   cardNews.push(newArt);

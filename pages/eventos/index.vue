@@ -1,6 +1,7 @@
 <template>
-  <div class="pt-[146px]">
-    <TopBanner :labelList="['Eventos']" />
+  <div class="pt-[96px] lg:pt-[146px]">
+    <TopBanner v-if="lang == 'es'" :labelList="['Eventos']" />
+    <TopBanner v-if="lang == 'en'" :labelList="['Events']" />
   </div>
   <div
     v-if="events"
@@ -18,18 +19,6 @@
       </h4>
 
       <CardEvent :cardEventProps="event" />
-      <div class="mt-8 w-full">
-        <a href="/" class="flex items-center">
-          <span v-if="lang == 'es'" class="text-big text-dark-blue">
-            Conoce eventos anteriores
-          </span>
-          <span v-if="lang == 'en'" class="text-big text-dark-blue">
-            Discover Previous Events
-          </span>
-
-          <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
-        </a>
-      </div>
     </section>
   </div>
 </template>

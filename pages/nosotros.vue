@@ -1,6 +1,7 @@
 <template>
-  <div class="pt-[146px]">
-    <TopBanner :labelList="['Sobre Grupo NUTEC']" />
+  <div class="pt-[96px] lg:pt-[146px]">
+    <TopBanner v-if="lang == 'es'" :labelList="['Sobre Grupo NUTEC']" />
+    <TopBanner v-if="lang == 'en'" :labelList="['About NUTEC Group']" />
   </div>
   <Hero
     :title="hero.title"
@@ -52,9 +53,12 @@
 </template>
 
 <script setup>
-const { localeProperties } = useI18n();
+const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
+
+const lang = locale.value;
+
 const { data: aboutUs } = await useAsyncData("aboutUs", async () => {
   const document = await client.getByUID("about_us", "nutec-nosotros", {
     lang: localeIso,
