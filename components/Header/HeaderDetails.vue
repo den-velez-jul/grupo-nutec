@@ -1,11 +1,12 @@
 <template>
   <div
     class="hidden lg:flex px-[80px] py-[45px] h-[232px] font-founders-grosteskers">
-    <div
-      class="flex flex-col h-[142px] max-w-[604px] pl-[40px] pr-[20px] font-bold">
-      <h3 class="text-[35px] text-dark-blue mb-5">{{ title }}</h3>
+    <div class="flex flex-col h-[142px] max-w-[604px] pl-[40px] pr-[20px]">
+      <h3 class="text-[35px] text-dark-blue mb-5">
+        <PrismicRichText :field="title" />
+      </h3>
       <p class="body-reg">
-        {{ paragraph }}
+        <PrismicRichText :field="paragraph" />
       </p>
       <!-- <NuxtLink class="uppercase text-[18px]">{{ moreDetails.label }}</NuxtLink> -->
     </div>

@@ -106,8 +106,8 @@
         showHeaderDetails.isDetailsOpen &&
         showHeaderDetails.optionSelected == 'about'
       "
-      :title="showHeaderDetails.headerDetails.title[0].text"
-      :paragraph="showHeaderDetails.headerDetails.description[0].text"
+      :title="showHeaderDetails.headerDetails.title"
+      :paragraph="showHeaderDetails.headerDetails.description"
       :moreDetails="{
         url: showHeaderDetails.headerDetails.linkUrl.url,
         label: showHeaderDetails.headerDetails.linkLabel[0].text,
@@ -119,8 +119,8 @@
         showHeaderDetails.isDetailsOpen &&
         showHeaderDetails.optionSelected == 'company'
       "
-      :title="showHeaderDetails.headerDetails.title[0].text"
-      :paragraph="showHeaderDetails.headerDetails.description[0].text"
+      :title="showHeaderDetails.headerDetails.title"
+      :paragraph="showHeaderDetails.headerDetails.description"
       :moreDetails="{
         url: showHeaderDetails.headerDetails.linkUrl.url,
         label: showHeaderDetails.headerDetails.linkLabel[0].text,
@@ -133,8 +133,8 @@
         showHeaderDetails.isDetailsOpen &&
         showHeaderDetails.optionSelected == 'resources'
       "
-      :title="showHeaderDetails.headerDetails.title[0].text"
-      :paragraph="showHeaderDetails.headerDetails.description[0].text"
+      :title="showHeaderDetails.headerDetails.title"
+      :paragraph="showHeaderDetails.headerDetails.description"
       :moreDetails="{
         url: showHeaderDetails.headerDetails.linkUrl.url,
         label: showHeaderDetails.headerDetails.linkLabel[0].text,
