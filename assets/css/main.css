@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  font-family: "Untitled Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-feature-settings: "kern"; /* turns on kerning */
   text-rendering: optimizeLegibility; /* emphasise on legibility when rendering, turns on ligatures and kerning */
   -webkit-font-smoothing: antialiased; /* apply font anti-aliasing for Webkit on OSX */
@@ -77,210 +77,180 @@ svg {
 .heading1 {
   font-family: "Founders Grotesk", "Helvetica Neue", Helvetica, Arial;
   letter-spacing: -0.03em;
-  @screen sm {
-    font-size: 35px;
-    line-height: 45px;
-    font-weight: 700;
-  }
-
-  @screen md {
-    font-size: 50px;
-    line-height: 60px;
-    font-weight: 700;
-  }
-
-  @screen lg {
-    font-size: 60px;
-    line-height: 70px;
-    font-weight: 700;
-  }
-  @screen xl {
-    font-size: 70px;
-    line-height: 80px;
-    font-weight: 700;
-  }
+  font-weight: 700;
 }
 
 .heading2 {
   font-family: "Founders Grotesk", "Helvetica Neue", Helvetica, Arial;
   letter-spacing: -0.03em;
-  @screen sm {
-    font-size: 28px;
-    line-height: 38px;
-    font-weight: 700;
-  }
-
-  @screen md {
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 700;
-  }
-
-  @screen lg {
-    font-size: 50px;
-    line-height: 60px;
-    font-weight: 700;
-  }
-  @screen xl {
-    font-size: 60px;
-    line-height: 70px;
-    font-weight: 700;
-  }
+  font-weight: 700;
 }
 
 .heading3 {
   font-family: "Founders Grotesk", "Helvetica Neue", Helvetica, Arial;
   letter-spacing: -0.03em;
-  @screen sm {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 700;
-  }
-
-  @screen md {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 700;
-  }
-
-  @screen lg {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: 700;
-  }
-  @screen xl {
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 700;
-  }
+  font-weight: 700;
 }
 
 .body-reg {
-  font-family: "Untitled Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @screen sm {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300;
-  }
-
-  @screen md {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300;
-  }
-
-  @screen lg {
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 300;
-  }
-  @screen xl {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 300;
-  }
+  /* font-family: "Untitled Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
 }
 
 .body-bold {
-  font-family: "Untitled Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  @screen sm {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-  }
-
-  @screen md {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-  }
-
-  @screen lg {
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 700;
-  }
-  @screen xl {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-  }
+  /* font-family: "Untitled Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-weight: 700;
 }
 
 .text-big {
   font-family: "Founders Grotesk", "Helvetica Neue", Helvetica, Arial;
-  @screen sm {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-  }
-
-  @screen md {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-  }
-
-  @screen lg {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-  }
-  @screen xl {
-    font-size: 30px;
-    line-height: 38px;
-    font-weight: 700;
-  }
+  font-weight: 700;
 }
 
 .text-med {
   font-family: "Founders Grotesk", "Helvetica Neue", Helvetica, Arial;
-  @screen sm {
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 700;
-  }
-
-  @screen md {
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 700;
-  }
-
-  @screen lg {
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 700;
-  }
-  @screen xl {
-    font-size: 20px;
-    line-height: 30px;
-    font-weight: 700;
-  }
+  font-weight: 700;
 }
 
 .text-small {
   font-family: "Founders Grotesk", "Helvetica Neue", Helvetica, Arial;
-  @screen sm {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-  }
+  font-weight: 700;
+}
 
-  @screen md {
+@screen sm {
+  .heading1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .heading2 {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .heading3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .body-reg {
     font-size: 16px;
     line-height: 24px;
-    font-weight: 700;
   }
+  .body-bold {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .text-big {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .text-med {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .text-small {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 
-  @screen lg {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
+@screen md {
+  .heading1 {
+    font-size: 50px;
+    line-height: 60px;
   }
-  @screen xl {
+  .heading2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .heading3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .body-reg {
     font-size: 16px;
     line-height: 24px;
-    font-weight: 700;
+  }
+  .body-bold {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .text-big {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .text-med {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .text-small {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@screen lg {
+  .heading1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .heading2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .heading3 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .body-reg {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .body-bold {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .text-big {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .text-med {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .text-small {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@screen xl {
+  .heading1 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .heading2 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .heading3 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .body-reg {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .body-bold {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .text-big {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .text-med {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .text-small {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
