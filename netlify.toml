@@ -1,3 +1,11 @@
+[dev]
+    command = "yarn dev"
+    framework = "#custom"
+    targetPort = 3000
+
+[functions]
+  external_node_modules = ["nodemailer"]
+
 [[headers]]
 for = "/*"
 
