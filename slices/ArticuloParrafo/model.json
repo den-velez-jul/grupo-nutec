@@ -18,7 +18,7 @@
             "label": "parrafo",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,hyperlink"
+            "multi": "paragraph,hyperlink,strong,em,embed"
           }
         }
       },

@@ -1,6 +1,24 @@
 [
 	{
 		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"parrafo": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Excepteur irure ullamco id adipisicing ullamco irure laborum velit adipisicing Lorem ad eu. Sunt veniam aliqua ea nisi Lorem do consequat aliqua aliquip nisi exercitation et qui non. Ullamco Lorem tempor est dolore dolore aliqua id consectetur proident."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
 		"variation": "textoAzul",
 		"primary": {
 			"parrafo": {
@@ -31,41 +49,5 @@
 				"value": []
 			}
 		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"parrafo": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Ipsum sit aliquip laborum magna consequat laboris.",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Ipsum sit aliquip laborum magna consequat laboris.",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			}
-		},
-		"items": []
 	}
 ]

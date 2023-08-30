@@ -52,7 +52,7 @@
           <h2 class="heading1 text-center md:text-left">
             <PrismicText :field="nutecShop.title" />
           </h2>
-          <PrismicText
+          <PrismicRichText
             :field="nutecShop.description"
             class="body-reg mt-6 mb-14 md:mt-10" />
 
@@ -82,10 +82,10 @@
         </div>
         <div>
           <h1 class="heading1 text-blue mt-8 lg:m-0">
-            <PrismicText :field="divisionsNews.nutecGroup.title1" />
+            <PrismicRichText :field="divisionsNews.nutecGroup.title1" />
           </h1>
           <p class="mt-[30px] md:mt-[50px] lg:mt-[60px] xl:mt-[70px] body-bold">
-            <PrismicText :field="divisionsNews.nutecGroup.author" />
+            <PrismicRichText :field="divisionsNews.nutecGroup.author" />
           </p>
           <p class="mt-[30px] md:mt-[40px] body-reg">
             {{ divisionsNews.nutecGroup.date }}

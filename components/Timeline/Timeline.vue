@@ -51,7 +51,7 @@
                 <PrismicText
                   :field="item.timeline_year"
                   class="mb-2 text-[70px] leading-[60px] font-founders-grosteskers font-semibold text-center" />
-                <PrismicText
+                <PrismicRichText
                   :field="item.timeline_description"
                   class="text-center" />
               </div>
@@ -74,7 +74,7 @@
               <PrismicText
                 :field="item.timeline_year"
                 class="mb-2 text-[70px] leading-[60px] font-founders-grosteskers font-semibold text-center" />
-              <PrismicText
+              <PrismicRichText
                 :field="item.timeline_description"
                 class="text-center mb-3" />
               <div class="left-[50%] border-r-2 h-3"></div>

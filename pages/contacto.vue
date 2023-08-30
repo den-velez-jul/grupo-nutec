@@ -101,7 +101,7 @@
               <PrismicText :field="division.label_sub_companias" />
             </p>
             <p class="body-reg text-dark-blue mt-[30px] lg:mt-[40px]">
-              <PrismicText :field="division.descripcion_compania" />
+              <PrismicRichText :field="division.descripcion_compania" />
             </p>
           </div>
           <div>

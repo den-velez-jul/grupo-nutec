@@ -14,7 +14,7 @@
       </div>
       <div>
         <h2 v-if="title" :class="titleCustomStyle">{{ title }}</h2>
-        <PrismicText
+        <PrismicRichText
           :field="companyProps.description"
           class="body-reg text-justify" />
       </div>
