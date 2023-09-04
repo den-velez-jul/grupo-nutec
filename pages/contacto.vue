@@ -38,43 +38,146 @@
             </div>
           </div>
         </div>
-        <form class="mt-8 lg:mt-0">
+        <Form
+          class="mt-8 lg:mt-0"
+          @submit="onSubmit"
+          :validation-schema="schema">
           <div>
             <div class="grid grid-cols-1 gap-[14px] md:grid-cols-2">
-              <input
-                v-for="item of formLabelsData.inputsLabels"
-                class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
-                type="text"
-                :placeholder="item" />
+              <div class="flex flex-col">
+                <Field
+                  name="name"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  type="text"
+                  :placeholder="formLabels.name" />
+                <ErrorMessage
+                  name="name"
+                  class="text-[#FF0000] text-[10px] px-2" />
+              </div>
+              <div class="flex flex-col">
+                <Field
+                  name="lastname"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  type="text"
+                  :placeholder="formLabels.lastname" />
+                <ErrorMessage
+                  name="lastname"
+                  class="text-[#FF0000] text-[10px] px-2" />
+              </div>
+              <div class="flex flex-col">
+                <Field
+                  name="phone"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  type="number"
+                  :placeholder="formLabels.phone" />
+                <ErrorMessage
+                  name="phone"
+                  class="text-[#FF0000] text-[10px] px-2" />
+              </div>
+              <div class="flex flex-col">
+                <Field
+                  name="email"
+                  type="email"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  :placeholder="formLabels.email" />
+                <ErrorMessage
+                  name="email"
+                  class="text-[#FF0000] text-[10px] px-2" />
+              </div>
+              <div class="flex flex-col">
+                <Field
+                  name="country"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  type="text"
+                  :placeholder="formLabels.country" />
+                <ErrorMessage
+                  name="country"
+                  class="text-[#FF0000] text-[10px] px-2" />
+              </div>
+              <div class="flex flex-col">
+                <Field
+                  name="state"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  type="text"
+                  :placeholder="formLabels.state" />
+                <ErrorMessage
+                  name="state"
+                  class="text-[#FF0000] text-[10px] px-2" />
+              </div>
+              <div class="flex flex-col">
+                <Field
+                  name="city"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  type="text"
+                  :placeholder="formLabels.city" />
+                <ErrorMessage
+                  name="city"
+                  class="text-[#FF0000] text-[10px] px-2" />
+              </div>
+              <div class="flex flex-col">
+                <Field
+                  name="company"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  type="text"
+                  :placeholder="formLabels.company" />
+                <ErrorMessage
+                  name="company"
+                  class="text-[#FF0000] text-[10px] px-2" />
+              </div>
             </div>
             <div class="mt-[14px] grid grid-cols-1 gap-[14px]">
-              <input
-                type="text"
-                :placeholder="formLabelsData.inputsLabels2"
-                class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4" />
-              <textarea
-                type="text"
-                :placeholder="formLabelsData.textArea"
-                class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4 min-h-[120px]" />
+              <div class="flex flex-col">
+                <Field
+                  name="source"
+                  class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4"
+                  type="text"
+                  :placeholder="formLabels.source" />
+              </div>
+              <div class="flex flex-col">
+                <Field v-model="comment" v-slot="{ field }" name="comments">
+                  <textarea
+                    v-bind="field"
+                    name="comments"
+                    type="text"
+                    :placeholder="formLabels.comments"
+                    class="bg-white text-dark-blue font-founders-grosteskers font-bold py-[10px] px-4 min-h-[120px]" />
+                </Field>
+              </div>
             </div>
           </div>
           <div
-            class="flex flex-col mt-[50px] text-white font-bold md:flex-row md:justify-between">
+            class="relative flex flex-col mt-[50px] text-white font-bold md:flex-row md:justify-between">
+            <div
+              v-if="showLocationDetails.formMessage == 'success'"
+              class="absolute inset-0 p-4 flex items-center bg-baby-blue text-dark-blue">
+              <img src="~assets/icons/success.svg" class="w-[50px] h-[50px]" />
+
+              <span class="text-dark-blue body-reg ml-3">Has been sent</span>
+            </div>
+            <div
+              v-if="showLocationDetails.formMessage == 'error'"
+              class="absolute inset-0 p-4 flex items-center bg-baby-blue text-dark-blue">
+              <img src="~assets/icons/error.svg" class="w-[50px] h-[50px]" />
+              <span class="text-dark-blue body-reg ml-3"
+                >Please, try again</span
+              >
+            </div>
             <div class="grid grid-cols-1 gap-4">
-              <p class="text-center md:text-left">*Campos requeridos</p>
               <p class="text-center md:text-left">
-                Al enviar este formulario, aceptas nuestros Términos y
-                Condiciones
+                {{ formLabels.requiredLabel }}
+              </p>
+              <p class="text-center md:text-left">
+                {{ formLabels.formLabel }}
               </p>
             </div>
             <div class="mt-[60px] flex justify-center md:mt-0">
               <button
                 class="py-[10px] px-4 bg-white text-dark-blue font-bold font-founders-grosteskers lg:bg-mid-blue lg:text-white">
-                Enviar Formulario
+                {{ formLabels.btnLabel }}
               </button>
             </div>
           </div>
-        </form>
+        </Form>
       </div>
     </div>
   </section>
@@ -209,10 +312,14 @@
 </template>
 
 <script setup>
+import { Form, Field, ErrorMessage } from "vee-validate";
+import * as yup from "yup";
 const { localeProperties, locale } = useI18n();
-const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
+import axios from "axios";
+import { tr } from "date-fns/locale";
 
+const localeIso = localeProperties.value.iso;
 const lang = locale.value;
 
 const { data: contact } = await useAsyncData("contacto", () =>
@@ -227,25 +334,6 @@ const hero = {
   bgMedia: [{ image: { ...contactData.top_image }, video: {} }],
 };
 
-const formLabelsData = {
-  title: contactData.form_title,
-  description: contactData.form_description,
-  moreWays: contactData.more_ways_title,
-  otherWays: contactData.more_ways,
-  btnLabel: contactData.form_button_label,
-  inputsLabels: [
-    "Nombre*",
-    "Apellido*",
-    "Telefono*",
-    "Correo*",
-    "País*",
-    "Estado*",
-    "Ciudad*",
-    "Nombre de la empresa",
-  ],
-  inputsLabels2: "¿Cómo se enteró de Grupo NUTEC?",
-  textArea: "Comentarios",
-};
 const companiesList = contactData.companias;
 
 const mapsData = {
@@ -305,7 +393,10 @@ const locations = {
   },
 };
 
-let showLocationDetails = reactive({ locationShoed: "" });
+let showLocationDetails = reactive({
+  locationShoed: "",
+  formMessage: "",
+});
 
 function onClickLocation(idLocation) {
   let newValue;
@@ -316,5 +407,71 @@ function onClickLocation(idLocation) {
     newValue = idLocation;
   }
   showLocationDetails.locationShoed = newValue;
+}
+
+const formLabelsData = {
+  title: contactData.form_title,
+  description: contactData.form_description,
+  moreWays: contactData.more_ways_title,
+  otherWays: contactData.more_ways,
+  btnLabel: contactData.form_button_label,
+};
+const formLabels = {
+  name: locale.value == "es" ? "Nombre*" : "Name*",
+  lastname: locale.value == "es" ? "Apellido*" : "LastName*",
+  phone: locale.value == "es" ? "Telefóno*" : "Phone*",
+  email: locale.value == "es" ? "Correo*" : "Email*",
+  country: locale.value == "es" ? "País*" : "Country*",
+  state: locale.value == "es" ? "Estado*" : "State*",
+  city: locale.value == "es" ? "Ciudad*" : "City*",
+  company: locale.value == "es" ? "Nombre de la empresa*" : "Company name*",
+  source:
+    locale.value == "es"
+      ? "¿Cómo se enteró de Grupo NUTEC?"
+      : "How did you hear about NUTEC group",
+  comments: locale.value == "es" ? "Comentarios" : "Comments",
+  requiredLabel:
+    locale.value == "es" ? "*Campos requeridos" : "*Required fields",
+  formLabel:
+    locale.value == "es"
+      ? "Al enviar este formulario, aceptas nuestros Términos y Condiciones"
+      : "When submitting this form, you agree to our Terms and Conditions",
+  btnLabel: locale.value == "es" ? "Enviar Formulario" : "Form Submit",
+};
+
+const schema = yup.object({
+  name: yup.string().required(),
+  lastname: yup.string().required(),
+  phone: yup.string().required(),
+  email: yup.string().required().email(),
+  country: yup.string().required(),
+  state: yup.string().required(),
+  city: yup.string().required(),
+  company: yup.string().required(),
+  source: yup.string(),
+  comments: yup.string(),
+});
+function onSubmit(values, { resetForm }) {
+  const payload = {
+    ...values,
+    language: lang,
+    page: "contact",
+  };
+
+  resetForm();
+  axios
+    .post("/.netlify/functions/send-email", { payload })
+    .then((response) => {
+      showLocationDetails.formMessage = "success";
+      setTimeout(() => {
+        showLocationDetails.formMessage = "";
+      }, 3000);
+    })
+    .catch((error) => {
+      showLocationDetails.formMessage = "error";
+      setTimeout(() => {
+        showLocationDetails.formMessage = "";
+      }, 3000);
+    });
 }
 </script>
