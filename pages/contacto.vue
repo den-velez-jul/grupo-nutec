@@ -317,7 +317,6 @@ import * as yup from "yup";
 const { localeProperties, locale } = useI18n();
 const { client } = usePrismic();
 import axios from "axios";
-import { tr } from "date-fns/locale";
 
 const localeIso = localeProperties.value.iso;
 const lang = locale.value;
@@ -454,15 +453,15 @@ const schema = yup.object({
 function onSubmit(values, { resetForm }) {
   const payload = {
     ...values,
-    language: lang,
+    language: locale.value,
     page: "contact",
   };
 
-  resetForm();
   axios
     .post("/.netlify/functions/send-email", { payload })
     .then((response) => {
       showLocationDetails.formMessage = "success";
+      resetForm();
       setTimeout(() => {
         showLocationDetails.formMessage = "";
       }, 3000);

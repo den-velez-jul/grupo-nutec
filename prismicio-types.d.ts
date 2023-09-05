@@ -276,6 +276,28 @@ interface AboutUsDocumentData {
    */
   image: prismic.ImageField<never>
   /**
+   * purpose title field in *Nutec Divisions*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.purpose_title
+   * - **Tab**: Values
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */;
+  purpose_title: prismic.RichTextField;
+
+  /**
+   * values title field in *Nutec Divisions*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.values_title
+   * - **Tab**: Values
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  values_title: prismic.RichTextField;
+
+  /**
    * purpose field in *Nutec Divisions*
    *
    * - **Field Type**: Group
@@ -283,7 +305,7 @@ interface AboutUsDocumentData {
    * - **API ID Path**: about_us.purpose[]
    * - **Tab**: Values
    * - **Documentation**: https://prismic.io/docs/field#group
-   */;
+   */
   purpose: prismic.GroupField<Simplify<AboutUsDocumentDataPurposeItem>>;
 
   /**

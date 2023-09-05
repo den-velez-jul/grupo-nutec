@@ -23,7 +23,7 @@
     class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <div class="pb-[60px] pt-[80px] md:pt-[120px]">
       <h4 class="heading3 text-center text-dark-blue pb-[32px] lg:pb-[48px]">
-        Nuestro propósito
+        <PrismicRichText :field="nutecPurposeTitle" />
       </h4>
       <div class="lg:grid lg:grid-cols-3 w-full justify-items-center">
         <div v-for="card of nutecPurposeList">
@@ -36,7 +36,7 @@
     </div>
     <div class="pb-[60px] pt-[80px] md:pt-[60px]">
       <h4 class="heading3 text-center text-dark-blue pb-[32px] md:pb-[48px]">
-        Valores Fundamentales
+        <PrismicRichText :field="nutecValuesTitle" />
       </h4>
       <div
         class="lg:grid lg:grid-cols-3 xl:grid-cols-4 w-full justify-items-center">
@@ -99,7 +99,9 @@ const aboutUsDescription = {
   topLabel: aboutUsData.top_label_description,
 };
 
+const nutecPurposeTitle = aboutUsData.purpose_title;
 const nutecPurposeList = aboutUsData.purpose;
+const nutecValuesTitle = aboutUsData.values_title;
 const nutecValuesList = aboutUsData.values;
 
 const timelineData = timeline.value.data || [];

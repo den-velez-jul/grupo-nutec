@@ -13,7 +13,7 @@ exports.handler = async (event, context) => {
 
   const pageFrom = body.page;
 
-  if (pageFrom != "contact" && pageFrom != "article") {
+  if (pageFrom != "career") {
     return {
       statusCode: 400,
       body: JSON.stringify({ message: "Bad request" }),
@@ -22,27 +22,18 @@ exports.handler = async (event, context) => {
 
   const emailData = {
     name: body.name,
-    lastname: body.lastname,
-    phone: body.phone,
-    email: body.email,
     country: body.country,
-    state: body.state,
-    city: body.city,
-    company: body.company,
-    source: body.source,
+    email: body.email,
+    phone: body.phone,
     comments: body.comments,
   };
 
   const subject = `Message from ${pageFrom} by ${emailData.name} ${emailData.lastname}`;
   const textBoyd = `
-    Full name: ${emailData.name} ${emailData.lastname}
-    phone: ${emailData.phone}
-    email: ${emailData.email}
+    Full name: ${emailData.name}
     country: ${emailData.country}
-    state: ${emailData.state}
-    city: ${emailData.city}
-    company: ${emailData.company}
-    How did you hear about NUTEC: ${emailData.name}
+    email: ${emailData.email}
+    phone: ${emailData.phone}
     commets: ${emailData.name}
   `;
 
