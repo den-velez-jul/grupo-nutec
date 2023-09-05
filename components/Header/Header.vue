@@ -78,12 +78,14 @@
         </ul>
       </nav>
       <div class="flex">
-        <img
-          class="mr-12 min-w-[24px]"
-          src="~assets/icons/search.svg"
-          alt="logo"
-          width="24px"
-          height="24px" />
+        <button @click="router.push('/searcher')">
+          <img
+            class="mr-12 min-w-[24px]"
+            src="~assets/icons/search.svg"
+            alt="logo"
+            width="24px"
+            height="24px" />
+        </button>
         <button @click="() => onShowMenu()" class="min-w-[24px]">
           <img
             class="lg:hidden"
@@ -154,6 +156,7 @@
 const { setLocale, localeProperties, locale } = useI18n();
 import { useLocaleStore } from "../../store/myStore.js";
 const store = useLocaleStore();
+const router = useRouter();
 
 const props = defineProps({
   headerData: {
