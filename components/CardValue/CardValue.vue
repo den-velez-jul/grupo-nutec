@@ -3,15 +3,15 @@
     <div
       class="flex justify-between h-[48px] md:h-[60px] lg:flex-row-reverse lg:justify-end lg:items-center xl:h-[80px]">
       <h2 v-if="!titleReduced" class="heading1 text-dark-blue lg:ml-3">
-        <PrismicText :field="title" />
+        <PrismicRichText :field="title" />
       </h2>
       <h2 v-if="titleReduced" class="heading3 text-dark-blue lg:ml-3">
-        <PrismicText :field="title" />
+        <PrismicRichText :field="title" />
       </h2>
       <img :src="icon.url" class="h-full w-auto" />
     </div>
     <p class="body-reg text-justify mt-4 lg:mt-[30px]">
-      <PrismicText :field="description" />
+      <PrismicRichText :field="description" />
     </p>
   </article>
 </template>

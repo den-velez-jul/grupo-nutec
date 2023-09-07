@@ -26,16 +26,16 @@
         </div>
         <div class="font-founders-grosteskers">
           <h1 class="text-blue mt-8 lg:mt-0 heading1">
-            <PrismicText :field="headlineNews.article_title" />
+            <PrismicRichText :field="headlineNews.article_title" />
           </h1>
           <p class="mt-[30px] md:mt-[50px] lg:mt-[60px] body-bold">
-            <PrismicText :field="headlineNews.article_author" />
+            <PrismicRichText :field="headlineNews.article_author" />
           </p>
           <p class="mt-[30px] md:mt-[40px] lg:mt-[30px] body-reg">
             {{ headlineNews.article_date }}
           </p>
           <p class="mt-[15px] lg:mt-5 body-reg">
-            <PrismicText :field="headlineNews.article_description" />
+            <PrismicRichText :field="headlineNews.article_description" />
           </p>
           <div
             v-if="headlineNews.article_cta_label"
@@ -90,10 +90,14 @@
       </div>
       <div class="mt-8 w-full">
         <a href="/eventos" class="flex items-center">
-          <span v-if="lang == 'es'" class="text-big text-dark-blue">
+          <span
+            v-if="lang == 'es'"
+            class="text-big text-dark-blue hover:text-mid-blue">
             Conoce eventos anteriores
           </span>
-          <span v-if="lang == 'en'" class="text-big text-dark-blue">
+          <span
+            v-if="lang == 'en'"
+            class="text-big text-dark-blue hover:text-mid-blue">
             Discover Previous Events
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
@@ -108,7 +112,7 @@ const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 import { format } from "date-fns";
-import { es } from "date-fns/locale";
+import { es, enUS } from "date-fns/locale";
 
 const lang = locale.value;
 const { data: news } = await useAsyncData("news", () =>
@@ -153,16 +157,30 @@ newsListSorted.forEach((news, index) => {
     const dateToTransfom = news.data.article_date
       ? new Date(news.data.article_date)
       : new Date();
-    const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
-      locale: es,
-    });
-    const dateUpdatedArray = dateUpdated.split(" ");
-    const dataFormatted =
-      dateUpdatedArray[0] +
-      " de " +
-      dateUpdatedArray[1] +
-      " de " +
-      dateUpdatedArray[2];
+    let dataFormatted;
+    if (locale.value == "es") {
+      const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
+        locale: es,
+      });
+      const dateUpdatedArray = dateUpdated.split(" ");
+      dataFormatted =
+        dateUpdatedArray[0] +
+        " de " +
+        dateUpdatedArray[1] +
+        " de " +
+        dateUpdatedArray[2];
+    } else {
+      const dateUpdated = format(dateToTransfom, "MMMM dd yyyy", {
+        locale: enUS,
+      });
+      const dateUpdatedArray = dateUpdated.split(" ");
+      dataFormatted =
+        dateUpdatedArray[0] +
+        " " +
+        dateUpdatedArray[1] +
+        ", " +
+        dateUpdatedArray[2];
+    }
     headlineNews = { ...news.data, article_date: dataFormatted };
     return;
   }

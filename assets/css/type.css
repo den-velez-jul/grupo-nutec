@@ -2,8 +2,9 @@
 
 @font-face {
   font-family: "Untitled Sans";
-  src: url("~assets/type/untitled-sans-regular.ttf") format("ttf"),
-    url("~assets/type/untitled-sans-regular.woff") format("woff");
+  src: url("assets/type/untitled-sans-regular.ttf") format("truetype"),
+    url("assets/type/untitled-sans-regular.woff2") format("woff2"),
+    url("assets/type/untitled-sans-regular.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 400;
@@ -11,8 +12,9 @@
 
 @font-face {
   font-family: "Untitled Sans";
-  src: url("~assets/type/untitled-sans-medium.ttf") format("ttf"),
-    url("~assets/type/untitled-sans-medium.woff") format("woff");
+  src: url("assets/type/untitled-sans-medium.ttf") format("truetype"),
+    url("assets/type/untitled-sans-medium.woff2") format("woff2"),
+    url("assets/type/untitled-sans-medium.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 500;
@@ -20,8 +22,9 @@
 
 @font-face {
   font-family: "Untitled Sans";
-  src: url("~assets/type/untitled-sans-bold.ttf") format("ttf"),
-    url("~assets/type/untitled-sans-bold.woff") format("woff");
+  src: url("assets/type/untitled-sans-bold.ttf") format("truetype"),
+    url("assets/type/untitled-sans-bold.woff2") format("woff2"),
+    url("assets/type/untitled-sans-bold.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 700;
@@ -31,8 +34,8 @@
 
 @font-face {
   font-family: "Founders Grotesk";
-  src: url("~assets/type/founders-grotesk-regular.woff2") format("woff2"),
-    url("~assets/type/founders-grotesk-regular.woff") format("woff");
+  src: url("assets/type/founders-grotesk-regular.woff2") format("woff2"),
+    url("assets/type/founders-grotesk-regular.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 400;
@@ -40,8 +43,8 @@
 
 @font-face {
   font-family: "Founders Grotesk";
-  src: url("~assets/type/founders-grotesk-medium.woff2") format("woff2"),
-    url("~assets/type/founders-grotesk-medium.woff") format("woff");
+  src: url("assets/type/founders-grotesk-medium.woff2") format("woff2"),
+    url("assets/type/founders-grotesk-medium.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 500;
@@ -49,8 +52,8 @@
 
 @font-face {
   font-family: "Founders Grotesk";
-  src: url("~assets/type/founders-grotesk-semibold.woff2") format("woff2"),
-    url("~assets/type/founders-grotesk-semibold.woff") format("woff");
+  src: url("assets/type/founders-grotesk-semibold.woff2") format("woff2"),
+    url("assets/type/founders-grotesk-semibold.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 600;
@@ -58,8 +61,8 @@
 
 @font-face {
   font-family: "Founders Grotesk";
-  src: url("~assets/type/founders-grotesk-bold.woff2") format("woff2"),
-    url("~assets/type/founders-grotesk-bold.woff") format("woff");
+  src: url("assets/type/founders-grotesk-bold.woff2") format("woff2"),
+    url("assets/type/founders-grotesk-bold.woff") format("woff");
   font-style: normal;
   font-display: swap;
   font-weight: 700;

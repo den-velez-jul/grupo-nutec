@@ -10,36 +10,36 @@
   <section
     class="pt-[80px] pb-[60px] mx-6 md:mx-[50px] lg:pb-0 lg:pt-[150px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <h1>
-      <PrismicText
+      <PrismicRichText
         class="heading3 mb-[80px] text-center text-dark-blue"
         :field="pageTitle" />
     </h1>
     <div class="bg-baby-blue py-[60px] px-6">
       <h2 class="heading3 mb-[90px] text-dark-blue text-center uppercase">
-        <PrismicText :field="careerData.title" />
+        <PrismicRichText :field="careerData.title" />
       </h2>
       <div class="flex flex-col">
         <span class="body-bold text-dark-blue"
-          ><PrismicText :field="careerData.title"
+          ><PrismicRichText :field="careerData.title"
         /></span>
         <div class="mt-[10px] flex gap-x-[10px]">
           <span class="body-bold">Categoria:</span>
-          <PrismicText :field="careerData.category" />
+          <PrismicRichText :field="careerData.category" />
         </div>
         <div class="mt-[10px] flex gap-x-[10px]">
           <span class="body-bold">Ubicación:</span>
-          <PrismicText :field="careerData.location" />
+          <PrismicRichText :field="careerData.location" />
         </div>
       </div>
       <div class="mt-10">
         <h3 class="body-bold text-dark-blue">Descripción</h3>
-        <PrismicText class="mt-5" :field="careerData.description" />
+        <PrismicRichText class="mt-5" :field="careerData.description" />
       </div>
       <div class="mt-10">
         <h3 class="body-bold text-dark-blue">Conocimientos</h3>
         <ul class="mt-5 list-disc ml-4">
           <li v-for="conoc of careerData.knowledge">
-            <PrismicText :field="conoc.knowledge_item" />
+            <PrismicRichText :field="conoc.knowledge_item" />
           </li>
         </ul>
       </div>
@@ -47,7 +47,7 @@
         <h3 class="body-bold text-dark-blue">Educacion</h3>
         <ul class="mt-5 list-disc ml-4">
           <li v-for="educacion of careerData.education">
-            <PrismicText :field="educacion.education_item" />
+            <PrismicRichText :field="educacion.education_item" />
           </li>
         </ul>
       </div>
@@ -55,7 +55,7 @@
         <h3 class="body-bold text-dark-blue">Habilidades</h3>
         <ul class="mt-5 list-disc ml-4">
           <li v-for="habilidad of careerData.skills">
-            <PrismicText :field="habilidad.skills_item" />
+            <PrismicRichText :field="habilidad.skills_item" />
           </li>
         </ul>
       </div>
@@ -64,15 +64,15 @@
   <section
     class="pt-[80px] pb-[60px] mx-6 md:mx-[50px] lg:pb-0 lg:pt-[150px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <h2 class="heading2 text-dark-blue lg:w-[50%]">
-      <PrismicText :field="careerForm.title" />
+      <PrismicRichText :field="careerForm.title" />
     </h2>
     <div class="lg:grid lg:grid-cols-[48%_48%] lg:gap-x-5">
       <div>
         <p class="mt-10 body-reg">
-          <PrismicText :field="careerForm.description" />
+          <PrismicRichText :field="careerForm.description" />
         </p>
         <p class="mt-5 body-bold">
-          <PrismicText :field="careerForm.caption" />
+          <PrismicRichText :field="careerForm.caption" />
         </p>
       </div>
       <Form class="mt-[32px]" @submit="onSubmit" :validation-schema="schema">

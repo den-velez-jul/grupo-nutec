@@ -15,17 +15,17 @@
       class="xl:max-w-[1920px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
       <div>
         <h2 class="text-white heading2">
-          <PrismicText :field="formLabelsData.title" />
+          <PrismicRichText :field="formLabelsData.title" />
         </h2>
       </div>
       <div
         class="mt-[50px] lg:mt-[50px] xl:mt-[40px] lg:grid lg:grid-cols-2 lg:gap-[100px]">
         <div class="">
           <p class="text-white xl:text-[18px]">
-            <PrismicText :field="formLabelsData.description" />
+            <PrismicRichText :field="formLabelsData.description" />
           </p>
           <h3 class="mt-[60px] text-light-blue heading3">
-            <PrismicText :field="formLabelsData.moreWays" />
+            <PrismicRichText :field="formLabelsData.moreWays" />
           </h3>
           <div class="grid grid-col-1 gap-5 mt-[32px]">
             <div
@@ -33,7 +33,7 @@
               class="flex items-center">
               <img :src="way.icon.url" />
               <p class="body-reg text-white ml-5">
-                <span><PrismicText :field="way.text" /></span>
+                <span><PrismicRichText :field="way.text" /></span>
               </p>
             </div>
           </div>
@@ -172,7 +172,7 @@
             </div>
             <div class="mt-[60px] flex justify-center md:mt-0">
               <button
-                class="py-[10px] px-4 bg-white text-dark-blue font-bold font-founders-grosteskers lg:bg-mid-blue lg:text-white">
+                class="py-[10px] px-4 bg-white text-dark-blue font-bold font-founders-grosteskers lg:bg-mid-blue lg:text-white hover:lg:bg-white hover:lg:text-dark-blue">
                 {{ formLabels.btnLabel }}
               </button>
             </div>
@@ -184,10 +184,10 @@
   <section
     class="py-[75px] lg:pb-[60px] lg:pt-[100px] xl:pt-[150px] xl:py-[100px] xl:max-w-[1920px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
     <h3 class="heading3 text-dark-blue">
-      <PrismicText :field="contactData.label_companias" />
+      <PrismicRichText :field="contactData.label_companias" />
     </h3>
     <h2 class="heading2 text-dark-blue mt-5">
-      <PrismicText :field="contactData.titulo_companias" />
+      <PrismicRichText :field="contactData.titulo_companias" />
     </h2>
     <div class="mt-[60px] mb-[50px] grid grid-cols-1 gap-10 md:grid-cols-2">
       <div v-for="division of companiesList" class="flex flex-col">
@@ -198,10 +198,10 @@
         <div class="flex-grow p-8 md:flex md:flex-col md:justify-between">
           <div class="mb-10">
             <h3 class="heading3 text-dark-blue">
-              <PrismicText :field="division.sub_companias" />
+              <PrismicRichText :field="division.sub_companias" />
             </h3>
             <p class="body-bold text-dark-blue mt-2">
-              <PrismicText :field="division.label_sub_companias" />
+              <PrismicRichText :field="division.label_sub_companias" />
             </p>
             <p class="body-reg text-dark-blue mt-[30px] lg:mt-[40px]">
               <PrismicRichText :field="division.descripcion_compania" />
@@ -221,7 +221,7 @@
       class="xl:max-w-[1920px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
       <h3
         class="heading3 text-center mb-10 lg:mb-[60px] xl:mb-[80px] text-dark-blue">
-        <PrismicText :field="mapsData.title" />
+        <PrismicRichText :field="mapsData.title" />
       </h3>
       <div class="flex justify-center relative min-h-[380px]">
         <img :src="mapsData.image.url" />

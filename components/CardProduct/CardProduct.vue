@@ -6,7 +6,7 @@
     <div class="p-8 flex-grow flex flex-col justify-between">
       <div>
         <h3 v-if="title" :class="titleCustomStyle">{{ title }}</h3>
-        <PrismicText
+        <PrismicRichText
           :field="companyProps.description"
           class="body-reg text-black" />
       </div>

@@ -4,7 +4,7 @@
     <h1
       v-if="title"
       class="heading2 text-dark-blue mb-5 max-w-[800px] lg:mx-auto xl:mb-10">
-      <PrismicText :field="title" />
+      <PrismicRichText :field="title" />
     </h1>
     <section class="max-w-[800px] lg:mx-auto">
       <slice-zone

@@ -13,18 +13,19 @@
       </span>
     </button>
     <div class="flex justify-center bg-dark-blue px-[50px] py-[40px]">
-      <NuxtLink
+      <button
+        @click="redirectTo('/contacto')"
         v-if="labelContact == 'es'"
-        to="/contacto"
-        class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold"
-        >Contacto</NuxtLink
-      >
-      <NuxtLink
+        class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold">
+        Contacto
+      </button>
+      <button
         v-if="labelContact == 'en'"
+        @click="redirectTo('/contacto')"
         to="/contacto"
-        class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold"
-        >Contact</NuxtLink
-      >
+        class="bg-mid-blue px-9 py-3 font-founders-grosteskers text-[20px] font-bold">
+        Contact
+      </button>
     </div>
     <div
       class="flex flex-col items-center gap-3 bg-blue px-[50px] py-[40px] text-white text-[12px] font-bold font-founders-grosteskers">
@@ -62,7 +63,7 @@
           class="mb-3"
           v-for="link of optionSelected.optionToDisplay.linksDetails"
           @click="redirectTo(link.internal_path)">
-          <PrismicText :field="link.label" />
+          <PrismicRichText :field="link.label" />
         </button>
       </div>
     </div>

@@ -27,10 +27,10 @@
             v-for="item of firstRangeUpper"
             class="w-[400px] min-w-[400px] px-4">
             <div class="flex flex-col items-center justify-end h-full">
-              <PrismicText
+              <PrismicRichText
                 :field="item.timeline_year"
                 class="mb-2 text-[70px] leading-[60px] font-founders-grosteskers font-semibold text-center" />
-              <PrismicText
+              <PrismicRichText
                 :field="item.timeline_description"
                 class="text-center mb-3" />
               <div class="left-[50%] border-r-2 h-3"></div>
@@ -48,7 +48,7 @@
                 class="rounded-lg bg-white mt-[-6px] w-[10px] h-[10px] z-100" />
               <div class="left-[50%] border-r-2 h-3"></div>
               <div class="flex flex-col mt-[16px]">
-                <PrismicText
+                <PrismicRichText
                   :field="item.timeline_year"
                   class="mb-2 text-[70px] leading-[60px] font-founders-grosteskers font-semibold text-center" />
                 <PrismicRichText
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="absolute left-[151px] bottom-[98px]">
-          <PrismicText
+          <PrismicRichText
             :field="firstRangeLabel"
             class="text-white font-semibold font-founders-grosteskers text-[30px]" />
         </div>
@@ -71,7 +71,7 @@
             v-for="item of secondRangeUpper"
             class="w-[400px] min-w-[400px] px-4">
             <div class="flex flex-col items-center justify-end h-full">
-              <PrismicText
+              <PrismicRichText
                 :field="item.timeline_year"
                 class="mb-2 text-[70px] leading-[60px] font-founders-grosteskers font-semibold text-center" />
               <PrismicRichText
@@ -92,10 +92,10 @@
                 class="rounded-lg bg-white mt-[-6px] w-[10px] h-[10px] z-100" />
               <div class="left-[50%] border-r-2 h-3"></div>
               <div class="flex flex-col mt-[16px]">
-                <PrismicText
+                <PrismicRichText
                   :field="item.timeline_year"
                   class="mb-2 text-[70px] leading-[60px] font-founders-grosteskers font-semibold text-center" />
-                <PrismicText
+                <PrismicRichText
                   :field="item.timeline_description"
                   class="text-center" />
               </div>
@@ -103,7 +103,7 @@
           </div>
         </div>
         <div class="absolute left-[151px] bottom-[98px]">
-          <PrismicText
+          <PrismicRichText
             :field="secondRangeLabel"
             class="text-white font-semibold font-founders-grosteskers text-[30px]" />
         </div>
@@ -112,7 +112,7 @@
         class="text-white bg-mid-green h-full flex flex-col justify-center min-w-[678px]">
         <div class="flex h-full">
           <div class="flex flex-col items-center justify-end h-full w-full">
-            <PrismicText
+            <PrismicRichText
               :field="futureLabel"
               class="mb-2 text-[70px] leading-[60px] font-founders-grosteskers font-semibold text-center" />
           </div>
@@ -123,8 +123,8 @@
         </div>
         <div class="flex h-full px-[154px]">
           <div class="flex flex-col items-center justify-between pb-[98px]">
-            <PrismicText :field="futureDescription" class="text-center" />
-            <PrismicText
+            <PrismicRichText :field="futureDescription" class="text-center" />
+            <PrismicRichText
               :field="futureLowerLabel"
               class="text-white font-semibold font-founders-grosteskers text-[30px]" />
           </div>

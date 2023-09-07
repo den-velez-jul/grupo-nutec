@@ -18,8 +18,10 @@ defineProps(
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation"
     class="bg-dark-blue mt-[60px] py-20 px-6 md:px-[100px] md:py-[80px] lg:px-[150px] xl:px-[300px] xl:py-[100px] xl:mt-[80px]">
-    <PrismicText :field="slice.primary.quote" class="heading3 text-mid-blue" />
-    <PrismicText
+    <PrismicRichText
+      :field="slice.primary.quote"
+      class="heading3 text-mid-blue" />
+    <PrismicRichText
       :field="slice.primary.author"
       class="pt-10 text-white body-bold" />
   </section>

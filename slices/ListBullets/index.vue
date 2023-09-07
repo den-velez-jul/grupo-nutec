@@ -20,7 +20,7 @@ defineProps(
     class="pl-10 pt-[40px] pr-6 md:pl-[120px] md:pr-[100px] lg:pt-[60px] lg:pl-[170px] lg:pr-[150px] xl:pl-[320px] xl:pr-[300px]">
     <ul class="list-disc">
       <li v-for="item of slice.items">
-        <PrismicText :field="item.list_item" class="body-reg" />
+        <PrismicRichText :field="item.list_item" class="body-reg" />
       </li>
     </ul>
   </section>

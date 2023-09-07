@@ -12,7 +12,7 @@
       id="description"
       class="py-[60px] bg-baby-blue xl:max-w-[1920px] xl:mx-auto mx-6 md:mx-[50px] lg:mx-[75px] xl:px-[100px]">
       <h4 class="text-dark-blue heading3 text-center lg:text-left lg:mb-[80px]">
-        <PrismicText :field="description.topLabel" />
+        <PrismicRichText :field="description.topLabel" />
         {{ descrptopLabel }}
       </h4>
       <ArticleOne :descriptionProps="description" />
@@ -24,7 +24,7 @@
       id="companies"
       class="pb-[80px] pt-[60px] md:pb-[100px] md:pt-[70px] lg:pt-[150px]">
       <h4 class="text-center text-dark-blue heading3">
-        <PrismicText :field="companies.title" />
+        <PrismicRichText :field="companies.title" />
       </h4>
       <div
         class="grid mt-10 md:mt-[60px] lg:mt-12 gap-y-[30px] md:grid-cols-2 md:gap-x-10">
@@ -50,7 +50,7 @@
         <div
           class="p-8 pt-6 bg-dark-blue text-white lg:py-[78px] lg:px-[74px] lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2 lg:flex lg:flex-col lg:justify-between xl:h-full">
           <h2 class="heading1 text-center md:text-left">
-            <PrismicText :field="nutecShop.title" />
+            <PrismicRichText :field="nutecShop.title" />
           </h2>
           <PrismicRichText
             :field="nutecShop.description"
@@ -69,7 +69,7 @@
     </section>
     <section id="groupNews" class="pb-[80px] lg:pb-[100px]">
       <h4>
-        <PrismicText
+        <PrismicRichText
           :field="homeData.articles_title"
           class="heading3 text-center text-dark-blue lg:text-left" />
       </h4>
@@ -139,10 +139,14 @@
       </div>
       <div class="mt-8 w-full">
         <a href="/eventos" class="flex items-center">
-          <span v-if="lang == 'es'" class="text-big text-dark-blue">
+          <span
+            v-if="lang == 'es'"
+            class="text-big text-dark-blue hover:text-mid-blue">
             Conoce eventos anteriores
           </span>
-          <span v-if="lang == 'en'" class="text-big text-dark-blue">
+          <span
+            v-if="lang == 'en'"
+            class="text-big text-dark-blue hover:text-mid-blue">
             Discover Previous Events
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
@@ -154,7 +158,7 @@
 
 <script setup>
 import { format } from "date-fns";
-import { es } from "date-fns/locale";
+import { es, enUS } from "date-fns/locale";
 const { localeProperties, locale } = useI18n();
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
@@ -194,16 +198,30 @@ const nutecShop = {
 const dateToTransfom = homeData.group_news[0].date
   ? new Date(homeData.group_news[0].date)
   : new Date();
-const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
-  locale: es,
-});
-const dateUpdatedArray = dateUpdated.split(" ");
-const dataFormatted =
-  dateUpdatedArray[0] +
-  " de " +
-  dateUpdatedArray[1] +
-  " de " +
-  dateUpdatedArray[2];
+let dataFormatted;
+if (locale.value == "es") {
+  const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
+    locale: es,
+  });
+  const dateUpdatedArray = dateUpdated.split(" ");
+  dataFormatted =
+    dateUpdatedArray[0] +
+    " de " +
+    dateUpdatedArray[1] +
+    " de " +
+    dateUpdatedArray[2];
+} else {
+  const dateUpdated = format(dateToTransfom, "MMMM dd yyyy", {
+    locale: enUS,
+  });
+  const dateUpdatedArray = dateUpdated.split(" ");
+  dataFormatted =
+    dateUpdatedArray[0] +
+    " " +
+    dateUpdatedArray[1] +
+    ", " +
+    dateUpdatedArray[2];
+}
 
 const divisionsNews = {
   nutecGroup: { ...homeData.group_news[0], date: dataFormatted },

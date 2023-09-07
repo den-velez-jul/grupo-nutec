@@ -19,7 +19,7 @@ defineProps(
     :data-slice-variation="slice.variation">
     <ul class="list-disc mt-[32px] ml-4">
       <li v-for="item of slice.items">
-        <PrismicText
+        <PrismicRichText
           :field="item.list_item"
           class="body-reg lg:text-[18px] xl:text-[20px]" />
       </li>

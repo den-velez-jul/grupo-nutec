@@ -9,7 +9,7 @@
       class="mx-6 md:mx-[50px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
       <div class="hidden lg:flex">
         <p class="body-bold text-blue">
-          <PrismicText :field="headlineNews.article_top_label" />
+          <PrismicRichText :field="headlineNews.article_top_label" />
         </p>
       </div>
       <div
@@ -35,19 +35,19 @@
         <div>
           <p
             class="font-founders-grosteskers font-bold text-[24px] mt-5 text-blue lg:hidden">
-            <PrismicText :field="headlineNews.article_top_label" />
+            <PrismicRichText :field="headlineNews.article_top_label" />
           </p>
           <div class="font-bold">
             <h1 class="text-blue heading1 mt-10 lg:mt-0">
-              <PrismicText :field="headlineNews.article_title" />
+              <PrismicRichText :field="headlineNews.article_title" />
             </h1>
             <p
               class="font-founders-grosteskers font-bold text-[24px] leading-[32px] mt-[35px] lg:mt-[70px] xl:text-[30px] xl:leading-[40px]">
-              <PrismicText :field="headlineNews.article_description" />
+              <PrismicRichText :field="headlineNews.article_description" />
             </p>
             <div class="mt-10">
               <p class="body-bold text-dark-blue">
-                <PrismicText :field="headlineNews.article_author" />
+                <PrismicRichText :field="headlineNews.article_author" />
               </p>
               <p class="flex items-center body-reg mt-[16px] lg:hidden">
                 <span>

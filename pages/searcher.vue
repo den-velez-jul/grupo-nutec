@@ -99,7 +99,8 @@ const searcher = () => {
   const newResultArticles = [];
   productList.forEach((product) => {
     const title = product.data.product_name[0].text.toLocaleLowerCase();
-    if (title.includes(results.searcher)) {
+    const searcherLowcase = results.searcher.toLocaleLowerCase();
+    if (title.includes(searcherLowcase)) {
       const productItem = {
         productProps: {
           cta_link1: product.data.product_cta_link,
@@ -119,7 +120,8 @@ const searcher = () => {
 
   articleList.forEach((article) => {
     const title = article.data.article_title[0].text.toLocaleLowerCase();
-    if (title.includes(results.searcher)) {
+    const searcherLowcase = results.searcher.toLocaleLowerCase();
+    if (title.includes(searcherLowcase)) {
       const dateToTransfom = article.data.article_date
         ? new Date(article.data.article_date)
         : new Date();

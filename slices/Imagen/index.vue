@@ -19,7 +19,7 @@ defineProps(
     :data-slice-variation="slice.variation"
     class="pt-[40px] px-6 md:px-[100px] lg:pt-[60px] lg:px-[150px] xl:px-[300px]">
     <img :src="slice.primary.imagen.url" />
-    <PrismicText
+    <PrismicRichText
       :field="slice.primary.imagen_caption"
       class="body-reg pt-6 text-black" />
   </section>

@@ -8,19 +8,19 @@
     <div
       class="flex flex-col justify-center font-founders-grosteskers text-white z-10">
       <span class="heading3">
-        <PrismicText :field="heroNews.article_top_label" />
+        <PrismicRichText :field="heroNews.article_top_label" />
       </span>
       <h1 class="mt-[30px] heading1">
-        <PrismicText :field="heroNews.article_title" />
+        <PrismicRichText :field="heroNews.article_title" />
       </h1>
       <p class="mt-[40px] body-bold">
-        <PrismicText :field="heroNews.article_author" />
+        <PrismicRichText :field="heroNews.article_author" />
       </p>
       <p class="mt-[16px] body-reg">
         {{ heroNews.article_date }}
       </p>
       <p class="mt-5 body-reg">
-        <PrismicText :field="heroNews.article_description" />
+        <PrismicRichText :field="heroNews.article_description" />
       </p>
       <div class="flex justify-start mt-10">
         <PrismicLink
@@ -63,16 +63,16 @@
         </div>
         <div class="font-founders-grosteskers">
           <h1 class="text-blue mt-8 lg:mt-0 heading1">
-            <PrismicText :field="headlineNews.article_title" />
+            <PrismicRichText :field="headlineNews.article_title" />
           </h1>
           <p class="mt-[30px] md:mt-[50px] lg:mt-[60px] body-bold">
-            <PrismicText :field="headlineNews.article_author" />
+            <PrismicRichText :field="headlineNews.article_author" />
           </p>
           <p class="mt-[30px] md:mt-[40px] lg:mt-[30px] body-reg">
             {{ headlineNews.article_date }}
           </p>
           <p class="mt-[15px] lg:mt-5 body-reg">
-            <PrismicText :field="headlineNews.article_description" />
+            <PrismicRichText :field="headlineNews.article_description" />
           </p>
           <div class="flex justify-start mt-[30px] lg:mt-10">
             <PrismicLink
@@ -131,10 +131,14 @@
       </div>
       <div class="mt-8 w-full">
         <a href="/eventos" class="flex items-center">
-          <span v-if="lang == 'es'" class="text-big text-dark-blue">
+          <span
+            v-if="lang == 'es'"
+            class="text-big text-dark-blue hover:text-mid-blue">
             Conoce eventos anteriores
           </span>
-          <span v-if="lang == 'en'" class="text-big text-dark-blue">
+          <span
+            v-if="lang == 'en'"
+            class="text-big text-dark-blue hover:text-mid-blue">
             Discover Previous Events
           </span>
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
@@ -150,7 +154,7 @@ const lang = locale.value;
 const localeIso = localeProperties.value.iso;
 const { client } = usePrismic();
 import { format } from "date-fns";
-import { es } from "date-fns/locale";
+import { es, enUS } from "date-fns/locale";
 
 const { data: home } = await useAsyncData("home", () =>
   client.getByUID("home", "homepage", { lang: localeIso })
@@ -182,16 +186,31 @@ newsList.forEach((news) => {
     const dateToTransfom = news.data.article_date
       ? new Date(news.data.article_date)
       : new Date();
-    const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
-      locale: es,
-    });
-    const dateUpdatedArray = dateUpdated.split(" ");
-    const dataFormatted =
-      dateUpdatedArray[0] +
-      " de " +
-      dateUpdatedArray[1] +
-      " de " +
-      dateUpdatedArray[2];
+
+    let dataFormatted;
+    if (locale.value == "es") {
+      const dateUpdated = format(dateToTransfom, "dd MMMM yyyy", {
+        locale: es,
+      });
+      const dateUpdatedArray = dateUpdated.split(" ");
+      dataFormatted =
+        dateUpdatedArray[0] +
+        " de " +
+        dateUpdatedArray[1] +
+        " de " +
+        dateUpdatedArray[2];
+    } else {
+      const dateUpdated = format(dateToTransfom, "MMMM dd yyyy", {
+        locale: enUS,
+      });
+      const dateUpdatedArray = dateUpdated.split(" ");
+      dataFormatted =
+        dateUpdatedArray[0] +
+        " " +
+        dateUpdatedArray[1] +
+        ", " +
+        dateUpdatedArray[2];
+    }
 
     if (news.tags.includes("Hero")) {
       heroNews = { ...news.data, article_date: dataFormatted };

@@ -1,6 +1,6 @@
 <template>
   <h4 v-if="topLabel">
-    <PrismicText
+    <PrismicRichText
       :field="topLabel"
       class="heading3 mb-[80px] text-dark-blue text-center" />
   </h4>
@@ -8,7 +8,7 @@
     <div class="mb-[80px]">
       <h1
         class="heading1 text-dark-blue text-center mt-10 mb-5 tracking-tight lg:text-left lg:mt-0 lg:mb-10">
-        <PrismicText :field="title" />
+        <PrismicRichText :field="title" />
       </h1>
       <p class="my-10">
         <PrismicRichText

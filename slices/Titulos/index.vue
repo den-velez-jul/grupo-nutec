@@ -19,7 +19,7 @@ defineProps(
     :data-slice-variation="slice.variation"
     class="pt-[60px] px-6 md:px-[100px] lg:pt-[80px] lg:px-[150px] xl:px-[300px]">
     <h3 class="text-blue heading2">
-      <PrismicText :field="slice.primary.titulo" />
+      <PrismicRichText :field="slice.primary.titulo" />
     </h3>
   </section>
 </template>

@@ -13,11 +13,11 @@
     class="pt-[80px] pb-[60px] mx-6 md:mx-[50px] lg:pb-0 lg:pt-[150px] lg:mx-[75px] xl:mx-auto max-w-[1920px] xl:px-[100px]">
     <div class="">
       <h4 class="heading3 text-center text-dark-blue">
-        <PrismicText :field="careerFeedData.career_title" />
+        <PrismicRichText :field="careerFeedData.career_title" />
       </h4>
       <p
         class="mt-[48px] mb-[70px] text-dark-blue lg:mb-[140px] xl:text-center body-reg">
-        <PrismicText :field="careerFeedData.career_description" />
+        <PrismicRichText :field="careerFeedData.career_description" />
       </p>
     </div>
     <div v-for="career of careerList">

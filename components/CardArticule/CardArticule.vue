@@ -8,10 +8,10 @@
       class="flex flex-col flex-grow justify-between bg-blue text-white p-8 pb-[60px] md:pb-[40px] lg:pb-[60px]">
       <div class="flex flex-col justify-between">
         <h5 class="heading3">
-          <PrismicText :field="title" />
+          <PrismicRichText :field="title" />
         </h5>
         <p class="py-6 md:py-[30px] xl:py-[40px] text-justify body-reg">
-          <PrismicText :field="description" />
+          <PrismicRichText :field="description" />
         </p>
       </div>
       <AnchorIcon :labelBtn="ctaLabel" whiteText="true" :urlTo="ctaUrl.url" />

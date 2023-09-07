@@ -17,7 +17,7 @@ defineProps(
   <section
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation">
-    <PrismicText
+    <PrismicRichText
       :field="slice.primary.headline"
       class="text-black body-bold text-5 mt-10 lg:text-[18px] xl:text-[20px]" />
   </section>

@@ -3,7 +3,7 @@
     class="mb-[60px] flex flex-col lg:grid lg:grid-cols-[35%_35%_25%] lg:gap-x-[80px]">
     <div class="flex flex-col">
       <p class="text-dark-blue body-bold">
-        <PrismicText :field="title" />
+        <PrismicRichText :field="title" />
       </p>
       <p class="mt-[30px]">
         <span v-if="lang == 'es'" class="text-dark-blue body-bold"
@@ -12,7 +12,7 @@
         <span v-if="lang == 'en'" class="text-dark-blue body-bold"
           >Category:</span
         >
-        <span class="body-reg"><PrismicText :field="category" /></span>
+        <span class="body-reg"><PrismicRichText :field="category" /></span>
       </p>
       <p class="mt-[12px]">
         <span v-if="lang == 'es'" class="text-dark-blue body-bold"
@@ -21,12 +21,12 @@
         <span v-if="lang == 'en'" class="text-dark-blue body-bold"
           >Location:</span
         >
-        <span><PrismicText :field="location" class="body-reg" /></span>
+        <span><PrismicRichText :field="location" class="body-reg" /></span>
       </p>
     </div>
     <div class="mt-5">
       <span>
-        <PrismicText :field="full_description" class="body-reg" />
+        <PrismicRichText :field="full_description" class="body-reg" />
       </span>
     </div>
     <div class="mt-5">

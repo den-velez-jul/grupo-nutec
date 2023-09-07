@@ -13,13 +13,13 @@
           fit="cover" />
       </div>
       <div class="ml-3 flex flex-col justify-between lg:max-w-[250px]">
-        <PrismicText
+        <PrismicRichText
           :field="division.division_descripcion"
           class="text-small" />
         <div class="flex justify-end">
           <PrismicLink :field="division.division_cta" class="flex items-center">
             <span class="text-med text-dark-blue">
-              <PrismicText :field="division.division_cta_label" />
+              <PrismicRichText :field="division.division_cta_label" />
             </span>
             <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3"
           /></PrismicLink>

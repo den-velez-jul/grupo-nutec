@@ -5,15 +5,15 @@
       class="flex flex-col justify-between px-6 py-8 lg:p-10 lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-3">
       <div>
         <span class="text-blue body-bold">
-          <PrismicText :field="topLabel" />
+          <PrismicRichText :field="topLabel" />
         </span>
         <p
           class="text-[#3D3D3D] font-bold mt-[26px] font-founders-grosteskers text-[32px] leading-[40px] md:text-[30px] md:leading-[36px] lg:text-[32px] lg:leading-[40px] xl:text-[50px] xl:leading-[70px]">
-          <PrismicText :field="title" />
+          <PrismicRichText :field="title" />
         </p>
       </div>
       <div class="flex justify-between text-blue md:text-[20px]">
-        <span class="body-bold"><PrismicText :field="place" /></span>
+        <span class="body-bold"><PrismicRichText :field="place" /></span>
         <div class="flex items-center text-blue">
           <a target="_blank" :href="ctaLink.url" class="flex items-center">
             <span class="text-med">

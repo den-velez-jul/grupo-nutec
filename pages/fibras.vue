@@ -43,13 +43,13 @@
             class="flex flex-col flex-grow justify-between bg-dark-blue text-white p-6 lg:p-8 lg:pb-[60px]">
             <div>
               <h4 class="pb-5 heading3 lg:pb-10">
-                <PrismicText :field="company.title" />
+                <PrismicRichText :field="company.title" />
               </h4>
               <p class="pb-[30px] body-reg">
-                <PrismicText :field="company.description" />
+                <PrismicRichText :field="company.description" />
               </p>
               <p class="body-reg">
-                <PrismicText :field="company.location" />
+                <PrismicRichText :field="company.location" />
               </p>
             </div>
             <a
