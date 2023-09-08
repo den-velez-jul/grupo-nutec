@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       { code: "en", iso: "en-us", localeName: "English" },
       { code: "es", iso: "es-mx", localeName: "Español" },
     ],
-    defaultLocale: "es",
+    defaultLocale: "en",
     strategy: "prefix",
   },
   image: {

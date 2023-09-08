@@ -39,7 +39,7 @@
       </div>
     </div>
     <div
-      class="px-6 py-3 h-[96px] flex items-center justify-between md:px-[50px] lg:px-[75px] lg:py-3 xl:max-w-[1920px] 2xl:mx-auto 2xl:min-w-[1900px]">
+      class="px-6 py-3 h-[96px] flex items-center justify-between md:px-[50px] lg:px-[75px] xl:px-[100px] lg:py-3 xl:max-w-[1920px] 2xl:mx-auto 2xl:min-w-[1920px]">
       <a href="/" class="h-full">
         <img
           class="mr-3 h-full w-auto min-w-[51px]"
@@ -53,7 +53,7 @@
           class="hidden max-w-[600px] lg:grid grid-cols-3 gap-x-12 font-founders-grosteskers text-med text-dark-blue justify-items-center">
           <li>
             <button
-              class="text-[14px] xl:text-[20px]"
+              class="text-[16px] xl:text-[20px]"
               @mouseover="onShowHeaderDetails('about')"
               @click="onShowHeaderDetails('about')">
               {{ showHeaderDetails.firstOption.navLabel[0].text }}
@@ -61,7 +61,7 @@
           </li>
           <li>
             <button
-              class="text-[14px] xl:text-[20px]"
+              class="text-[16px] xl:text-[20px]"
               @mouseover="onShowHeaderDetails('company')"
               @click="onShowHeaderDetails('company')">
               {{ showHeaderDetails.secondOption.navLabel[0].text }}
@@ -69,7 +69,7 @@
           </li>
           <li>
             <button
-              class="text-[14px] xl:text-[20px]"
+              class="text-[16px] xl:text-[20px]"
               @mouseover="onShowHeaderDetails('resources')"
               @click="onShowHeaderDetails('resources')">
               {{ showHeaderDetails.thirdOption.navLabel[0].text }}

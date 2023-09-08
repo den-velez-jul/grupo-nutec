@@ -1,9 +1,10 @@
 <template>
   <footer
-    class="px-6 pt-6 pb-[80px] text-dark-blue font-semibold md:px-[50px] lg:px-[100px] lg:py-[150px]">
+    class="px-6 pt-6 pb-[80px] text-dark-blue font-semibold md:px-[50px] lg:pr-[75px] lg:pl-[40px] xl:pr-[100px] xl:pl-[45px] lg:py-[150px] xl:max-w-[1920px] 2xl:mx-auto 2xl:min-w-[1920px]">
     <div
       class="flex flex-col items-center md:grid lg:grid-cols-4 md:content-center md:grid-cols-2 md:grid-rows-2 lg:grid-rows-1 md:gap-y-[60px] lg:gap-y-0">
-      <div class="flex flex-col items-center justify-center xl:pr-14">
+      <div
+        class="flex flex-col items-center justify-center xl:pr-14 lg:justify-self-start">
         <img
           :src="logo.url"
           :alt="logo.alt"
