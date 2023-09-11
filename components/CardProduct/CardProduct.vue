@@ -1,15 +1,16 @@
 <template>
-  <a target="_blank" :href="companyProps.cta_link1.url">
-    <div class="flex flex-col h-full bg-baby-blue">
+  <div class="bg-baby-blue h-full">
+    <a
+      target="_blank"
+      :href="companyProps.cta_link1.url"
+      class="flex flex-col h-full hover:text-mid-blue">
       <img
         :src="companyProps.imagen.url"
         class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px] object-cover" />
       <div class="p-8 flex-grow flex flex-col justify-between">
         <div>
           <h3 v-if="title" :class="titleCustomStyle">{{ title }}</h3>
-          <PrismicRichText
-            :field="companyProps.description"
-            class="body-reg text-black" />
+          <PrismicRichText :field="companyProps.description" class="body-reg" />
         </div>
         <a
           target="_blank"
@@ -21,8 +22,8 @@
           <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
         </a>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </template>
 
 <script setup>

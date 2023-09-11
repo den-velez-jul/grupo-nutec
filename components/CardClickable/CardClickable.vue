@@ -1,6 +1,9 @@
 <template>
-  <div class="flex flex-col h-full bg-baby-blue">
-    <a target="_blank" :href="companyProps.cta_link1.url">
+  <div class="bg-baby-blue h-full hover:text-mid-blue">
+    <a
+      target="_blank"
+      :href="companyProps.cta_link1.url"
+      class="flex flex-col h-full hover:text-mid-blue">
       <img
         :src="companyProps.imagen.url"
         class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px] object-cover" />
