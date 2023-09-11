@@ -33,7 +33,7 @@
         ctaUrl="https://nutecbickley.com/what-we-do/kilns-for-ceramics-and-advanced-materials" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
-        <Card
+        <CardClickable
           v-for="product of ovensCeramicListSorted"
           :companyProps="product.companyProps"
           :redTitle="product.redTitle"
@@ -56,7 +56,7 @@
         ctaUrl="https://nutecbickley.com/what-we-do/kilns-for-ceramics-and-advanced-materials" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-3 lg:grid-rows-1 lg:gap-x-10">
-        <Card
+        <CardClickable
           v-for="product of ovensMetalsListSorted"
           :companyProps="product.companyProps"
           :redTitle="product.redTitle"
@@ -79,7 +79,7 @@
         ctaUrl="https://nutecbickley.com/what-we-do/combustion-and-control-systems" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
-        <Card
+        <CardClickable
           v-for="product of sistemsListSorted"
           :companyProps="product.companyProps"
           :redTitle="product.redTitle"
@@ -102,7 +102,7 @@
         ctaUrl="https://nutecbickley.com/what-we-do/fabrication-and-installation-services" />
       <div
         class="pt-[60px] grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-x-10">
-        <Card
+        <CardClickable
           v-for="product of servicesListSorted"
           :companyProps="product.companyProps"
           :redTitle="product.redTitle"

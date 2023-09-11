@@ -97,7 +97,7 @@
         <NuxtLink
           class="py-3 px-9 bg-dark-blue text-white hidden lg:flex items-center justify-center"
           href="/contacto">
-          <span class="text-white text-med mt-1">{{
+          <span class="text-white text-med">{{
             showHeaderDetails.btnLogo[0].text
           }}</span>
         </NuxtLink>

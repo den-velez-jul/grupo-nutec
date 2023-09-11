@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[146px]">
+  <div class="mt-[96px] lg:mt-[144px]">
     <TopBanner :labelList="['Newsroom']" />
   </div>
   <section
@@ -19,8 +19,10 @@
       <p class="mt-[16px] body-reg">
         {{ heroNews.article_date }}
       </p>
-      <p class="mt-5 body-reg">
-        <PrismicRichText :field="heroNews.article_description" />
+      <p>
+        <PrismicRichText
+          :field="heroNews.article_description"
+          class="mt-5 body-reg" />
       </p>
       <div class="flex justify-start mt-10">
         <PrismicLink

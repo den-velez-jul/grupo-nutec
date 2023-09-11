@@ -22,7 +22,9 @@
         target="_blank"
         :href="companyProps.cta_link1.url"
         :class="anchorCustomStyle">
-        <span class="font-bold text-big"> {{ companyProps.cta_label1 }} </span>
+        <span class="font-bold text-big">
+          {{ companyProps.cta_label1 }}
+        </span>
         <img src="~assets/icons/arrow-dark-blue.svg" class="ml-3" />
       </a>
     </div>
@@ -35,9 +37,10 @@ const props = defineProps({
   title: String,
   redTitle: Boolean,
   anchorLeft: Boolean,
+  clickAllowed: Boolean,
 });
 
-const { companyProps, title, redTitle, anchorLeft } = props;
+const { companyProps, title, redTitle, anchorLeft, clickAllowed } = props;
 
 const titleColorStyle = redTitle ? "text-[#B40023]" : "text-dark-blue";
 const archorPositionColor = anchorLeft ? "justify-start" : "justify-end";

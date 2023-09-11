@@ -35,7 +35,6 @@
       </div>
     </section>
     <section id="tiendaNutec" class="pb-[80px]">
-      <p class="heading3 text-dark-blue text-center">NUTEC Shop</p>
       <div class="mt-8 lg:mt-12 lg:grid lg:grid-cols-[50%_50%]">
         <div class="lg:col-start-2 lg:col-end-3">
           <img
