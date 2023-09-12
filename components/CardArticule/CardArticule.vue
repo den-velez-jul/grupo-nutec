@@ -4,14 +4,13 @@
       class="flex justify-center items-center p-[60px] h-[240px] lg:h-[290px] xl:h-[340px]">
       <img :src="image.url" alt="" class="object-contain" />
     </div>
-    <div
-      class="flex flex-col flex-grow justify-between bg-blue text-white p-8 pb-[60px] md:pb-[40px] lg:pb-[60px]">
+    <div class="flex flex-col flex-grow justify-between bg-blue text-white p-8">
       <div class="flex flex-col justify-between">
         <h5 class="heading3">
           <PrismicRichText :field="title" />
         </h5>
-        <p class="py-6 md:py-[30px] xl:py-[40px] text-justify body-reg">
-          <PrismicRichText :field="description" />
+        <p class="py-6 md:py-[30px] xl:py-[40px] text-justify">
+          <PrismicRichText :field="description" class="body-reg" />
         </p>
       </div>
       <AnchorIcon :labelBtn="ctaLabel" whiteText="true" :urlTo="ctaUrl.url" />

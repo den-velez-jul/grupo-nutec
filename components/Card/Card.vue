@@ -3,10 +3,10 @@
     <img
       :src="companyProps.imagen.url"
       class="w-full h-[290px] md:h-[240px] lg:h-[330px] xl:h-[400px] object-cover" />
-    <div class="p-8 flex-grow flex flex-col justify-between">
+    <div class="p-8 lg:pt-6 xl:pt-4 flex-grow flex flex-col justify-between">
       <div
         v-if="companyProps.companias_logo"
-        class="my-5 flex h-[80px] justify-start">
+        class="mb-5 flex h-[80px] justify-start">
         <img
           class="w-full h-full object-contain lg:w-auto lg:h-full xl:w-[25%]"
           :src="companyProps.companias_logo.url"
